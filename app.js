@@ -43,7 +43,7 @@
   const PROBLEMS_PER_PAGE = 20;
 
   // 解答欄 1 文字あたりの幅 (mm) と余白
-  const ANSWER_CHAR_WIDTH_MM = 20;
+  const ANSWER_CHAR_WIDTH_MM = { write: 20, read: 12 };
   const ANSWER_PADDING_CHARS = 2;
 
   // 起動時に欠落しているデータ変数を検出する
@@ -75,7 +75,7 @@
   const SETTINGS_KEY = "kanji_practice_settings_v1";
 
   const DEFAULT_SETTINGS = {
-    grade: "g3",
+    grade: "g1",
     cumulative: true,
     mode: "write",
     answerStyle: "boxed",
@@ -294,7 +294,7 @@
       `<span>日付: ____________</span>`,
       `<span>目安: ${duration}分</span>`,
       `<span>実績: ____ 分</span>`,
-      `<span>${pageIndex + 1} / ${totalPages}</span>`,
+      totalPages > 1 ? `<span>${pageIndex + 1} / ${totalPages}</span>` : "",
       `</header>`
     ].join("");
   }
@@ -302,7 +302,8 @@
   // 1 問のセル HTML
   function buildProblemCell(problem, indexInPage, settings) {
     const num = indexInPage + 1;
-    const widthMm = (problem.answerLength + ANSWER_PADDING_CHARS) * ANSWER_CHAR_WIDTH_MM;
+    const charWidth = ANSWER_CHAR_WIDTH_MM[settings.mode] ?? ANSWER_CHAR_WIDTH_MM.write;
+    const widthMm = (problem.answerLength + ANSWER_PADDING_CHARS) * charWidth;
     const classes = ["answer-area", settings.answerStyle];
     if (settings.crossGuide) classes.push("cross-guide");
     return [
