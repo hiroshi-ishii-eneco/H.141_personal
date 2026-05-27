@@ -609,7 +609,7 @@ window.KANJI_DATA_G5 = [
     readings: { on: ["ケン"], kun: [] },
     words: [
       { word: "券", reading: "けん", sentence: "夕方、入場○○を見せて中へ入る。", printable: true },
-      { word: "切符", reading: "きっぷ", sentence: "学校で、先週、電車の○○を買う。", printable: true },
+      { word: "定期券", reading: "ていきけん", sentence: "毎朝、駅で○○を見せる。", printable: true },
       { word: "乗車券", reading: "じょうしゃけん", sentence: "教室で、家で、○○をしっかり持つ。", printable: true },
       { word: "旅券", reading: "りょけん", sentence: "体育館で、外国へ行くのに○○がいる。", printable: true },
       { word: "証券", reading: "しょうけん", sentence: "公園で、父は○○会社で働く。", printable: true },
@@ -1393,7 +1393,7 @@ window.KANJI_DATA_G5 = [
       { word: "製作", reading: "せいさく", sentence: "先週、学校でえい画を○○する。", printable: true },
       { word: "鉄製", reading: "てっせい", sentence: "学校で、○○の門を取り付ける。", printable: true },
       { word: "手製", reading: "てせい", sentence: "家で、母の○○のかばんを持つ。", printable: true },
-      { word: "国産", reading: "こくさん", sentence: "教室で、○○の野さいを選ぶ。", printable: true }
+      { word: "日本製", reading: "にほんせい", sentence: "店で○○のおもちゃを買う。", printable: true }
     ]
   },
   {
@@ -1750,7 +1750,7 @@ window.KANJI_DATA_G5 = [
     words: [
       { word: "銅", reading: "どう", sentence: "私は、古い○○の食器が見つかる。", printable: true },
       { word: "銅像", reading: "どうぞう", sentence: "兄が、公園の○○を見学する。", printable: true },
-      { word: "銅メダル", reading: "どうメダル", sentence: "先生が、妹は、選手が○○を取った。", printable: true },
+      { word: "銅メダル", reading: "どうめだる", sentence: "先生が、妹は、選手が○○を取った。", printable: true },
       { word: "銅貨", reading: "どうか", sentence: "父は、むかしの○○を観察する。", printable: true },
       { word: "青銅", reading: "せいどう", sentence: "母は、○○器時代の道具を学ぶ。", printable: true },
       { word: "銅山", reading: "どうざん", sentence: "友だちと、むかしの○○の話を聞く。", printable: true }
@@ -2135,8 +2135,8 @@ window.KANJI_DATA_G5 = [
       { word: "貿易", reading: "ぼうえき", sentence: "父は、外国との○○がさかんだ。", printable: true },
       { word: "貿易港", reading: "ぼうえきこう", sentence: "母は、大きな○○を見学する。", printable: true },
       { word: "貿易船", reading: "ぼうえきせん", sentence: "六年生が、友だちと、○○が港に着く。", printable: true },
-      { word: "輸出", reading: "ゆしゅつ", sentence: "今日、○○品の種るいを学ぶ。", printable: true },
-      { word: "輸入", reading: "ゆにゅう", sentence: "昨日、今朝、石油は○○にたよる。", printable: true },
+      { word: "貿易品", reading: "ぼうえきひん", sentence: "他国との○○を学ぶ。", printable: true },
+      { word: "貿易風", reading: "ぼうえきふう", sentence: "理科で○○について学ぶ。", printable: true },
       { word: "外国貿易", reading: "がいこくぼうえき", sentence: "先週、夕方、○○の歴史を学ぶ。", printable: true }
     ]
   },

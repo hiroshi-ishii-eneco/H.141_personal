@@ -1535,7 +1535,7 @@ window.KANJI_DATA_G6 = [
       { word: "宙返り", reading: "ちゅうがえり", sentence: "体育の時間にマットの上で○○に挑戦する。", printable: true },
       { word: "宇宙服", reading: "うちゅうふく", sentence: "理科の本で実物大の○○の仕組みについて学ぶ。", printable: true },
       { word: "宙吊", reading: "ちゅうづり", sentence: "強風で空高く飛ばされ風船が○○の状態になる。", printable: true },
-      { word: "中空", reading: "ちゅうくう", sentence: "晴れた○○に巨大な飛行船がふわりと浮かぶ。", printable: true },
+      { word: "宇宙人", reading: "うちゅうじん", sentence: "本で○○の物語を読む。", printable: true },
       { word: "宙", reading: "ちゅう", sentence: "弟と一しょにボールを高く○○に投げる。", printable: true },
       { word: "宇宙食", reading: "うちゅうしょく", sentence: "科学館で珍しい○○を試食する体験がある。", printable: true }
     ]
@@ -1811,7 +1811,7 @@ window.KANJI_DATA_G6 = [
       { word: "俳句", reading: "はいく", sentence: "国語の時間に季語を入れた○○を一つ作る。", printable: true },
       { word: "俳優", reading: "はいゆう", sentence: "ドラマで活やくする○○の演技に深く見入る。", printable: true },
       { word: "俳人", reading: "はいじん", sentence: "図書室で有名な○○の本を借りて読んだ。", printable: true },
-      { word: "女優", reading: "じょゆう", sentence: "若手○○の出ている作品を家族で見に行く。", printable: true },
+      { word: "俳号", reading: "はいごう", sentence: "詩集で作者の○○を確かめて読む。", printable: true },
       { word: "俳味", reading: "はいみ", sentence: "国語の時間に古典の○○を味わって読む。", printable: true },
       { word: "俳画", reading: "はいが", sentence: "美術館で○○の特別展を学級で見学する。", printable: true }
     ]

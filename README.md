@@ -75,11 +75,33 @@
 配当漢字定義 (`data/grade-assignments.js`) は将来 MeCab / Sudachi 連携の
 正規ソースとして使う想定で、現状は空配列のまま運用しています。
 
-## 既知の制限 (Phase 1a 時点)
+## データ品質検証
 
-- 小学 2 年〜中学 3 年のデータは未整備で、対応ファイルは空配列のままです。
+`scripts/validate-kanji-data.mjs` で各学年データの整合性を機械チェックできます。
+Node.js 18+ が必要です。
+
+```sh
+node scripts/validate-kanji-data.mjs           # 全学年検証
+node scripts/validate-kanji-data.mjs g3        # 学年指定
+node scripts/validate-kanji-data.mjs --verbose # 検出内容の詳細表示
+node scripts/validate-kanji-data.mjs --strict  # warning も exit code 2 で失敗扱い
+node scripts/validate-kanji-data.mjs --json    # JSON 出力
+```
+
+検証項目:
+- word に対象漢字が含まれているか
+- sentence の `○` プレースホルダが 1 箇所だけ存在するか
+- reading がひらがな (+ 長音符) のみで構成されているか
+- word が `MAX_ANSWER_LEN` (5 字) を超えないか
+- sentence が学年別の推奨上限 (p95+1 で校正) に収まるか
+
+最新の検証結果: errors 0 / warnings 49 / **clean rate 99.20%** (95% 目標達成済)。
+
+## 既知の制限
+
+- 中学 1 年〜中学 3 年のデータは未整備で、対応ファイルは空配列のままです。
   該当学年を選ぶと「この学年のデータは準備中です。」と表示されます。
-- 採点機能はありません (自己採点用の小枠だけが各問に置かれています)。
+- 採点機能はありません (各問右上に自己採点用の 6mm 角の小枠を印字します)。
 - 出題は端末内の擬似乱数によるシャッフルで、再現性のあるシード指定は未対応。
 - 同一単語が 1 プリント内に重複出題される可能性があります
   (現状はフラットなランダム抽出のため)。

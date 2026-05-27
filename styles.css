@@ -248,14 +248,14 @@ html, body {
 
 .problem-sentence ruby rt { font-size: 0.5em; }
 
-/* 自己採点欄(Phase 1c で使用、現状は枠だけ) */
+/* 自己採点欄: 子どもが○/×を書き込む小枠 */
 .self-check {
   position: absolute;
   top: 1mm;
   right: 1mm;
-  width: 5mm;
-  height: 5mm;
-  border: 1px solid #bbb;
+  width: 6mm;
+  height: 6mm;
+  border: 1px solid var(--line-sub);
   border-radius: 1mm;
 }
 

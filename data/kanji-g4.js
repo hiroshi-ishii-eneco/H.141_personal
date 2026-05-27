@@ -1489,7 +1489,7 @@ window.KANJI_DATA_G4 = [
       { word: "戦争",   reading: "せんそう",   sentence: "○○のない世界をねがう。",           printable: true },
       { word: "競争",   reading: "きょうそう", sentence: "かけっこで二人が○○する。",         printable: true },
       { word: "論争",   reading: "ろんそう",   sentence: "歴史上の○○について調べる。",       printable: true },
-      { word: "口論",   reading: "こうろん",   sentence: "ささいなことで○○になる。",         printable: true }
+      { word: "争点",   reading: "そうてん",   sentence: "会議の○○をはっきりさせる。",       printable: true }
     ]
   },
   {

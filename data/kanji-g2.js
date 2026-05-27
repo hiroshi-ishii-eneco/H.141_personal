@@ -994,7 +994,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "食べる", reading: "たべる",     sentence: "やさいを○○子になる。",         printable: true },
       { word: "食事",   reading: "しょくじ",   sentence: "家ぞくで○○をする。",           printable: true },
-      { word: "食パン", reading: "しょくパン", sentence: "あさに○○を食べる。",           printable: true },
+      { word: "食パン", reading: "しょくぱん", sentence: "あさに○○を食べる。",           printable: true },
       { word: "夕食",   reading: "ゆうしょく", sentence: "○○の時間になる。",             printable: true },
       { word: "食どう", reading: "しょくどう", sentence: "学校の○○で食べる。",           printable: true },
       { word: "食生活", reading: "しょくせいかつ", sentence: "○○を見直す。",             printable: true }
@@ -1141,7 +1141,7 @@ window.KANJI_DATA_G2 = [
       { word: "船長",   reading: "せんちょう", sentence: "○○のはなしを聞く。",           printable: true },
       { word: "風船",   reading: "ふうせん",   sentence: "○○が空高くとぶ。",             printable: true },
       { word: "船出",   reading: "ふなで",     sentence: "新しい○○のとき。",             printable: true },
-      { word: "ふね旅", reading: "ふなたび",   sentence: "夏に○○を楽しむ。",             printable: true }
+      { word: "小船",   reading: "こぶね",     sentence: "みずうみで○○にのる。",         printable: true }
     ]
   },
   {
@@ -1705,7 +1705,7 @@ window.KANJI_DATA_G2 = [
       { word: "母親",   reading: "ははおや",   sentence: "やさしい○○だ。",               printable: true },
       { word: "母さん", reading: "かあさん",   sentence: "お○○とおりょうりをする。",     printable: true },
       { word: "母の日", reading: "ははのひ",   sentence: "○○にカードをわたす。",         printable: true },
-      { word: "ぼ国",   reading: "ぼこく",     sentence: "○○のうたを心でうたう。",       printable: true }
+      { word: "母国",   reading: "ぼこく",     sentence: "○○のうたを心でうたう。",       printable: true }
     ]
   },
   {

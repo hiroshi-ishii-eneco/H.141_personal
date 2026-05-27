@@ -1368,7 +1368,7 @@ window.KANJI_DATA_G3 = [
       { word: "打ち上げ", reading: "うちあげ", sentence: "ロケットの○○を見る。",              printable: true },
       { word: "打開",   reading: "だかい",     sentence: "問だいを○○する。",                  printable: true },
       { word: "打者",   reading: "だしゃ",     sentence: "次の○○がバットを持つ。",            printable: true },
-      { word: "ねうち", reading: "ねうち",     sentence: "古い本の○○がわかる。",              printable: true },
+      { word: "安打",   reading: "あんだ",     sentence: "野球で○○がきまる。",                printable: true },
       { word: "打ち水", reading: "うちみず",   sentence: "夏の朝、外に○○をする。",            printable: true }
     ]
   },
@@ -2375,7 +2375,7 @@ window.KANJI_DATA_G3 = [
       { word: "道路",   reading: "どうろ",     sentence: "町に新しい○○ができる。",            printable: true },
       { word: "通路",   reading: "つうろ",     sentence: "電車の○○を歩く。",                  printable: true },
       { word: "線路",   reading: "せんろ",     sentence: "○○ぞいに歩く。",                    printable: true },
-      { word: "道のり", reading: "みちのり",   sentence: "長い○○を歩く。",                    printable: true },
+      { word: "進路",   reading: "しんろ",     sentence: "次の○○を考える。",                  printable: true },
       { word: "家路",   reading: "いえじ",     sentence: "夕方に○○につく。",                  printable: true },
       { word: "山路",   reading: "やまじ",     sentence: "ほそい○○を行く。",                  printable: true }
     ]
