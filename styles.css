@@ -1,0 +1,342 @@
+/* ===== ページ基本設定 ===== */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+:root {
+  /* 学年ごとに上書きされる解答枠高さ(低学年デフォルト) */
+  --answer-height: 20mm;
+  --line-main: #333;
+  --line-sub: #666;
+  --line-guide: #ddd;
+  --bg-screen: #f4f4f4;
+  --bg-paper: #fff;
+  --font-stack: "UD デジタル 教科書体 NK-R", "BIZ UDPGothic",
+                "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+body.grade-mid  { --answer-height: 17mm; }
+body.grade-high { --answer-height: 15mm; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-stack);
+  color: var(--line-main);
+}
+
+/* ===== 画面表示 ===== */
+@media screen {
+  body {
+    background: var(--bg-screen);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* 操作パネル */
+  #controls {
+    width: 100%;
+    max-width: 820px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .app-title {
+    grid-column: 1 / -1;
+    margin: 0 0 4px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+  }
+
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .control-label {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #222;
+  }
+
+  .grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .grade-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 6px 4px;
+    background: #fff;
+    color: #222;
+    border: 1px solid #888;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .grade-btn:hover { background: #eee; }
+  .grade-btn:focus-visible { outline: 2px solid #333; outline-offset: 1px; }
+  .grade-btn.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+  }
+
+  .inline-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    margin-right: 12px;
+  }
+
+  .inline-option input[type="number"] {
+    width: 5em;
+    padding: 4px 6px;
+    font: inherit;
+    border: 1px solid #888;
+    border-radius: 3px;
+  }
+
+  .control-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+  }
+
+  .action-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .action-btn:hover { background: #555; }
+  .action-btn:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+
+  /* エラー表示 */
+  #error-container {
+    width: 100%;
+    max-width: 820px;
+  }
+
+  /* 出題プレビュー(紙) */
+  #problems-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--bg-paper);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 12mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* レスポンシブ: 狭い画面 */
+  @media (max-width: 600px) {
+    .grade-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #controls {
+      grid-template-columns: 1fr;
+      padding: 12px;
+    }
+    .page {
+      width: 100%;
+      min-height: auto;
+      padding: 8mm;
+    }
+  }
+}
+
+/* ===== エラーメッセージ ===== */
+.error-message {
+  background: #f4f4f4;
+  border-left: 4px solid #333;
+  padding: 1em;
+  margin: 0 0 12px;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+/* ===== ページ(印刷単位) ===== */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダ: 学年・モード・名前・日付・目安・実績 */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8mm;
+  min-height: 22mm;
+  border-bottom: 1px solid var(--line-main);
+  padding-bottom: 4mm;
+  margin-bottom: 4mm;
+  font-size: 11pt;
+}
+
+.page-header > * { white-space: nowrap; }
+
+.page-header ruby rt { font-size: 0.5em; }
+
+/* 出題グリッド: 2列 × 10行 */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 3mm;
+  /* 有効領域 273mm からヘッダ約 30mm を引いた残り */
+  height: calc(273mm - 30mm);
+}
+
+/* 問題セル */
+.problem-cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5mm 2mm;
+  border: 1px dashed #bbb;
+  border-radius: 1mm;
+}
+
+.problem-number {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-right: 4pt;
+}
+
+.problem-sentence {
+  font-size: 11pt;
+  line-height: 1.5;
+  margin: 0 0 1mm;
+  flex: 1;
+}
+
+.problem-sentence ruby rt { font-size: 0.5em; }
+
+/* 自己採点欄(Phase 1c で使用、現状は枠だけ) */
+.self-check {
+  position: absolute;
+  top: 1mm;
+  right: 1mm;
+  width: 5mm;
+  height: 5mm;
+  border: 1px solid #bbb;
+  border-radius: 1mm;
+}
+
+/* 解答枠 */
+.answer-area {
+  height: var(--answer-height);
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+
+.answer-area.boxed {
+  border: 1px solid var(--line-main);
+}
+
+.answer-area.underline {
+  border-bottom: 1px solid var(--line-main);
+}
+
+/* 十字リーダー: 四角枠時は十字、下線時は中央縦線 */
+.answer-area.boxed.cross-guide {
+  background-image:
+    linear-gradient(to right,
+      transparent calc(50% - 0.25pt),
+      var(--line-guide) calc(50% - 0.25pt),
+      var(--line-guide) calc(50% + 0.25pt),
+      transparent calc(50% + 0.25pt)),
+    linear-gradient(to bottom,
+      transparent calc(50% - 0.25pt),
+      var(--line-guide) calc(50% - 0.25pt),
+      var(--line-guide) calc(50% + 0.25pt),
+      transparent calc(50% + 0.25pt));
+}
+
+.answer-area.underline.cross-guide::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 0.5pt;
+  background: var(--line-guide);
+  transform: translateX(-50%);
+}
+
+/* ===== 印刷 ===== */
+@media print {
+  body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  #controls,
+  #error-container {
+    display: none !important;
+  }
+
+  #problems-container {
+    display: block;
+  }
+
+  .page {
+    width: auto;
+    min-height: auto;
+    height: 273mm; /* A4 - 上下余白 12mm*2 */
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background: #fff;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .problem-cell {
+    border: 1px dashed #bbb;
+  }
+}

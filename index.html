@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>漢字練習プリント生成ツール</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 操作パネル(印刷時非表示) -->
+  <aside id="controls" aria-label="操作パネル">
+    <h1 class="app-title">漢字練習プリント生成ツール</h1>
+
+    <section class="control-group" aria-label="学年選択">
+      <h2 class="control-label">学年</h2>
+      <div class="grade-grid">
+        <button type="button" class="grade-btn" data-grade="g1">小1</button>
+        <button type="button" class="grade-btn" data-grade="g2">小2</button>
+        <button type="button" class="grade-btn" data-grade="g3">小3</button>
+        <button type="button" class="grade-btn" data-grade="g4">小4</button>
+        <button type="button" class="grade-btn" data-grade="g5">小5</button>
+        <button type="button" class="grade-btn" data-grade="g6">小6</button>
+        <button type="button" class="grade-btn" data-grade="jhs1">中1</button>
+        <button type="button" class="grade-btn" data-grade="jhs2">中2</button>
+        <button type="button" class="grade-btn" data-grade="jhs3">中3</button>
+      </div>
+    </section>
+
+    <section class="control-group" aria-label="出題範囲">
+      <h2 class="control-label">出題範囲</h2>
+      <label class="inline-option">
+        <input type="checkbox" id="cumulative-toggle">
+        <span>その学年までの累積</span>
+      </label>
+    </section>
+
+    <section class="control-group" aria-label="出題モード">
+      <h2 class="control-label">モード</h2>
+      <label class="inline-option">
+        <input type="radio" name="mode" value="read" checked>
+        <span>読み</span>
+      </label>
+      <label class="inline-option">
+        <input type="radio" name="mode" value="write">
+        <span>書き</span>
+      </label>
+    </section>
+
+    <section class="control-group" aria-label="解答欄スタイル">
+      <h2 class="control-label">解答欄スタイル</h2>
+      <label class="inline-option">
+        <input type="radio" name="answer-style" value="boxed" checked>
+        <span>四角枠</span>
+      </label>
+      <label class="inline-option">
+        <input type="radio" name="answer-style" value="underline">
+        <span>下線</span>
+      </label>
+    </section>
+
+    <section class="control-group" aria-label="十字リーダー">
+      <h2 class="control-label">十字リーダー</h2>
+      <label class="inline-option">
+        <input type="checkbox" id="cross-guide">
+        <span>ガイド線を表示</span>
+      </label>
+    </section>
+
+    <section class="control-group" aria-label="出力枚数">
+      <h2 class="control-label">出力枚数</h2>
+      <label class="inline-option">
+        <input type="number" id="sheet-count" min="1" max="20" value="1">
+        <span>枚</span>
+      </label>
+    </section>
+
+    <section class="control-group" aria-label="目安所要時間">
+      <h2 class="control-label">目安所要時間</h2>
+      <label class="inline-option">
+        <input type="number" id="duration-goal" min="0" max="120" value="10">
+        <span>分</span>
+      </label>
+    </section>
+
+    <section class="control-group control-actions">
+      <button type="button" id="regenerate-btn" class="action-btn">問題を新しく作る</button>
+      <button type="button" id="print-btn" class="action-btn">印刷する</button>
+    </section>
+  </aside>
+
+  <!-- エラー表示領域(app.js が必要時に表示) -->
+  <div id="error-container"></div>
+
+  <!-- 出題エリア -->
+  <main id="problems-container"></main>
+
+  <!-- データ(別エージェントが提供) -->
+  <script src="data/grade-assignments.js"></script>
+  <script src="data/kanji-g1.js"></script>
+  <script src="data/kanji-g2.js"></script>
+  <script src="data/kanji-g3.js"></script>
+  <script src="data/kanji-g4.js"></script>
+  <script src="data/kanji-g5.js"></script>
+  <script src="data/kanji-g6.js"></script>
+  <script src="data/kanji-jhs1.js"></script>
+  <script src="data/kanji-jhs2.js"></script>
+  <script src="data/kanji-jhs3.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
