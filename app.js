@@ -81,7 +81,8 @@
     answerStyle: "boxed",
     sheetCount: 1,
     durationGoal: 15,
-    crossGuide: false
+    crossGuide: false,
+    includeAnswerPage: false
   };
 
   function loadSettings() {
@@ -100,6 +101,7 @@
       if (merged.answerStyle !== "boxed" && merged.answerStyle !== "underline") merged.answerStyle = DEFAULT_SETTINGS.answerStyle;
       merged.cumulative = !!merged.cumulative;
       merged.crossGuide = !!merged.crossGuide;
+      merged.includeAnswerPage = !!merged.includeAnswerPage;
       merged.sheetCount = clampInt(merged.sheetCount, 1, 20, DEFAULT_SETTINGS.sheetCount);
       merged.durationGoal = clampInt(merged.durationGoal, 0, 120, DEFAULT_SETTINGS.durationGoal);
       return merged;
@@ -316,6 +318,54 @@
     ].join("");
   }
 
+  // 解答ページ HTML を組み立てる
+  // - 出題と同じ A4 縦・1 ページ 40 問 (2 列 × 20 行)
+  // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
+  function buildAnswerPage(problems, settings) {
+    const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
+    const useCompoundNumber = totalProblemPages > 1;
+
+    // 「番号. 答え」文字列を全問分組み立て
+    const items = problems.map((p, idx) => {
+      const pageNo = Math.floor(idx / PROBLEMS_PER_PAGE) + 1;
+      const localNo = (idx % PROBLEMS_PER_PAGE) + 1;
+      const label = useCompoundNumber ? `${pageNo}-${localNo}` : `${localNo}`;
+      return `<li>${escapeHtml(label)}. ${escapeHtml(p.answer)}</li>`;
+    });
+
+    // 1 ページ 40 問 (1 列 20 問 × 2 列) でグルーピング
+    const ITEMS_PER_ANSWER_PAGE = PROBLEMS_PER_PAGE * 2;
+    const pages = [];
+    for (let i = 0; i < items.length; i += ITEMS_PER_ANSWER_PAGE) {
+      pages.push(items.slice(i, i + ITEMS_PER_ANSWER_PAGE));
+    }
+    if (pages.length === 0) pages.push([]);
+
+    const gradePart = gradeHeaderHtml(settings.grade);
+    const modePart = escapeHtml(modeLabel(settings.mode));
+
+    return pages
+      .map((pageItems) => {
+        // 左列 (前半 20) と 右列 (後半 20)
+        const leftItems = pageItems.slice(0, PROBLEMS_PER_PAGE).join("");
+        const rightItems = pageItems.slice(PROBLEMS_PER_PAGE).join("");
+        return [
+          `<section class="page answer-page">`,
+          `<header class="page-header">`,
+          `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
+          `<span>名前: ____________</span>`,
+          `<span>日付: ____________</span>`,
+          `</header>`,
+          `<div class="answer-list">`,
+          `<ol class="answer-column">${leftItems}</ol>`,
+          `<ol class="answer-column">${rightItems}</ol>`,
+          `</div>`,
+          `</section>`
+        ].join("");
+      })
+      .join("");
+  }
+
   // 「準備中です」ページ (中学範囲などデータが空のとき)
   function buildEmptyPage(grade, settings, message) {
     const header = buildPageHeader(grade, settings.mode, settings, 0, 1);
@@ -365,6 +415,11 @@
       ].join("");
       container.insertAdjacentHTML("beforeend", html);
     });
+
+    // 解答ページ (オプション)
+    if (settings.includeAnswerPage && problems.length > 0) {
+      container.insertAdjacentHTML("beforeend", buildAnswerPage(problems, settings));
+    }
   }
 
   // === 6. イベントハンドリング ===
@@ -425,6 +480,10 @@
     const cg = document.getElementById("cross-guide");
     if (cg) cg.checked = !!s.crossGuide;
 
+    // 解答ページ
+    const ap = document.getElementById("answer-page-toggle");
+    if (ap) ap.checked = !!s.includeAnswerPage;
+
     // 出力枚数
     const sc = document.getElementById("sheet-count");
     if (sc) sc.value = String(s.sheetCount);
@@ -482,6 +541,16 @@
     if (cg) {
       cg.addEventListener("change", () => {
         state.settings.crossGuide = !!cg.checked;
+        saveSettings(state.settings);
+        rerenderOnly();
+      });
+    }
+
+    // 解答ページ: 再描画のみ
+    const ap = document.getElementById("answer-page-toggle");
+    if (ap) {
+      ap.addEventListener("change", () => {
+        state.settings.includeAnswerPage = !!ap.checked;
         saveSettings(state.settings);
         rerenderOnly();
       });
