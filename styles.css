@@ -273,9 +273,14 @@ html, body {
   text-align: center;
 }
 
-/* 読みモードでは漢字が表示される。下線も付ける */
-.blank.filled {
+/* 読みモード: 漢字表示 (太字で目立たせる) */
+.blank-kanji {
   font-weight: 600;
+}
+
+/* 書きモード: ひらがな表示 (少しゆとりのあるトラッキング) */
+.blank-kana {
+  letter-spacing: 0.05em;
 }
 
 /* 自己採点欄 */

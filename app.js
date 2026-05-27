@@ -216,9 +216,9 @@
     const problems = picked.map((w) => {
       const answer = mode === "read" ? w.reading : w.word;
       const parts = splitSentence(w.sentence);
-      // 書きモード: blank は空欄 (下線のみ)
-      // 読みモード: blank に word (漢字) を表示
-      const blankDisplay = mode === "read" ? w.word : "";
+      // 書きモード: blank に reading (ひらがな) を表示 → 解答下線に漢字を書く
+      // 読みモード: blank に word (漢字) を表示 → 解答下線にひらがなを書く
+      const blankDisplay = mode === "read" ? w.word : w.reading;
 
       return {
         kanji: w.kanji,
@@ -302,7 +302,8 @@
     const num = indexInPage + 1;
     const isRead = settings.mode === "read";
     const blankText = escapeHtml(problem.blankDisplay || "");
-    const blankClass = isRead ? "blank filled" : "blank";
+    // read: 漢字表示 → blank-kanji / write: ひらがな表示 → blank-kana
+    const blankClass = isRead ? "blank blank-kanji" : "blank blank-kana";
     return [
       `<div class="problem-cell">`,
       `<div class="self-check"></div>`,
