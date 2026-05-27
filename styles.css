@@ -5,19 +5,30 @@
 }
 
 :root {
-  /* 学年ごとに上書きされる解答枠高さ(低学年デフォルト) */
-  --answer-height: 20mm;
   --line-main: #333;
   --line-sub: #666;
-  --line-guide: #ddd;
+  --line-light: #aaa;
   --bg-screen: #f4f4f4;
   --bg-paper: #fff;
   --font-stack: "UD デジタル 教科書体 NK-R", "BIZ UDPGothic",
                 "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+
+  /* A4(297mm) - 上下余白 24mm = 紙面有効 273mm */
+  --paper-height: 273mm;
+  /* ヘッダ: min-height 16mm + padding-bottom 3mm + margin-bottom 3mm ≈ 22mm */
+  --header-block: 22mm;
+  /* セル間 gap */
+  --cell-gap: 3mm;
+  /* セル高さ = (273 - 22 - 3*9) / 10 = 22.4mm → 22mm で 4mm 余裕 */
+  --cell-height: 22mm;
+  /* 問題文フォント (学年で上書き) */
+  --problem-font: 11pt;
 }
 
-body.grade-mid  { --answer-height: 17mm; }
-body.grade-high { --answer-height: 15mm; }
+/* 学年別フォント微調整: 高学年は長い文に備え小さめ */
+body.grade-low  { --problem-font: 12pt; }
+body.grade-mid  { --problem-font: 11pt; }
+body.grade-high { --problem-font: 10pt; }
 
 * { box-sizing: border-box; }
 
@@ -39,7 +50,6 @@ html, body {
     gap: 16px;
   }
 
-  /* 操作パネル */
   #controls {
     width: 100%;
     max-width: 820px;
@@ -137,13 +147,11 @@ html, body {
   .action-btn:hover { background: #555; }
   .action-btn:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
 
-  /* エラー表示 */
   #error-container {
     width: 100%;
     max-width: 820px;
   }
 
-  /* 出題プレビュー(紙) */
   #problems-container {
     width: 100%;
     display: flex;
@@ -162,7 +170,6 @@ html, body {
     flex-direction: column;
   }
 
-  /* レスポンシブ: 狭い画面 */
   @media (max-width: 600px) {
     .grade-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -195,110 +202,100 @@ html, body {
   flex-direction: column;
 }
 
-/* ヘッダ: 学年・モード・名前・日付・目安・実績 */
+/* ヘッダ */
 .page-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8mm;
-  min-height: 22mm;
+  gap: 6mm;
   border-bottom: 1px solid var(--line-main);
-  padding-bottom: 4mm;
-  margin-bottom: 4mm;
+  padding-bottom: 3mm;
+  margin-bottom: 3mm;
   font-size: 11pt;
+  min-height: 16mm;
 }
 
 .page-header > * { white-space: nowrap; }
-
 .page-header ruby rt { font-size: 0.5em; }
 
-/* 出題グリッド: 2列 × 10行 */
+/* 出題グリッド: 2列 × 10行, セル幅は均等割り */
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  gap: 3mm;
-  /* 有効領域 273mm からヘッダ約 30mm を引いた残り */
-  height: calc(273mm - 30mm);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(10, var(--cell-height));
+  column-gap: 8mm;
+  row-gap: var(--cell-gap);
+  width: 100%;
 }
 
-/* 問題セル */
+/* 問題セル: 上に問題行, 下に解答下線 */
 .problem-cell {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5mm 2mm;
-  border: 1px dashed #bbb;
-  border-radius: 1mm;
+  padding: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* 問題行 (番号 + 文) を横並び */
+.problem-line {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  font-size: var(--problem-font);
+  line-height: 1.4;
+  flex: 0 0 auto;
+  /* セル右上の self-check と被らないよう右側に余白 */
+  padding-right: 6mm;
 }
 
 .problem-number {
-  font-size: 10pt;
   font-weight: 600;
-  margin-right: 4pt;
+  flex-shrink: 0;
+  min-width: 6mm;
 }
 
 .problem-sentence {
-  font-size: 11pt;
-  line-height: 1.5;
-  margin: 0 0 1mm;
   flex: 1;
+  word-break: break-all;
 }
 
 .problem-sentence ruby rt { font-size: 0.5em; }
 
-/* 自己採点欄: 子どもが○/×を書き込む小枠 */
+/* 文中の出題対象 = 下線で明示 */
+.blank {
+  display: inline-block;
+  min-width: 10mm;
+  border-bottom: 1.2pt solid var(--line-main);
+  padding: 0 1mm;
+  vertical-align: baseline;
+  text-align: center;
+}
+
+/* 読みモードでは漢字が表示される。下線も付ける */
+.blank.filled {
+  font-weight: 600;
+}
+
+/* 自己採点欄 */
 .self-check {
   position: absolute;
-  top: 1mm;
-  right: 1mm;
-  width: 6mm;
-  height: 6mm;
+  top: 0;
+  right: 0;
+  width: 5mm;
+  height: 5mm;
   border: 1px solid var(--line-sub);
   border-radius: 1mm;
 }
 
-/* 解答枠 */
+/* 解答欄: セル幅最大、下線のみ (子どもが書く高さを確保) */
 .answer-area {
-  height: var(--answer-height);
   width: 100%;
-  position: relative;
-  background-color: transparent;
-}
-
-.answer-area.boxed {
-  border: 1px solid var(--line-main);
-}
-
-.answer-area.underline {
-  border-bottom: 1px solid var(--line-main);
-}
-
-/* 十字リーダー: 四角枠時は十字、下線時は中央縦線 */
-.answer-area.boxed.cross-guide {
-  background-image:
-    linear-gradient(to right,
-      transparent calc(50% - 0.25pt),
-      var(--line-guide) calc(50% - 0.25pt),
-      var(--line-guide) calc(50% + 0.25pt),
-      transparent calc(50% + 0.25pt)),
-    linear-gradient(to bottom,
-      transparent calc(50% - 0.25pt),
-      var(--line-guide) calc(50% - 0.25pt),
-      var(--line-guide) calc(50% + 0.25pt),
-      transparent calc(50% + 0.25pt));
-}
-
-.answer-area.underline.cross-guide::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 0.5pt;
-  background: var(--line-guide);
-  transform: translateX(-50%);
+  border-bottom: 1pt solid var(--line-main);
+  margin-top: auto;
+  height: 14mm;
+  flex: 0 0 14mm;
 }
 
 /* ===== 解答ページ ===== */
@@ -348,7 +345,7 @@ html, body {
   .page {
     width: auto;
     min-height: auto;
-    height: 273mm; /* A4 - 上下余白 12mm*2 */
+    height: var(--paper-height);
     padding: 0;
     margin: 0;
     box-shadow: none;
@@ -365,9 +362,5 @@ html, body {
   .answer-page {
     page-break-before: always;
     break-before: page;
-  }
-
-  .problem-cell {
-    border: 1px dashed #bbb;
   }
 }

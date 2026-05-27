@@ -42,10 +42,6 @@
   // 1ページあたりの問題数
   const PROBLEMS_PER_PAGE = 20;
 
-  // 解答欄 1 文字あたりの幅 (mm) と余白
-  const ANSWER_CHAR_WIDTH_MM = { write: 20, read: 12 };
-  const ANSWER_PADDING_CHARS = 2;
-
   // 起動時に欠落しているデータ変数を検出する
   function detectMissingData() {
     const missing = [];
@@ -78,10 +74,8 @@
     grade: "g1",
     cumulative: true,
     mode: "write",
-    answerStyle: "boxed",
     sheetCount: 1,
     durationGoal: 15,
-    crossGuide: false,
     includeAnswerPage: false
   };
 
@@ -98,9 +92,7 @@
       // 値の正規化
       if (!GRADE_ORDER.includes(merged.grade)) merged.grade = DEFAULT_SETTINGS.grade;
       if (merged.mode !== "read" && merged.mode !== "write") merged.mode = DEFAULT_SETTINGS.mode;
-      if (merged.answerStyle !== "boxed" && merged.answerStyle !== "underline") merged.answerStyle = DEFAULT_SETTINGS.answerStyle;
       merged.cumulative = !!merged.cumulative;
-      merged.crossGuide = !!merged.crossGuide;
       merged.includeAnswerPage = !!merged.includeAnswerPage;
       merged.sheetCount = clampInt(merged.sheetCount, 1, 20, DEFAULT_SETTINGS.sheetCount);
       merged.durationGoal = clampInt(merged.durationGoal, 0, 120, DEFAULT_SETTINGS.durationGoal);
@@ -165,12 +157,17 @@
     return arr;
   }
 
-  // sentence 内の ○+ を、与えられた文字数分の ○ に置換
-  function replacePlaceholder(sentence, replacementChar, charCount) {
-    if (typeof sentence !== "string" || sentence.length === 0) return "";
-    const replacement = replacementChar.repeat(Math.max(1, charCount));
-    // 「○○」やそれ以上の連続を 1 度だけ置換 (最初の出現のみ)
-    return sentence.replace(/○+/, replacement);
+  // sentence 内の ○+ を見つけ、前後パーツに分解する
+  function splitSentence(sentence) {
+    if (typeof sentence !== "string") return { before: "", after: "", hasBlank: false };
+    const m = sentence.match(/○+/);
+    if (!m) return { before: sentence, after: "", hasBlank: false };
+    const idx = m.index;
+    return {
+      before: sentence.slice(0, idx),
+      after: sentence.slice(idx + m[0].length),
+      hasBlank: true
+    };
   }
 
   function generateProblems(pool, mode, count) {
@@ -215,27 +212,22 @@
     // 4. 先頭 count 件
     const picked = filtered.slice(0, Math.max(0, count | 0));
 
-    // 5. 各問題に表示文と正答を組み立てる
+    // 5. 各問題: 文を before/after に分解し、blank に入る表示テキストを決定
     const problems = picked.map((w) => {
       const answer = mode === "read" ? w.reading : w.word;
-      // sentence の ○ 置換
-      // read モード: word(漢字) に置換 (○ の数は word 文字数に合わせる)
-      // write モード: ○ の数を reading 文字数に合わせる (空欄として残す)
-      let displaySentence;
-      if (mode === "read") {
-        // 読みモード: ○+ を漢字表記 (word) でそのまま置換
-        displaySentence = (w.sentence || "").replace(/○+/, w.word);
-      } else {
-        // 書きモード: ○+ を「正答 (reading) 文字数ぶんの ○」に置換
-        displaySentence = replacePlaceholder(w.sentence, "○", w.reading.length);
-      }
+      const parts = splitSentence(w.sentence);
+      // 書きモード: blank は空欄 (下線のみ)
+      // 読みモード: blank に word (漢字) を表示
+      const blankDisplay = mode === "read" ? w.word : "";
 
       return {
         kanji: w.kanji,
         word: w.word,
         reading: w.reading,
         okurigana: w.okurigana,
-        sentence: displaySentence,
+        sentenceBefore: parts.before,
+        sentenceAfter: parts.after,
+        blankDisplay: blankDisplay,
         answer: answer,
         answerLength: answer.length,
         _grade: w._grade
@@ -261,13 +253,9 @@
   // body に学年バンド (low/mid/high) を付与
   function applyGradeBand(grade) {
     document.body.classList.remove("grade-low", "grade-mid", "grade-high");
-    if (grade === "g1" || grade === "g2") {
-      document.body.classList.add("grade-low");
-    } else if (grade === "g3" || grade === "g4") {
-      document.body.classList.add("grade-mid");
-    } else {
-      document.body.classList.add("grade-high");
-    }
+    if (grade === "g1" || grade === "g2") document.body.classList.add("grade-low");
+    else if (grade === "g3" || grade === "g4") document.body.classList.add("grade-mid");
+    else document.body.classList.add("grade-high");
   }
 
   // 学年表示 (低学年はふりがな付き)
@@ -302,18 +290,31 @@
   }
 
   // 1 問のセル HTML
+  // 構造:
+  //   .problem-cell
+  //     .self-check                (採点用 5mm 角)
+  //     .problem-line              (番号 + 問題文 横並び)
+  //       .problem-number
+  //       .problem-sentence
+  //         <text> <span.blank>[漢字 or 空]</span> <text>
+  //     .answer-area               (セル幅最大の解答下線)
   function buildProblemCell(problem, indexInPage, settings) {
     const num = indexInPage + 1;
-    const charWidth = ANSWER_CHAR_WIDTH_MM[settings.mode] ?? ANSWER_CHAR_WIDTH_MM.write;
-    const widthMm = (problem.answerLength + ANSWER_PADDING_CHARS) * charWidth;
-    const classes = ["answer-area", settings.answerStyle];
-    if (settings.crossGuide) classes.push("cross-guide");
+    const isRead = settings.mode === "read";
+    const blankText = escapeHtml(problem.blankDisplay || "");
+    const blankClass = isRead ? "blank filled" : "blank";
     return [
       `<div class="problem-cell">`,
       `<div class="self-check"></div>`,
-      `<div class="problem-number">${num}.</div>`,
-      `<div class="problem-sentence">${escapeHtml(problem.sentence)}</div>`,
-      `<div class="${classes.join(" ")}" style="width: ${widthMm}mm;"></div>`,
+      `<div class="problem-line">`,
+      `<span class="problem-number">${num}.</span>`,
+      `<span class="problem-sentence">`,
+      escapeHtml(problem.sentenceBefore),
+      `<span class="${blankClass}">${blankText}</span>`,
+      escapeHtml(problem.sentenceAfter),
+      `</span>`,
+      `</div>`,
+      `<div class="answer-area"></div>`,
       `</div>`
     ].join("");
   }
@@ -471,15 +472,6 @@
       r.checked = (r.value === s.mode);
     });
 
-    // 解答欄スタイル
-    document.querySelectorAll('input[name="answer-style"]').forEach((r) => {
-      r.checked = (r.value === s.answerStyle);
-    });
-
-    // 十字リーダー
-    const cg = document.getElementById("cross-guide");
-    if (cg) cg.checked = !!s.crossGuide;
-
     // 解答ページ
     const ap = document.getElementById("answer-page-toggle");
     if (ap) ap.checked = !!s.includeAnswerPage;
@@ -525,26 +517,6 @@
         regenerateAndRender();
       });
     });
-
-    // 解答欄スタイル: 再生成不要 (設定だけ)
-    document.querySelectorAll('input[name="answer-style"]').forEach((r) => {
-      r.addEventListener("change", () => {
-        if (!r.checked) return;
-        state.settings.answerStyle = (r.value === "underline" ? "underline" : "boxed");
-        saveSettings(state.settings);
-        rerenderOnly();
-      });
-    });
-
-    // 十字リーダー: 再描画のみ
-    const cg = document.getElementById("cross-guide");
-    if (cg) {
-      cg.addEventListener("change", () => {
-        state.settings.crossGuide = !!cg.checked;
-        saveSettings(state.settings);
-        rerenderOnly();
-      });
-    }
 
     // 解答ページ: 再描画のみ
     const ap = document.getElementById("answer-page-toggle");
