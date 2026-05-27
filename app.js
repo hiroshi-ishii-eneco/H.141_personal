@@ -39,6 +39,9 @@
   // 印刷可能な正答の最大文字数 (これを超える単語は除外)
   const MAX_ANSWER_LEN = 5;
 
+  // 空欄に入る側 (read=word / write=reading) の最大文字数
+  const MAX_BLANK_LEN = 6;
+
   // 1ページあたりの問題数
   const PROBLEMS_PER_PAGE = 20;
 
@@ -144,6 +147,23 @@
     return pool;
   }
 
+  // 選択学年までに「学習済み」の配当漢字集合を構築。
+  // cumulative トグルに関わらず常に累積で計算する
+  // (該当学年の児童はそれまでに習った全漢字を知っているため)。
+  function buildLearnedKanjiSet(grade) {
+    const set = new Set();
+    for (const g of GRADE_ORDER) {
+      const list = window[DATA_VAR[g]];
+      if (Array.isArray(list)) {
+        for (const entry of list) {
+          if (entry && typeof entry.kanji === "string") set.add(entry.kanji);
+        }
+      }
+      if (g === grade) break;
+    }
+    return set;
+  }
+
   // === 4. 問題生成 ===
 
   // Fisher-Yates シャッフル (in-place)
@@ -170,7 +190,13 @@
     };
   }
 
-  function generateProblems(pool, mode, count) {
+  // 文字列中の漢字 (CJK統合漢字) を配列で返す
+  function extractKanji(s) {
+    if (typeof s !== "string") return [];
+    return s.match(/[一-鿿]/g) || [];
+  }
+
+  function generateProblems(pool, mode, count, learnedKanji) {
     if (!Array.isArray(pool) || pool.length === 0) {
       return { problems: [], excludedCount: 0, totalCandidates: 0 };
     }
@@ -194,13 +220,23 @@
 
     const totalCandidates = flat.length;
 
-    // 2. printable === false と、正答が長すぎるもの・必須フィールド欠落を除外
+    // 2. 各種フィルタ
     const filtered = flat.filter((w) => {
       if (w.printable === false) return false;
       if (!w.word || !w.reading) return false;
-      // 正答長チェック (read=reading, write=word)
+      // 正答長 (read=reading, write=word)
       const ansLen = (mode === "read" ? w.reading : w.word).length;
       if (ansLen === 0 || ansLen > MAX_ANSWER_LEN) return false;
+      // 空欄に入る表示側 (read=word / write=reading) の長さ。長すぎるとセルに収まらない
+      const blankLen = (mode === "read" ? w.word : w.reading).length;
+      if (blankLen > MAX_BLANK_LEN) return false;
+      // word に含まれる漢字がすべて学習済みか
+      if (learnedKanji) {
+        const kanjiInWord = extractKanji(w.word);
+        for (const k of kanjiInWord) {
+          if (!learnedKanji.has(k)) return false;
+        }
+      }
       return true;
     });
 
@@ -436,14 +472,15 @@
   function regenerateAndRender() {
     const { grade, cumulative, mode, sheetCount } = state.settings;
     const pool = buildPool(grade, cumulative);
+    const learnedKanji = buildLearnedKanjiSet(grade);
     const count = Math.max(1, sheetCount) * PROBLEMS_PER_PAGE;
-    const { problems, excludedCount } = generateProblems(pool, mode, count);
+    const { problems, excludedCount } = generateProblems(pool, mode, count, learnedKanji);
     state.problems = problems;
 
     // 除外件数の表示 (毎回クリアした上で必要時のみ出す)
     clearErrors();
     if (excludedCount > 0) {
-      showError(`印刷に適さない単語を ${excludedCount} 件除外しました (printable=false または正答が ${MAX_ANSWER_LEN} 文字超)。`);
+      showError(`印刷に適さない単語を ${excludedCount} 件除外しました (printable=false / 正答長 / 表示長 / 未学習漢字を含む)。`);
     }
 
     renderPages(problems, state.settings);

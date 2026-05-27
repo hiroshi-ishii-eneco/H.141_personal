@@ -223,7 +223,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(10, var(--cell-height));
-  column-gap: 8mm;
+  column-gap: 5mm;
   row-gap: var(--cell-gap);
   width: 100%;
 }
@@ -238,16 +238,18 @@ html, body {
   overflow: hidden;
 }
 
-/* 問題行 (番号 + 文) を横並び */
+/* 問題行 (番号 + 文) を横並び。最大 2 行まで許容 (overflowでクリップ) */
 .problem-line {
   display: flex;
   align-items: baseline;
-  gap: 2mm;
+  gap: 1.5mm;
   font-size: var(--problem-font);
-  line-height: 1.4;
-  flex: 0 0 auto;
+  line-height: 1.35;
+  flex: 0 1 auto;
   /* セル右上の self-check と被らないよう右側に余白 */
-  padding-right: 6mm;
+  padding-right: 5.5mm;
+  max-height: 10mm;
+  overflow: hidden;
 }
 
 .problem-number {
@@ -294,13 +296,13 @@ html, body {
   border-radius: 1mm;
 }
 
-/* 解答欄: セル幅最大、下線のみ (子どもが書く高さを確保) */
+/* 解答欄: セル幅最大、下線のみ。残り高さを取る */
 .answer-area {
   width: 100%;
   border-bottom: 1pt solid var(--line-main);
   margin-top: auto;
-  height: 14mm;
-  flex: 0 0 14mm;
+  flex: 1 0 11mm;
+  min-height: 11mm;
 }
 
 /* ===== 解答ページ ===== */
