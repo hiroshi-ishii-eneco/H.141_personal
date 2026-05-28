@@ -5,30 +5,25 @@
 }
 
 :root {
-  --line-main: #333;
+  --line-main: #222;
   --line-sub: #666;
-  --line-light: #aaa;
+  --line-light: #bbb;
   --bg-screen: #f4f4f4;
   --bg-paper: #fff;
-  --font-stack: "UD デジタル 教科書体 NK-R", "BIZ UDPGothic",
-                "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --bg-answer: #fcfcfc;
+  --font-stack: "UD デジタル 教科書体 NK-R", "BIZ UDPMincho",
+                "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho",
+                "BIZ UDPGothic", "Yu Gothic", "Meiryo", serif;
 
   /* A4横(297×210mm) - 上下左右余白 12mm → 有効領域 273×186mm */
   --paper-width: 273mm;
   --paper-height: 186mm;
-  /* ヘッダ占有 */
-  --header-block: 18mm;
-  /* セル間 gap */
-  --cell-gap: 2mm;
-  /* 2行×10列のセル寸法 (--paper-width / 10, (--paper-height - header) / 2) */
-  --cell-width: 25.5mm;
-  --cell-height: 82mm;
-  /* 問題文フォント (学年で上書き) */
+
+  /* 文字サイズ (学年で上書き) */
   --problem-font: 11pt;
-  /* 解答欄の高さ */
-  --answer-block: 18mm;
 }
 
+/* 学年別: 高学年ほど長文なのでフォントを小さく */
 body.grade-low  { --problem-font: 12pt; }
 body.grade-mid  { --problem-font: 11pt; }
 body.grade-high { --problem-font: 10pt; }
@@ -219,105 +214,99 @@ html, body {
 .page-header > * { white-space: nowrap; }
 .page-header ruby rt { font-size: 0.5em; }
 
-/* 出題グリッド: 2行 × 10列, 右から左へ読む (direction: rtl) */
+/* ===== 出題エリア (漢字検定スタイル) =====
+   - A4 横 2 段 10 列
+   - 問題は右上から始まり、右→左、上段→下段の順
+   - 各セル内は縦書き、問題文を1列で完結させる設計
+   - 解答スペースはセル左側に縦長の枠 */
+
+/* グリッド: direction: rtl で右上が問題1 */
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(2, var(--cell-height));
-  column-gap: var(--cell-gap);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 2mm;
   row-gap: 3mm;
   width: 100%;
+  flex: 1;
   direction: rtl;
 }
 
-/* 問題セル: 縦書きセル
-   構造:
-     1. 番号 (上端、横書き、中央寄せ)
-     2. body (横並び flex):
-        - 左: 解答スペース (縦長の書込み枠)
-        - 右: 問題文 (縦書き vertical-rl) */
+/* セル: 番号上部、その下を grid(解答|問題文)で分割 */
 .problem-cell {
   direction: ltr;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 1mm 1mm 1mm 1mm;
-  border: 0.5pt solid var(--line-light);
-  border-radius: 1mm;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 14mm 1fr;
+  grid-template-rows: 5mm 1fr;
+  column-gap: 1mm;
+  row-gap: 0.8mm;
+  padding: 1mm;
+  border: 0.4pt solid var(--line-light);
   min-width: 0;
+  min-height: 0;
+  overflow: hidden;
 }
 
-/* 番号 */
+/* 番号: 上段、両列をまたぐ */
 .problem-number {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  text-align: center;
   font-size: 9pt;
   font-weight: 600;
-  text-align: center;
-  flex: 0 0 4mm;
-  border-bottom: 0.5pt solid var(--line-light);
-  padding-bottom: 0.5mm;
-  margin-bottom: 1mm;
-  padding-right: 5mm; /* self-check と被らないように */
+  border-bottom: 0.4pt solid var(--line-light);
+  padding-right: 4.5mm; /* self-check と被らないように */
+  line-height: 1;
 }
 
-/* 自己採点欄 (番号右に小さく) */
+/* 自己採点欄: 右上隅 */
 .self-check {
   position: absolute;
   top: 0.8mm;
   right: 0.8mm;
-  width: 3.5mm;
-  height: 3.5mm;
-  border: 0.5pt solid var(--line-sub);
-  border-radius: 0.5mm;
+  width: 3.2mm;
+  height: 3.2mm;
+  border: 0.4pt solid var(--line-sub);
 }
 
-/* 本体: 左に解答欄、右に問題文を横並び */
-.problem-body {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
-  min-height: 0;
-  gap: 1mm;
-}
-
-/* 解答欄: 左側の縦長の書込み枠
-   旧横書き時の解答欄を 90 度回転した形:
-     幅 = 旧高さ (≈14mm)
-     高さ = 旧幅相当 (セル内縦の残り) */
+/* 解答スペース: 左側、縦長の書込み枠 */
 .answer-area {
-  flex: 0 0 14mm;
-  border: 1pt solid var(--line-main);
-  border-radius: 0.5mm;
-  background: transparent;
+  grid-column: 1;
+  grid-row: 2;
+  border: 0.6pt solid var(--line-main);
+  background: var(--bg-answer);
 }
 
 /* 問題文 (縦書き、セル右側) */
 .problem-sentence {
+  grid-column: 2;
+  grid-row: 2;
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  text-orientation: upright;     /* 全文字を縦書き用に立てる(漢字・かな共に) */
   font-size: var(--problem-font);
-  line-height: 1.55;
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
-  padding-inline: 0.5mm; /* 視覚的な上下の余白 */
-  font-feature-settings: "vkrn", "vert", "vrt2";
+  line-height: 1.45;
+  padding-block-start: 1mm;      /* 視覚右の余白 */
+  padding-block-end: 0.5mm;      /* 視覚左の余白 */
+  padding-inline: 1mm;           /* 視覚上下の余白 */
+  overflow: hidden;
 }
 
-/* 縦書きの「空欄/出題部分」: テキストの右側に縦線 1 本
-   vertical-rl では border-right (物理) が視覚的にも右側に線として現れる */
+/* 出題該当箇所のマーカー: グレーハイライト + 太字
+   縦書きでは border/text-decoration の挙動がブラウザ依存で揺れるため、
+   確実に見える背景ハイライト方式を採用 */
 .blank {
   display: inline-block;
-  border-right: 1.5pt solid var(--line-main);
-  padding-right: 0.8mm;
-  padding-left: 0.3mm;
-  min-inline-size: 14mm; /* 視覚的な縦の最小サイズ */
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.5mm 0.3mm;
+  min-inline-size: 14mm;
   text-align: center;
+  border-radius: 0.5mm;
 }
 
+/* 読みモード: 漢字を表示 (太字) / 書きモード: ひらがな表示 */
 .blank-kanji { font-weight: 700; }
-.blank-kana  { font-weight: 500; }
+.blank-kana  { font-weight: 500; letter-spacing: 0; }
 
 /* ===== 解答ページ (横書きのままで OK) ===== */
 .answer-page .answer-list {

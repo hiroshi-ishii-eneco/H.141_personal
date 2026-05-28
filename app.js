@@ -334,14 +334,13 @@
   //       .problem-sentence
   //         <text> <span.blank>[漢字 or 空]</span> <text>
   //     .answer-area               (セル幅最大の解答下線)
-  // 縦書きセル構造:
-  //   .problem-cell (flex column)
-  //     .self-check (absolute right-top)
-  //     .problem-number (上部)
-  //     .problem-body (flex row: 左=解答 / 右=問題文)
-  //       .answer-area (左、縦長の書込み枠)
-  //       .problem-sentence (右、縦書き vertical-rl)
-  //         <text> <span.blank> <text>
+  // 縦書きセル構造 (CSS Grid: 上段=番号、下段=解答|問題文):
+  //   .problem-cell
+  //     .self-check       (absolute right-top)
+  //     .problem-number   (上段、両列スパン)
+  //     .answer-area      (下段左、縦長の書込み枠)
+  //     .problem-sentence (下段右、縦書き vertical-rl)
+  //       <text> <span.blank> <text>
   function buildProblemCell(problem, indexInPage, settings) {
     const num = indexInPage + 1;
     const isRead = settings.mode === "read";
@@ -350,14 +349,12 @@
     return [
       `<div class="problem-cell">`,
       `<div class="self-check"></div>`,
-      `<div class="problem-number">${num}.</div>`,
-      `<div class="problem-body">`,
+      `<div class="problem-number">${num}</div>`,
       `<div class="answer-area"></div>`,
       `<div class="problem-sentence">`,
       escapeHtml(problem.sentenceBefore),
       `<span class="${blankClass}">${blankText}</span>`,
       escapeHtml(problem.sentenceAfter),
-      `</div>`,
       `</div>`,
       `</div>`
     ].join("");
