@@ -205,9 +205,9 @@ html, body {
 
 /* ヘッダ (右側に縦書きで配置)
    writing-mode: vertical-rl + flex-direction: column で
-   各 span が複数の縦列として右→左に並ぶ */
+   各 span が複数の縦列として右→左に並ぶ。要素を統合し 4 列で完結 */
 .page-header {
-  flex: 0 0 22mm;
+  flex: 0 0 18mm;
   writing-mode: vertical-rl;
   text-orientation: upright;
   display: flex;
@@ -292,12 +292,12 @@ html, body {
 }
 
 /* 解答スペース: 左側、縦長の書込み枠
-   濃い枠は撤廃。背景の極薄ティントのみで領域を示す */
+   背景・枠ともになし (セル枠が領域を示す) */
 .answer-area {
   grid-column: 1;
   grid-row: 2;
   border: none;
-  background: var(--bg-answer);
+  background: transparent;
 }
 
 /* 問題文 (縦書き、セル右側) */
@@ -334,37 +334,44 @@ html, body {
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; letter-spacing: 0; }
 
-/* ===== 解答ページ (A4 横 + 枠なしのコンパクトリスト) =====
+/* ===== 解答ページ (A4 横 + 枠なしのコンパクトリスト + 縦書き) =====
    1 ページに 5〜10 枚分 (100〜200 問) の答えを掲載できる密度。
-   問題番号と答えのみ、枠線なし。CSS columns で自動段組 */
+   問題番号と答えを縦書きで表示、明朝体で字形を明確に */
 .answer-page .answer-list {
   list-style: none;
   margin: 0;
-  padding: 2mm 3mm;
+  padding: 2mm 3mm 2mm 2mm;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
-  columns: 10;
-  column-gap: 4mm;
-  column-fill: auto;
+  display: grid;
+  /* 5 行 × 自動段組 (列方向, 右→左) */
+  grid-template-rows: repeat(5, min-content);
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  column-gap: 2mm;
+  row-gap: 1mm;
   direction: rtl;
+  align-content: start;
 }
 
 .answer-page .answer-list li {
-  font-size: 11pt;
-  line-height: 1.5;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: "Noto Serif CJK JP", "BIZ UDPMincho",
+               "Hiragino Mincho ProN", "Yu Mincho",
+               "IPAexMincho", serif;
+  font-size: 13pt;
+  line-height: 1.05;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  break-inside: avoid;
   direction: ltr;
-  padding-bottom: 0.5mm;
 }
 
 .answer-page .answer-list .num {
   color: var(--line-sub);
   font-size: 9pt;
-  margin-right: 0.3em;
+  font-family: var(--font-stack);
+  margin-block-end: 1mm;             /* 縦書きで番号と答えの間にスペース */
 }
 
 .answer-page .answer-list .ans {

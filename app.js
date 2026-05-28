@@ -336,6 +336,7 @@
   }
 
   // ページごとのヘッダ HTML
+  // 名前/日付は同一スパン、目安/実績も同一スパンにまとめてスペース節約
   function buildPageHeader(grade, mode, settings, sheetNumber, totalSheets, timestamp) {
     const gradePart = gradeHeaderHtml(grade);
     const modePart = escapeHtml(modeLabel(mode));
@@ -344,10 +345,8 @@
     return [
       `<header class="page-header">`,
       `<span>漢字練習 ${gradePart} (${modePart})</span>`,
-      `<span>名前: ____________</span>`,
-      `<span>日付: ____________</span>`,
-      `<span>目安: ${duration}分</span>`,
-      `<span>実績: ____ 分</span>`,
+      `<span>名前 ________ 日付 ________</span>`,
+      `<span>目安 ${duration}分 / 実績 ____分</span>`,
       `<span class="sheet-id">${id}</span>`,
       `</header>`
     ].join("");
