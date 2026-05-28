@@ -342,7 +342,7 @@
     const modePart = escapeHtml(modeLabel(mode));
     return [
       `<header class="page-header">`,
-      `<span>漢字練習 ${gradePart} (${modePart})　　　名前　　　　　　　　日付　　　　　　　</span>`,
+      `<span>漢字練習 ${gradePart} (${modePart})　　　日付　　　　　　　　名前　　　　　　　</span>`,
       `</header>`
     ].join("");
   }
@@ -446,7 +446,7 @@
         `<div class="page-meta">${id}</div>`,
         `<div class="page-content">`,
         `<header class="page-header">`,
-        `<span>解答 漢字練習 ${gradePart} (${modePart})　　　名前　　　　　　　　日付　　　　　　　</span>`,
+        `<span>解答 漢字練習 ${gradePart} (${modePart})　　　日付　　　　　　　　名前　　　　　　　</span>`,
         `</header>`,
         `<div class="answer-groups">${groupsHtml}</div>`,
         `</div>`,
