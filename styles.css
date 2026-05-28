@@ -219,6 +219,14 @@ html, body {
 .page-header > * { white-space: nowrap; }
 .page-header ruby rt { font-size: 0.5em; }
 
+/* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT) — 右端に小さく等幅で表示 */
+.page-header .sheet-id {
+  margin-left: auto;
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 9pt;
+  color: var(--line-sub);
+}
+
 /* ===== 出題エリア (漢字検定スタイル) =====
    - A4 横 2 段 10 列
    - 問題は右上から始まり、右→左、上段→下段の順
@@ -321,33 +329,58 @@ html, body {
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; letter-spacing: 0; }
 
-/* ===== 解答ページ (横書き、自己採点用に大きめフォントで表示) =====
-   とめ・はね・はらい等が確認できるよう 16pt の大きさ
-   CSS columns で自動段組み (4列) にして 1 ページに収める */
-.answer-page .answer-list {
-  columns: 4;
-  column-gap: 10mm;
-  column-fill: auto;
-  height: 180mm;
+/* ===== 解答ページ (A4 横 + 縦書きセル) =====
+   問題ページと同じ 2 段 10 列のグリッド構造で、各セルに番号と縦書きの答え。
+   とめ・はね・はらい等が確認できるよう答えのフォントを大きく */
+.answer-page .answer-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-auto-flow: column;
+  column-gap: 2mm;
+  row-gap: 3mm;
+  width: 100%;
+  flex: 1 1 0;
+  min-height: 0;
+  direction: rtl;
+}
+
+.answer-cell {
   direction: ltr;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.answer-page .answer-list li {
-  font-size: 16pt;
-  font-weight: 500;
-  line-height: 1.6;
-  list-style: none;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  border: 0.4pt solid var(--line-light);
+  padding: 1.5mm 1mm;
+  align-items: center;
   overflow: hidden;
-  text-overflow: ellipsis;
-  break-inside: avoid;
-  padding-bottom: 1mm;
+  min-width: 0;
+  min-height: 0;
 }
 
-/* 答えページ用のヘッダは少し控えめに */
+.answer-num {
+  font-size: 10pt;
+  font-weight: 600;
+  border-bottom: 0.5pt solid var(--line-light);
+  padding-bottom: 1mm;
+  margin-bottom: 2mm;
+  width: 100%;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.answer-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 22pt;
+  font-weight: 500;
+  line-height: 1.3;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 答えページ用のヘッダ */
 .answer-page .page-header {
   min-height: 12mm;
   font-size: 11pt;

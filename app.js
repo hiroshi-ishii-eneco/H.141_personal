@@ -317,11 +317,30 @@
     return mode === "read" ? "読み" : "書き";
   }
 
+  // タイムスタンプ生成: YYMMDD_HHMMSS
+  function formatTimestamp(date) {
+    const pad2 = (n) => String(n).padStart(2, "0");
+    const pad3 = (n) => String(n).padStart(3, "0");
+    const yy = pad2(date.getFullYear() % 100);
+    const mm = pad2(date.getMonth() + 1);
+    const dd = pad2(date.getDate());
+    const hh = pad2(date.getHours());
+    const mi = pad2(date.getMinutes());
+    const ss = pad2(date.getSeconds());
+    return { base: `${yy}${mm}${dd}_${hh}${mi}${ss}`, pad3 };
+  }
+
+  // 印刷識別 ID: YYMMDD_HHMMSS_NNN/TTT
+  function sheetId(timestamp, sheetNumber, total) {
+    return `${timestamp.base}_${timestamp.pad3(sheetNumber)}/${timestamp.pad3(total)}`;
+  }
+
   // ページごとのヘッダ HTML
-  function buildPageHeader(grade, mode, settings, pageIndex, totalPages) {
+  function buildPageHeader(grade, mode, settings, sheetNumber, totalSheets, timestamp) {
     const gradePart = gradeHeaderHtml(grade);
     const modePart = escapeHtml(modeLabel(mode));
     const duration = clampInt(settings.durationGoal, 0, 120, DEFAULT_SETTINGS.durationGoal);
+    const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
     return [
       `<header class="page-header">`,
       `<span>漢字練習 ${gradePart} (${modePart})</span>`,
@@ -329,7 +348,7 @@
       `<span>日付: ____________</span>`,
       `<span>目安: ${duration}分</span>`,
       `<span>実績: ____ 分</span>`,
-      totalPages > 1 ? `<span>${pageIndex + 1} / ${totalPages}</span>` : "",
+      `<span class="sheet-id">${id}</span>`,
       `</header>`
     ].join("");
   }
@@ -370,46 +389,58 @@
   }
 
   // 解答ページ HTML を組み立てる
-  // - A4 横 1 ページに CSS columns で自動段組み (4 列)
+  // - A4 横、縦書きセル (問題ページと同じ 2 段 10 列 grid)
+  // - 各セル: 上部に番号、下部に縦書きの答え
   // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
-  // - 自己採点用に大きめフォントで表示
-  function buildAnswerPage(problems, settings) {
+  // - 自己採点用に大きめフォントで答えを表示
+  // 戻り値: { html, sheetCount } — sheet 通し番号付与のため枚数を返す
+  function buildAnswerPages(problems, settings, firstSheetNumber, totalSheets, timestamp) {
     const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
     const useCompoundNumber = totalProblemPages > 1;
 
-    const items = problems.map((p, idx) => {
-      const pageNo = Math.floor(idx / PROBLEMS_PER_PAGE) + 1;
-      const localNo = (idx % PROBLEMS_PER_PAGE) + 1;
-      const label = useCompoundNumber ? `${pageNo}-${localNo}` : `${localNo}`;
-      return `<li>${escapeHtml(label)}. ${escapeHtml(p.answer)}</li>`;
-    });
-
-    // 1 ページに収まる目安: 16pt × line-height 1.6 ≈ 7mm / 行
-    //   有効高さ 180mm / 7mm ≈ 25 行 × 4 列 = 100問まで OK
-    const ITEMS_PER_ANSWER_PAGE = 80;
+    // 1 ページ 20 問 (問題ページと同じ)
     const pages = [];
-    for (let i = 0; i < items.length; i += ITEMS_PER_ANSWER_PAGE) {
-      pages.push(items.slice(i, i + ITEMS_PER_ANSWER_PAGE));
+    for (let i = 0; i < problems.length; i += PROBLEMS_PER_PAGE) {
+      pages.push(problems.slice(i, i + PROBLEMS_PER_PAGE));
     }
     if (pages.length === 0) pages.push([]);
 
     const gradePart = gradeHeaderHtml(settings.grade);
     const modePart = escapeHtml(modeLabel(settings.mode));
 
-    return pages
-      .map((pageItems) => [
+    const htmls = pages.map((pageProblems, pageIdx) => {
+      const sheetNumber = firstSheetNumber + pageIdx;
+      const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
+
+      const cells = pageProblems.map((p, idx) => {
+        const globalIdx = pageIdx * PROBLEMS_PER_PAGE + idx;
+        const pageNo = Math.floor(globalIdx / PROBLEMS_PER_PAGE) + 1;
+        const localNo = (globalIdx % PROBLEMS_PER_PAGE) + 1;
+        const label = useCompoundNumber ? `${pageNo}-${localNo}` : `${localNo}`;
+        return [
+          `<div class="answer-cell">`,
+          `<div class="answer-num">${escapeHtml(label)}</div>`,
+          `<div class="answer-text">${escapeHtml(p.answer)}</div>`,
+          `</div>`
+        ].join("");
+      }).join("");
+
+      return [
         `<section class="page answer-page">`,
         `<header class="page-header">`,
         `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
         `<span>名前: ____________</span>`,
         `<span>日付: ____________</span>`,
+        `<span class="sheet-id">${id}</span>`,
         `</header>`,
-        `<ol class="answer-list">`,
-        pageItems.join(""),
-        `</ol>`,
+        `<div class="answer-grid">`,
+        cells,
+        `</div>`,
         `</section>`
-      ].join(""))
-      .join("");
+      ].join("");
+    });
+
+    return { html: htmls.join(""), sheetCount: pages.length };
   }
 
   // 「準備中です」ページ (中学範囲などデータが空のとき)
@@ -447,13 +478,20 @@
       pages.push(problems.slice(i, i + PROBLEMS_PER_PAGE));
     }
 
+    // 印刷バッチのタイムスタンプ + 通し番号
+    const timestamp = state.timestamp || formatTimestamp(new Date());
+    const problemSheetCount = pages.length;
+    const answerSheetCount = settings.includeAnswerPage ? problemSheetCount : 0;
+    const totalSheets = problemSheetCount + answerSheetCount;
+
     pages.forEach((pageProblems, pageIndex) => {
+      const sheetNumber = pageIndex + 1;
       const cells = pageProblems
         .map((p, i) => buildProblemCell(p, i, settings))
         .join("");
       const html = [
         `<section class="page">`,
-        buildPageHeader(settings.grade, settings.mode, settings, pageIndex, pages.length),
+        buildPageHeader(settings.grade, settings.mode, settings, sheetNumber, totalSheets, timestamp),
         `<div class="problem-grid">`,
         cells,
         `</div>`,
@@ -464,16 +502,24 @@
 
     // 解答ページ (オプション)
     if (settings.includeAnswerPage && problems.length > 0) {
-      container.insertAdjacentHTML("beforeend", buildAnswerPage(problems, settings));
+      const { html } = buildAnswerPages(
+        problems,
+        settings,
+        problemSheetCount + 1,
+        totalSheets,
+        timestamp
+      );
+      container.insertAdjacentHTML("beforeend", html);
     }
   }
 
   // === 6. イベントハンドリング ===
 
-  // アプリ全体の状態 (settings + 直近の問題セット)
+  // アプリ全体の状態 (settings + 直近の問題セット + 印刷バッチ ID)
   const state = {
     settings: { ...DEFAULT_SETTINGS },
-    problems: []
+    problems: [],
+    timestamp: null
   };
 
   // 再生成 + 再描画
@@ -484,6 +530,8 @@
     const count = Math.max(1, sheetCount) * PROBLEMS_PER_PAGE;
     const { problems, excludedCount } = generateProblems(pool, mode, count, learnedKanji);
     state.problems = problems;
+    // 新規生成時に印刷バッチ ID を更新
+    state.timestamp = formatTimestamp(new Date());
 
     // 除外件数の表示 (毎回クリアした上で必要時のみ出す)
     clearErrors();
