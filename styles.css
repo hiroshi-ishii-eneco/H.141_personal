@@ -231,17 +231,18 @@ html, body {
 }
 
 /* 問題セル: 縦書きセル
-   構造 (物理的上から下):
+   構造:
      1. 番号 (上端、横書き、中央寄せ)
-     2. 問題文 (縦書きvertical-rl)
-     3. 解答欄 (下端、横書きの下線) */
+     2. body (横並び flex):
+        - 左: 解答スペース (縦長の書込み枠)
+        - 右: 問題文 (縦書き vertical-rl) */
 .problem-cell {
   direction: ltr;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 1.5mm 1mm 1mm 1mm;
+  padding: 1mm 1mm 1mm 1mm;
   border: 0.5pt solid var(--line-light);
   border-radius: 1mm;
   overflow: hidden;
@@ -253,63 +254,70 @@ html, body {
   font-size: 9pt;
   font-weight: 600;
   text-align: center;
-  flex: 0 0 5mm;
+  flex: 0 0 4mm;
   border-bottom: 0.5pt solid var(--line-light);
-  padding-bottom: 1mm;
+  padding-bottom: 0.5mm;
   margin-bottom: 1mm;
+  padding-right: 5mm; /* self-check と被らないように */
 }
 
 /* 自己採点欄 (番号右に小さく) */
 .self-check {
   position: absolute;
-  top: 1mm;
-  right: 1mm;
-  width: 4mm;
-  height: 4mm;
+  top: 0.8mm;
+  right: 0.8mm;
+  width: 3.5mm;
+  height: 3.5mm;
   border: 0.5pt solid var(--line-sub);
   border-radius: 0.5mm;
 }
 
-/* 問題文 (縦書き) */
+/* 本体: 左に解答欄、右に問題文を横並び */
+.problem-body {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  min-height: 0;
+  gap: 1mm;
+}
+
+/* 解答欄: 左側の縦長の書込み枠
+   旧横書き時の解答欄を 90 度回転した形:
+     幅 = 旧高さ (≈14mm)
+     高さ = 旧幅相当 (セル内縦の残り) */
+.answer-area {
+  flex: 0 0 14mm;
+  border: 1pt solid var(--line-main);
+  border-radius: 0.5mm;
+  background: transparent;
+}
+
+/* 問題文 (縦書き、セル右側) */
 .problem-sentence {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: var(--problem-font);
-  line-height: 1.6;
+  line-height: 1.55;
   flex: 1 1 auto;
+  min-width: 0;
   min-height: 0;
-  margin: 0 auto;
-  /* 句読点・カッコの縦書き配置を改善 */
+  padding-inline: 0.5mm; /* 視覚的な上下の余白 */
   font-feature-settings: "vkrn", "vert", "vrt2";
 }
 
-/* 縦書きの「空欄/出題部分」: 上下に小さな線分を置き、グレー背景で目立たせる
-   vertical-rl では inline 軸 = 視覚的な縦方向 */
+/* 縦書きの「空欄/出題部分」: テキストの右側に縦線 1 本
+   vertical-rl では border-right (物理) が視覚的にも右側に線として現れる */
 .blank {
   display: inline-block;
-  /* 視覚上端と下端 (= inline-start/inline-end) に短い横線を置く */
-  border-inline-start: 1.5pt solid var(--line-main); /* 視覚上端 */
-  border-inline-end:   1.5pt solid var(--line-main); /* 視覚下端 */
-  padding-block: 1mm;     /* 視覚左右の余白 */
-  padding-inline: 0.8mm;  /* 視覚上下の余白 */
-  min-inline-size: 14mm;  /* 視覚高さ最低値 */
+  border-right: 1.5pt solid var(--line-main);
+  padding-right: 0.8mm;
+  padding-left: 0.3mm;
+  min-inline-size: 14mm; /* 視覚的な縦の最小サイズ */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.06);
-  border-radius: 1mm;
 }
 
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; }
-
-/* 解答欄 (下端、横書き下線) */
-.answer-area {
-  writing-mode: horizontal-tb;
-  width: 100%;
-  border-top: 0.5pt dashed var(--line-light);
-  border-bottom: 1pt solid var(--line-main);
-  flex: 0 0 var(--answer-block);
-  margin-top: 1mm;
-}
 
 /* ===== 解答ページ (横書きのままで OK) ===== */
 .answer-page .answer-list {

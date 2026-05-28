@@ -337,10 +337,11 @@
   // 縦書きセル構造:
   //   .problem-cell (flex column)
   //     .self-check (absolute right-top)
-  //     .problem-number (横書き、上端)
-  //     .problem-sentence (縦書き vertical-rl)
-  //       <text> <span.blank> <text>
-  //     .answer-area (横書き下線、下端)
+  //     .problem-number (上部)
+  //     .problem-body (flex row: 左=解答 / 右=問題文)
+  //       .answer-area (左、縦長の書込み枠)
+  //       .problem-sentence (右、縦書き vertical-rl)
+  //         <text> <span.blank> <text>
   function buildProblemCell(problem, indexInPage, settings) {
     const num = indexInPage + 1;
     const isRead = settings.mode === "read";
@@ -350,12 +351,14 @@
       `<div class="problem-cell">`,
       `<div class="self-check"></div>`,
       `<div class="problem-number">${num}.</div>`,
+      `<div class="problem-body">`,
+      `<div class="answer-area"></div>`,
       `<div class="problem-sentence">`,
       escapeHtml(problem.sentenceBefore),
       `<span class="${blankClass}">${blankText}</span>`,
       escapeHtml(problem.sentenceAfter),
       `</div>`,
-      `<div class="answer-area"></div>`,
+      `</div>`,
       `</div>`
     ].join("");
   }
