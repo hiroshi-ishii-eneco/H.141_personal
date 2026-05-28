@@ -289,36 +289,30 @@ html, body {
   grid-column: 2;
   grid-row: 2;
   writing-mode: vertical-rl;
-  text-orientation: mixed;       /* CJK は立て、ーや句読点等は縦書き正書 */
+  text-orientation: upright;     /* 全文字を縦書き用に立てる */
   font-size: var(--problem-font);
   line-height: 1.7;              /* 列間スペースを十分に取る */
-  padding-block-start: 1.5mm;    /* 視覚右の余白 */
+  padding-block-start: 2mm;      /* 視覚右の余白 (傍点分を確保) */
   padding-block-end: 1mm;        /* 視覚左の余白 */
   padding-inline: 1.5mm;         /* 視覚上下の余白 */
   overflow: hidden;
 }
 
-/* 出題該当箇所: 漢字検定スタイル
-   .blank は display: inline のまま */
+/* 出題該当箇所: 太字 + 薄いグレー背景で出題箇所を明示
+   display: inline のまま (inline-block は spacing 不一致、
+   text-emphasis は text-orientation を狂わせるため避ける) */
 .blank {
   font-weight: 700;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 0.05em 0;
+  /* 縦書きでは padding が縦方向に効くが、極小値なら spacing への影響は最小 */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
-/* 読みモード: 漢字 + 傍点 (text-emphasis)
-   under = 縦書きでは視覚的に左側 */
-.blank-kanji {
-  text-emphasis: filled dot;
-  text-emphasis-color: var(--line-main);
-  text-emphasis-position: under;
-  -webkit-text-emphasis: filled dot;
-  -webkit-text-emphasis-color: var(--line-main);
-  -webkit-text-emphasis-position: under;
-}
-
-/* 書きモード: 太字カタカナのみ (傍点なし) */
-.blank-kana {
-  /* font-weight: 700 のみ */
-}
+/* モード別の追加スタイル */
+.blank-kanji {}
+.blank-kana {}
 
 /* 読みモード: 漢字を表示 (太字) / 書きモード: ひらがな表示 */
 .blank-kanji { font-weight: 700; }
