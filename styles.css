@@ -224,11 +224,12 @@ html, body {
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 2mm;
   row-gap: 3mm;
   width: 100%;
-  flex: 1;
+  flex: 1 1 0;
+  min-height: 0;
   direction: rtl;
 }
 
@@ -237,8 +238,8 @@ html, body {
   direction: ltr;
   position: relative;
   display: grid;
-  grid-template-columns: 14mm 1fr;
-  grid-template-rows: 5mm 1fr;
+  grid-template-columns: 14mm minmax(0, 1fr);
+  grid-template-rows: 5mm minmax(0, 1fr);
   column-gap: 1mm;
   row-gap: 0.8mm;
   padding: 1mm;
@@ -292,16 +293,29 @@ html, body {
   overflow: hidden;
 }
 
-/* 出題該当箇所のマーカー: グレーハイライト + 太字
-   縦書きでは border/text-decoration の挙動がブラウザ依存で揺れるため、
-   確実に見える背景ハイライト方式を採用 */
+/* 出題該当箇所: 漢字検定スタイル
+   - 読みモード (.blank-kanji): 漢字を表示し、左側に縦の傍線 (linear-gradient で確実描画)
+   - 書きモード (.blank-kana): カタカナで太字表示、傍線なし
+   いずれもグレー背景・ボックスなし、漢字検定の組版に倣う */
 .blank {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.08);
-  padding: 0.5mm 0.3mm;
-  min-inline-size: 14mm;
-  text-align: center;
-  border-radius: 0.5mm;
+  padding: 0;
+}
+
+/* 読みモード: 漢字 + 左の傍線 */
+.blank-kanji {
+  font-weight: 600;
+  /* 物理 left 端に縦線を描く (background gradient で確実に出力) */
+  background-image: linear-gradient(var(--line-main), var(--line-main));
+  background-size: 1.2pt 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 1.5mm;
+}
+
+/* 書きモード: カタカナ太字 (傍線・ハイライトなし) */
+.blank-kana {
+  font-weight: 700;
 }
 
 /* 読みモード: 漢字を表示 (太字) / 書きモード: ひらがな表示 */

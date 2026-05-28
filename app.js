@@ -196,6 +196,14 @@
     return s.match(/[一-鿿]/g) || [];
   }
 
+  // ひらがな → カタカナ変換 (書きモードの出題表記用、漢字検定スタイル)
+  function hiraToKata(s) {
+    if (typeof s !== "string") return "";
+    return s.replace(/[ぁ-ゖ]/g, (c) =>
+      String.fromCharCode(c.charCodeAt(0) + 0x60)
+    );
+  }
+
   function generateProblems(pool, mode, count, learnedKanji) {
     if (!Array.isArray(pool) || pool.length === 0) {
       return { problems: [], excludedCount: 0, totalCandidates: 0 };
@@ -249,12 +257,13 @@
     const picked = filtered.slice(0, Math.max(0, count | 0));
 
     // 5. 各問題: 文を before/after に分解し、blank に入る表示テキストを決定
+    //    漢字検定スタイル:
+    //      - 読みモード: blank に word (漢字) を表示 + 左に傍線
+    //      - 書きモード: blank に reading をカタカナ化したものを表示 (太字)
     const problems = picked.map((w) => {
       const answer = mode === "read" ? w.reading : w.word;
       const parts = splitSentence(w.sentence);
-      // 書きモード: blank に reading (ひらがな) を表示 → 解答下線に漢字を書く
-      // 読みモード: blank に word (漢字) を表示 → 解答下線にひらがなを書く
-      const blankDisplay = mode === "read" ? w.word : w.reading;
+      const blankDisplay = mode === "read" ? w.word : hiraToKata(w.reading);
 
       return {
         kanji: w.kanji,
