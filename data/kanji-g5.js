@@ -168,7 +168,7 @@ window.KANJI_DATA_G5 = [
       { word: "桜花", reading: "おうか", sentence: "今日、○○らんまんの公園を歩く。", printable: true },
       { word: "桜色", reading: "さくらいろ", sentence: "今朝、ほおが○○にそまった。", printable: true },
       { word: "夜桜", reading: "よざくら", sentence: "昨日、ライトに照らされた○○がきれいだ。", printable: true },
-      { word: "山桜", reading: "やまざくら", sentence: "夕方、山道で○○のえだを見つけた。", printable: true },
+      { word: "山桜", reading: "やまざくら", sentence: "夕方、山道で○○の枝を見つけた。", printable: true },
       { word: "葉桜", reading: "はざくら", sentence: "先週、花が散って○○の季節だ。", printable: true }
     ]
   },
@@ -188,7 +188,7 @@ window.KANJI_DATA_G5 = [
     kanji: "可",
     readings: { on: ["カ"], kun: [] },
     words: [
-      { word: "可能", reading: "かのう", sentence: "ぼくは、努力で○○な目ひょうを立てる。", printable: true },
+      { word: "可能", reading: "かのう", sentence: "ぼくは、努力で○○な目標を立てる。", printable: true },
       { word: "不可", reading: "ふか", sentence: "私は、立ち入り○○の場所だ。", printable: true },
       { word: "可決", reading: "かけつ", sentence: "兄が、国会で法案が○○された。", printable: true },
       { word: "可否", reading: "かひ", sentence: "妹は、計画の○○をみんなで決める。", printable: true },
@@ -262,7 +262,7 @@ window.KANJI_DATA_G5 = [
     words: [
       { word: "解く", reading: "とく", sentence: "教室で、むずかしい問題を○○ことができた。", printable: true },
       { word: "解ける", reading: "とける", sentence: "体育館で、なぞが○○とすっきりする。", printable: true },
-      { word: "理解", reading: "りかい", sentence: "公園で、話の内ようを○○できた。", printable: true },
+      { word: "理解", reading: "りかい", sentence: "公園で、話の内容を○○できた。", printable: true },
       { word: "解答", reading: "かいとう", sentence: "みんなで、正しい○○を書きこむ。", printable: true },
       { word: "分解", reading: "ぶんかい", sentence: "ぼくは、古い時計を○○してみた。", printable: true },
       { word: "解説", reading: "かいせつ", sentence: "私は、先生がくわしく○○してくれた。", printable: true }
@@ -289,7 +289,7 @@ window.KANJI_DATA_G5 = [
       { word: "正確", reading: "せいかく", sentence: "昨日、今朝、時間を○○にはかる。", printable: true },
       { word: "確実", reading: "かくじつ", sentence: "夕方、勝利は○○なものとなった。", printable: true },
       { word: "確信", reading: "かくしん", sentence: "先週、成功を○○して進める。", printable: true },
-      { word: "明確", reading: "めいかく", sentence: "学校で、目ひょうを○○に決める。", printable: true }
+      { word: "明確", reading: "めいかく", sentence: "学校で、目標を○○に決める。", printable: true }
     ]
   },
   {
@@ -2156,7 +2156,7 @@ window.KANJI_DATA_G5 = [
     kanji: "脈",
     readings: { on: ["ミャク"], kun: [] },
     words: [
-      { word: "脈", reading: "みゃく", sentence: "妹は、走ったあとに○○をとる。", printable: true },
+      { word: "脈", reading: "みゃく", sentence: "妹は、走った後に○○をとる。", printable: true },
       { word: "山脈", reading: "さんみゃく", sentence: "先生が、アルプス○○を学ぶ。", printable: true },
       { word: "脈拍", reading: "みゃくはく", sentence: "友だちと、母は、父は、○○を数える。", printable: true },
       { word: "動脈", reading: "どうみゃく", sentence: "六年生が、体の○○について学ぶ。", printable: true },
