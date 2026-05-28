@@ -1941,7 +1941,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["ヒ"], kun: ["と(ぶ)", "と(ばす)"] },
     words: [
       { word: "飛ぶ",   reading: "とぶ",       sentence: "空高く鳥が気持ちよく○○。",         printable: true },
-      { word: "飛ばす", reading: "とばす",     sentence: "公園で紙ひこうきを○○。",           printable: true },
+      { word: "飛ばす", reading: "とばす",     sentence: "公園で紙飛行機を○○。",           printable: true },
       { word: "飛行",   reading: "ひこう",     sentence: "○○機が空を進んでいく。",           printable: true },
       { word: "飛行場", reading: "ひこうじょう", sentence: "見学で町の○○を訪れる。",         printable: true },
       { word: "飛び石", reading: "とびいし",   sentence: "庭の○○を伝って歩く。",             printable: true },
@@ -2349,7 +2349,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["リョウ"], kun: ["はか(る)"] },
     words: [
       { word: "量る",   reading: "はかる",     sentence: "野菜の重さを○○のを手伝う。",       printable: true },
-      { word: "量",     reading: "りょう",     sentence: "ごはんの○○を加減する。",           printable: true },
+      { word: "量",     reading: "りょう",     sentence: "ご飯の○○を加減する。",           printable: true },
       { word: "重量",   reading: "じゅうりょう", sentence: "荷物の○○を量る。",               printable: true },
       { word: "大量",   reading: "たいりょう", sentence: "今年は雪が○○にふった。",           printable: true },
       { word: "分量",   reading: "ぶんりょう", sentence: "料理の○○をきちんと量る。",         printable: true },
