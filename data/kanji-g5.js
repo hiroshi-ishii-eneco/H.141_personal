@@ -2206,7 +2206,7 @@ window.KANJI_DATA_G5 = [
     words: [
       { word: "綿", reading: "わた", sentence: "家で、やわらかい○○の中わた。", printable: true },
       { word: "綿毛", reading: "わたげ", sentence: "教室で、たんぽぽの○○がとぶ。", printable: true },
-      { word: "綿糸", reading: "めんし", sentence: "体育館で、○○でぬのを織る。", printable: true },
+      { word: "綿糸", reading: "めんし", sentence: "体育館で、○○で布を織る。", printable: true },
       { word: "木綿", reading: "もめん", sentence: "公園で、○○のシャツを着る。", printable: true },
       { word: "綿密", reading: "めんみつ", sentence: "みんなで、○○な計画を立てる。", printable: true },
       { word: "綿雪", reading: "わたゆき", sentence: "ぼくは、ふんわりした○○がふる。", printable: true }

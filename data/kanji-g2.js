@@ -1078,9 +1078,9 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "声",     reading: "こえ",       sentence: "大きな○○で歌う。",             printable: true },
       { word: "歌声",   reading: "うたごえ",   sentence: "となりから○○が聞こえる。",     printable: true },
-      { word: "音声",   reading: "おんせい",   sentence: "○○がよくきこえる。",           printable: true },
+      { word: "音声",   reading: "おんせい",   sentence: "○○がよく聞こえる。",           printable: true },
       { word: "声楽",   reading: "せいがく",   sentence: "○○のれっすんに通う。",         printable: true },
-      { word: "声色",   reading: "こわいろ",   sentence: "○○をかえてはなす。",           printable: true },
+      { word: "声色",   reading: "こわいろ",   sentence: "○○をかえて話す。",             printable: true },
       { word: "大声",   reading: "おおごえ",   sentence: "○○でわらってしまう。",         printable: true }
     ]
   },
@@ -1090,7 +1090,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "星",     reading: "ほし",       sentence: "夜空に○○がきらめく。",         printable: true },
       { word: "星空",   reading: "ほしぞら",   sentence: "山の上で○○をながめる。",       printable: true },
-      { word: "明星",   reading: "みょうじょう", sentence: "夜あけ前に○○がかがやく。",   printable: true },
+      { word: "明星",   reading: "みょうじょう", sentence: "夜明け前に○○がかがやく。",   printable: true },
       { word: "星形",   reading: "ほしがた",   sentence: "○○のもようをかく。",           printable: true },
       { word: "白星",   reading: "しろぼし",   sentence: "しあいで○○をあげる。",         printable: true },
       { word: "流れ星", reading: "ながれぼし", sentence: "夜空に○○を見た。",             printable: true }
@@ -1102,7 +1102,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "晴れる", reading: "はれる",     sentence: "あすは空が○○。",               printable: true },
       { word: "晴天",   reading: "せいてん",   sentence: "うんどう会は○○だ。",           printable: true },
-      { word: "快晴",   reading: "かいせい",   sentence: "○○の空がひろがる。",           printable: true },
+      { word: "快晴",   reading: "かいせい",   sentence: "○○の空が広がる。",             printable: true },
       { word: "晴れ間", reading: "はれま",     sentence: "雨の○○に外に出る。",           printable: true },
       { word: "見晴し", reading: "みはらし",   sentence: "○○のよい場しょ。",             printable: true },
       { word: "晴れ姿", reading: "はれすがた", sentence: "新一年生の○○を見る。",         printable: true }
