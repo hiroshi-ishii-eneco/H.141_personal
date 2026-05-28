@@ -225,11 +225,13 @@ html, body {
    - 各セル内は縦書き、問題文を1列で完結させる設計
    - 解答スペースはセル左側に縦長の枠 */
 
-/* グリッド: direction: rtl で右上が問題1 */
+/* グリッド: direction: rtl で右上が問題1、grid-auto-flow: column で
+   右列を上→下に問題1,2、次の列(左)を上→下に問題3,4 と続く順序にする */
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-auto-flow: column;
   column-gap: 2mm;
   row-gap: 3mm;
   width: 100%;
@@ -238,16 +240,17 @@ html, body {
   direction: rtl;
 }
 
-/* セル: 番号上部、その下を grid(解答|問題文)で分割 */
+/* セル: 番号上部、その下を grid(解答|問題文)で分割
+   解答スペースを広げるため answer 列を 16mm に拡大 */
 .problem-cell {
   direction: ltr;
   position: relative;
   display: grid;
-  grid-template-columns: 14mm minmax(0, 1fr);
+  grid-template-columns: 16mm minmax(0, 1fr);
   grid-template-rows: 5mm minmax(0, 1fr);
   column-gap: 1mm;
   row-gap: 0.8mm;
-  padding: 1mm;
+  padding: 0.5mm;
   border: 0.4pt solid var(--line-light);
   min-width: 0;
   min-height: 0;
@@ -291,10 +294,10 @@ html, body {
   writing-mode: vertical-rl;
   text-orientation: upright;     /* 全文字を縦書き用に立てる */
   font-size: var(--problem-font);
-  line-height: 1.7;              /* 列間スペースを十分に取る */
-  padding-block-start: 2mm;      /* 視覚右の余白 (傍点分を確保) */
-  padding-block-end: 1mm;        /* 視覚左の余白 */
-  padding-inline: 1.5mm;         /* 視覚上下の余白 */
+  line-height: 1.65;
+  padding-block-start: 0.5mm;    /* 視覚右の余白を削減 (回答スペース優先) */
+  padding-block-end: 0.5mm;      /* 視覚左の余白 */
+  padding-inline: 1mm;           /* 視覚上下の余白 */
   overflow: hidden;
 }
 
@@ -318,31 +321,36 @@ html, body {
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; letter-spacing: 0; }
 
-/* ===== 解答ページ (横書きのままで OK) ===== */
+/* ===== 解答ページ (横書き、自己採点用に大きめフォントで表示) =====
+   とめ・はね・はらい等が確認できるよう 16pt の大きさ
+   CSS columns で自動段組み (4列) にして 1 ページに収める */
 .answer-page .answer-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4mm 8mm;
-  flex: 1;
+  columns: 4;
+  column-gap: 10mm;
+  column-fill: auto;
+  height: 180mm;
   direction: ltr;
-}
-
-.answer-page .answer-column {
-  list-style: none;
-  padding-left: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1mm;
+  padding: 0;
+  list-style: none;
 }
 
-.answer-page .answer-column li {
-  font-size: 10pt;
-  line-height: 1.35;
+.answer-page .answer-list li {
+  font-size: 16pt;
+  font-weight: 500;
+  line-height: 1.6;
   list-style: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  break-inside: avoid;
+  padding-bottom: 1mm;
+}
+
+/* 答えページ用のヘッダは少し控えめに */
+.answer-page .page-header {
+  min-height: 12mm;
+  font-size: 11pt;
 }
 
 /* ===== 印刷 ===== */

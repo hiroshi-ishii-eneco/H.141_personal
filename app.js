@@ -370,8 +370,9 @@
   }
 
   // 解答ページ HTML を組み立てる
-  // - A4 横 1 ページに 4 列で 80 問まで収まる
+  // - A4 横 1 ページに CSS columns で自動段組み (4 列)
   // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
+  // - 自己採点用に大きめフォントで表示
   function buildAnswerPage(problems, settings) {
     const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
     const useCompoundNumber = totalProblemPages > 1;
@@ -383,10 +384,9 @@
       return `<li>${escapeHtml(label)}. ${escapeHtml(p.answer)}</li>`;
     });
 
-    // 1 ページ 80 問 (4 列 × 20 行)
-    const COLS = 4;
-    const ROWS_PER_COL = 20;
-    const ITEMS_PER_ANSWER_PAGE = COLS * ROWS_PER_COL;
+    // 1 ページに収まる目安: 16pt × line-height 1.6 ≈ 7mm / 行
+    //   有効高さ 180mm / 7mm ≈ 25 行 × 4 列 = 100問まで OK
+    const ITEMS_PER_ANSWER_PAGE = 80;
     const pages = [];
     for (let i = 0; i < items.length; i += ITEMS_PER_ANSWER_PAGE) {
       pages.push(items.slice(i, i + ITEMS_PER_ANSWER_PAGE));
@@ -397,25 +397,18 @@
     const modePart = escapeHtml(modeLabel(settings.mode));
 
     return pages
-      .map((pageItems) => {
-        const columns = [];
-        for (let c = 0; c < COLS; c++) {
-          const colItems = pageItems.slice(c * ROWS_PER_COL, (c + 1) * ROWS_PER_COL).join("");
-          columns.push(`<ol class="answer-column">${colItems}</ol>`);
-        }
-        return [
-          `<section class="page answer-page">`,
-          `<header class="page-header">`,
-          `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
-          `<span>名前: ____________</span>`,
-          `<span>日付: ____________</span>`,
-          `</header>`,
-          `<div class="answer-list">`,
-          columns.join(""),
-          `</div>`,
-          `</section>`
-        ].join("");
-      })
+      .map((pageItems) => [
+        `<section class="page answer-page">`,
+        `<header class="page-header">`,
+        `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
+        `<span>名前: ____________</span>`,
+        `<span>日付: ____________</span>`,
+        `</header>`,
+        `<ol class="answer-list">`,
+        pageItems.join(""),
+        `</ol>`,
+        `</section>`
+      ].join(""))
       .join("");
   }
 
