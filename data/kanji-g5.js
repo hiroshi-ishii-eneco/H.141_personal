@@ -1115,7 +1115,7 @@ window.KANJI_DATA_G5 = [
       { word: "質問", reading: "しつもん", sentence: "先週、夕方、先生に○○をする。", printable: true },
       { word: "品質", reading: "ひんしつ", sentence: "学校で、○○の良い品物を選ぶ。", printable: true },
       { word: "性質", reading: "せいしつ", sentence: "家で、水の○○を実験で調べる。", printable: true },
-      { word: "質感", reading: "しっかん", sentence: "教室で、ぬのの○○をたしかめる。", printable: true },
+      { word: "質感", reading: "しつかん", sentence: "教室で、ぬのの○○をたしかめる。", printable: true },
       { word: "本質", reading: "ほんしつ", sentence: "体育館で、物事の○○を考える。", printable: true },
       { word: "実質", reading: "じっしつ", sentence: "公園で、○○的に同じ意味だ。", printable: true }
     ]
@@ -1750,7 +1750,7 @@ window.KANJI_DATA_G5 = [
     words: [
       { word: "銅", reading: "どう", sentence: "私は、古い○○の食器が見つかる。", printable: true },
       { word: "銅像", reading: "どうぞう", sentence: "兄が、公園の○○を見学する。", printable: true },
-      { word: "銅メダル", reading: "どうめだる", sentence: "先生が、妹は、選手が○○を取った。", printable: true },
+      { word: "銅メダル", reading: "どうメダル", sentence: "先生が、妹は、選手が○○を取った。", printable: true },
       { word: "銅貨", reading: "どうか", sentence: "父は、むかしの○○を観察する。", printable: true },
       { word: "青銅", reading: "せいどう", sentence: "母は、○○器時代の道具を学ぶ。", printable: true },
       { word: "銅山", reading: "どうざん", sentence: "友だちと、むかしの○○の話を聞く。", printable: true }

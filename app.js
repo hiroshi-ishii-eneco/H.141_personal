@@ -334,22 +334,26 @@
   //       .problem-sentence
   //         <text> <span.blank>[漢字 or 空]</span> <text>
   //     .answer-area               (セル幅最大の解答下線)
+  // 縦書きセル構造:
+  //   .problem-cell (flex column)
+  //     .self-check (absolute right-top)
+  //     .problem-number (横書き、上端)
+  //     .problem-sentence (縦書き vertical-rl)
+  //       <text> <span.blank> <text>
+  //     .answer-area (横書き下線、下端)
   function buildProblemCell(problem, indexInPage, settings) {
     const num = indexInPage + 1;
     const isRead = settings.mode === "read";
     const blankText = escapeHtml(problem.blankDisplay || "");
-    // read: 漢字表示 → blank-kanji / write: ひらがな表示 → blank-kana
     const blankClass = isRead ? "blank blank-kanji" : "blank blank-kana";
     return [
       `<div class="problem-cell">`,
       `<div class="self-check"></div>`,
-      `<div class="problem-line">`,
-      `<span class="problem-number">${num}.</span>`,
-      `<span class="problem-sentence">`,
+      `<div class="problem-number">${num}.</div>`,
+      `<div class="problem-sentence">`,
       escapeHtml(problem.sentenceBefore),
       `<span class="${blankClass}">${blankText}</span>`,
       escapeHtml(problem.sentenceAfter),
-      `</span>`,
       `</div>`,
       `<div class="answer-area"></div>`,
       `</div>`
@@ -357,13 +361,12 @@
   }
 
   // 解答ページ HTML を組み立てる
-  // - 出題と同じ A4 縦・1 ページ 40 問 (2 列 × 20 行)
+  // - A4 横 1 ページに 4 列で 80 問まで収まる
   // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
   function buildAnswerPage(problems, settings) {
     const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
     const useCompoundNumber = totalProblemPages > 1;
 
-    // 「番号. 答え」文字列を全問分組み立て
     const items = problems.map((p, idx) => {
       const pageNo = Math.floor(idx / PROBLEMS_PER_PAGE) + 1;
       const localNo = (idx % PROBLEMS_PER_PAGE) + 1;
@@ -371,8 +374,10 @@
       return `<li>${escapeHtml(label)}. ${escapeHtml(p.answer)}</li>`;
     });
 
-    // 1 ページ 40 問 (1 列 20 問 × 2 列) でグルーピング
-    const ITEMS_PER_ANSWER_PAGE = PROBLEMS_PER_PAGE * 2;
+    // 1 ページ 80 問 (4 列 × 20 行)
+    const COLS = 4;
+    const ROWS_PER_COL = 20;
+    const ITEMS_PER_ANSWER_PAGE = COLS * ROWS_PER_COL;
     const pages = [];
     for (let i = 0; i < items.length; i += ITEMS_PER_ANSWER_PAGE) {
       pages.push(items.slice(i, i + ITEMS_PER_ANSWER_PAGE));
@@ -384,9 +389,11 @@
 
     return pages
       .map((pageItems) => {
-        // 左列 (前半 20) と 右列 (後半 20)
-        const leftItems = pageItems.slice(0, PROBLEMS_PER_PAGE).join("");
-        const rightItems = pageItems.slice(PROBLEMS_PER_PAGE).join("");
+        const columns = [];
+        for (let c = 0; c < COLS; c++) {
+          const colItems = pageItems.slice(c * ROWS_PER_COL, (c + 1) * ROWS_PER_COL).join("");
+          columns.push(`<ol class="answer-column">${colItems}</ol>`);
+        }
         return [
           `<section class="page answer-page">`,
           `<header class="page-header">`,
@@ -395,8 +402,7 @@
           `<span>日付: ____________</span>`,
           `</header>`,
           `<div class="answer-list">`,
-          `<ol class="answer-column">${leftItems}</ol>`,
-          `<ol class="answer-column">${rightItems}</ol>`,
+          columns.join(""),
           `</div>`,
           `</section>`
         ].join("");

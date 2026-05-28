@@ -229,7 +229,7 @@ window.KANJI_DATA_G6 = [
       { word: "看病", reading: "かんびょう", sentence: "風じゃで休む祖父を母がやさしく○○する。", printable: true },
       { word: "看守", reading: "かんしゅ", sentence: "歴史の本で建物の○○の様子について読む。", printable: true },
       { word: "看過", reading: "かんか", sentence: "クラスで起きた問題を○○することは難しい。", printable: true },
-      { word: "看取", reading: "かんしゅ", sentence: "祖母から最期の○○についての話を聞く。", printable: true }
+      { word: "看取", reading: "みとり", sentence: "祖母から最期の○○についての話を聞く。", printable: true }
     ]
   },
   {

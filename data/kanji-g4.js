@@ -430,7 +430,7 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "旗",     reading: "はた",       sentence: "運動会で赤い○○を高くふる。",       printable: true },
       { word: "国旗",   reading: "こっき",     sentence: "世界の○○を本で調べる。",           printable: true },
-      { word: "白旗",   reading: "はくき",     sentence: "じょうずに○○を作って合図した。",   printable: true },
+      { word: "白旗",   reading: "はっき",     sentence: "じょうずに○○を作って合図した。",   printable: true },
       { word: "校旗",   reading: "こうき",     sentence: "式の前に○○をかかげる。",           printable: true },
       { word: "旗手",   reading: "きしゅ",     sentence: "兄が入場行進の○○を務める。",       printable: true },
       { word: "手旗",   reading: "てばた",     sentence: "○○で合図を送る練習をする。",       printable: true }

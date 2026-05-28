@@ -708,7 +708,7 @@ window.KANJI_DATA_G2 = [
       { word: "才のう", reading: "さいのう",   sentence: "○○をのばすれんしゅう。",       printable: true },
       { word: "八才",   reading: "はっさい",   sentence: "弟は○○になった。",             printable: true },
       { word: "才気",   reading: "さいき",     sentence: "○○のあるあねだ。",             printable: true },
-      { word: "千才",   reading: "せんさい",   sentence: "むかしの○○ちょうじゅ。",       printable: true },
+      { word: "千才",   reading: "せんざい",   sentence: "むかしの○○ちょうじゅ。",       printable: true },
       { word: "六才",   reading: "ろくさい",   sentence: "いとこは○○になった。",         printable: true }
     ]
   },
@@ -1067,7 +1067,7 @@ window.KANJI_DATA_G2 = [
       { word: "西",     reading: "にし",       sentence: "夕日が○○にしずむ。",           printable: true },
       { word: "西日",   reading: "にしび",     sentence: "○○がへやに入る。",             printable: true },
       { word: "西口",   reading: "にしぐち",   sentence: "えきの○○で会う。",             printable: true },
-      { word: "西海",   reading: "せいかい",   sentence: "○○ぐんとうのちず。",           printable: true },
+      { word: "西海",   reading: "さいかい",   sentence: "○○ぐんとうのちず。",           printable: true },
       { word: "東西",   reading: "とうざい",   sentence: "○○南北をならう。",             printable: true },
       { word: "西風",   reading: "にしかぜ",   sentence: "つよい○○がふく。",             printable: true }
     ]

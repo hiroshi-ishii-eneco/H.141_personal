@@ -37,7 +37,8 @@ const SENTENCE_LIMIT = {
 
 const MAX_ANSWER_LEN = 5;
 
-const HIRAGANA_RE = /^[぀-ゟーー]+$/;
+// reading はひらがな + カタカナ (外来語 メダル/パン 等を含むため) + 長音符を許容
+const READING_RE = /^[぀-ゟ゠-ヿーー]+$/;
 const KANJI_RE = /[一-鿿]/g;
 
 function loadGradeFile(grade) {
@@ -119,8 +120,8 @@ function validateEntry(entry, grade, allowedKanjiSet) {
 
     if (typeof reading !== "string" || reading.length === 0) {
       findings.push({ level: "error", code: "EMPTY_READING", message: `${tag}: reading が空` });
-    } else if (!HIRAGANA_RE.test(reading)) {
-      findings.push({ level: "error", code: "READING_NOT_HIRAGANA", message: `${tag}: reading "${reading}" にひらがな以外を含む` });
+    } else if (!READING_RE.test(reading)) {
+      findings.push({ level: "error", code: "READING_INVALID_CHARS", message: `${tag}: reading "${reading}" にかな以外を含む` });
     }
 
     if (typeof sentence !== "string" || sentence.length === 0) {
