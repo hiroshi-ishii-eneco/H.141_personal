@@ -336,15 +336,13 @@
   }
 
   // ページごとのヘッダ HTML
-  // 2 列構成: タイトル / 名前+日付 のみ
-  // (目安・実績・シートIDはここに含めない。シートIDは .page-meta に分離)
+  // 1 列構成: タイトル + 名前 + 日付 を 1 span に統合
   function buildPageHeader(grade, mode) {
     const gradePart = gradeHeaderHtml(grade);
     const modePart = escapeHtml(modeLabel(mode));
     return [
       `<header class="page-header">`,
-      `<span>漢字練習 ${gradePart} (${modePart})</span>`,
-      `<span>名前　　　日付</span>`,
+      `<span>漢字練習 ${gradePart} (${modePart})　　　名前　　　　　　　　日付　　　　　　　</span>`,
       `</header>`
     ].join("");
   }
@@ -372,8 +370,7 @@
     const blankClass = isRead ? "blank blank-kanji" : "blank blank-kana";
     return [
       `<div class="problem-cell">`,
-      `<div class="self-check"></div>`,
-      `<div class="problem-number">${num}</div>`,
+      `<div class="problem-number">${numLabel(num)}</div>`,
       `<div class="answer-area"></div>`,
       `<div class="problem-sentence">`,
       escapeHtml(problem.sentenceBefore),
@@ -390,16 +387,24 @@
     return s.length >= 2 ? `<span class="tcy">${s}</span>` : s;
   }
 
+  // 3 桁ゼロ詰めラベル ("001", "002", ...)
+  function pad3(n) {
+    return String(n).padStart(3, "0");
+  }
+
   // 解答ページ HTML を組み立てる
-  // - 1 問題シートにつき 1 枚の解答ページを生成 (N 枚出題 → N 枚解答)
-  // - 大きな問題シート番号をヘッダ末に表示
-  // - 各問題は 1〜20 のローカル連番のみ (シート番号は冒頭の大きな番号で示す)
-  // - 縦書き、明朝体、大きめフォント
+  // - 1 ページに最大 5 グループ × 20 問 = 100 問の答えを掲載
+  // - 各グループは「001」「002」… の 3 桁ゼロ詰めラベル付きの枠
+  // - 枠内に 1〜20 の連番で正答
+  // - 縦書き、明朝体
   // 戻り値: { html, sheetCount }
   function buildAnswerPages(problems, settings, firstSheetNumber, totalSheets, timestamp) {
+    const GROUPS_PER_PAGE = 5;
+    const ITEMS_PER_PAGE = PROBLEMS_PER_PAGE * GROUPS_PER_PAGE;  // 100
+
     const pages = [];
-    for (let i = 0; i < problems.length; i += PROBLEMS_PER_PAGE) {
-      pages.push(problems.slice(i, i + PROBLEMS_PER_PAGE));
+    for (let i = 0; i < problems.length; i += ITEMS_PER_PAGE) {
+      pages.push(problems.slice(i, i + ITEMS_PER_PAGE));
     }
     if (pages.length === 0) pages.push([]);
 
@@ -408,29 +413,43 @@
 
     const htmls = pages.map((pageProblems, pageIdx) => {
       const sheetNumber = firstSheetNumber + pageIdx;
-      const problemSheetNo = pageIdx + 1;
       const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
 
-      const items = pageProblems.map((p, idx) => {
-        const num = idx + 1;
+      // 各 20 問を 1 グループに分割
+      const groups = [];
+      for (let g = 0; g < pageProblems.length; g += PROBLEMS_PER_PAGE) {
+        const items = pageProblems.slice(g, g + PROBLEMS_PER_PAGE);
+        const groupNumber = pageIdx * GROUPS_PER_PAGE + (g / PROBLEMS_PER_PAGE) + 1;
+        groups.push({ items, groupNumber });
+      }
+
+      const groupsHtml = groups.map(({ items, groupNumber }) => {
+        const itemsHtml = items.map((p, idx) => {
+          const num = idx + 1;
+          return [
+            `<li>`,
+            `<span class="num">${numLabel(num)}</span>`,
+            `<span class="ans">${escapeHtml(p.answer)}</span>`,
+            `</li>`
+          ].join("");
+        }).join("");
         return [
-          `<li>`,
-          `<span class="num">${numLabel(num)}</span>`,
-          `<span class="ans">${escapeHtml(p.answer)}</span>`,
-          `</li>`
+          `<div class="answer-group">`,
+          `<div class="group-label">${pad3(groupNumber)}</div>`,
+          `<ol class="group-items">${itemsHtml}</ol>`,
+          `</div>`
         ].join("");
       }).join("");
 
       return [
         `<section class="page answer-page">`,
         `<div class="page-meta">${id}</div>`,
+        `<div class="page-content">`,
         `<header class="page-header">`,
-        `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
-        `<span class="sheet-no-big">第${numLabel(problemSheetNo)}枚</span>`,
+        `<span>解答 漢字練習 ${gradePart} (${modePart})　　　名前　　　　　　　　日付　　　　　　　</span>`,
         `</header>`,
-        `<ol class="answer-list">`,
-        items,
-        `</ol>`,
+        `<div class="answer-groups">${groupsHtml}</div>`,
+        `</div>`,
         `</section>`
       ].join("");
     });
@@ -476,7 +495,10 @@
     // 印刷バッチのタイムスタンプ + 通し番号
     const timestamp = state.timestamp || formatTimestamp(new Date());
     const problemSheetCount = pages.length;
-    const answerSheetCount = settings.includeAnswerPage ? problemSheetCount : 0;
+    // 解答ページは 5 問題シートにつき 1 枚 (100 問/ページ)
+    const answerSheetCount = settings.includeAnswerPage
+      ? Math.ceil(problemSheetCount / 5)
+      : 0;
     const totalSheets = problemSheetCount + answerSheetCount;
 
     pages.forEach((pageProblems, pageIndex) => {
@@ -488,9 +510,11 @@
       const html = [
         `<section class="page">`,
         `<div class="page-meta">${id}</div>`,
+        `<div class="page-content">`,
         buildPageHeader(settings.grade, settings.mode),
         `<div class="problem-grid">`,
         cells,
+        `</div>`,
         `</div>`,
         `</section>`
       ].join("");

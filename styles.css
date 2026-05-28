@@ -206,14 +206,20 @@ html, body {
 /* ===== ページ ===== */
 .page {
   display: flex;
+  flex-direction: column;        /* タイムスタンプを最上段、その下に本体 */
+}
+
+.page-content {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
   flex-direction: row-reverse;   /* ヘッダを右、本体を左 */
-  position: relative;            /* .page-meta の絶対配置基準 */
 }
 
 /* ヘッダ (右側に縦書きで配置)
-   2 列構成 (タイトル / 名前+日付) のみ、最小幅で */
+   1 列構成 (タイトル + 名前 + 日付) を 1 span に統合、最小幅で */
 .page-header {
-  flex: 0 0 12mm;
+  flex: 0 0 9mm;
   writing-mode: vertical-rl;
   text-orientation: upright;
   display: flex;
@@ -229,17 +235,17 @@ html, body {
 .page-header ruby rt { font-size: 0.5em; }
 
 /* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT)
-   ヘッダから分離し、ページ上部右端に小さく横書きで表示 */
+   ヘッダから分離し、ページ最上部右端に小さく横書きで表示
+   (問題枠と被らないよう flex 要素として独立配置) */
 .page-meta {
-  position: absolute;
-  top: 0;
-  right: 0;
+  flex: 0 0 auto;
   font-family: "DejaVu Sans Mono", "Courier New", monospace;
   font-size: 8pt;
   color: var(--line-sub);
   letter-spacing: 0;
-  z-index: 1;
   white-space: nowrap;
+  text-align: right;
+  padding: 0 0 1mm 0;
 }
 
 /* 縦中横: 2 桁数字を縦書きの中で横並びに表示 */
@@ -297,7 +303,7 @@ html, body {
   overflow: hidden;
 }
 
-/* 番号: 上段、両列をまたぐ */
+/* 番号: 上段、両列をまたぐ。中央配置 */
 .problem-number {
   grid-column: 1 / 3;
   grid-row: 1;
@@ -305,18 +311,7 @@ html, body {
   font-size: 9pt;
   font-weight: 600;
   border-bottom: 0.4pt solid var(--line-light);
-  padding-right: 4.5mm; /* self-check と被らないように */
   line-height: 1;
-}
-
-/* 自己採点欄: 右上隅 */
-.self-check {
-  position: absolute;
-  top: 0.8mm;
-  right: 0.8mm;
-  width: 3.2mm;
-  height: 3.2mm;
-  border: 0.4pt solid var(--line-sub);
 }
 
 /* 解答スペース: 左側、縦長の書込み枠
@@ -362,47 +357,81 @@ html, body {
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; letter-spacing: 0; }
 
-/* ===== 解答ページ (A4 横 + 枠なしのコンパクトリスト + 縦書き) =====
-   1 ページに 5〜10 枚分 (100〜200 問) の答えを掲載できる密度。
-   問題番号と答えを縦書きで表示、明朝体で字形を明確に */
-.answer-page .answer-list {
-  list-style: none;
-  margin: 0;
-  padding: 4mm 4mm 4mm 4mm;
-  flex: 1 1 auto;
+/* ===== 解答ページ (A4 横 + 5 グループ × 20 問 / 枚) =====
+   1 ページに最大 5 枚分 (100 問) を掲載
+   各グループは 3 桁ゼロ詰めラベル「001」「002」… と 4×5 サブグリッドの答え枠 */
+.answer-groups {
+  flex: 1 1 0;
   min-width: 0;
   min-height: 0;
   display: grid;
-  /* 4 行 × 5 列 = 1 シート 20 問 がちょうど収まる */
-  grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(5, 1fr);
-  grid-auto-flow: column;
-  column-gap: 4mm;
-  row-gap: 3mm;
-  direction: rtl;
-  align-items: start;
-  justify-items: start;
+  grid-template-rows: 1fr;
+  column-gap: 3mm;
+  padding: 2mm;
+  direction: rtl;       /* グループは右→左 */
 }
 
-.answer-page .answer-list li {
+.answer-group {
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  border: 0.5pt solid var(--line-sub);
+  padding: 2mm;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.group-label {
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 14pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-bottom: 1mm;
+  margin-bottom: 2mm;
+  border-bottom: 0.5pt solid var(--line-sub);
+  flex: 0 0 auto;
+}
+
+.group-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;            /* 列方向 (右→左) で1,2,3... を配置 */
+  column-gap: 1mm;
+  row-gap: 1mm;
+  direction: rtl;
+}
+
+.group-items li {
+  direction: ltr;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: var(--font-stack-textbook);
-  font-size: 22pt;                  /* 大きめで字形を確認しやすく */
+  font-size: 11pt;
   line-height: 1.05;
   white-space: nowrap;
-  direction: ltr;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.answer-page .answer-list .num {
+.group-items .num {
   color: var(--line-sub);
-  font-size: 12pt;
-  font-family: var(--font-stack);   /* 番号は通常字形 */
-  font-weight: 500;
-  margin-block-end: 1.5mm;          /* 縦書きで番号と答えの間にスペース */
+  font-size: 7pt;
+  font-family: var(--font-stack);
+  margin-block-end: 0.8mm;
 }
 
-.answer-page .answer-list .ans {
+.group-items .ans {
   font-weight: 500;
 }
 
