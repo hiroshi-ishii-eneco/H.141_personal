@@ -32,7 +32,7 @@ window.KANJI_DATA_G4 = [
     kanji: "以",
     readings: { on: ["イ"], kun: [] },
     words: [
-      { word: "以上",   reading: "いじょう",   sentence: "発表は○○でおわります。",           printable: true },
+      { word: "以上",   reading: "いじょう",   sentence: "発表は○○で終わります。",           printable: true },
       { word: "以下",   reading: "いか",       sentence: "答えは十○○の数になる。",           printable: true },
       { word: "以内",   reading: "いない",     sentence: "十分○○に教室にもどる。",           printable: true },
       { word: "以外",   reading: "いがい",     sentence: "わたし○○はみな帰った。",           printable: true },
@@ -109,7 +109,7 @@ window.KANJI_DATA_G4 = [
       { word: "栄養",   reading: "えいよう",   sentence: "野菜には○○がたくさんある。",       printable: true },
       { word: "光栄",   reading: "こうえい",   sentence: "代表に選ばれて○○に思う。",         printable: true },
       { word: "見栄",   reading: "みえ",       sentence: "○○をはらず正直に話す。",           printable: true },
-      { word: "繁栄",   reading: "はんえい",   sentence: "町の○○をねがう祭りがある。",       printable: true }
+      { word: "繁栄",   reading: "はんえい",   sentence: "町の○○を願う祭りがある。",       printable: true }
     ]
   },
   {
@@ -636,7 +636,7 @@ window.KANJI_DATA_G4 = [
       { word: "軍人",   reading: "ぐんじん",   sentence: "おじは元○○だったそうだ。",         printable: true },
       { word: "軍手",   reading: "ぐんて",     sentence: "庭の手入れで○○を使う。",           printable: true },
       { word: "海軍",   reading: "かいぐん",   sentence: "資料館で○○の歴史を知る。",         printable: true },
-      { word: "空軍",   reading: "くうぐん",   sentence: "○○の飛行機がそらをとぶ。",         printable: true },
+      { word: "空軍",   reading: "くうぐん",   sentence: "○○の飛行機が空を飛ぶ。",         printable: true },
       { word: "軍配",   reading: "ぐんばい",   sentence: "すもうで行司が○○を上げる。",       printable: true }
     ]
   },
@@ -827,7 +827,7 @@ window.KANJI_DATA_G4 = [
       { word: "康",     reading: "こう",       sentence: "家族の安○○を毎晩いのる。",         printable: true },
       { word: "健康",   reading: "けんこう",   sentence: "○○のために早寝早起きをする。",     printable: true },
       { word: "小康",   reading: "しょうこう", sentence: "祖父の容体は○○を保っている。",     printable: true },
-      { word: "安康",   reading: "あんこう",   sentence: "家族の○○をねがう祭りだ。",         printable: true },
+      { word: "安康",   reading: "あんこう",   sentence: "家族の○○を願う祭りだ。",         printable: true },
       { word: "康寧",   reading: "こうねい",   sentence: "古い書に○○の文字がある。",         printable: true },
       { word: "康年",   reading: "こうねん",   sentence: "おじは○○のお祝いを迎えた。",       printable: true }
     ]
@@ -1124,7 +1124,7 @@ window.KANJI_DATA_G4 = [
     kanji: "失",
     readings: { on: ["シツ"], kun: ["うしな(う)"] },
     words: [
-      { word: "失う",   reading: "うしなう",   sentence: "大切な物を○○とかなしい。",         printable: true },
+      { word: "失う",   reading: "うしなう",   sentence: "大切な物を○○と悲しい。",         printable: true },
       { word: "失敗",   reading: "しっぱい",   sentence: "○○しても次にいかせばよい。",       printable: true },
       { word: "失礼",   reading: "しつれい",   sentence: "おじゃまして○○しました。",         printable: true },
       { word: "失望",   reading: "しつぼう",   sentence: "結果に○○しないで前を向く。",       printable: true },
@@ -1486,7 +1486,7 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "争う",   reading: "あらそう",   sentence: "一位を最後まで○○ことになる。",     printable: true },
       { word: "争い",   reading: "あらそい",   sentence: "兄弟の○○を母が止める。",           printable: true },
-      { word: "戦争",   reading: "せんそう",   sentence: "○○のない世界をねがう。",           printable: true },
+      { word: "戦争",   reading: "せんそう",   sentence: "○○のない世界を願う。",           printable: true },
       { word: "競争",   reading: "きょうそう", sentence: "かけっこで二人が○○する。",         printable: true },
       { word: "論争",   reading: "ろんそう",   sentence: "歴史上の○○について調べる。",       printable: true },
       { word: "争点",   reading: "そうてん",   sentence: "会議の○○をはっきりさせる。",       printable: true }
@@ -1544,7 +1544,7 @@ window.KANJI_DATA_G4 = [
     kanji: "続",
     readings: { on: ["ゾク"], kun: ["つづ(く)", "つづ(ける)"] },
     words: [
-      { word: "続く",   reading: "つづく",     sentence: "雨はあすも○○予定だ。",             printable: true },
+      { word: "続く",   reading: "つづく",     sentence: "雨は明日も○○予定だ。",             printable: true },
       { word: "続ける", reading: "つづける",   sentence: "毎朝の練習を○○ことにした。",       printable: true },
       { word: "連続",   reading: "れんぞく",   sentence: "三日○○で晴れた。",                 printable: true },
       { word: "続出",   reading: "ぞくしゅつ", sentence: "好記録が○○する大会だった。",       printable: true },

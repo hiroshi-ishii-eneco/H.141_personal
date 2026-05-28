@@ -311,7 +311,7 @@ window.KANJI_DATA_G6 = [
       { word: "吸引", reading: "きゅういん", sentence: "新しいそうじ機の○○力を実際に試してみる。", printable: true },
       { word: "呼吸", reading: "こきゅう", sentence: "発表の前に大きく深い○○を意識して整える。", printable: true },
       { word: "吸収", reading: "きゅうしゅう", sentence: "新しい知識をどんどん○○する楽しい時期だ。", printable: true },
-      { word: "吸入", reading: "きゅうにゅう", sentence: "苦しい時はおいしゃさんの薬を○○して治す。", printable: true },
+      { word: "吸入", reading: "きゅうにゅう", sentence: "苦しい時はお医者さんの薬を○○して治す。", printable: true },
       { word: "吸盤", reading: "きゅうばん", sentence: "水族館でタコの大きな○○をじっくり観察する。", printable: true },
       { word: "吸う", reading: "すう", sentence: "山の頂上で新せんな空気を思い切り○○。", printable: true }
     ]
@@ -837,7 +837,7 @@ window.KANJI_DATA_G6 = [
     readings: { on: ["ジ"], kun: [] },
     words: [
       { word: "磁石", reading: "じしゃく", sentence: "理科の実験で○○の力をくわしく調べる。", printable: true },
-      { word: "磁気", reading: "じき", sentence: "理科の時間に○○のせいしつをじっくり学ぶ。", printable: true },
+      { word: "磁気", reading: "じき", sentence: "理科の時間に○○の性質をじっくり学ぶ。", printable: true },
       { word: "電磁", reading: "でんじ", sentence: "教科書で○○波の働きについて調べてみる。", printable: true },
       { word: "陶磁器", reading: "とうじき", sentence: "祖母は古い○○を大事に集めるのが趣味だ。", printable: true },
       { word: "青磁", reading: "せいじ", sentence: "美術館で美しい○○のつぼをじっくり見学する。", printable: true },
