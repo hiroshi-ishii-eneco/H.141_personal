@@ -817,7 +817,7 @@ window.KANJI_DATA_G2 = [
       { word: "新聞紙", reading: "しんぶんし", sentence: "○○で花たばをつつむ。",         printable: true },
       { word: "画用紙", reading: "がようし",   sentence: "○○にかさをかく。",             printable: true },
       { word: "手紙",   reading: "てがみ",     sentence: "母に○○を書く。",               printable: true },
-      { word: "白紙",   reading: "はくし",     sentence: "○○にもどしてかんがえる。",     printable: true }
+      { word: "白紙",   reading: "はくし",     sentence: "○○にもどして考える。",         printable: true }
     ]
   },
   {

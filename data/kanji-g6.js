@@ -1436,7 +1436,7 @@ window.KANJI_DATA_G6 = [
     kanji: "退",
     readings: { on: ["タイ"], kun: ["しりぞ(く)", "しりぞ(ける)"] },
     words: [
-      { word: "退場", reading: "たいじょう", sentence: "サッカーで反そくを受けた選手が○○する。", printable: true },
+      { word: "退場", reading: "たいじょう", sentence: "サッカーで反則を受けた選手が○○する。", printable: true },
       { word: "後退", reading: "こうたい", sentence: "天候のせいで計画が思いがけず○○する。", printable: true },
       { word: "退院", reading: "たいいん", sentence: "入院していた祖母が無事に○○してきた。", printable: true },
       { word: "進退", reading: "しんたい", sentence: "シーズン終了とともに選手が○○を決める。", printable: true },
