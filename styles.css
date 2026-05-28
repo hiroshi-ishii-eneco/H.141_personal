@@ -11,9 +11,15 @@
   --bg-screen: #f4f4f4;
   --bg-paper: #fff;
   --bg-answer: #fafafa;
-  --font-stack: "Noto Sans CJK JP", "BIZ UDPGothic",
-                "UD デジタル 教科書体 NK-R", "Hiragino Sans",
-                "Yu Gothic", "Meiryo", "IPAexGothic", sans-serif;
+  /* 漢字検定の組版に倣い明朝体ベース。
+     ベース: Noto Serif CJK JP (本物の bold + 縦書き正書対応)
+     フォールバック: IPAex 明朝 → IPA 明朝 → 系統 mincho/serif */
+  --font-stack: "Noto Serif CJK JP", "IPAexMincho", "IPAMincho",
+                "Hiragino Mincho ProN", "Yu Mincho",
+                "MS Mincho", serif;
+  /* UD 教科書体寄せの代替フォント (主に解答用) */
+  --font-stack-textbook: "Noto Serif CJK JP", "IPAexMincho",
+                         "HanaMinA", "IPAMincho", serif;
 
   /* A4横(297×210mm) - 上下左右余白 12mm → 有効領域 273×186mm */
   --paper-width: 273mm;
@@ -201,13 +207,13 @@ html, body {
 .page {
   display: flex;
   flex-direction: row-reverse;   /* ヘッダを右、本体を左 */
+  position: relative;            /* .page-meta の絶対配置基準 */
 }
 
 /* ヘッダ (右側に縦書きで配置)
-   writing-mode: vertical-rl + flex-direction: column で
-   各 span が複数の縦列として右→左に並ぶ。要素を統合し 4 列で完結 */
+   2 列構成 (タイトル / 名前+日付) のみ、最小幅で */
 .page-header {
-  flex: 0 0 18mm;
+  flex: 0 0 12mm;
   writing-mode: vertical-rl;
   text-orientation: upright;
   display: flex;
@@ -222,12 +228,34 @@ html, body {
 .page-header > * { white-space: nowrap; }
 .page-header ruby rt { font-size: 0.5em; }
 
-/* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT) — 等幅で表示 */
-.page-header .sheet-id {
+/* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT)
+   ヘッダから分離し、ページ上部右端に小さく横書きで表示 */
+.page-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-family: "DejaVu Sans Mono", "Courier New", monospace;
-  font-size: 9pt;
+  font-size: 8pt;
   color: var(--line-sub);
-  margin-block-start: auto;       /* 縦書き下では視覚的に下端 (=block-end) */
+  letter-spacing: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* 縦中横: 2 桁数字を縦書きの中で横並びに表示 */
+.tcy {
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-upright: all;
+  display: inline-block;
+}
+
+/* 解答ページの大きな問題シート番号 (1, 2, ...) */
+.sheet-no-big {
+  font-size: 48pt;
+  font-weight: 700;
+  margin-block-start: auto;       /* 縦書き下では視覚下端 (block-end) */
+  text-align: center;
 }
 
 /* ===== 出題エリア (漢字検定スタイル) =====
@@ -340,28 +368,27 @@ html, body {
 .answer-page .answer-list {
   list-style: none;
   margin: 0;
-  padding: 2mm 3mm 2mm 2mm;
+  padding: 4mm 4mm 4mm 4mm;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
   display: grid;
-  /* 5 行 × 自動段組 (列方向, 右→左) */
-  grid-template-rows: repeat(5, min-content);
+  /* 4 行 × 5 列 = 1 シート 20 問 がちょうど収まる */
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-auto-flow: column;
-  grid-auto-columns: min-content;
-  column-gap: 2mm;
-  row-gap: 1mm;
+  column-gap: 4mm;
+  row-gap: 3mm;
   direction: rtl;
-  align-content: start;
+  align-items: start;
+  justify-items: start;
 }
 
 .answer-page .answer-list li {
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-family: "Noto Serif CJK JP", "BIZ UDPMincho",
-               "Hiragino Mincho ProN", "Yu Mincho",
-               "IPAexMincho", serif;
-  font-size: 13pt;
+  font-family: var(--font-stack-textbook);
+  font-size: 22pt;                  /* 大きめで字形を確認しやすく */
   line-height: 1.05;
   white-space: nowrap;
   direction: ltr;
@@ -369,9 +396,10 @@ html, body {
 
 .answer-page .answer-list .num {
   color: var(--line-sub);
-  font-size: 9pt;
-  font-family: var(--font-stack);
-  margin-block-end: 1mm;             /* 縦書きで番号と答えの間にスペース */
+  font-size: 12pt;
+  font-family: var(--font-stack);   /* 番号は通常字形 */
+  font-weight: 500;
+  margin-block-end: 1.5mm;          /* 縦書きで番号と答えの間にスペース */
 }
 
 .answer-page .answer-list .ans {

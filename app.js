@@ -336,18 +336,15 @@
   }
 
   // ページごとのヘッダ HTML
-  // 名前/日付は同一スパン、目安/実績も同一スパンにまとめてスペース節約
-  function buildPageHeader(grade, mode, settings, sheetNumber, totalSheets, timestamp) {
+  // 2 列構成: タイトル / 名前+日付 のみ
+  // (目安・実績・シートIDはここに含めない。シートIDは .page-meta に分離)
+  function buildPageHeader(grade, mode) {
     const gradePart = gradeHeaderHtml(grade);
     const modePart = escapeHtml(modeLabel(mode));
-    const duration = clampInt(settings.durationGoal, 0, 120, DEFAULT_SETTINGS.durationGoal);
-    const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
     return [
       `<header class="page-header">`,
       `<span>漢字練習 ${gradePart} (${modePart})</span>`,
-      `<span>名前 ________ 日付 ________</span>`,
-      `<span>目安 ${duration}分 / 実績 ____分</span>`,
-      `<span class="sheet-id">${id}</span>`,
+      `<span>名前　　　日付</span>`,
       `</header>`
     ].join("");
   }
@@ -387,20 +384,22 @@
     ].join("");
   }
 
+  // 2 桁以上の数字を縦中横 (text-combine-upright) で横並び化するためのラッパ
+  function numLabel(n) {
+    const s = String(n);
+    return s.length >= 2 ? `<span class="tcy">${s}</span>` : s;
+  }
+
   // 解答ページ HTML を組み立てる
-  // - A4 横、コンパクトなリスト形式 (枠なし、番号と答えのみ)
-  // - 1 ページに 5〜10 枚分 (100〜200 問) の答えを掲載できる密度
-  // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
+  // - 1 問題シートにつき 1 枚の解答ページを生成 (N 枚出題 → N 枚解答)
+  // - 大きな問題シート番号をヘッダ末に表示
+  // - 各問題は 1〜20 のローカル連番のみ (シート番号は冒頭の大きな番号で示す)
+  // - 縦書き、明朝体、大きめフォント
   // 戻り値: { html, sheetCount }
   function buildAnswerPages(problems, settings, firstSheetNumber, totalSheets, timestamp) {
-    const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
-    const useCompoundNumber = totalProblemPages > 1;
-
-    // 1 ページに最大 200 問 (10列 × 20行) — 10枚分まで収まる
-    const ITEMS_PER_ANSWER_PAGE = 200;
     const pages = [];
-    for (let i = 0; i < problems.length; i += ITEMS_PER_ANSWER_PAGE) {
-      pages.push(problems.slice(i, i + ITEMS_PER_ANSWER_PAGE));
+    for (let i = 0; i < problems.length; i += PROBLEMS_PER_PAGE) {
+      pages.push(problems.slice(i, i + PROBLEMS_PER_PAGE));
     }
     if (pages.length === 0) pages.push([]);
 
@@ -409,24 +408,25 @@
 
     const htmls = pages.map((pageProblems, pageIdx) => {
       const sheetNumber = firstSheetNumber + pageIdx;
+      const problemSheetNo = pageIdx + 1;
       const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
-      const startIdx = pageIdx * ITEMS_PER_ANSWER_PAGE;
 
       const items = pageProblems.map((p, idx) => {
-        const globalIdx = startIdx + idx;
-        const pageNo = Math.floor(globalIdx / PROBLEMS_PER_PAGE) + 1;
-        const localNo = (globalIdx % PROBLEMS_PER_PAGE) + 1;
-        const label = useCompoundNumber ? `${pageNo}-${localNo}` : `${localNo}`;
-        return `<li><span class="num">${escapeHtml(label)}.</span><span class="ans">${escapeHtml(p.answer)}</span></li>`;
+        const num = idx + 1;
+        return [
+          `<li>`,
+          `<span class="num">${numLabel(num)}</span>`,
+          `<span class="ans">${escapeHtml(p.answer)}</span>`,
+          `</li>`
+        ].join("");
       }).join("");
 
       return [
         `<section class="page answer-page">`,
+        `<div class="page-meta">${id}</div>`,
         `<header class="page-header">`,
         `<span>解答 漢字練習 ${gradePart} (${modePart})</span>`,
-        `<span>名前: ____________</span>`,
-        `<span>日付: ____________</span>`,
-        `<span class="sheet-id">${id}</span>`,
+        `<span class="sheet-no-big">第${numLabel(problemSheetNo)}枚</span>`,
         `</header>`,
         `<ol class="answer-list">`,
         items,
@@ -440,7 +440,7 @@
 
   // 「準備中です」ページ (中学範囲などデータが空のとき)
   function buildEmptyPage(grade, settings, message) {
-    const header = buildPageHeader(grade, settings.mode, settings, 0, 1);
+    const header = buildPageHeader(grade, settings.mode);
     return [
       `<section class="page">`,
       header,
@@ -481,12 +481,14 @@
 
     pages.forEach((pageProblems, pageIndex) => {
       const sheetNumber = pageIndex + 1;
+      const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
       const cells = pageProblems
         .map((p, i) => buildProblemCell(p, i, settings))
         .join("");
       const html = [
         `<section class="page">`,
-        buildPageHeader(settings.grade, settings.mode, settings, sheetNumber, totalSheets, timestamp),
+        `<div class="page-meta">${id}</div>`,
+        buildPageHeader(settings.grade, settings.mode),
         `<div class="problem-grid">`,
         cells,
         `</div>`,
