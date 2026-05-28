@@ -6,11 +6,11 @@
 
 :root {
   --line-main: #222;
-  --line-sub: #666;
+  --line-sub: #555;        /* セル枠用 (薄枠を1トーン濃く) */
   --line-light: #bbb;
   --bg-screen: #f4f4f4;
   --bg-paper: #fff;
-  --bg-answer: #fcfcfc;
+  --bg-answer: #fafafa;
   --font-stack: "Noto Sans CJK JP", "BIZ UDPGothic",
                 "UD デジタル 教科書体 NK-R", "Hiragino Sans",
                 "Yu Gothic", "Meiryo", "IPAexGothic", sans-serif;
@@ -200,31 +200,34 @@ html, body {
 /* ===== ページ ===== */
 .page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;   /* ヘッダを右、本体を左 */
 }
 
-/* ヘッダ (横書きのまま) */
+/* ヘッダ (右側に縦書きで配置)
+   writing-mode: vertical-rl + flex-direction: column で
+   各 span が複数の縦列として右→左に並ぶ */
 .page-header {
+  flex: 0 0 22mm;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6mm;
-  border-bottom: 1px solid var(--line-main);
-  padding-bottom: 2mm;
-  margin-bottom: 3mm;
-  font-size: 11pt;
-  min-height: 13mm;
+  flex-direction: column;
+  gap: 1.5mm;
+  padding: 2mm 1mm 2mm 1.5mm;
+  border-inline-start: 0.5pt solid var(--line-sub);
+  font-size: 9pt;
+  align-items: flex-start;
 }
 
 .page-header > * { white-space: nowrap; }
 .page-header ruby rt { font-size: 0.5em; }
 
-/* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT) — 右端に小さく等幅で表示 */
+/* 印刷バッチ識別 ID (YYMMDD_HHMMSS_NNN/TTT) — 等幅で表示 */
 .page-header .sheet-id {
-  margin-left: auto;
   font-family: "DejaVu Sans Mono", "Courier New", monospace;
   font-size: 9pt;
   color: var(--line-sub);
+  margin-block-start: auto;       /* 縦書き下では視覚的に下端 (=block-end) */
 }
 
 /* ===== 出題エリア (漢字検定スタイル) =====
@@ -240,26 +243,27 @@ html, body {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   grid-auto-flow: column;
-  column-gap: 2mm;
-  row-gap: 3mm;
+  column-gap: 1.5mm;
+  row-gap: 2mm;
   width: 100%;
-  flex: 1 1 0;
+  flex: 1 1 auto;
+  min-width: 0;
   min-height: 0;
   direction: rtl;
 }
 
 /* セル: 番号上部、その下を grid(解答|問題文)で分割
-   解答スペースを広げるため answer 列を 16mm に拡大 */
+   セル枠のみで内側の解答枠の濃線を撤廃 */
 .problem-cell {
   direction: ltr;
   position: relative;
   display: grid;
-  grid-template-columns: 16mm minmax(0, 1fr);
+  grid-template-columns: 15mm minmax(0, 1fr);
   grid-template-rows: 5mm minmax(0, 1fr);
-  column-gap: 1mm;
-  row-gap: 0.8mm;
+  column-gap: 0.8mm;
+  row-gap: 0.5mm;
   padding: 0.5mm;
-  border: 0.4pt solid var(--line-light);
+  border: 0.6pt solid var(--line-sub);  /* セル枠を1トーン濃く (これが囲い) */
   min-width: 0;
   min-height: 0;
   overflow: hidden;
@@ -287,11 +291,12 @@ html, body {
   border: 0.4pt solid var(--line-sub);
 }
 
-/* 解答スペース: 左側、縦長の書込み枠 */
+/* 解答スペース: 左側、縦長の書込み枠
+   濃い枠は撤廃。背景の極薄ティントのみで領域を示す */
 .answer-area {
   grid-column: 1;
   grid-row: 2;
-  border: 0.6pt solid var(--line-main);
+  border: none;
   background: var(--bg-answer);
 }
 
@@ -329,61 +334,41 @@ html, body {
 .blank-kanji { font-weight: 700; }
 .blank-kana  { font-weight: 500; letter-spacing: 0; }
 
-/* ===== 解答ページ (A4 横 + 縦書きセル) =====
-   問題ページと同じ 2 段 10 列のグリッド構造で、各セルに番号と縦書きの答え。
-   とめ・はね・はらい等が確認できるよう答えのフォントを大きく */
-.answer-page .answer-grid {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-  grid-auto-flow: column;
-  column-gap: 2mm;
-  row-gap: 3mm;
-  width: 100%;
-  flex: 1 1 0;
+/* ===== 解答ページ (A4 横 + 枠なしのコンパクトリスト) =====
+   1 ページに 5〜10 枚分 (100〜200 問) の答えを掲載できる密度。
+   問題番号と答えのみ、枠線なし。CSS columns で自動段組 */
+.answer-page .answer-list {
+  list-style: none;
+  margin: 0;
+  padding: 2mm 3mm;
+  flex: 1 1 auto;
+  min-width: 0;
   min-height: 0;
+  columns: 10;
+  column-gap: 4mm;
+  column-fill: auto;
   direction: rtl;
 }
 
-.answer-cell {
-  direction: ltr;
-  display: flex;
-  flex-direction: column;
-  border: 0.4pt solid var(--line-light);
-  padding: 1.5mm 1mm;
-  align-items: center;
-  overflow: hidden;
-  min-width: 0;
-  min-height: 0;
-}
-
-.answer-num {
-  font-size: 10pt;
-  font-weight: 600;
-  border-bottom: 0.5pt solid var(--line-light);
-  padding-bottom: 1mm;
-  margin-bottom: 2mm;
-  width: 100%;
-  text-align: center;
-  flex: 0 0 auto;
-}
-
-.answer-text {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-size: 22pt;
-  font-weight: 500;
-  line-height: 1.3;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 答えページ用のヘッダ */
-.answer-page .page-header {
-  min-height: 12mm;
+.answer-page .answer-list li {
   font-size: 11pt;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  break-inside: avoid;
+  direction: ltr;
+  padding-bottom: 0.5mm;
+}
+
+.answer-page .answer-list .num {
+  color: var(--line-sub);
+  font-size: 9pt;
+  margin-right: 0.3em;
+}
+
+.answer-page .answer-list .ans {
+  font-weight: 500;
 }
 
 /* ===== 印刷 ===== */

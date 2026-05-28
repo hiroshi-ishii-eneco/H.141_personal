@@ -389,19 +389,19 @@
   }
 
   // 解答ページ HTML を組み立てる
-  // - A4 横、縦書きセル (問題ページと同じ 2 段 10 列 grid)
-  // - 各セル: 上部に番号、下部に縦書きの答え
+  // - A4 横、コンパクトなリスト形式 (枠なし、番号と答えのみ)
+  // - 1 ページに 5〜10 枚分 (100〜200 問) の答えを掲載できる密度
   // - 複数ページ出題時は「ページ番号-問題番号」形式で連番化
-  // - 自己採点用に大きめフォントで答えを表示
-  // 戻り値: { html, sheetCount } — sheet 通し番号付与のため枚数を返す
+  // 戻り値: { html, sheetCount }
   function buildAnswerPages(problems, settings, firstSheetNumber, totalSheets, timestamp) {
     const totalProblemPages = Math.max(1, Math.ceil(problems.length / PROBLEMS_PER_PAGE));
     const useCompoundNumber = totalProblemPages > 1;
 
-    // 1 ページ 20 問 (問題ページと同じ)
+    // 1 ページに最大 200 問 (10列 × 20行) — 10枚分まで収まる
+    const ITEMS_PER_ANSWER_PAGE = 200;
     const pages = [];
-    for (let i = 0; i < problems.length; i += PROBLEMS_PER_PAGE) {
-      pages.push(problems.slice(i, i + PROBLEMS_PER_PAGE));
+    for (let i = 0; i < problems.length; i += ITEMS_PER_ANSWER_PAGE) {
+      pages.push(problems.slice(i, i + ITEMS_PER_ANSWER_PAGE));
     }
     if (pages.length === 0) pages.push([]);
 
@@ -411,18 +411,14 @@
     const htmls = pages.map((pageProblems, pageIdx) => {
       const sheetNumber = firstSheetNumber + pageIdx;
       const id = escapeHtml(sheetId(timestamp, sheetNumber, totalSheets));
+      const startIdx = pageIdx * ITEMS_PER_ANSWER_PAGE;
 
-      const cells = pageProblems.map((p, idx) => {
-        const globalIdx = pageIdx * PROBLEMS_PER_PAGE + idx;
+      const items = pageProblems.map((p, idx) => {
+        const globalIdx = startIdx + idx;
         const pageNo = Math.floor(globalIdx / PROBLEMS_PER_PAGE) + 1;
         const localNo = (globalIdx % PROBLEMS_PER_PAGE) + 1;
         const label = useCompoundNumber ? `${pageNo}-${localNo}` : `${localNo}`;
-        return [
-          `<div class="answer-cell">`,
-          `<div class="answer-num">${escapeHtml(label)}</div>`,
-          `<div class="answer-text">${escapeHtml(p.answer)}</div>`,
-          `</div>`
-        ].join("");
+        return `<li><span class="num">${escapeHtml(label)}.</span><span class="ans">${escapeHtml(p.answer)}</span></li>`;
       }).join("");
 
       return [
@@ -433,9 +429,9 @@
         `<span>日付: ____________</span>`,
         `<span class="sheet-id">${id}</span>`,
         `</header>`,
-        `<div class="answer-grid">`,
-        cells,
-        `</div>`,
+        `<ol class="answer-list">`,
+        items,
+        `</ol>`,
         `</section>`
       ].join("");
     });
