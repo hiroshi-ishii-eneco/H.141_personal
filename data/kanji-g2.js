@@ -645,7 +645,7 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ゴウ", "ガッ", "カッ"], kun: ["あ(う)", "あ(わす)"] },
     words: [
       { word: "合う",   reading: "あう",       sentence: "目と目が○○。",                 printable: true },
-      { word: "合計",   reading: "ごうけい",   sentence: "買い物の○○を見る。",           printable: true },
+      { word: "合計",   reading: "ごうけい",   sentence: "おかいものの○○を見る。",       printable: true },
       { word: "合同",   reading: "ごうどう",   sentence: "となりのクラスと○○する。",     printable: true },
       { word: "気合い", reading: "きあい",     sentence: "○○を入れて本ばんにのぞむ。",   printable: true },
       { word: "合図",   reading: "あいず",     sentence: "ピーで○○をする。",             printable: true },
@@ -1416,7 +1416,6 @@ window.KANJI_DATA_G2 = [
       { word: "小刀",   reading: "こがたな",   sentence: "○○でえんぴつをけずる。",       printable: true },
       { word: "木刀",   reading: "ぼくとう",   sentence: "○○でけいこする。",             printable: true },
       { word: "短刀",   reading: "たんとう",   sentence: "ものがたりの○○の話。",         printable: true },
-
       { word: "竹刀",   reading: "しない",     sentence: "けんどうの○○をもつ。",         printable: true },
       { word: "刀工",   reading: "とうこう",   sentence: "むかしの○○のしごとを学ぶ。",   printable: true }
     ]
@@ -1425,7 +1424,7 @@ window.KANJI_DATA_G2 = [
     kanji: "冬",
     readings: { on: ["トウ"], kun: ["ふゆ"] },
     words: [
-      { word: "冬",     reading: "ふゆ",       sentence: "○○のあさはさむい。",           printable: true },
+      { word: "冬",     reading: "ふゆ",       sentence: "○○の朝はさむい。",             printable: true },
       { word: "冬休み", reading: "ふゆやすみ", sentence: "○○にスキーへ行く。",           printable: true },
       { word: "立冬",   reading: "りっとう",   sentence: "○○のころが来る。",             printable: true },
       { word: "冬山",   reading: "ふゆやま",   sentence: "○○のけしきはきれいだ。",       printable: true },
@@ -1439,7 +1438,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "当たる", reading: "あたる",     sentence: "ボールが木に○○。",             printable: true },
       { word: "当てる", reading: "あてる",     sentence: "目を○○てとくいわざ。",         printable: true },
-      { word: "本当",   reading: "ほんとう",   sentence: "○○の話をきいてほっとする。",   printable: true },
+      { word: "本当",   reading: "ほんとう",   sentence: "○○の話を聞いてほっとする。",   printable: true },
       { word: "当日",   reading: "とうじつ",   sentence: "うんどう会の○○。",             printable: true },
       { word: "当番",   reading: "とうばん",   sentence: "そうじの○○になる。",           printable: true },
       { word: "見当",   reading: "けんとう",   sentence: "答えの○○をつける。",           printable: true }
@@ -1452,7 +1451,7 @@ window.KANJI_DATA_G2 = [
       { word: "東",     reading: "ひがし",     sentence: "○○から朝日がのぼる。",         printable: true },
       { word: "東口",   reading: "ひがしぐち", sentence: "○○からホームに上がる。",       printable: true },
       { word: "東京",   reading: "とうきょう", sentence: "あすは○○へしゅっぱつする。",   printable: true },
-      { word: "東西",   reading: "とうざい",   sentence: "ちずで○○のほうがくを見る。",   printable: true },
+      { word: "東西",   reading: "とうざい",   sentence: "地図で○○の方角を見る。",       printable: true },
       { word: "東風",   reading: "こち",       sentence: "春の○○がふく。",               printable: true },
       { word: "東日本", reading: "ひがしにほん", sentence: "○○のおまつりを見る。",       printable: true }
     ]
@@ -1465,7 +1464,7 @@ window.KANJI_DATA_G2 = [
       { word: "答え",   reading: "こたえ",     sentence: "正しい○○を書く。",             printable: true },
       { word: "答案",   reading: "とうあん",   sentence: "○○を出す。",                   printable: true },
       { word: "回答",   reading: "かいとう",   sentence: "アンケートの○○。",             printable: true },
-      { word: "口答",   reading: "こうとう",   sentence: "○○でこたえるしけん。",         printable: true },
+      { word: "口答",   reading: "こうとう",   sentence: "○○で答えるしけん。",           printable: true },
       { word: "問答",   reading: "もんどう",   sentence: "先生と○○をする。",             printable: true }
     ]
   },
@@ -1486,7 +1485,7 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ドウ"], kun: ["おな(じ)"] },
     words: [
       { word: "同じ",   reading: "おなじ",     sentence: "兄と○○本を読む。",             printable: true },
-      { word: "同時",   reading: "どうじ",     sentence: "ふたりが○○にゴールした。",     printable: true },
+      { word: "同時",   reading: "どうじ",     sentence: "二人が○○にゴールした。",       printable: true },
       { word: "同年",   reading: "どうねん",   sentence: "○○の友だちに会う。",           printable: true },
       { word: "同点",   reading: "どうてん",   sentence: "しあいは○○でおわった。",       printable: true },
       { word: "合同",   reading: "ごうどう",   sentence: "となりとうらで○○のれんしゅう。", printable: true },
@@ -1534,10 +1533,10 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ナン", "ナ"], kun: ["みなみ"] },
     words: [
       { word: "南",     reading: "みなみ",     sentence: "○○の風がふく。",               printable: true },
-      { word: "南国",   reading: "なんごく",   sentence: "○○のはなはあざやかだ。",       printable: true },
+      { word: "南国",   reading: "なんごく",   sentence: "○○の花はあざやかだ。",         printable: true },
       { word: "南口",   reading: "みなみぐち", sentence: "えきの○○の前にバスがとまる。", printable: true },
       { word: "東南",   reading: "とうなん",   sentence: "○○アジアの本を読む。",         printable: true },
-      { word: "西南",   reading: "せいなん",   sentence: "○○のほうがくをさす。",         printable: true },
+      { word: "西南",   reading: "せいなん",   sentence: "○○の方角をさす。",             printable: true },
       { word: "南北",   reading: "なんぼく",   sentence: "○○に細ながい国土。",           printable: true }
     ]
   },
@@ -1571,7 +1570,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "売る",   reading: "うる",       sentence: "お店でやさいを○○。",           printable: true },
       { word: "売れる", reading: "うれる",     sentence: "新しい本が○○。",               printable: true },
-      { word: "売店",   reading: "ばいてん",   sentence: "プールの○○でジュースをかう。", printable: true },
+      { word: "売店",   reading: "ばいてん",   sentence: "プールの○○でジュースを買う。", printable: true },
       { word: "売買",   reading: "ばいばい",   sentence: "土地の○○の話。",               printable: true },
       { word: "売り上げ", reading: "うりあげ", sentence: "お店の○○がふえた。",           printable: true },
       { word: "売り場", reading: "うりば",     sentence: "おもちゃの○○へ行く。",         printable: true }
@@ -1593,10 +1592,10 @@ window.KANJI_DATA_G2 = [
     kanji: "麦",
     readings: { on: ["バク"], kun: ["むぎ"] },
     words: [
-      { word: "麦",     reading: "むぎ",       sentence: "○○ばたけがひろがる。",         printable: true },
-      { word: "麦茶",   reading: "むぎちゃ",   sentence: "なつに○○をのむ。",             printable: true },
+      { word: "麦",     reading: "むぎ",       sentence: "○○ばたけが広がる。",           printable: true },
+      { word: "麦茶",   reading: "むぎちゃ",   sentence: "夏に○○をのむ。",               printable: true },
       { word: "小麦",   reading: "こむぎ",     sentence: "○○こでパンを作る。",           printable: true },
-      { word: "麦畑",   reading: "むぎばたけ", sentence: "○○がどこまでもひろがる。",     printable: true },
+      { word: "麦畑",   reading: "むぎばたけ", sentence: "○○がどこまでも広がる。",       printable: true },
       { word: "大麦",   reading: "おおむぎ",   sentence: "○○のかゆを食べる。",           printable: true },
       { word: "麦わら", reading: "むぎわら",   sentence: "○○ぼうしをかぶる。",           printable: true }
     ]
@@ -1608,8 +1607,8 @@ window.KANJI_DATA_G2 = [
       { word: "半分",   reading: "はんぶん",   sentence: "りんごを○○に切る。",           printable: true },
       { word: "半ば",   reading: "なかば",     sentence: "月の○○にあそびに行く。",       printable: true },
       { word: "前半",   reading: "ぜんはん",   sentence: "しあいの○○がおわった。",       printable: true },
-      { word: "後半",   reading: "こうはん",   sentence: "○○からてんが入る。",           printable: true },
-      { word: "半年",   reading: "はんとし",   sentence: "○○まえに学校に入った。",       printable: true },
+      { word: "後半",   reading: "こうはん",   sentence: "○○から点が入る。",             printable: true },
+      { word: "半年",   reading: "はんとし",   sentence: "○○前に学校に入った。",         printable: true },
       { word: "半日",   reading: "はんにち",   sentence: "○○本を読んですごす。",         printable: true }
     ]
   },
@@ -1619,7 +1618,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "番",     reading: "ばん",       sentence: "じゅん○○にならぶ。",           printable: true },
       { word: "番組",   reading: "ばんぐみ",   sentence: "おもしろいテレビの○○を見る。", printable: true },
-      { word: "交番",   reading: "こうばん",   sentence: "近くの○○できく。",             printable: true },
+      { word: "交番",   reading: "こうばん",   sentence: "近くの○○で聞く。",             printable: true },
       { word: "番号",   reading: "ばんごう",   sentence: "○○じゅんによばれる。",         printable: true },
       { word: "本番",   reading: "ほんばん",   sentence: "あすが○○だ。",                 printable: true },
       { word: "当番",   reading: "とうばん",   sentence: "そうじの○○をする。",           printable: true }
@@ -1630,7 +1629,7 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["フ"], kun: ["ちち"] },
     words: [
       { word: "父",     reading: "ちち",       sentence: "○○といっしょに走る。",         printable: true },
-      { word: "父母",   reading: "ふぼ",       sentence: "○○のあいに思う。",             printable: true },
+      { word: "父母",   reading: "ふぼ",       sentence: "○○のあいを思う。",             printable: true },
       { word: "父親",   reading: "ちちおや",   sentence: "○○のせなかが大きい。",         printable: true },
       { word: "父さん", reading: "とうさん",   sentence: "お○○とつりに行く。",           printable: true },
       { word: "祖父",   reading: "そふ",       sentence: "○○とさんぽする。",             printable: true },
@@ -1643,10 +1642,10 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "風",     reading: "かぜ",       sentence: "○○がやさしくふく。",           printable: true },
       { word: "風車",   reading: "ふうしゃ",   sentence: "○○が回るのを見る。",           printable: true },
-      { word: "風船",   reading: "ふうせん",   sentence: "あかい○○が空にとぶ。",         printable: true },
+      { word: "風船",   reading: "ふうせん",   sentence: "赤い○○が空にとぶ。",           printable: true },
       { word: "南風",   reading: "みなみかぜ", sentence: "あたたかい○○がふく。",         printable: true },
       { word: "風土",   reading: "ふうど",     sentence: "○○のちがいを学ぶ。",           printable: true },
-      { word: "風雪",   reading: "ふうせつ",   sentence: "つよい○○の中を歩く。",         printable: true }
+      { word: "風雪",   reading: "ふうせつ",   sentence: "強い○○の中を歩く。",           printable: true }
     ]
   },
   {
@@ -1666,8 +1665,8 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ブン", "モン"], kun: ["き(く)", "き(こえる)"] },
     words: [
       { word: "聞く",   reading: "きく",       sentence: "先生の話を○○。",               printable: true },
-      { word: "聞こえる", reading: "きこえる", sentence: "鳥のこえが○○。",               printable: true },
-      { word: "新聞",   reading: "しんぶん",   sentence: "あさの○○を読む。",             printable: true },
+      { word: "聞こえる", reading: "きこえる", sentence: "鳥の声が○○。",                 printable: true },
+      { word: "新聞",   reading: "しんぶん",   sentence: "朝の○○を読む。",               printable: true },
       { word: "見聞",   reading: "けんぶん",   sentence: "りょこうで○○をひろめる。",     printable: true },
       { word: "聞き手", reading: "ききて",     sentence: "よい○○になる。",               printable: true },
       { word: "聞こえ", reading: "きこえ",     sentence: "○○のよいぴあのの音。",         printable: true }
@@ -1690,8 +1689,8 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ホ", "ブ"], kun: ["ある(く)", "あゆ(む)"] },
     words: [
       { word: "歩く",   reading: "あるく",     sentence: "学校までゆっくり○○。",         printable: true },
-      { word: "歩道",   reading: "ほどう",     sentence: "白いせんがある○○を歩く。",     printable: true },
-      { word: "歩行",   reading: "ほこう",     sentence: "○○ちゅうにきをつける。",       printable: true },
+      { word: "歩道",   reading: "ほどう",     sentence: "白い線がある○○を歩く。",       printable: true },
+      { word: "歩行",   reading: "ほこう",     sentence: "○○ちゅうに気をつける。",       printable: true },
       { word: "一歩",   reading: "いっぽ",     sentence: "前に○○ふみだす。",             printable: true },
       { word: "散歩",   reading: "さんぽ",     sentence: "犬と○○する。",                 printable: true },
       { word: "歩み",   reading: "あゆみ",     sentence: "ゆっくりとした○○。",           printable: true }
@@ -1706,16 +1705,16 @@ window.KANJI_DATA_G2 = [
       { word: "母親",   reading: "ははおや",   sentence: "やさしい○○だ。",               printable: true },
       { word: "母さん", reading: "かあさん",   sentence: "お○○とおりょうりをする。",     printable: true },
       { word: "母の日", reading: "ははのひ",   sentence: "○○にカードをわたす。",         printable: true },
-      { word: "母国",   reading: "ぼこく",     sentence: "○○のうたを心でうたう。",       printable: true }
+      { word: "母国",   reading: "ぼこく",     sentence: "○○の歌を心で歌う。",           printable: true }
     ]
   },
   {
     kanji: "方",
     readings: { on: ["ホウ"], kun: ["かた"] },
     words: [
-      { word: "方",     reading: "かた",       sentence: "あちらの○○からこえがする。",   printable: true },
+      { word: "方",     reading: "かた",       sentence: "あちらの○○から声がする。",     printable: true },
       { word: "方角",   reading: "ほうがく",   sentence: "東の○○をさす。",               printable: true },
-      { word: "夕方",   reading: "ゆうがた",   sentence: "○○からあめだ。",               printable: true },
+      { word: "夕方",   reading: "ゆうがた",   sentence: "○○から雨だ。",                 printable: true },
       { word: "方位",   reading: "ほうい",     sentence: "○○じしゃくをつかう。",         printable: true },
       { word: "見方",   reading: "みかた",     sentence: "図の○○をならう。",             printable: true },
       { word: "方言",   reading: "ほうげん",   sentence: "ふるさとの○○を聞く。",         printable: true }
@@ -1726,10 +1725,10 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ホク"], kun: ["きた"] },
     words: [
       { word: "北",     reading: "きた",       sentence: "○○の空に星が出る。",           printable: true },
-      { word: "北口",   reading: "きたぐち",   sentence: "デパートの○○からはいる。",     printable: true },
+      { word: "北口",   reading: "きたぐち",   sentence: "デパートの○○から入る。",       printable: true },
       { word: "北風",   reading: "きたかぜ",   sentence: "つめたい○○がふく。",           printable: true },
       { word: "東北",   reading: "とうほく",   sentence: "○○のお米はおいしい。",         printable: true },
-      { word: "南北",   reading: "なんぼく",   sentence: "国土は○○にながい。",           printable: true },
+      { word: "南北",   reading: "なんぼく",   sentence: "国土は○○に長い。",             printable: true },
       { word: "北上",   reading: "ほくじょう", sentence: "車で○○する。",                 printable: true }
     ]
   },
@@ -1737,10 +1736,10 @@ window.KANJI_DATA_G2 = [
     kanji: "毎",
     readings: { on: ["マイ"], kun: [] },
     words: [
-      { word: "毎日",   reading: "まいにち",   sentence: "○○えにっきを書く。",           printable: true },
+      { word: "毎日",   reading: "まいにち",   sentence: "○○絵にっきを書く。",           printable: true },
       { word: "毎週",   reading: "まいしゅう", sentence: "○○月よう日にこいぬとあそぶ。", printable: true },
       { word: "毎月",   reading: "まいつき",   sentence: "○○新しい本を買う。",           printable: true },
-      { word: "毎年",   reading: "まいとし",   sentence: "○○なつにおまつりがある。",     printable: true },
+      { word: "毎年",   reading: "まいとし",   sentence: "○○夏におまつりがある。",       printable: true },
       { word: "毎回",   reading: "まいかい",   sentence: "○○いい点数をとる。",           printable: true },
       { word: "毎朝",   reading: "まいあさ",   sentence: "○○ラジオたいそうをする。",     printable: true }
     ]
@@ -1751,9 +1750,9 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "妹",     reading: "いもうと",   sentence: "○○がブランコにのる。",         printable: true },
       { word: "姉妹",   reading: "しまい",     sentence: "○○できょうりょくする。",       printable: true },
-      { word: "義妹",   reading: "ぎまい",     sentence: "あにのつまは○○にあたる。",     printable: true },
+      { word: "義妹",   reading: "ぎまい",     sentence: "兄のつまは○○にあたる。",       printable: true },
       { word: "妹分",   reading: "いもうとぶん", sentence: "クラブで○○のような子。",     printable: true },
-      { word: "妹さん", reading: "いもうとさん", sentence: "○○がうたを歌う。",           printable: true },
+      { word: "妹さん", reading: "いもうとさん", sentence: "○○が歌を歌う。",             printable: true },
       { word: "弟妹",   reading: "ていまい",   sentence: "○○のせわをする。",             printable: true }
     ]
   },
@@ -1776,7 +1775,7 @@ window.KANJI_DATA_G2 = [
       { word: "明るい", reading: "あかるい",   sentence: "○○いへやで本を読む。",         printable: true },
       { word: "明ける", reading: "あける",     sentence: "夜が○○。",                     printable: true },
       { word: "明日",   reading: "あした",     sentence: "○○のじゅんびを早めにする。",   printable: true },
-      { word: "明星",   reading: "みょうじょう", sentence: "あさの○○が見える。",         printable: true },
+      { word: "明星",   reading: "みょうじょう", sentence: "朝の○○が見える。",           printable: true },
       { word: "発明",   reading: "はつめい",   sentence: "新しい○○をする。",             printable: true },
       { word: "明らか", reading: "あきらか",   sentence: "答えが○○になる。",             printable: true }
     ]
@@ -1790,7 +1789,7 @@ window.KANJI_DATA_G2 = [
       { word: "鳴らす", reading: "ならす",     sentence: "ベルをりんりんと○○。",         printable: true },
       { word: "鳴き声", reading: "なきごえ",   sentence: "犬の○○がする。",               printable: true },
       { word: "大鳴り", reading: "おおなり",   sentence: "○○のはくしゅが来た。",         printable: true },
-      { word: "雷鳴",   reading: "らいめい",   sentence: "とおくで○○が聞こえる。",       printable: true }
+      { word: "雷鳴",   reading: "らいめい",   sentence: "遠くで○○が聞こえる。",         printable: true }
     ]
   },
   {
@@ -1809,8 +1808,8 @@ window.KANJI_DATA_G2 = [
     kanji: "門",
     readings: { on: ["モン"], kun: ["かど"] },
     words: [
-      { word: "門",     reading: "もん",       sentence: "校○○の前にたつ。",             printable: true },
-      { word: "校門",   reading: "こうもん",   sentence: "あさ○○をくぐる。",             printable: true },
+      { word: "門",     reading: "もん",       sentence: "校○○の前に立つ。",             printable: true },
+      { word: "校門",   reading: "こうもん",   sentence: "朝○○をくぐる。",               printable: true },
       { word: "正門",   reading: "せいもん",   sentence: "○○からみんなで出る。",         printable: true },
       { word: "門出",   reading: "かどで",     sentence: "新しい○○をいわう。",           printable: true },
       { word: "入門",   reading: "にゅうもん", sentence: "ピアノの○○書を読む。",         printable: true },
@@ -1821,10 +1820,10 @@ window.KANJI_DATA_G2 = [
     kanji: "夜",
     readings: { on: ["ヤ"], kun: ["よ", "よる"] },
     words: [
-      { word: "夜",     reading: "よる",       sentence: "○○のそらに星がきれいだ。",     printable: true },
+      { word: "夜",     reading: "よる",       sentence: "○○の空に星がきれいだ。",       printable: true },
       { word: "今夜",   reading: "こんや",     sentence: "○○はおまつりだ。",             printable: true },
       { word: "夜空",   reading: "よぞら",     sentence: "○○に月が出る。",               printable: true },
-      { word: "夜風",   reading: "よかぜ",     sentence: "なつの○○にあたる。",           printable: true },
+      { word: "夜風",   reading: "よかぜ",     sentence: "夏の○○にあたる。",             printable: true },
       { word: "白夜",   reading: "びゃくや",   sentence: "○○の国の話を聞く。",           printable: true },
       { word: "夜中",   reading: "よなか",     sentence: "○○に目がさめる。",             printable: true }
     ]
@@ -1834,7 +1833,7 @@ window.KANJI_DATA_G2 = [
     readings: { on: ["ヤ"], kun: ["の"] },
     words: [
       { word: "野",     reading: "の",         sentence: "○○山であそぶ。",               printable: true },
-      { word: "野原",   reading: "のはら",     sentence: "ひろい○○をかけまわる。",       printable: true },
+      { word: "野原",   reading: "のはら",     sentence: "広い○○をかけまわる。",         printable: true },
       { word: "野鳥",   reading: "やちょう",   sentence: "○○のかんさつをする。",         printable: true },
       { word: "野外",   reading: "やがい",     sentence: "○○のじゅぎょうに出る。",       printable: true },
       { word: "野生",   reading: "やせい",     sentence: "○○のうさぎを見る。",           printable: true },
@@ -1874,18 +1873,18 @@ window.KANJI_DATA_G2 = [
       { word: "火曜",   reading: "かよう",     sentence: "○○日に音楽がある。",           printable: true },
       { word: "水曜",   reading: "すいよう",   sentence: "○○日にプールがある。",         printable: true },
       { word: "金曜",   reading: "きんよう",   sentence: "○○日にあそびに行く。",         printable: true },
-      { word: "日曜",   reading: "にちよう",   sentence: "○○日はやすみだ。",             printable: true }
+      { word: "日曜",   reading: "にちよう",   sentence: "○○日は休みだ。",               printable: true }
     ]
   },
   {
     kanji: "来",
     readings: { on: ["ライ"], kun: ["く(る)", "き(たる)"] },
     words: [
-      { word: "来る",   reading: "くる",       sentence: "ともだちが家に○○。",           printable: true },
+      { word: "来る",   reading: "くる",       sentence: "友だちが家に○○。",             printable: true },
       { word: "来年",   reading: "らいねん",   sentence: "○○は三年生だ。",               printable: true },
       { word: "来月",   reading: "らいげつ",   sentence: "○○うんどう会がある。",         printable: true },
       { word: "来週",   reading: "らいしゅう", sentence: "○○には新しい本を読む。",       printable: true },
-      { word: "出来る", reading: "できる",     sentence: "ひとりで○○ようになる。",       printable: true },
+      { word: "出来る", reading: "できる",     sentence: "一人で○○ようになる。",         printable: true },
       { word: "来日",   reading: "らいにち",   sentence: "○○した友人をむかえる。",       printable: true }
     ]
   },
@@ -1907,7 +1906,7 @@ window.KANJI_DATA_G2 = [
     words: [
       { word: "理科",   reading: "りか",       sentence: "○○のじっけんが楽しい。",       printable: true },
       { word: "理由",   reading: "りゆう",     sentence: "正しい○○を考える。",           printable: true },
-      { word: "道理",   reading: "どうり",     sentence: "○○にあった話だ。",             printable: true },
+      { word: "道理",   reading: "どうり",     sentence: "○○に合った話だ。",             printable: true },
       { word: "心理",   reading: "しんり",     sentence: "あいての○○を考える。",         printable: true },
       { word: "理ろん", reading: "りろん",     sentence: "○○をしっかり学ぶ。",           printable: true },
       { word: "地理",   reading: "ちり",       sentence: "○○の本でちきゅうを学ぶ。",     printable: true }
@@ -1917,7 +1916,7 @@ window.KANJI_DATA_G2 = [
     kanji: "話",
     readings: { on: ["ワ"], kun: ["はな(す)", "はなし"] },
     words: [
-      { word: "話す",   reading: "はなす",     sentence: "ともだちと電話で○○。",         printable: true },
+      { word: "話す",   reading: "はなす",     sentence: "友だちと電話で○○。",           printable: true },
       { word: "話",     reading: "はなし",     sentence: "むかしの○○を聞く。",           printable: true },
       { word: "会話",   reading: "かいわ",     sentence: "明るく○○をする。",             printable: true },
       { word: "電話",   reading: "でんわ",     sentence: "家に○○をかける。",             printable: true },
