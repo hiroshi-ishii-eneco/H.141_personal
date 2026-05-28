@@ -11,9 +11,9 @@
   --bg-screen: #f4f4f4;
   --bg-paper: #fff;
   --bg-answer: #fcfcfc;
-  --font-stack: "UD デジタル 教科書体 NK-R", "BIZ UDPMincho",
-                "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho",
-                "BIZ UDPGothic", "Yu Gothic", "Meiryo", serif;
+  --font-stack: "Noto Sans CJK JP", "BIZ UDPGothic",
+                "UD デジタル 教科書体 NK-R", "Hiragino Sans",
+                "Yu Gothic", "Meiryo", "IPAexGothic", sans-serif;
 
   /* A4横(297×210mm) - 上下左右余白 12mm → 有効領域 273×186mm */
   --paper-width: 273mm;
@@ -35,6 +35,11 @@ html, body {
   padding: 0;
   font-family: var(--font-stack);
   color: var(--line-main);
+  /* システムに本物の bold グリフが無いフォント (IPAGothic 等) で、
+     ブラウザが二重描画でフェイク bold を作るのを禁止する。
+     フェイク bold は縦書き下で文字が重なって見える原因になる */
+  font-synthesis: none;
+  -webkit-font-synthesis: none;
 }
 
 /* ===== 画面表示 ===== */
@@ -284,38 +289,35 @@ html, body {
   grid-column: 2;
   grid-row: 2;
   writing-mode: vertical-rl;
-  text-orientation: upright;     /* 全文字を縦書き用に立てる(漢字・かな共に) */
+  text-orientation: mixed;       /* CJK は立て、ーや句読点等は縦書き正書 */
   font-size: var(--problem-font);
-  line-height: 1.45;
-  padding-block-start: 1mm;      /* 視覚右の余白 */
-  padding-block-end: 0.5mm;      /* 視覚左の余白 */
-  padding-inline: 1mm;           /* 視覚上下の余白 */
+  line-height: 1.7;              /* 列間スペースを十分に取る */
+  padding-block-start: 1.5mm;    /* 視覚右の余白 */
+  padding-block-end: 1mm;        /* 視覚左の余白 */
+  padding-inline: 1.5mm;         /* 視覚上下の余白 */
   overflow: hidden;
 }
 
 /* 出題該当箇所: 漢字検定スタイル
-   - 読みモード (.blank-kanji): 漢字を表示し、左側に縦の傍線 (linear-gradient で確実描画)
-   - 書きモード (.blank-kana): カタカナで太字表示、傍線なし
-   いずれもグレー背景・ボックスなし、漢字検定の組版に倣う */
+   .blank は display: inline のまま */
 .blank {
-  display: inline-block;
-  padding: 0;
-}
-
-/* 読みモード: 漢字 + 左の傍線 */
-.blank-kanji {
-  font-weight: 600;
-  /* 物理 left 端に縦線を描く (background gradient で確実に出力) */
-  background-image: linear-gradient(var(--line-main), var(--line-main));
-  background-size: 1.2pt 100%;
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 1.5mm;
-}
-
-/* 書きモード: カタカナ太字 (傍線・ハイライトなし) */
-.blank-kana {
   font-weight: 700;
+}
+
+/* 読みモード: 漢字 + 傍点 (text-emphasis)
+   under = 縦書きでは視覚的に左側 */
+.blank-kanji {
+  text-emphasis: filled dot;
+  text-emphasis-color: var(--line-main);
+  text-emphasis-position: under;
+  -webkit-text-emphasis: filled dot;
+  -webkit-text-emphasis-color: var(--line-main);
+  -webkit-text-emphasis-position: under;
+}
+
+/* 書きモード: 太字カタカナのみ (傍点なし) */
+.blank-kana {
+  /* font-weight: 700 のみ */
 }
 
 /* 読みモード: 漢字を表示 (太字) / 書きモード: ひらがな表示 */
