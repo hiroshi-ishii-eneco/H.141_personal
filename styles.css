@@ -406,8 +406,10 @@ html, body {
   grid-template-rows: repeat(4, 1fr);
   grid-auto-flow: column;            /* 列方向 (右→左) で1,2,3... を配置 */
   column-gap: 1mm;
-  row-gap: 1mm;
+  row-gap: 2mm;
   direction: rtl;
+  align-items: center;               /* セル内で li を中央配置 */
+  justify-items: center;
 }
 
 .group-items li {
@@ -415,24 +417,29 @@ html, body {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: var(--font-stack-textbook);
-  font-size: 11pt;
+  font-size: 18pt;                    /* 大きめで字形を確認しやすく */
   line-height: 1.05;
   white-space: nowrap;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row;                /* vertical-rl 下では主軸が縦方向 */
+  align-items: center;                /* 横方向 (視覚的) 中央 */
+  justify-content: center;            /* 縦方向 (視覚的) 中央 */
   overflow: hidden;
+  text-align: center;
 }
 
 .group-items .num {
   color: var(--line-sub);
-  font-size: 7pt;
+  font-size: 10pt;
   font-family: var(--font-stack);
-  margin-block-end: 0.8mm;
+  font-weight: 500;
+  margin-block-end: 1.5mm;
+  text-align: center;
 }
 
 .group-items .ans {
   font-weight: 500;
+  text-align: center;
 }
 
 /* ===== 印刷 ===== */
