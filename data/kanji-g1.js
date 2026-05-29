@@ -36,7 +36,7 @@ window.KANJI_DATA_G1 = [
       { word: "大雨",   reading: "おおあめ",   sentence: "夕がた○○になった。",          printable: true },
       { word: "小雨",   reading: "こさめ",     sentence: "まどそとで○○がふる。",        printable: true },
       { word: "雨水",   reading: "あまみず",   sentence: "はちに○○がたまる。",          printable: true },
-      { word: "雨上り", reading: "あめあがり", sentence: "○○の空はきれいだ。",          printable: true },
+      { word: "雨上がり", reading: "あめあがり", sentence: "○○の空はきれいだ。",          printable: true },
       { word: "雨やどり", reading: "あまやどり", sentence: "木の下で○○をする。",          printable: true }
     ]
   },

@@ -119,7 +119,7 @@ window.KANJI_DATA_G3 = [
       { word: "飲む",   reading: "のむ",       sentence: "つめたい水を○○。",                  printable: true },
       { word: "飲み物", reading: "のみもの",   sentence: "○○を買って帰る。",                  printable: true },
       { word: "飲食",   reading: "いんしょく", sentence: "車内での○○はえんりょする。",        printable: true },
-      { word: "飲水",   reading: "のみみず",   sentence: "山の○○がつめたい。",                printable: true },
+      { word: "飲み水", reading: "のみみず",   sentence: "山の○○がつめたい。",                printable: true },
       { word: "飲料",   reading: "いんりょう", sentence: "夏は○○が多くうれる。",              printable: true },
       { word: "立ち飲み", reading: "たちのみ", sentence: "店先で○○のお茶を買う。",            printable: true }
     ]
