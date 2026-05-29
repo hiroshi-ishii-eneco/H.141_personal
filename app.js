@@ -74,7 +74,7 @@
   const SETTINGS_KEY = "kanji_practice_settings_v1";
 
   const DEFAULT_SETTINGS = {
-    grade: "g1",
+    grades: ["g1"],             // 複数選択対応 (配列)
     cumulative: true,
     mode: "write",
     sheetCount: 1,
@@ -85,15 +85,22 @@
   function loadSettings() {
     try {
       const raw = localStorage.getItem(SETTINGS_KEY);
-      if (!raw) return { ...DEFAULT_SETTINGS };
+      if (!raw) return { ...DEFAULT_SETTINGS, grades: DEFAULT_SETTINGS.grades.slice() };
       const parsed = JSON.parse(raw);
       // 既知キーのみマージ (未知値は無視)
-      const merged = { ...DEFAULT_SETTINGS };
+      const merged = { ...DEFAULT_SETTINGS, grades: DEFAULT_SETTINGS.grades.slice() };
       for (const k of Object.keys(DEFAULT_SETTINGS)) {
         if (parsed[k] !== undefined) merged[k] = parsed[k];
       }
-      // 値の正規化
-      if (!GRADE_ORDER.includes(merged.grade)) merged.grade = DEFAULT_SETTINGS.grade;
+      // 旧バージョン (単一 grade) からの移行
+      if (parsed.grade && !Array.isArray(parsed.grades)) {
+        merged.grades = [parsed.grade];
+      }
+      // grades の正規化 (有効な学年のみ、最低 1 つ)
+      if (!Array.isArray(merged.grades)) merged.grades = [];
+      merged.grades = merged.grades.filter((g) => GRADE_ORDER.includes(g));
+      if (merged.grades.length === 0) merged.grades = DEFAULT_SETTINGS.grades.slice();
+
       if (merged.mode !== "read" && merged.mode !== "write") merged.mode = DEFAULT_SETTINGS.mode;
       merged.cumulative = !!merged.cumulative;
       merged.includeAnswerPage = !!merged.includeAnswerPage;
@@ -102,7 +109,7 @@
       return merged;
     } catch (e) {
       // パース失敗時はデフォルトに戻す
-      return { ...DEFAULT_SETTINGS };
+      return { ...DEFAULT_SETTINGS, grades: DEFAULT_SETTINGS.grades.slice() };
     }
   }
 
@@ -124,15 +131,30 @@
 
   // === 3. 漢字プール構築 ===
 
-  function buildPool(grade, cumulative) {
-    const targets = [];
+  // 選択学年群の中で最も高い学年を返す
+  function highestGrade(grades) {
+    let best = grades[0];
+    let bestIdx = GRADE_ORDER.indexOf(best);
+    for (const g of grades) {
+      const idx = GRADE_ORDER.indexOf(g);
+      if (idx > bestIdx) { best = g; bestIdx = idx; }
+    }
+    return best;
+  }
+
+  // grades: 選択された学年配列 (例: ["g1", "g6"])
+  // cumulative: true なら最も高い学年までの全範囲を pool に含める、
+  //             false なら明示選択された学年のみ
+  function buildPool(grades, cumulative) {
+    const targets = new Set();
     if (cumulative) {
+      const top = highestGrade(grades);
       for (const g of GRADE_ORDER) {
-        targets.push(g);
-        if (g === grade) break;
+        targets.add(g);
+        if (g === top) break;
       }
     } else {
-      targets.push(grade);
+      for (const g of grades) targets.add(g);
     }
 
     const pool = [];
@@ -147,10 +169,11 @@
     return pool;
   }
 
-  // 選択学年までに「学習済み」の配当漢字集合を構築。
-  // cumulative トグルに関わらず常に累積で計算する
+  // 「学習済み」の配当漢字集合を構築。
+  // 選択学年群のうち最高学年までを累積で「学習済み」とする
   // (該当学年の児童はそれまでに習った全漢字を知っているため)。
-  function buildLearnedKanjiSet(grade) {
+  function buildLearnedKanjiSet(grades) {
+    const top = highestGrade(grades);
     const set = new Set();
     for (const g of GRADE_ORDER) {
       const list = window[DATA_VAR[g]];
@@ -159,7 +182,7 @@
           if (entry && typeof entry.kanji === "string") set.add(entry.kanji);
         }
       }
-      if (g === grade) break;
+      if (g === top) break;
     }
     return set;
   }
@@ -295,11 +318,12 @@
       .replace(/'/g, "&#39;");
   }
 
-  // body に学年バンド (low/mid/high) を付与
-  function applyGradeBand(grade) {
+  // body に学年バンド (low/mid/high) を付与 (最高学年で判定)
+  function applyGradeBand(grades) {
     document.body.classList.remove("grade-low", "grade-mid", "grade-high");
-    if (grade === "g1" || grade === "g2") document.body.classList.add("grade-low");
-    else if (grade === "g3" || grade === "g4") document.body.classList.add("grade-mid");
+    const top = highestGrade(grades);
+    if (top === "g1" || top === "g2") document.body.classList.add("grade-low");
+    else if (top === "g3" || top === "g4") document.body.classList.add("grade-mid");
     else document.body.classList.add("grade-high");
   }
 
@@ -311,6 +335,15 @@
       return `<ruby>${escapeHtml(label.text)}<rt>${escapeHtml(label.ruby)}</rt></ruby>`;
     }
     return escapeHtml(label.text);
+  }
+
+  // 複数学年表示: 単一なら1年生風、複数なら「小1・小6」
+  function gradesHeaderHtml(grades) {
+    const sorted = [...grades].sort(
+      (a, b) => GRADE_ORDER.indexOf(a) - GRADE_ORDER.indexOf(b)
+    );
+    if (sorted.length === 1) return gradeHeaderHtml(sorted[0]);
+    return escapeHtml(sorted.map((g) => GRADE_LABEL[g]?.short || g).join("・"));
   }
 
   function modeLabel(mode) {
@@ -336,9 +369,9 @@
   }
 
   // ページごとのヘッダ HTML
-  // 1 列構成: タイトル + 名前 + 日付 を 1 span に統合
-  function buildPageHeader(grade, mode) {
-    const gradePart = gradeHeaderHtml(grade);
+  // 1 列構成: タイトル + 日付 + 名前 を 1 span に統合
+  function buildPageHeader(grades, mode) {
+    const gradePart = gradesHeaderHtml(grades);
     const modePart = escapeHtml(modeLabel(mode));
     return [
       `<header class="page-header">`,
@@ -408,7 +441,7 @@
     }
     if (pages.length === 0) pages.push([]);
 
-    const gradePart = gradeHeaderHtml(settings.grade);
+    const gradePart = gradesHeaderHtml(settings.grades);
     const modePart = escapeHtml(modeLabel(settings.mode));
 
     const htmls = pages.map((pageProblems, pageIdx) => {
@@ -459,7 +492,7 @@
 
   // 「準備中です」ページ (中学範囲などデータが空のとき)
   function buildEmptyPage(grade, settings, message) {
-    const header = buildPageHeader(grade, settings.mode);
+    const header = buildPageHeader([grade], settings.mode);
     return [
       `<section class="page">`,
       header,
@@ -473,16 +506,19 @@
     if (!container) return;
     container.innerHTML = "";
 
-    applyGradeBand(settings.grade);
+    applyGradeBand(settings.grades);
 
     if (!problems || problems.length === 0) {
-      // データ未整備 / プール空
-      const data = window[DATA_VAR[settings.grade]];
-      const isPlaceholder = !Array.isArray(data) || data.length === 0;
-      const msg = isPlaceholder
-        ? "この学年のデータは準備中です。"
+      // データ未整備 / プール空 — 選択学年のいずれかにデータがあるか確認
+      const hasAnyData = settings.grades.some((g) => {
+        const data = window[DATA_VAR[g]];
+        return Array.isArray(data) && data.length > 0;
+      });
+      const msg = !hasAnyData
+        ? "選択した学年のデータは準備中です。"
         : "出題できる単語がありません (printable な単語が不足しています)。";
-      container.insertAdjacentHTML("beforeend", buildEmptyPage(settings.grade, settings, msg));
+      const firstGrade = settings.grades[0];
+      container.insertAdjacentHTML("beforeend", buildEmptyPage(firstGrade, settings, msg));
       return;
     }
 
@@ -511,7 +547,7 @@
         `<section class="page">`,
         `<div class="page-meta">${id}</div>`,
         `<div class="page-content">`,
-        buildPageHeader(settings.grade, settings.mode),
+        buildPageHeader(settings.grades, settings.mode),
         `<div class="problem-grid">`,
         cells,
         `</div>`,
@@ -545,9 +581,9 @@
 
   // 再生成 + 再描画
   function regenerateAndRender() {
-    const { grade, cumulative, mode, sheetCount } = state.settings;
-    const pool = buildPool(grade, cumulative);
-    const learnedKanji = buildLearnedKanjiSet(grade);
+    const { grades, cumulative, mode, sheetCount } = state.settings;
+    const pool = buildPool(grades, cumulative);
+    const learnedKanji = buildLearnedKanjiSet(grades);
     const count = Math.max(1, sheetCount) * PROBLEMS_PER_PAGE;
     const { problems, excludedCount } = generateProblems(pool, mode, count, learnedKanji);
     state.problems = problems;
@@ -572,10 +608,10 @@
   function syncUiFromSettings() {
     const s = state.settings;
 
-    // 学年ボタン
+    // 学年ボタン (複数選択対応)
     document.querySelectorAll(".grade-btn").forEach((btn) => {
       const g = btn.dataset.grade;
-      btn.classList.toggle("active", g === s.grade);
+      btn.classList.toggle("active", s.grades.includes(g));
     });
 
     // 累積
@@ -601,12 +637,20 @@
   }
 
   function bindEvents() {
-    // 学年ボタン
+    // 学年ボタン (複数選択: クリックでトグル、ただし全解除は禁止)
     document.querySelectorAll(".grade-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const g = btn.dataset.grade;
         if (!GRADE_ORDER.includes(g)) return;
-        state.settings.grade = g;
+        const current = state.settings.grades.slice();
+        const idx = current.indexOf(g);
+        if (idx >= 0) {
+          // 既に選択中: 解除 (ただし最低1つは残す)
+          if (current.length > 1) current.splice(idx, 1);
+        } else {
+          current.push(g);
+        }
+        state.settings.grades = current;
         saveSettings(state.settings);
         syncUiFromSettings();
         regenerateAndRender();
