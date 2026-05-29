@@ -46,7 +46,7 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "衣",     reading: "ころも",     sentence: "天ぷらの○○がさくっと音を立てる。", printable: true },
       { word: "衣服",   reading: "いふく",     sentence: "季節に合った○○を選ぶ。",           printable: true },
-      { word: "衣食",   reading: "いしょく",   sentence: "人の○○の歴史を学ぶ。",             printable: true },
+      { word: "衣食住", reading: "いしょくじゅう", sentence: "人の生活の基本は○○だ。",       printable: true },
       { word: "衣類",   reading: "いるい",     sentence: "古い○○をたなにしまう。",           printable: true },
       { word: "白衣",   reading: "はくい",     sentence: "お医者さんが○○を着ている。",       printable: true },
       { word: "上衣",   reading: "うわぎ",     sentence: "寒いので○○を一枚はおる。",         printable: true }
@@ -59,7 +59,7 @@ window.KANJI_DATA_G4 = [
       { word: "位",     reading: "くらい",     sentence: "一の○○の数字をたしかめる。",       printable: true },
       { word: "位置",   reading: "いち",       sentence: "地図で学校の○○を調べる。",         printable: true },
       { word: "上位",   reading: "じょうい",   sentence: "兄はかけっこで○○に入った。",       printable: true },
-      { word: "下位",   reading: "かい",       sentence: "今回は○○の組に入った。",           printable: true },
+      { word: "下位",   reading: "かい",       sentence: "今回の試合は○○に終わった。",       printable: true },
       { word: "一位",   reading: "いちい",     sentence: "リレーで○○になって喜ぶ。",         printable: true },
       { word: "方位",   reading: "ほうい",     sentence: "地図で北の○○を読み取る。",         printable: true }
     ]
@@ -70,10 +70,10 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "茨",     reading: "いばら",     sentence: "野原に○○の道がのびている。",       printable: true },
       { word: "茨城",   reading: "いばらき",   sentence: "○○県は関東地方にある。",           printable: true },
-      { word: "茨道",   reading: "いばらみち", sentence: "苦しい○○を一歩ずつ進む。",         printable: true },
-      { word: "山茨",   reading: "やまいばら", sentence: "山すそに○○の花が咲く。",           printable: true },
+      { word: "茨城県", reading: "いばらきけん", sentence: "○○には広い平野がある。",         printable: true },
       { word: "野茨",   reading: "のいばら",   sentence: "○○の白い花が風にゆれる。",         printable: true },
-      { word: "茨原",   reading: "いばらはら", sentence: "古い物語に○○が出てくる。",         printable: true }
+      { word: "茨の道", reading: "いばらのみち", sentence: "苦しい○○を一歩ずつ進む。",       printable: true },
+      { word: "山茨",   reading: "やまいばら", sentence: "山すそに○○の花がさく。",           printable: true }
     ]
   },
   {
@@ -109,7 +109,7 @@ window.KANJI_DATA_G4 = [
       { word: "栄養",   reading: "えいよう",   sentence: "野菜には○○がたくさんある。",       printable: true },
       { word: "光栄",   reading: "こうえい",   sentence: "代表に選ばれて○○に思う。",         printable: true },
       { word: "見栄",   reading: "みえ",       sentence: "○○をはらず正直に話す。",           printable: true },
-      { word: "繁栄",   reading: "はんえい",   sentence: "町の○○を願う祭りがある。",       printable: true }
+      { word: "栄え",   reading: "はえ",       sentence: "夕日○○の景色が美しい。",           printable: true }
     ]
   },
   {
@@ -117,11 +117,11 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["エン"], kun: [] },
     words: [
       { word: "愛媛",   reading: "えひめ",     sentence: "○○県は四国地方にある。",           printable: true },
-      { word: "才媛",   reading: "さいえん",   sentence: "祖母は○○とよばれていた。",         printable: true },
-      { word: "媛女",   reading: "ひめ",       sentence: "古い物語に○○が出てくる。",         printable: true },
-      { word: "名媛",   reading: "めいえん",   sentence: "町の○○として知られる人だ。",       printable: true },
-      { word: "閨媛",   reading: "けいえん",   sentence: "歴史の本で○○の話を読む。",         printable: true },
-      { word: "淑媛",   reading: "しゅくえん", sentence: "○○のほまれ高い人物だった。",       printable: true }
+      { word: "愛媛県", reading: "えひめけん", sentence: "○○のみかんは有名だ。",             printable: true },
+      { word: "才媛",   reading: "さいえん",   sentence: "祖母は学校で○○とよばれた。",       printable: true },
+      { word: "媛",     reading: "ひめ",       sentence: "古い物語に美しい○○が出てくる。",   printable: true },
+      { word: "名媛",   reading: "めいえん",   sentence: "町で○○と呼ばれる人がいる。",       printable: true },
+      { word: "南愛媛", reading: "みなみえひめ", sentence: "○○の海でつりを楽しむ。",         printable: true }
     ]
   },
   {
@@ -145,7 +145,7 @@ window.KANJI_DATA_G4 = [
       { word: "福岡",   reading: "ふくおか",   sentence: "○○県は九州地方にある。",           printable: true },
       { word: "岡山",   reading: "おかやま",   sentence: "○○県は中国地方にある。",           printable: true },
       { word: "高岡",   reading: "たかおか",   sentence: "富山の○○市を旅行した。",           printable: true },
-      { word: "片岡",   reading: "かたおか",   sentence: "となりに○○さんが住んでいる。",     printable: true }
+      { word: "盛岡",   reading: "もりおか",   sentence: "岩手の○○市に親せきが住む。",       printable: true }
     ]
   },
   {
@@ -157,7 +157,7 @@ window.KANJI_DATA_G4 = [
       { word: "億万",   reading: "おくまん",   sentence: "夜空に○○の星が光る。",             printable: true },
       { word: "数億",   reading: "すうおく",   sentence: "宇宙には○○の星があるそうだ。",     printable: true },
       { word: "億兆",   reading: "おくちょう", sentence: "○○の数を考えて気が遠くなる。",     printable: true },
-      { word: "億万長者", reading: "おくまんちょうじゃ", sentence: "本で○○の話を読む。",     printable: true }
+      { word: "万億",   reading: "まんおく",   sentence: "夜空には○○の星があるそうだ。",     printable: true }
     ]
   },
   {
@@ -169,7 +169,7 @@ window.KANJI_DATA_G4 = [
       { word: "加速",   reading: "かそく",     sentence: "下り坂で自転車が○○する。",         printable: true },
       { word: "参加",   reading: "さんか",     sentence: "町の祭りに○○することにした。",     printable: true },
       { word: "加工",   reading: "かこう",     sentence: "木を○○して家具を作る。",           printable: true },
-      { word: "加点",   reading: "かてん",     sentence: "おしくも○○ならずに終わった。",     printable: true }
+      { word: "加点",   reading: "かてん",     sentence: "試合の最後で○○して勝った。",       printable: true }
     ]
   },
   {
@@ -217,7 +217,7 @@ window.KANJI_DATA_G4 = [
       { word: "若芽",   reading: "わかめ",     sentence: "畑のすみに○○が見える。",           printable: true },
       { word: "発芽",   reading: "はつが",     sentence: "種が水を吸って○○した。",           printable: true },
       { word: "芽生え", reading: "めばえ",     sentence: "友情の○○を大切にする。",           printable: true },
-      { word: "芽切り", reading: "めきり",     sentence: "盆栽の○○を父が教えてくれた。",     printable: true }
+      { word: "芽切り", reading: "めきり",     sentence: "庭の木の○○を父に教わる。",         printable: true }
     ]
   },
   {
@@ -228,8 +228,8 @@ window.KANJI_DATA_G4 = [
       { word: "年賀",   reading: "ねんが",     sentence: "○○状を友達に送った。",             printable: true },
       { word: "祝賀",   reading: "しゅくが",   sentence: "学校の○○会に出席する。",           printable: true },
       { word: "佐賀",   reading: "さが",       sentence: "○○県は九州地方にある。",           printable: true },
-      { word: "滋賀",   reading: "しが",       sentence: "○○県に琵琶湖がある。",             printable: true },
-      { word: "賀春",   reading: "がしゅん",   sentence: "正月の手紙に○○と記す。",           printable: true }
+      { word: "滋賀",   reading: "しが",       sentence: "○○県は近畿地方に位置する。",       printable: true },
+      { word: "賀状",   reading: "がじょう",   sentence: "正月に年○○を出す。",               printable: true }
     ]
   },
   {
@@ -240,7 +240,7 @@ window.KANJI_DATA_G4 = [
       { word: "改まる", reading: "あらたまる", sentence: "新年に気持ちが○○のを感じる。",     printable: true },
       { word: "改正",   reading: "かいせい",   sentence: "校則の○○について話し合う。",       printable: true },
       { word: "改良",   reading: "かいりょう", sentence: "古い道具に○○を加えた。",           printable: true },
-      { word: "改名",   reading: "かいめい",   sentence: "町の通りが○○されたそうだ。",       printable: true },
+      { word: "改名",   reading: "かいめい",   sentence: "兄が中学で○○することにした。",     printable: true },
       { word: "改札",   reading: "かいさつ",   sentence: "駅の○○口で母と待ち合わせる。",     printable: true }
     ]
   },
@@ -311,9 +311,9 @@ window.KANJI_DATA_G4 = [
       { word: "潟",     reading: "かた",       sentence: "海べの○○に小さな魚がいる。",       printable: true },
       { word: "新潟",   reading: "にいがた",   sentence: "○○県は雪が多い地方だ。",           printable: true },
       { word: "干潟",   reading: "ひがた",     sentence: "○○で貝を集めて遊ぶ。",             printable: true },
-      { word: "潟湖",   reading: "せきこ",     sentence: "理科で○○について学んだ。",         printable: true },
+      { word: "新潟県", reading: "にいがたけん", sentence: "○○の米はとてもおいしい。",       printable: true },
       { word: "大潟",   reading: "おおがた",   sentence: "秋田の○○村について調べる。",       printable: true },
-      { word: "潟塩",   reading: "かたしお",   sentence: "昔は○○を作って暮らした。",         printable: true }
+      { word: "新潟市", reading: "にいがたし", sentence: "○○には大きな港がある。",           printable: true }
     ]
   },
   {
@@ -368,7 +368,7 @@ window.KANJI_DATA_G4 = [
     kanji: "観",
     readings: { on: ["カン"], kun: [] },
     words: [
-      { word: "観",     reading: "かん",       sentence: "彼の人生○○を尊敬している。",       printable: true },
+      { word: "観",     reading: "かん",       sentence: "祖父の人生○○を学ぶ。",             printable: true },
       { word: "観察",   reading: "かんさつ",   sentence: "あさがおを毎日○○する。",           printable: true },
       { word: "観光",   reading: "かんこう",   sentence: "外国から○○客が大勢来る。",         printable: true },
       { word: "観客",   reading: "かんきゃく", sentence: "試合で○○がさかんに声を出す。",     printable: true },
@@ -396,7 +396,7 @@ window.KANJI_DATA_G4 = [
       { word: "分岐",   reading: "ぶんき",     sentence: "道の○○点で右に進む。",             printable: true },
       { word: "多岐",   reading: "たき",       sentence: "話の内容が○○にわたる。",           printable: true },
       { word: "岐阜",   reading: "ぎふ",       sentence: "○○県は中部地方にある。",           printable: true },
-      { word: "岐山",   reading: "きざん",     sentence: "古い書物に○○の名が出てくる。",     printable: true },
+      { word: "岐阜県", reading: "ぎふけん",   sentence: "○○の山に登ってみたい。",           printable: true },
       { word: "分岐点", reading: "ぶんきてん", sentence: "川の○○で立ち止まる。",             printable: true }
     ]
   },
@@ -407,9 +407,9 @@ window.KANJI_DATA_G4 = [
       { word: "希望",   reading: "きぼう",     sentence: "六年生に○○の進路を聞く。",         printable: true },
       { word: "希少",   reading: "きしょう",   sentence: "森に○○な鳥がすんでいる。",         printable: true },
       { word: "古希",   reading: "こき",       sentence: "祖父の○○の祝いをする。",           printable: true },
+      { word: "希望者", reading: "きぼうしゃ", sentence: "係の○○を集めて話し合う。",         printable: true },
       { word: "希薄",   reading: "きはく",     sentence: "山の上は空気が○○だ。",             printable: true },
-      { word: "希有",   reading: "けう",       sentence: "それは○○な出来事だった。",         printable: true },
-      { word: "希願",   reading: "きがん",     sentence: "長年の○○がついに通った。",         printable: true }
+      { word: "希望日", reading: "きぼうび",   sentence: "見学の○○を先生に伝える。",         printable: true }
     ]
   },
   {
@@ -440,7 +440,7 @@ window.KANJI_DATA_G4 = [
     kanji: "器",
     readings: { on: ["キ"], kun: ["うつわ"] },
     words: [
-      { word: "器",     reading: "うつわ",     sentence: "焼き物の○○に料理を盛る。",         printable: true },
+      { word: "器",     reading: "うつわ",     sentence: "焼き物の○○に料理を入れる。",       printable: true },
       { word: "食器",   reading: "しょっき",   sentence: "夕食の○○をきれいに洗う。",         printable: true },
       { word: "楽器",   reading: "がっき",     sentence: "好きな○○を選んで練習する。",       printable: true },
       { word: "土器",   reading: "どき",       sentence: "古代の○○を博物館で見る。",         printable: true },
@@ -480,8 +480,8 @@ window.KANJI_DATA_G4 = [
       { word: "求人",   reading: "きゅうじん", sentence: "店の前に○○の張り紙が出た。",       printable: true },
       { word: "要求",   reading: "ようきゅう", sentence: "兄の○○に答えて手伝う。",           printable: true },
       { word: "追求",   reading: "ついきゅう", sentence: "理想を○○して研究を続ける。",       printable: true },
-      { word: "求心",   reading: "きゅうしん", sentence: "○○力のあるリーダーになりたい。",   printable: true },
-      { word: "求書",   reading: "きゅうしょ", sentence: "図書館で読みたい本を○○する。",     printable: true }
+      { word: "請求",   reading: "せいきゅう", sentence: "店から○○書がとどいた。",           printable: true },
+      { word: "探求",   reading: "たんきゅう", sentence: "知らない世界を○○する。",           printable: true }
     ]
   },
   {
@@ -491,8 +491,8 @@ window.KANJI_DATA_G4 = [
       { word: "泣く",   reading: "なく",       sentence: "妹が転んでわんわん○○。",           printable: true },
       { word: "泣き声", reading: "なきごえ",   sentence: "となりの赤ちゃんの○○がする。",     printable: true },
       { word: "号泣",   reading: "ごうきゅう", sentence: "感動して思わず○○してしまう。",     printable: true },
-      { word: "泣き顔", reading: "なきがお",   sentence: "弟の○○を見て胸がいたんだ。",       printable: true },
-      { word: "泣虫",   reading: "なきむし",   sentence: "昔は○○とよばれていた。",           printable: true },
+      { word: "泣き顔", reading: "なきがお",   sentence: "弟の○○を見て心がいたんだ。",       printable: true },
+      { word: "泣き虫", reading: "なきむし",   sentence: "弟は昔○○と呼ばれていた。",         printable: true },
       { word: "泣き笑い", reading: "なきわらい", sentence: "○○の表情で報告した。",           printable: true }
     ]
   },
@@ -608,7 +608,7 @@ window.KANJI_DATA_G4 = [
     kanji: "熊",
     readings: { on: [], kun: ["くま"] },
     words: [
-      { word: "熊",     reading: "くま",       sentence: "森の奥に大きな○○がいるそうだ。",   printable: true },
+      { word: "熊",     reading: "くま",       sentence: "森の中に大きな○○がいるそうだ。",   printable: true },
       { word: "熊本",   reading: "くまもと",   sentence: "○○県は九州地方にある。",           printable: true },
       { word: "白熊",   reading: "しろくま",   sentence: "動物園で○○を見て楽しんだ。",       printable: true },
       { word: "子熊",   reading: "こぐま",     sentence: "親子の○○が川辺を歩く。",           printable: true },
@@ -647,9 +647,9 @@ window.KANJI_DATA_G4 = [
       { word: "郡",     reading: "ぐん",       sentence: "となりの○○には大きな川がある。",   printable: true },
       { word: "郡部",   reading: "ぐんぶ",     sentence: "○○の人口について調べる。",         printable: true },
       { word: "郡内",   reading: "ぐんない",   sentence: "○○の小学校が集まる行事だ。",       printable: true },
-      { word: "郡長",   reading: "ぐんちょう", sentence: "むかし○○という役があった。",       printable: true },
-      { word: "郡名",   reading: "ぐんめい",   sentence: "古い地図で○○を確かめる。",         printable: true },
-      { word: "全郡",   reading: "ぜんぐん",   sentence: "○○のチームが集まる大会だ。",       printable: true }
+      { word: "市郡",   reading: "しぐん",     sentence: "○○の地図を見て確かめる。",         printable: true },
+      { word: "町郡",   reading: "ちょうぐん", sentence: "古い地図で○○の境を見る。",         printable: true },
+      { word: "郡道",   reading: "ぐんどう",   sentence: "昔の○○を地図でたどる。",           printable: true }
     ]
   },
   {
@@ -780,8 +780,8 @@ window.KANJI_DATA_G4 = [
       { word: "成功",   reading: "せいこう",   sentence: "発表会は大○○だった。",             printable: true },
       { word: "功績",   reading: "こうせき",   sentence: "発明者の○○をたたえる。",           printable: true },
       { word: "功労",   reading: "こうろう",   sentence: "○○者として表しょうされた。",       printable: true },
-      { word: "年功",   reading: "ねんこう",   sentence: "祖父の○○は会社で有名だ。",         printable: true },
-      { word: "功名",   reading: "こうみょう", sentence: "○○心で大きな仕事に挑む。",         printable: true }
+      { word: "大功",   reading: "たいこう",   sentence: "町のために○○をのこした人だ。",     printable: true },
+      { word: "成功者", reading: "せいこうしゃ", sentence: "兄は努力家で○○と言われた。",     printable: true }
     ]
   },
   {
@@ -824,24 +824,24 @@ window.KANJI_DATA_G4 = [
     kanji: "康",
     readings: { on: ["コウ"], kun: [] },
     words: [
-      { word: "康",     reading: "こう",       sentence: "家族の安○○を毎晩いのる。",         printable: true },
-      { word: "健康",   reading: "けんこう",   sentence: "○○のために早寝早起きをする。",     printable: true },
+      { word: "健康",   reading: "けんこう",   sentence: "○○のために毎日運動する。",         printable: true },
       { word: "小康",   reading: "しょうこう", sentence: "祖父の容体は○○を保っている。",     printable: true },
-      { word: "安康",   reading: "あんこう",   sentence: "家族の○○を願う祭りだ。",         printable: true },
-      { word: "康寧",   reading: "こうねい",   sentence: "古い書に○○の文字がある。",         printable: true },
-      { word: "康年",   reading: "こうねん",   sentence: "おじは○○のお祝いを迎えた。",       printable: true }
+      { word: "健康面", reading: "けんこうめん", sentence: "祖父の○○が気にかかる。",         printable: true },
+      { word: "不健康", reading: "ふけんこう", sentence: "夜ふかしは○○な生活だ。",           printable: true },
+      { word: "健康法", reading: "けんこうほう", sentence: "祖父に○○を教わる。",             printable: true },
+      { word: "健康体", reading: "けんこうたい", sentence: "検査で○○と言われた。",           printable: true }
     ]
   },
   {
     kanji: "佐",
     readings: { on: ["サ"], kun: [] },
     words: [
-      { word: "佐",     reading: "さ",         sentence: "祖父は元軍人で大○○だった。",       printable: true },
       { word: "佐賀",   reading: "さが",       sentence: "○○県は九州地方にある。",           printable: true },
       { word: "土佐",   reading: "とさ",       sentence: "高知の昔の名は○○という。",         printable: true },
       { word: "補佐",   reading: "ほさ",       sentence: "委員長を○○の役で支える。",         printable: true },
-      { word: "佐官",   reading: "さかん",     sentence: "本で○○について調べる。",           printable: true },
-      { word: "大佐",   reading: "たいさ",     sentence: "物語の○○がせりふを言う。",         printable: true }
+      { word: "佐賀県", reading: "さがけん",   sentence: "○○は九州の北部にある。",           printable: true },
+      { word: "佐賀市", reading: "さがし",     sentence: "○○には大きなお祭りがある。",       printable: true },
+      { word: "土佐犬", reading: "とさけん",   sentence: "祖父の家で○○を飼っている。",       printable: true }
     ]
   },
   {
@@ -865,7 +865,7 @@ window.KANJI_DATA_G4 = [
       { word: "菜園",   reading: "さいえん",   sentence: "家の庭で○○を作る。",               printable: true },
       { word: "菜食",   reading: "さいしょく", sentence: "おばは○○を心がけている。",         printable: true },
       { word: "白菜",   reading: "はくさい",   sentence: "なべに○○をどっさり入れる。",       printable: true },
-      { word: "菜の花", reading: "なのはな",   sentence: "土手に○○が一面に咲く。",           printable: true }
+      { word: "菜の花", reading: "なのはな",   sentence: "土手に○○が一面にさく。",           printable: true }
     ]
   },
   {
@@ -885,11 +885,11 @@ window.KANJI_DATA_G4 = [
     readings: { on: [], kun: ["さき"] },
     words: [
       { word: "埼玉",   reading: "さいたま",   sentence: "○○県は関東地方にある。",           printable: true },
-      { word: "埼",     reading: "さき",       sentence: "船が岬の○○を回って進む。",         printable: true },
-      { word: "埼東",   reading: "さいとう",   sentence: "古い地名で○○とよぶ場所がある。",   printable: true },
-      { word: "埼西",   reading: "さいせい",   sentence: "○○の地域には田畑が広がる。",       printable: true },
-      { word: "埼村",   reading: "さきむら",   sentence: "祖母の故郷は昔○○とよばれた。",     printable: true },
-      { word: "埼山",   reading: "さきやま",   sentence: "○○の方から朝日がのぼる。",         printable: true }
+      { word: "埼玉県", reading: "さいたまけん", sentence: "○○には大きな川が流れる。",       printable: true },
+      { word: "西埼玉", reading: "にしさいたま", sentence: "○○の地区に大きな公園がある。",   printable: true },
+      { word: "南埼玉", reading: "みなみさいたま", sentence: "○○の駅で電車をおりる。",       printable: true },
+      { word: "北埼玉", reading: "きたさいたま", sentence: "○○の地域に親せきが住む。",       printable: true },
+      { word: "東埼玉", reading: "ひがしさいたま", sentence: "○○の町を地図で調べる。",       printable: true }
     ]
   },
   {
@@ -913,7 +913,7 @@ window.KANJI_DATA_G4 = [
       { word: "宮崎",   reading: "みやざき",   sentence: "○○県は南国の気候だ。",             printable: true },
       { word: "山崎",   reading: "やまざき",   sentence: "友達の○○くんが転校した。",         printable: true },
       { word: "川崎",   reading: "かわさき",   sentence: "神奈川の○○市を旅した。",           printable: true },
-      { word: "崎守",   reading: "さきもり",   sentence: "古い歌に○○のことが出てくる。",     printable: true }
+      { word: "長崎市", reading: "ながさきし", sentence: "○○には古い町並みがのこる。",       printable: true }
     ]
   },
   {
@@ -922,7 +922,7 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "昨日",   reading: "きのう",     sentence: "○○は雨で外で遊べなかった。",       printable: true },
       { word: "昨年",   reading: "さくねん",   sentence: "○○の今ごろは寒かった。",           printable: true },
-      { word: "昨夜",   reading: "さくや",     sentence: "○○早く寝てぐっすり眠った。",       printable: true },
+      { word: "昨夜",   reading: "さくや",     sentence: "○○早くやすんで体を休めた。",       printable: true },
       { word: "昨今",   reading: "さっこん",   sentence: "○○の天気はおかしい。",             printable: true },
       { word: "昨朝",   reading: "さくちょう", sentence: "○○早起きして散歩した。",           printable: true },
       { word: "一昨年", reading: "いっさくねん", sentence: "○○のことを思い出して笑う。",     printable: true }
@@ -935,7 +935,7 @@ window.KANJI_DATA_G4 = [
       { word: "札",     reading: "ふだ",       sentence: "木に○○をかけて目印にする。",       printable: true },
       { word: "千円札", reading: "せんえんさつ", sentence: "おつりに○○をもらう。",           printable: true },
       { word: "札束",   reading: "さつたば",   sentence: "本で大きな○○の話が出る。",         printable: true },
-      { word: "名札",   reading: "なふだ",     sentence: "胸に○○をつけて参加する。",         printable: true },
+      { word: "名札",   reading: "なふだ",     sentence: "服に○○をつけて参加する。",         printable: true },
       { word: "改札",   reading: "かいさつ",   sentence: "駅の○○口で切符を見せる。",         printable: true },
       { word: "立札",   reading: "たてふだ",   sentence: "公園の○○の注意を読む。",           printable: true }
     ]
@@ -948,7 +948,7 @@ window.KANJI_DATA_G4 = [
       { word: "印刷",   reading: "いんさつ",   sentence: "プリントを○○して配る。",           printable: true },
       { word: "刷新",   reading: "さっしん",   sentence: "係の役割を○○する。",               printable: true },
       { word: "増刷",   reading: "ぞうさつ",   sentence: "人気の本が○○された。",             printable: true },
-      { word: "縮刷",   reading: "しゅくさつ", sentence: "図書館に新聞の○○版がある。",       printable: true },
+      { word: "縮刷",   reading: "しゅくさつ", sentence: "図書館に新聞の○○ばんがある。",     printable: true },
       { word: "重刷",   reading: "じゅうさつ", sentence: "兄が好きな本が○○された。",         printable: true }
     ]
   },
@@ -958,10 +958,10 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "殺す",   reading: "ころす",     sentence: "畑の害虫を○○方法を学ぶ。",         printable: true },
       { word: "殺風景", reading: "さっぷうけい", sentence: "○○な部屋に花をかざる。",         printable: true },
-      { word: "殺到",   reading: "さっとう",   sentence: "受付に申し込みが○○した。",         printable: true },
-      { word: "黙殺",   reading: "もくさつ",   sentence: "意見を○○せず聞き合う。",           printable: true },
-      { word: "相殺",   reading: "そうさい",   sentence: "売買の額を○○する。",               printable: true },
-      { word: "殺気",   reading: "さっき",     sentence: "物語で○○のある場面が続く。",       printable: true }
+      { word: "殺到",   reading: "さっとう",   sentence: "受付に申しこみが○○した。",         printable: true },
+      { word: "虫殺し", reading: "むしごろし", sentence: "畑で○○の薬を使う。",               printable: true },
+      { word: "殺虫",   reading: "さっちゅう", sentence: "庭で○○ざいをまく。",               printable: true },
+      { word: "見殺し", reading: "みごろし",   sentence: "仲間を○○にしてはならない。",       printable: true }
     ]
   },
   {
@@ -1032,8 +1032,8 @@ window.KANJI_DATA_G4 = [
       { word: "氏名",   reading: "しめい",     sentence: "用紙に○○を書きこむ。",             printable: true },
       { word: "源氏",   reading: "げんじ",     sentence: "歴史で○○の話を学ぶ。",             printable: true },
       { word: "平氏",   reading: "へいし",     sentence: "○○の旗の色について調べた。",       printable: true },
-      { word: "彼氏",   reading: "かれし",     sentence: "兄に○○と呼ばれて笑う。",           printable: true },
-      { word: "氏族",   reading: "しぞく",     sentence: "古代の○○の暮らしを学ぶ。",         printable: true }
+      { word: "彼氏",   reading: "かれし",     sentence: "姉が○○を家につれてくる。",         printable: true },
+      { word: "両氏",   reading: "りょうし",   sentence: "○○の意見をしっかり聞く。",         printable: true }
     ]
   },
   {
@@ -1091,9 +1091,9 @@ window.KANJI_DATA_G4 = [
       { word: "滋賀",   reading: "しが",       sentence: "○○県は近畿地方にある。",           printable: true },
       { word: "滋養",   reading: "じよう",     sentence: "病後は○○のある食事をとる。",       printable: true },
       { word: "滋味",   reading: "じみ",       sentence: "祖母の煮物には○○がある。",         printable: true },
-      { word: "滋雨",   reading: "じう",       sentence: "畑にとって今日の雨は○○だ。",       printable: true },
-      { word: "滋潤",   reading: "じじゅん",   sentence: "心を○○する音楽を聞く。",           printable: true },
-      { word: "滋強",   reading: "じきょう",   sentence: "古い書物に○○の語が出てくる。",     printable: true }
+      { word: "滋賀県", reading: "しがけん",   sentence: "○○は近畿地方の内陸にある。",       printable: true },
+      { word: "滋養分", reading: "じようぶん", sentence: "野菜には大切な○○がある。",         printable: true },
+      { word: "滋賀産", reading: "しがさん",   sentence: "○○のお米を炊いて食べる。",         printable: true }
     ]
   },
   {
@@ -1177,7 +1177,7 @@ window.KANJI_DATA_G4 = [
       { word: "祝福",   reading: "しゅくふく", sentence: "みんなで友達を○○する。",           printable: true },
       { word: "祝賀",   reading: "しゅくが",   sentence: "学校の○○会に出席した。",           printable: true },
       { word: "祝意",   reading: "しゅくい",   sentence: "手紙で○○を伝える。",               printable: true },
-      { word: "祝言",   reading: "しゅうげん", sentence: "親せきの○○に招かれた。",           printable: true }
+      { word: "祝勝",   reading: "しゅくしょう", sentence: "優勝した日に○○会を開く。",       printable: true }
     ]
   },
   {
@@ -1233,7 +1233,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["ショウ"], kun: ["とな(える)"] },
     words: [
       { word: "唱える", reading: "となえる",   sentence: "朝礼で校歌を○○ことになった。",     printable: true },
-      { word: "合唱",   reading: "がっしょう", sentence: "学級で美しい○○を披露する。",       printable: true },
+      { word: "合唱",   reading: "がっしょう", sentence: "学級で美しい○○を発表する。",       printable: true },
       { word: "独唱",   reading: "どくしょう", sentence: "音楽会で姉が○○する。",             printable: true },
       { word: "暗唱",   reading: "あんしょう", sentence: "詩を最後まで○○する。",             printable: true },
       { word: "斉唱",   reading: "せいしょう", sentence: "国歌を○○で歌う。",                 printable: true },
@@ -1319,7 +1319,7 @@ window.KANJI_DATA_G4 = [
       { word: "井戸",   reading: "いど",       sentence: "古い家の庭に○○がある。",           printable: true },
       { word: "井",     reading: "い",         sentence: "字の形は○○の形に似ている。",       printable: true },
       { word: "天井",   reading: "てんじょう", sentence: "教室の○○が高くて気持ちいい。",     printable: true },
-      { word: "油井",   reading: "ゆせい",     sentence: "外国の○○について本で学ぶ。",       printable: true },
+      { word: "市井",   reading: "しせい",     sentence: "本で○○の人々の話を読む。",         printable: true },
       { word: "福井",   reading: "ふくい",     sentence: "○○県は北陸地方にある。",           printable: true },
       { word: "井上",   reading: "いのうえ",   sentence: "となりの○○さんと話す。",           printable: true }
     ]
@@ -1345,7 +1345,7 @@ window.KANJI_DATA_G4 = [
       { word: "反省",   reading: "はんせい",   sentence: "失敗を○○して次に進む。",           printable: true },
       { word: "省略",   reading: "しょうりゃく", sentence: "説明の一部を○○する。",           printable: true },
       { word: "帰省",   reading: "きせい",     sentence: "夏休みに祖父母の家へ○○する。",     printable: true },
-      { word: "文部省", reading: "もんぶしょう", sentence: "昔○○とよばれた役所がある。",     printable: true }
+      { word: "省エネ", reading: "しょうえね", sentence: "家で○○を心がける。",               printable: true }
     ]
   },
   {
@@ -1393,7 +1393,7 @@ window.KANJI_DATA_G4 = [
       { word: "面積",   reading: "めんせき",   sentence: "教室の○○を計算する。",             printable: true },
       { word: "体積",   reading: "たいせき",   sentence: "箱の○○を求める。",                 printable: true },
       { word: "積雪",   reading: "せきせつ",   sentence: "今朝の○○は十センチだ。",           printable: true },
-      { word: "山積",   reading: "さんせき",   sentence: "問題が○○の状態だ。",               printable: true }
+      { word: "山積",   reading: "さんせき",   sentence: "今は問題が○○の毎日だ。",           printable: true }
     ]
   },
   {
@@ -1440,7 +1440,7 @@ window.KANJI_DATA_G4 = [
       { word: "浅瀬",   reading: "あさせ",     sentence: "魚が○○でかくれている。",           printable: true },
       { word: "浅黒い", reading: "あさぐろい", sentence: "夏で顔が○○になった。",             printable: true },
       { word: "浅草",   reading: "あさくさ",   sentence: "東京の○○を観光する。",             printable: true },
-      { word: "浅学",   reading: "せんがく",   sentence: "○○ながら自分の意見を述べる。",     printable: true },
+      { word: "浅海",   reading: "せんかい",   sentence: "○○で魚がたくさん泳ぐ。",           printable: true },
       { word: "浅手",   reading: "あさで",     sentence: "ころんだが○○ですんだ。",           printable: true }
     ]
   },
@@ -1472,7 +1472,7 @@ window.KANJI_DATA_G4 = [
     kanji: "然",
     readings: { on: ["ゼン", "ネン"], kun: [] },
     words: [
-      { word: "然",     reading: "ぜん",       sentence: "彼は当○○のように手伝う。",         printable: true },
+      { word: "然",     reading: "ぜん",       sentence: "兄は当○○のように手伝った。",       printable: true },
       { word: "自然",   reading: "しぜん",     sentence: "森の○○を大切に守る。",             printable: true },
       { word: "天然",   reading: "てんねん",   sentence: "○○の塩を料理に使う。",             printable: true },
       { word: "全然",   reading: "ぜんぜん",   sentence: "風邪は○○治らない。",               printable: true },
@@ -1501,7 +1501,7 @@ window.KANJI_DATA_G4 = [
       { word: "米倉",   reading: "こめぐら",   sentence: "農家の○○を見学する。",             printable: true },
       { word: "船倉",   reading: "せんそう",   sentence: "船の○○に荷物を積む。",             printable: true },
       { word: "鎌倉",   reading: "かまくら",   sentence: "歴史で○○時代を学ぶ。",             printable: true },
-      { word: "穀倉",   reading: "こくそう",   sentence: "ここは○○地帯と呼ばれる。",         printable: true }
+      { word: "倉出し", reading: "くらだし",   sentence: "古い道具を○○して使う。",           printable: true }
     ]
   },
   {
@@ -1512,8 +1512,8 @@ window.KANJI_DATA_G4 = [
       { word: "巣箱",   reading: "すばこ",     sentence: "庭に小鳥用の○○をかける。",         printable: true },
       { word: "古巣",   reading: "ふるす",     sentence: "兄が○○のチームへ戻った。",         printable: true },
       { word: "巣立つ", reading: "すだつ",     sentence: "ひなが元気に○○のを見守る。",       printable: true },
-      { word: "営巣",   reading: "えいそう",   sentence: "つばめが軒下で○○している。",       printable: true },
-      { word: "病巣",   reading: "びょうそう", sentence: "本で○○について読む。",             printable: true }
+      { word: "鳥の巣", reading: "とりのす",   sentence: "木の上で○○を見つける。",           printable: true },
+      { word: "巣作り", reading: "すづくり",   sentence: "つばめが家ののき先で○○する。",     printable: true }
     ]
   },
   {
@@ -1571,9 +1571,9 @@ window.KANJI_DATA_G4 = [
       { word: "孫",     reading: "まご",       sentence: "祖父母にとってわたしは○○だ。",     printable: true },
       { word: "子孫",   reading: "しそん",     sentence: "歴史上の人物の○○を調べる。",       printable: true },
       { word: "孫娘",   reading: "まごむすめ", sentence: "祖母が○○にお菓子を作る。",         printable: true },
-      { word: "初孫",   reading: "ういまご",   sentence: "祖父にとって兄は○○だった。",       printable: true },
-      { word: "外孫",   reading: "そとまご",   sentence: "○○と内孫の話題で笑う。",           printable: true },
-      { word: "曾孫",   reading: "ひまご",     sentence: "曾祖母にとって弟は○○だ。",         printable: true }
+      { word: "初孫",   reading: "はつまご",   sentence: "祖父にとって兄は○○だった。",       printable: true },
+      { word: "内孫",   reading: "うちまご",   sentence: "わたしは祖父の○○にあたる。",       printable: true },
+      { word: "孫の手", reading: "まごのて",   sentence: "祖父が○○で背中をかく。",           printable: true }
     ]
   },
   {
@@ -1644,8 +1644,8 @@ window.KANJI_DATA_G4 = [
       { word: "仲間",   reading: "なかま",     sentence: "新しい○○がふえてうれしい。",       printable: true },
       { word: "仲直り", reading: "なかなおり", sentence: "ささいな口げんかから○○する。",     printable: true },
       { word: "仲良し", reading: "なかよし",   sentence: "○○の友達と席が近い。",             printable: true },
-      { word: "仲介",   reading: "ちゅうかい", sentence: "町の○○で取引が成り立つ。",         printable: true },
-      { word: "仲秋",   reading: "ちゅうしゅう", sentence: "○○の名月を家族で見上げる。",     printable: true }
+      { word: "兄弟仲", reading: "きょうだいなか", sentence: "となりの家は○○がよい。",       printable: true },
+      { word: "親子仲", reading: "おやこなか", sentence: "となりの家は○○がよい。",           printable: true }
     ]
   },
   {
@@ -1655,9 +1655,9 @@ window.KANJI_DATA_G4 = [
       { word: "沖",     reading: "おき",       sentence: "船が遠い○○へ進んでいく。",         printable: true },
       { word: "沖縄",   reading: "おきなわ",   sentence: "○○県は南の島々からなる。",         printable: true },
       { word: "沖合",   reading: "おきあい",   sentence: "○○に大きな船が見える。",           printable: true },
-      { word: "沖釣",   reading: "おきづり",   sentence: "祖父が○○へ出かける。",             printable: true },
-      { word: "沖天",   reading: "ちゅうてん", sentence: "勢いが○○の意気だ。",               printable: true },
-      { word: "沖波",   reading: "おきなみ",   sentence: "○○が大きく船をゆらす。",           printable: true }
+      { word: "沖縄県", reading: "おきなわけん", sentence: "○○の海はとても青い。",           printable: true },
+      { word: "沖釣り", reading: "おきづり",   sentence: "祖父が○○へ出かける。",             printable: true },
+      { word: "沖の島", reading: "おきのしま", sentence: "船で遠くの○○へ向かう。",           printable: true }
     ]
   },
   {
@@ -1741,7 +1741,7 @@ window.KANJI_DATA_G4 = [
       { word: "徒歩",   reading: "とほ",       sentence: "○○で十分ほどの場所だ。",           printable: true },
       { word: "徒競走", reading: "ときょうそう", sentence: "運動会で○○に出る。",             printable: true },
       { word: "信徒",   reading: "しんと",     sentence: "古い書物に○○の話が出る。",         printable: true },
-      { word: "徒党",   reading: "ととう",     sentence: "歴史で○○を組んだ集団を学ぶ。",     printable: true }
+      { word: "徒手",   reading: "としゅ",     sentence: "体育で○○体そうをならう。",         printable: true }
     ]
   },
   {
@@ -1751,9 +1751,9 @@ window.KANJI_DATA_G4 = [
       { word: "努める", reading: "つとめる",   sentence: "係の仕事を進めるよう○○つもりだ。", printable: true },
       { word: "努力",   reading: "どりょく",   sentence: "毎日の○○が実を結ぶ。",             printable: true },
       { word: "努め",   reading: "つとめ",     sentence: "親としての○○を果たす。",           printable: true },
-      { word: "勉努",   reading: "べんど",     sentence: "古い書物に○○の語が出る。",         printable: true },
       { word: "努力家", reading: "どりょくか", sentence: "兄は学級でも有名な○○だ。",         printable: true },
-      { word: "尽努",   reading: "じんど",     sentence: "ふるさとのため○○した人物だ。",     printable: true }
+      { word: "大努力", reading: "だいどりょく", sentence: "兄の○○が実を結んだ。",           printable: true },
+      { word: "努力中", reading: "どりょくちゅう", sentence: "今は弟も○○の毎日だ。",         printable: true }
     ]
   },
   {
@@ -1763,9 +1763,9 @@ window.KANJI_DATA_G4 = [
       { word: "灯",     reading: "ひ",         sentence: "祖父の家の○○が見えてほっとする。", printable: true },
       { word: "電灯",   reading: "でんとう",   sentence: "部屋の○○をつけて勉強する。",       printable: true },
       { word: "街灯",   reading: "がいとう",   sentence: "夕方に○○が一斉につく。",           printable: true },
-      { word: "灯台",   reading: "とうだい",   sentence: "岬の○○が船を導く。",               printable: true },
+      { word: "灯台",   reading: "とうだい",   sentence: "海べに白い○○が立っている。",       printable: true },
       { word: "点灯",   reading: "てんとう",   sentence: "夕方に車のライトを○○する。",       printable: true },
-      { word: "消灯",   reading: "しょうとう", sentence: "九時に○○して寝る。",               printable: true }
+      { word: "消灯",   reading: "しょうとう", sentence: "九時に○○してねむる。",             printable: true }
     ]
   },
   {
@@ -1788,7 +1788,7 @@ window.KANJI_DATA_G4 = [
       { word: "労働",   reading: "ろうどう",   sentence: "社会で○○について学ぶ。",           printable: true },
       { word: "共働き", reading: "ともばたらき", sentence: "となりの家は○○だ。",             printable: true },
       { word: "実働",   reading: "じつどう",   sentence: "○○時間を表に記録する。",           printable: true },
-      { word: "出働",   reading: "しゅつどう", sentence: "係が朝早く○○する。",               printable: true },
+      { word: "働き",   reading: "はたらき",   sentence: "母の毎日の○○に感謝する。",         printable: true },
       { word: "稼働",   reading: "かどう",     sentence: "工場の機械が○○している。",         printable: true }
     ]
   },
@@ -1823,9 +1823,9 @@ window.KANJI_DATA_G4 = [
       { word: "栃",     reading: "とち",       sentence: "山に○○の実が落ちている。",         printable: true },
       { word: "栃木",   reading: "とちぎ",     sentence: "○○県は関東地方にある。",           printable: true },
       { word: "栃の木", reading: "とちのき",   sentence: "公園に大きな○○がある。",           printable: true },
-      { word: "栃餅",   reading: "とちもち",   sentence: "山の宿で○○を味わう。",             printable: true },
-      { word: "栃葉",   reading: "とちは",     sentence: "秋になり○○が色づく。",             printable: true },
-      { word: "栃林",   reading: "とちばやし", sentence: "山すそに広い○○が広がる。",         printable: true }
+      { word: "栃木県", reading: "とちぎけん", sentence: "○○には有名な高原がある。",         printable: true },
+      { word: "栃木市", reading: "とちぎし",   sentence: "○○の古い町並みを歩く。",           printable: true },
+      { word: "栃の実", reading: "とちのみ",   sentence: "山道で○○を拾って集める。",         printable: true }
     ]
   },
   {
@@ -1835,9 +1835,9 @@ window.KANJI_DATA_G4 = [
       { word: "奈良",   reading: "なら",       sentence: "○○県は近畿地方にある。",           printable: true },
       { word: "神奈川", reading: "かながわ",   sentence: "○○県は関東地方にある。",           printable: true },
       { word: "奈落",   reading: "ならく",     sentence: "物語で○○の底へ落ちる場面がある。", printable: true },
-      { word: "奈何",   reading: "いかん",     sentence: "今後の○○が気になる。",             printable: true },
-      { word: "奈辺",   reading: "なへん",     sentence: "答えは○○にあるのだろう。",         printable: true },
-      { word: "佳奈",   reading: "かな",       sentence: "妹の名前は○○という。",             printable: true }
+      { word: "奈良県", reading: "ならけん",   sentence: "○○には大きな大ぶつがある。",       printable: true },
+      { word: "奈良市", reading: "ならし",     sentence: "○○には古い寺が多い。",             printable: true },
+      { word: "西奈良", reading: "にしなら",   sentence: "○○の駅で電車をおりる。",           printable: true }
     ]
   },
   {
@@ -1847,9 +1847,9 @@ window.KANJI_DATA_G4 = [
       { word: "梨",     reading: "なし",       sentence: "秋にあまい○○を食べる。",           printable: true },
       { word: "山梨",   reading: "やまなし",   sentence: "○○県は中部地方にある。",           printable: true },
       { word: "洋梨",   reading: "ようなし",   sentence: "デザートに○○が出された。",         printable: true },
-      { word: "梨園",   reading: "りえん",     sentence: "本で○○の歴史を読む。",             printable: true },
+      { word: "山梨県", reading: "やまなしけん", sentence: "○○には富士山がある。",           printable: true },
       { word: "梨畑",   reading: "なしばたけ", sentence: "近くに広い○○がある。",             printable: true },
-      { word: "梨棚",   reading: "なしだな",   sentence: "農家で○○を見学する。",             printable: true }
+      { word: "青梨",   reading: "あおなし",   sentence: "○○をうすく切って食べる。",         printable: true }
     ]
   },
   {
@@ -1881,7 +1881,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["ハイ"], kun: ["やぶ(れる)"] },
     words: [
       { word: "敗れる", reading: "やぶれる",   sentence: "強い相手に○○が次に向かう。",       printable: true },
-      { word: "敗北",   reading: "はいぼく",   sentence: "○○を認めて握手する。",             printable: true },
+      { word: "敗北",   reading: "はいぼく",   sentence: "試合の○○をすなおにみとめる。",     printable: true },
       { word: "失敗",   reading: "しっぱい",   sentence: "○○からたくさん学ぶ。",             printable: true },
       { word: "勝敗",   reading: "しょうはい", sentence: "最後まで○○がわからない。",         printable: true },
       { word: "敗者",   reading: "はいしゃ",   sentence: "○○にもはくしゅが送られる。",       printable: true },
@@ -1892,11 +1892,11 @@ window.KANJI_DATA_G4 = [
     kanji: "梅",
     readings: { on: ["バイ"], kun: ["うめ"] },
     words: [
-      { word: "梅",     reading: "うめ",       sentence: "庭の○○の花が咲き始めた。",         printable: true },
+      { word: "梅",     reading: "うめ",       sentence: "庭の○○の花がさき始めた。",         printable: true },
       { word: "梅雨",   reading: "つゆ",       sentence: "六月は○○の季節だ。",               printable: true },
       { word: "梅干",   reading: "うめぼし",   sentence: "おにぎりに○○を入れる。",           printable: true },
       { word: "梅林",   reading: "ばいりん",   sentence: "春に○○を見に出かける。",           printable: true },
-      { word: "紅梅",   reading: "こうばい",   sentence: "○○がかれんに咲く。",               printable: true },
+      { word: "紅梅",   reading: "こうばい",   sentence: "○○がかれんにさく。",               printable: true },
       { word: "梅酒",   reading: "うめしゅ",   sentence: "おじが家で○○をつける。",           printable: true }
     ]
   },
@@ -1919,9 +1919,9 @@ window.KANJI_DATA_G4 = [
       { word: "大阪",   reading: "おおさか",   sentence: "○○府は近畿地方にある。",           printable: true },
       { word: "阪神",   reading: "はんしん",   sentence: "○○間を電車で行き来する。",         printable: true },
       { word: "京阪",   reading: "けいはん",   sentence: "○○の街並みを歩いてみる。",         printable: true },
-      { word: "阪急",   reading: "はんきゅう", sentence: "祖父母が○○電車に乗る。",           printable: true },
-      { word: "阪和",   reading: "はんわ",     sentence: "○○線にゆられて旅をする。",         printable: true },
-      { word: "阪南",   reading: "はんなん",   sentence: "○○の地域に親せきが住む。",         printable: true }
+      { word: "大阪府", reading: "おおさかふ", sentence: "○○には大きな駅がある。",           printable: true },
+      { word: "大阪市", reading: "おおさかし", sentence: "○○を友達と旅行する。",             printable: true },
+      { word: "大阪駅", reading: "おおさかえき", sentence: "○○で電車を乗りかえる。",         printable: true }
     ]
   },
   {
@@ -1955,7 +1955,7 @@ window.KANJI_DATA_G4 = [
       { word: "必ず",   reading: "かならず",   sentence: "○○約束の時間に着くようにする。",   printable: true },
       { word: "必要",   reading: "ひつよう",   sentence: "遠足に○○な物をそろえる。",         printable: true },
       { word: "必死",   reading: "ひっし",     sentence: "ゴールまで○○に走った。",           printable: true },
-      { word: "必勝",   reading: "ひっしょう", sentence: "○○の気持ちで試合に挑む。",         printable: true },
+      { word: "必勝",   reading: "ひっしょう", sentence: "○○の気持ちで試合に出る。",         printable: true },
       { word: "必然",   reading: "ひつぜん",   sentence: "結果はある意味○○だった。",         printable: true },
       { word: "必着",   reading: "ひっちゃく", sentence: "明日○○で書類を送る。",             printable: true }
     ]
@@ -2012,7 +2012,7 @@ window.KANJI_DATA_G4 = [
     kanji: "付",
     readings: { on: ["フ"], kun: ["つ(ける)", "つ(く)"] },
     words: [
-      { word: "付ける", reading: "つける",     sentence: "服に名札を○○のを忘れない。",       printable: true },
+      { word: "付ける", reading: "つける",     sentence: "服に名札を○○のがきまりだ。",       printable: true },
       { word: "付く",   reading: "つく",       sentence: "服にどろが○○のは仕方ない。",       printable: true },
       { word: "付近",   reading: "ふきん",     sentence: "学校○○の道を調べる。",             printable: true },
       { word: "受付",   reading: "うけつけ",   sentence: "○○で名前を書いた。",               printable: true },
@@ -2029,7 +2029,7 @@ window.KANJI_DATA_G4 = [
       { word: "政府",   reading: "せいふ",     sentence: "ニュースで○○の話が出る。",         printable: true },
       { word: "府立",   reading: "ふりつ",     sentence: "○○の図書館で本を借りる。",         printable: true },
       { word: "幕府",   reading: "ばくふ",     sentence: "歴史で○○の仕組みを学ぶ。",         printable: true },
-      { word: "県府",   reading: "けんぷ",     sentence: "古い書物に○○の語が出る。",         printable: true }
+      { word: "府民",   reading: "ふみん",     sentence: "大阪○○のための行事がある。",       printable: true }
     ]
   },
   {
@@ -2038,10 +2038,10 @@ window.KANJI_DATA_G4 = [
     words: [
       { word: "岐阜",   reading: "ぎふ",       sentence: "○○県は中部地方にある。",           printable: true },
       { word: "岐阜市", reading: "ぎふし",     sentence: "○○を旅行して城を見学した。",       printable: true },
-      { word: "曲阜",   reading: "きょくふ",   sentence: "歴史で中国の○○を学ぶ。",           printable: true },
-      { word: "阜頭",   reading: "ふとう",     sentence: "古い書物に○○の語が出る。",         printable: true },
-      { word: "高阜",   reading: "こうふ",     sentence: "○○の地に古い社がある。",           printable: true },
-      { word: "大阜",   reading: "たいふ",     sentence: "古い詩に○○の語がある。",           printable: true }
+      { word: "岐阜県", reading: "ぎふけん",   sentence: "○○は中部地方の内陸にある。",       printable: true },
+      { word: "岐阜駅", reading: "ぎふえき",   sentence: "○○で電車をおりて歩く。",           printable: true },
+      { word: "岐阜城", reading: "ぎふじょう", sentence: "山の上に○○がたつ。",               printable: true },
+      { word: "岐阜産", reading: "ぎふさん",   sentence: "○○の野菜を母が買った。",           printable: true }
     ]
   },
   {
@@ -2132,11 +2132,11 @@ window.KANJI_DATA_G4 = [
     kanji: "包",
     readings: { on: ["ホウ"], kun: ["つつ(む)"] },
     words: [
-      { word: "包む",   reading: "つつむ",     sentence: "贈り物をきれいに○○のがじょうずだ。", printable: true },
+      { word: "包む",   reading: "つつむ",     sentence: "おくり物をきれいに○○のがうまい。", printable: true },
       { word: "包み",   reading: "つつみ",     sentence: "小さな○○を母にわたす。",           printable: true },
       { word: "包帯",   reading: "ほうたい",   sentence: "指のけがに○○を巻く。",             printable: true },
       { word: "小包",   reading: "こづつみ",   sentence: "祖父から○○が届いた。",             printable: true },
-      { word: "内包",   reading: "ないほう",   sentence: "問題に○○する意味を考える。",       printable: true },
+      { word: "上包み", reading: "うわづつみ", sentence: "本の○○を新しくする。",             printable: true },
       { word: "包囲",   reading: "ほうい",     sentence: "歴史で城を○○する場面を学ぶ。",     printable: true }
     ]
   },
@@ -2184,8 +2184,8 @@ window.KANJI_DATA_G4 = [
       { word: "週末",   reading: "しゅうまつ", sentence: "○○に家族で出かける。",             printable: true },
       { word: "年末",   reading: "ねんまつ",   sentence: "○○の大そうじを手伝う。",           printable: true },
       { word: "結末",   reading: "けつまつ",   sentence: "物語の○○に感動する。",             printable: true },
-      { word: "末来",   reading: "まつらい",   sentence: "古い書物に○○の語がある。",         printable: true },
-      { word: "末代",   reading: "まつだい",   sentence: "○○まで語り継ぐ話だ。",             printable: true }
+      { word: "月末",   reading: "げつまつ",   sentence: "○○に家族で映画を見に行く。",       printable: true },
+      { word: "末っ子", reading: "すえっこ",   sentence: "三人兄弟の○○が妹だ。",             printable: true }
     ]
   },
   {
@@ -2193,7 +2193,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["マン"], kun: ["み(ちる)", "み(たす)"] },
     words: [
       { word: "満ちる", reading: "みちる",     sentence: "月が美しく○○夜だ。",               printable: true },
-      { word: "満たす", reading: "みたす",     sentence: "コップに水を○○のを忘れる。",       printable: true },
+      { word: "満たす", reading: "みたす",     sentence: "コップに水を○○のを手伝う。",       printable: true },
       { word: "満点",   reading: "まんてん",   sentence: "テストで○○を取って喜ぶ。",         printable: true },
       { word: "満員",   reading: "まんいん",   sentence: "電車が○○で乗れない。",             printable: true },
       { word: "満足",   reading: "まんぞく",   sentence: "今日の出来に○○している。",         printable: true },
@@ -2256,7 +2256,7 @@ window.KANJI_DATA_G4 = [
       { word: "勇気",   reading: "ゆうき",     sentence: "○○を出して話しかける。",           printable: true },
       { word: "勇士",   reading: "ゆうし",     sentence: "物語の○○が活やくする。",           printable: true },
       { word: "勇者",   reading: "ゆうしゃ",   sentence: "本で○○の旅を読む。",               printable: true },
-      { word: "勇敢",   reading: "ゆうかん",   sentence: "○○な姿に拍手が起こる。",           printable: true },
+      { word: "勇敢",   reading: "ゆうかん",   sentence: "兄の○○な姿に感動する。",           printable: true },
       { word: "武勇",   reading: "ぶゆう",     sentence: "歴史で○○の話を学ぶ。",             printable: true }
     ]
   },
@@ -2280,7 +2280,7 @@ window.KANJI_DATA_G4 = [
       { word: "養分",   reading: "ようぶん",   sentence: "野菜には○○がたくさんある。",       printable: true },
       { word: "栄養",   reading: "えいよう",   sentence: "○○のある食事を心がける。",         printable: true },
       { word: "教養",   reading: "きょうよう", sentence: "本を読んで○○を深める。",           printable: true },
-      { word: "養老",   reading: "ようろう",   sentence: "○○の滝を旅行で見た。",             printable: true },
+      { word: "養老",   reading: "ようろう",   sentence: "町の○○の家へ行事に行く。",         printable: true },
       { word: "養成",   reading: "ようせい",   sentence: "選手の○○について学ぶ。",           printable: true }
     ]
   },
@@ -2328,7 +2328,7 @@ window.KANJI_DATA_G4 = [
       { word: "良心",   reading: "りょうしん", sentence: "○○に従って行動する。",             printable: true },
       { word: "良好",   reading: "りょうこう", sentence: "成績は○○だと言われた。",           printable: true },
       { word: "改良",   reading: "かいりょう", sentence: "古い道具を○○して使う。",           printable: true },
-      { word: "不良",   reading: "ふりょう",   sentence: "天候○○で試合が延期だ。",           printable: true },
+      { word: "不良",   reading: "ふりょう",   sentence: "天候○○で試合が中止になる。",       printable: true },
       { word: "良質",   reading: "りょうしつ", sentence: "○○な紙を選んで使う。",             printable: true }
     ]
   },
@@ -2457,7 +2457,7 @@ window.KANJI_DATA_G4 = [
     readings: { on: ["ロク"], kun: [] },
     words: [
       { word: "録",     reading: "ろく",       sentence: "今日の出来事を記○○する。",         printable: true },
-      { word: "記録",   reading: "きろく",     sentence: "陸上の○○が更新された。",           printable: true },
+      { word: "記録",   reading: "きろく",     sentence: "陸上の○○が新しくなった。",         printable: true },
       { word: "登録",   reading: "とうろく",   sentence: "図書館の利用を○○する。",           printable: true },
       { word: "録音",   reading: "ろくおん",   sentence: "歌の練習を○○して聞く。",           printable: true },
       { word: "録画",   reading: "ろくが",     sentence: "番組を○○して後で見る。",           printable: true },
