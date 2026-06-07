@@ -911,7 +911,7 @@ window.KANJI_DATA_G4 = [
       { word: "崎",     reading: "さき",       sentence: "海辺の○○に灯台が立つ。",           printable: true },
       { word: "長崎",   reading: "ながさき",   sentence: "○○県は九州地方にある。",           printable: true },
       { word: "宮崎",   reading: "みやざき",   sentence: "○○県は南国の気候だ。",             printable: true },
-      { word: "山崎",   reading: "やまざき",   sentence: "友達の○○くんが転校した。",         printable: true },
+      { word: "出崎",   reading: "でさき",     sentence: "海につき出た○○に立つ。",           printable: true },
       { word: "川崎",   reading: "かわさき",   sentence: "神奈川の○○市を旅した。",           printable: true },
       { word: "長崎市", reading: "ながさきし", sentence: "○○には古い町なみがのこる。",       printable: true }
     ]
@@ -1321,7 +1321,7 @@ window.KANJI_DATA_G4 = [
       { word: "天井",   reading: "てんじょう", sentence: "教室の○○が高くて気持ちいい。",     printable: true },
       { word: "市井",   reading: "しせい",     sentence: "本で○○の人々の話を読む。",         printable: true },
       { word: "福井",   reading: "ふくい",     sentence: "○○県は北陸地方にある。",           printable: true },
-      { word: "井上",   reading: "いのうえ",   sentence: "となりの○○さんと話す。",           printable: true }
+      { word: "井戸水", reading: "いどみず",   sentence: "つめたい○○をくんで飲む。",         printable: true }
     ]
   },
   {

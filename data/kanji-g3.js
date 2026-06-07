@@ -433,7 +433,7 @@ window.KANJI_DATA_G3 = [
       { word: "石橋",   reading: "いしばし",   sentence: "古い○○をわたる。",                  printable: true },
       { word: "歩道橋", reading: "ほどうきょう", sentence: "○○で道路をわたる。",              printable: true },
       { word: "つり橋", reading: "つりばし",   sentence: "谷川に○○がかかる。",                printable: true },
-      { word: "橋本",   reading: "はしもと",   sentence: "○○さんは友だちだ。",                printable: true }
+      { word: "丸木橋", reading: "まるきばし", sentence: "細い○○をそっとわたる。",            printable: true }
     ]
   },
   {
@@ -443,7 +443,7 @@ window.KANJI_DATA_G3 = [
       { word: "業",     reading: "わざ",       sentence: "見事な○○を見せる。",                printable: true },
       { word: "工業",   reading: "こうぎょう", sentence: "町に○○がさかえる。",                printable: true },
       { word: "農業",   reading: "のうぎょう", sentence: "村の人は○○をしている。",            printable: true },
-      { word: "じゅ業", reading: "じゅぎょう", sentence: "三時間目の○○が始まる。",         printable: true },
+      { word: "学業",   reading: "がくぎょう", sentence: "毎日○○にはげむ。",                  printable: true },
       { word: "作業",   reading: "さぎょう",   sentence: "外で○○を手つだう。",                printable: true },
       { word: "産業",   reading: "さんぎょう", sentence: "○○について学ぶ。",                  printable: true }
     ]
@@ -612,7 +612,7 @@ window.KANJI_DATA_G3 = [
       { word: "金庫",   reading: "きんこ",     sentence: "大事な物を○○に入れる。",            printable: true },
       { word: "倉庫",   reading: "そうこ",     sentence: "古い○○を直す。",                    printable: true },
       { word: "書庫",   reading: "しょこ",     sentence: "本を○○にしまう。",                  printable: true },
-      { word: "冷ぞう庫", reading: "れいぞうこ", sentence: "牛にゅうを○○に入れる。",          printable: true },
+      { word: "文庫",   reading: "ぶんこ",     sentence: "本だなに○○の本をならべる。",        printable: true },
       { word: "庫内",   reading: "こない",     sentence: "○○の温度を下げる。",                printable: true }
     ]
   },
@@ -625,7 +625,7 @@ window.KANJI_DATA_G3 = [
       { word: "湖面",   reading: "こめん",     sentence: "○○に空がうつる。",                  printable: true },
       { word: "湖上",   reading: "こじょう",   sentence: "○○を船で行く。",                    printable: true },
       { word: "湖岸",   reading: "こがん",     sentence: "○○で写真をとる。",                  printable: true },
-      { word: "山中湖", reading: "やまなかこ", sentence: "○○へ家族で出かけた。",              printable: true }
+      { word: "火口湖", reading: "かこうこ",   sentence: "山の上に○○が広がる。",              printable: true }
     ]
   },
   {
@@ -768,7 +768,7 @@ window.KANJI_DATA_G3 = [
       { word: "指す",   reading: "さす",       sentence: "時計の長いはりが三を○○。",          printable: true },
       { word: "指先",   reading: "ゆびさき",   sentence: "○○がつめたい。",                    printable: true },
       { word: "指名",   reading: "しめい",     sentence: "先生に○○される。",                  printable: true },
-      { word: "指じ",   reading: "しじ",       sentence: "先生の○○にしたがう。",              printable: true },
+      { word: "中指",   reading: "なかゆび",   sentence: "○○は手で一番長いゆびだ。",          printable: true },
       { word: "親指",   reading: "おやゆび",   sentence: "○○を立ててほめる。",                printable: true }
     ]
   },
@@ -985,7 +985,7 @@ window.KANJI_DATA_G3 = [
       { word: "練習",   reading: "れんしゅう", sentence: "毎日漢字の○○をする。",              printable: true },
       { word: "習字",   reading: "しゅうじ",   sentence: "○○の時間がすきだ。",                printable: true },
       { word: "予習",   reading: "よしゅう",   sentence: "明日の○○をする。",                  printable: true },
-      { word: "ふく習", reading: "ふくしゅう", sentence: "ノートで○○する。",                  printable: true }
+      { word: "習い事", reading: "ならいごと", sentence: "妹は○○でピアノに通う。",            printable: true }
     ]
   },
   {
@@ -1091,7 +1091,7 @@ window.KANJI_DATA_G3 = [
       { word: "消える", reading: "きえる",     sentence: "電気が○○。",                        printable: true },
       { word: "消す",   reading: "けす",       sentence: "黒板の字を○○。",                    printable: true },
       { word: "消火",   reading: "しょうか",   sentence: "○○のくんれんをする。",              printable: true },
-      { word: "消ぼう車", reading: "しょうぼうしゃ", sentence: "○○がかけつける。",          printable: true },
+      { word: "火消し", reading: "ひけし",     sentence: "○○が町の火事を止める。",            printable: true },
       { word: "消化",   reading: "しょうか",   sentence: "食べ物の○○を学ぶ。",                printable: true },
       { word: "取り消し", reading: "とりけし", sentence: "予やくの○○をする。",                printable: true }
     ]
@@ -1789,7 +1789,7 @@ window.KANJI_DATA_G3 = [
       { word: "重箱",   reading: "じゅうばこ", sentence: "正月に○○を出す。",                  printable: true },
       { word: "ごみ箱", reading: "ごみばこ",   sentence: "教室の○○をかたづける。",            printable: true },
       { word: "筆箱",   reading: "ふでばこ",   sentence: "○○にえん筆を入れる。",              printable: true },
-      { word: "箱根",   reading: "はこね",     sentence: "○○へ旅行に行く。",                  printable: true }
+      { word: "小箱",   reading: "こばこ",     sentence: "○○にビー玉をしまう。",              printable: true }
     ]
   },
   {
@@ -1933,7 +1933,7 @@ window.KANJI_DATA_G3 = [
       { word: "発表",   reading: "はっぴょう", sentence: "学んだことを○○する。",              printable: true },
       { word: "表面",   reading: "ひょうめん", sentence: "池の○○がきらめき光る。",            printable: true },
       { word: "代表",   reading: "だいひょう", sentence: "クラスの○○にえらばれる。",          printable: true },
-      { word: "時こく表", reading: "じこくひょう", sentence: "駅の○○を見る。",              printable: true }
+      { word: "年表",   reading: "ねんぴょう", sentence: "昔のできごとを○○にまとめる。",      printable: true }
     ]
   },
   {
@@ -2014,7 +2014,7 @@ window.KANJI_DATA_G3 = [
     words: [
       { word: "幸福",   reading: "こうふく",   sentence: "家族みんなで○○にくらす。",          printable: true },
       { word: "福引",   reading: "ふくびき",   sentence: "商店がいの○○に出る。",              printable: true },
-      { word: "福島",   reading: "ふくしま",   sentence: "夏休みに○○まで旅行する。",          printable: true },
+      { word: "福の神", reading: "ふくのかみ", sentence: "○○がやってくる絵本を読む。",        printable: true },
       { word: "祝福",   reading: "しゅくふく", sentence: "兄を○○する。",                      printable: true },
       { word: "福音",   reading: "ふくいん",   sentence: "古い○○のお話を読む。",              printable: true },
       { word: "大福",   reading: "だいふく",   sentence: "三時のおやつに○○を食べる。",        printable: true }
@@ -2257,7 +2257,7 @@ window.KANJI_DATA_G3 = [
       { word: "陽光",   reading: "ようこう",   sentence: "○○がへやに入る。",                  printable: true },
       { word: "夕陽",   reading: "ゆうひ",     sentence: "山に○○がしずむ。",                  printable: true },
       { word: "陰陽",   reading: "いんよう",   sentence: "古い話の○○。",                      printable: true },
-      { word: "陽子",   reading: "ようこ",     sentence: "○○さんは元気な人だ。",              printable: true }
+      { word: "陽だまり", reading: "ひだまり", sentence: "ねこが○○で気もちよくねる。",        printable: true }
     ]
   },
   {

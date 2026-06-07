@@ -169,7 +169,7 @@ window.KANJI_DATA_G1 = [
       { word: "休日",   reading: "きゅうじつ", sentence: "あしたは○○だ。",              printable: true },
       { word: "休校",   reading: "きゅうこう", sentence: "ゆきで○○になった。",          printable: true },
       { word: "休止",   reading: "きゅうし",   sentence: "うんてんを○○する。",          printable: true },
-      { word: "ひと休み", reading: "ひとやすみ", sentence: "ベンチで○○する。",            printable: true }
+      { word: "一休み", reading: "ひとやすみ", sentence: "ベンチで○○する。",            printable: true }
     ]
   },
   {
@@ -226,7 +226,7 @@ window.KANJI_DATA_G1 = [
     words: [
       { word: "犬",     reading: "いぬ",       sentence: "うちの○○はちゃいろだ。",      printable: true },
       { word: "子犬",   reading: "こいぬ",     sentence: "○○がはしりまわる。",          printable: true },
-      { word: "あい犬", reading: "あいけん",   sentence: "○○といっしょにあるく。",      printable: true },
+      { word: "名犬",   reading: "めいけん",   sentence: "かしこい○○をかう。",          printable: true },
       { word: "犬小屋", reading: "いぬごや",   sentence: "にわに○○がある。",            printable: true },
       { word: "番犬",   reading: "ばんけん",   sentence: "りっぱな○○がいる。",          printable: true },
       { word: "飼い犬", reading: "かいいぬ",   sentence: "となりの○○はやさしい。",      printable: true }
@@ -310,7 +310,7 @@ window.KANJI_DATA_G1 = [
     words: [
       { word: "山",     reading: "やま",       sentence: "ふじ○○がきれいだ。",          printable: true },
       { word: "火山",   reading: "かざん",     sentence: "○○がふんかする。",            printable: true },
-      { word: "山口",   reading: "やまぐち",   sentence: "○○けんのうみをみた。",        printable: true },
+      { word: "山林",   reading: "さんりん",   sentence: "とおくに○○が見える。",        printable: true },
       { word: "高山",   reading: "こうざん",   sentence: "○○にゆきがつもる。",          printable: true },
       { word: "山道",   reading: "やまみち",   sentence: "ながい○○をあるく。",          printable: true },
       { word: "下山",   reading: "げざん",     sentence: "ゆうがたに○○する。",          printable: true }
@@ -478,7 +478,7 @@ window.KANJI_DATA_G1 = [
     words: [
       { word: "森",     reading: "もり",       sentence: "ふかい○○をあるく。",          printable: true },
       { word: "森林",   reading: "しんりん",   sentence: "○○のなかをさんぽする。",      printable: true },
-      { word: "青森",   reading: "あおもり",   sentence: "○○けんのりんご。",            printable: true },
+      { word: "森の音", reading: "もりのおと", sentence: "しずかな○○をきく。",          printable: true },
       { word: "森の中", reading: "もりのなか", sentence: "○○でとりがなく。",            printable: true },
       { word: "森林浴", reading: "しんりんよく", sentence: "山で○○をたのしむ。",          printable: true },
       { word: "大森林", reading: "だいしんりん", sentence: "ひろい○○がひろがる。",       printable: true }
@@ -540,7 +540,7 @@ window.KANJI_DATA_G1 = [
       { word: "青い",   reading: "あおい",     sentence: "○○いうみがひろがる。",        printable: true },
       { word: "青空",   reading: "あおぞら",   sentence: "きょうは○○だ。",              printable: true },
       { word: "青年",   reading: "せいねん",   sentence: "りっぱな○○になる。",          printable: true },
-      { word: "青森",   reading: "あおもり",   sentence: "○○のりんごはおいしい。",      printable: true },
+      { word: "青虫",   reading: "あおむし",   sentence: "はっぱに○○がいる。",          printable: true },
       { word: "青草",   reading: "あおくさ",   sentence: "○○のうえにすわる。",          printable: true }
     ]
   },
@@ -562,9 +562,9 @@ window.KANJI_DATA_G1 = [
     words: [
       { word: "石",     reading: "いし",       sentence: "かわらで○○をひろう。",        printable: true },
       { word: "小石",   reading: "こいし",     sentence: "ポケットに○○を入れる。",      printable: true },
-      { word: "石川",   reading: "いしかわ",   sentence: "○○けんのおまつり。",          printable: true },
+      { word: "石だん", reading: "いしだん",   sentence: "○○をのぼっていく。",          printable: true },
       { word: "石山",   reading: "いしやま",   sentence: "○○にのぼった。",              printable: true },
-      { word: "白石",   reading: "しらいし",   sentence: "○○でみちをかざる。",          printable: true },
+      { word: "ふみ石", reading: "ふみいし",   sentence: "にわの○○をわたる。",          printable: true },
       { word: "石ころ", reading: "いしころ",   sentence: "小さな○○をけった。",          printable: true }
     ]
   },
@@ -601,7 +601,7 @@ window.KANJI_DATA_G1 = [
       { word: "川上",   reading: "かわかみ",   sentence: "○○へさかなをみにいく。",      printable: true },
       { word: "川下",   reading: "かわしも",   sentence: "○○へボートでくだる。",        printable: true },
       { word: "川原",   reading: "かわら",     sentence: "○○で石ころをひろう。",        printable: true },
-      { word: "石川",   reading: "いしかわ",   sentence: "○○けんのかにをたべる。",      printable: true }
+      { word: "川ぎし", reading: "かわぎし",   sentence: "○○で水あそびをする。",        printable: true }
     ]
   },
   {
@@ -755,9 +755,9 @@ window.KANJI_DATA_G1 = [
       { word: "田",     reading: "た",         sentence: "○○んぼでカエルがなく。",      printable: true },
       { word: "田んぼ", reading: "たんぼ",     sentence: "○○がきれいにみどりだ。",      printable: true },
       { word: "水田",   reading: "すいでん",   sentence: "ひろい○○がつづく。",          printable: true },
-      { word: "田中",   reading: "たなか",     sentence: "○○さんがあいさつする。",      printable: true },
+      { word: "田うえ", reading: "たうえ",     sentence: "むらの人と○○をする。",        printable: true },
       { word: "田畑",   reading: "たはた",     sentence: "○○のしごとをする。",          printable: true },
-      { word: "山田",   reading: "やまだ",     sentence: "となりの○○さん。",            printable: true }
+      { word: "青田",   reading: "あおた",     sentence: "○○がかぜでゆれる。",          printable: true }
     ]
   },
   {
@@ -949,7 +949,7 @@ window.KANJI_DATA_G1 = [
       { word: "竹林",   reading: "ちくりん",   sentence: "○○でかぜがそよぐ。",          printable: true },
       { word: "山林",   reading: "さんりん",   sentence: "○○をたいせつにする。",        printable: true },
       { word: "林道",   reading: "りんどう",   sentence: "○○をハイキングする。",        printable: true },
-      { word: "小林",   reading: "こばやし",   sentence: "○○さんとあそぶ。",            printable: true }
+      { word: "すぎ林", reading: "すぎばやし", sentence: "○○でせみがなく。",            printable: true }
     ]
   },
   {

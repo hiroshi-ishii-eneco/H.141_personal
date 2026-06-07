@@ -455,7 +455,7 @@ window.KANJI_DATA_G2 = [
       { word: "言う",   reading: "いう",       sentence: "本当のことを○○。",             printable: true },
       { word: "言葉",   reading: "ことば",     sentence: "やさしい○○をつかう。",         printable: true },
       { word: "方言",   reading: "ほうげん",   sentence: "おばあちゃんの○○がやさしい。", printable: true },
-      { word: "ひと言", reading: "ひとこと",   sentence: "先生に○○あいさつする。",       printable: true },
+      { word: "一言",   reading: "ひとこと",   sentence: "先生に○○あいさつする。",       printable: true },
       { word: "助言",   reading: "じょげん",   sentence: "先生に○○をもらう。",           printable: true },
       { word: "言い分", reading: "いいぶん",   sentence: "おたがいの○○を聞く。",         printable: true }
     ]
@@ -661,7 +661,7 @@ window.KANJI_DATA_G2 = [
       { word: "谷間",   reading: "たにま",     sentence: "○○に村がある。",               printable: true },
       { word: "谷ぞこ", reading: "たにぞこ",   sentence: "○○に小さな川が見える。",       printable: true },
       { word: "谷風",   reading: "たにかぜ",   sentence: "つめたい○○がふいてくる。",     printable: true },
-      { word: "谷口",   reading: "たにぐち",   sentence: "クラスに○○さんがいる。",       printable: true }
+      { word: "谷おく", reading: "たにおく",   sentence: "○○にひっそりと家がある。",     printable: true }
     ]
   },
   {
@@ -841,7 +841,7 @@ window.KANJI_DATA_G2 = [
       { word: "自力",   reading: "じりき",     sentence: "○○でとくのが大切だ。",         printable: true },
       { word: "自由",   reading: "じゆう",     sentence: "○○な時間を楽しむ。",           printable: true },
       { word: "自然",   reading: "しぜん",     sentence: "山の○○をかんさつする。",       printable: true },
-      { word: "自しん", reading: "じしん",     sentence: "○○をもってはっぴょうする。",   printable: true }
+      { word: "自立",   reading: "じりつ",     sentence: "○○の心をもって生活する。",     printable: true }
     ]
   },
   {
@@ -1153,7 +1153,7 @@ window.KANJI_DATA_G2 = [
       { word: "光線",   reading: "こうせん",   sentence: "朝の○○がまぶしい。",           printable: true },
       { word: "電線",   reading: "でんせん",   sentence: "鳥が○○にとまる。",             printable: true },
       { word: "海岸線", reading: "かいがんせん", sentence: "長い○○を見る。",             printable: true },
-      { word: "新かん線", reading: "しんかんせん", sentence: "○○にのって行く。",         printable: true }
+      { word: "点線",   reading: "てんせん",   sentence: "○○にそって紙を切る。",         printable: true }
     ]
   },
   {
@@ -1393,7 +1393,7 @@ window.KANJI_DATA_G2 = [
       { word: "百点",   reading: "ひゃくてん", sentence: "算数で○○をとる。",             printable: true },
       { word: "弱点",   reading: "じゃくてん", sentence: "○○をのりこえる力がつく。",     printable: true },
       { word: "交点",   reading: "こうてん",   sentence: "線と線の○○を見る。",           printable: true },
-      { word: "出ぱつ点", reading: "しゅっぱつてん", sentence: "○○に立つ。",             printable: true }
+      { word: "点字",   reading: "てんじ",     sentence: "ゆびで○○を読みとる。",         printable: true }
     ]
   },
   {
