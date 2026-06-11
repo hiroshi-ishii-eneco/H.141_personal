@@ -276,8 +276,17 @@
     // 3. シャッフル
     shuffle(filtered);
 
-    // 4. 先頭 count 件
-    const picked = filtered.slice(0, Math.max(0, count | 0));
+    // 4. 先頭から count 件。同じ単語が同一出力内に重複しないようスキップ
+    //    (同じ単語が複数の漢字エントリ・複数学年に登録されているため)
+    const limit = Math.max(0, count | 0);
+    const picked = [];
+    const usedWords = new Set();
+    for (const w of filtered) {
+      if (picked.length >= limit) break;
+      if (usedWords.has(w.word)) continue;
+      usedWords.add(w.word);
+      picked.push(w);
+    }
 
     // 5. 各問題: 文を before/after に分解し、blank に入る表示テキストを決定
     //    漢字検定スタイル:
