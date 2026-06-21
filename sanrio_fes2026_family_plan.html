@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サンリオフェス2026｜家族プラン表（6/26金 14:00〜6/27土 21:00）</title>
+<style>
+  :root{
+    --pink:#ff5fa2;
+    --blue:#3aa0ff;
+    --yellow:#ffb800;
+    --ink:#333;
+    --line:#dcdce2;
+    --fam:#f3fbf3;
+    --fam-line:#bfe3bf;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+    color:var(--ink);line-height:1.55;background:#f7f7f9;font-size:15px;
+  }
+  .sheet{max-width:880px;margin:0 auto;background:#fff;padding:22px 18px 44px;}
+
+  header.title{text-align:center;border-bottom:3px solid var(--pink);padding-bottom:12px;margin-bottom:14px;}
+  header.title h1{font-size:1.4rem;margin:0 0 4px;color:var(--pink);line-height:1.3;}
+  header.title .sub{font-size:.82rem;color:#666;margin:0;}
+
+  .toolbar{position:sticky;top:0;z-index:10;display:flex;justify-content:flex-end;gap:8px;padding:10px 0;background:#f7f7f9;}
+  button{appearance:none;border:none;cursor:pointer;font-weight:700;border-radius:999px;font-size:.9rem;padding:9px 16px;}
+  .btn-print{background:var(--pink);color:#fff;box-shadow:0 3px 8px rgba(255,95,162,.35);}
+  .btn-clear{background:#eee;color:#666;}
+  button:active{transform:translateY(1px);}
+
+  .legend{font-size:.78rem;color:#666;margin:0 0 14px;text-align:center;}
+  .legend b{color:var(--pink);}
+
+  .day{margin:0 0 22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .day-head{padding:9px 14px;color:#fff;font-weight:700;font-size:1.02rem;}
+  .day-fri .day-head{background:var(--yellow);}
+  .day-sat .day-head{background:var(--blue);}
+
+  table{width:100%;border-collapse:collapse;table-layout:fixed;}
+  col.c-time{width:62px;}
+  col.c-off{width:48%;}
+  col.c-fam{width:auto;}
+  th,td{border:1px solid var(--line);padding:7px 8px;vertical-align:top;font-size:.85rem;}
+  thead th{background:#f1f1f4;font-size:.78rem;text-align:center;}
+  thead th.off{background:#eef6ff;color:#1f6fc0;}
+  thead th.fam{background:var(--fam);color:#2f8f2f;}
+  td.time{font-weight:700;text-align:center;font-variant-numeric:tabular-nums;background:#fafafa;white-space:nowrap;}
+  td.off .ev{font-weight:700;}
+  td.off .mini{display:block;font-size:.76rem;color:#777;font-weight:400;}
+  td.off .star{color:var(--pink);}
+  tr.key td.off{background:#fff7fb;}
+
+  /* 家族の書き込み欄 */
+  td.fam{
+    background:var(--fam);
+    background-image:repeating-linear-gradient(transparent,transparent 25px,var(--fam-line) 25px,var(--fam-line) 26px);
+    background-position:0 6px;
+  }
+  td.fam[contenteditable]{outline:none;min-height:54px;}
+  td.fam[contenteditable]:focus{background-color:#eafaea;}
+  td.fam:empty::before{content:"＋ タップして記入";color:#9bc79b;font-size:.78rem;}
+
+  footer.foot{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);font-size:.72rem;color:#999;text-align:center;}
+
+  /* スマホ最適化 */
+  @media (max-width:600px){
+    body{font-size:14px;}
+    .sheet{padding:14px 10px 36px;}
+    header.title h1{font-size:1.15rem;}
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .table-wrap table{min-width:520px;}
+    th,td{padding:6px;}
+  }
+
+  /* A4印刷最適化 */
+  @media print{
+    @page{size:A4 portrait;margin:11mm;}
+    body{background:#fff;font-size:10pt;}
+    .sheet{max-width:none;padding:0;}
+    .toolbar{display:none !important;}
+    .day{break-inside:avoid;page-break-inside:avoid;}
+    .day-head,thead th,thead th.off,thead th.fam,td.fam,tr.key td.off{
+      -webkit-print-color-adjust:exact;print-color-adjust:exact;
+    }
+    table{font-size:9pt;}
+    tr{break-inside:avoid;}
+    td.fam:empty::before{content:"";}
+    td.fam[contenteditable]{min-height:46px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="toolbar">
+    <button class="btn-clear" onclick="clearFam()">🗑 記入クリア</button>
+    <button class="btn-print" onclick="window.print()">🖨 印刷（A4）</button>
+  </div>
+
+  <header class="title">
+    <h1>サンリオフェス2026｜家族プラン表</h1>
+    <p class="sub">6/26（金）14:00 〜 6/27（土）21:00 ｜ 入場日：土曜（DAY1）</p>
+  </header>
+
+  <p class="legend">左＝<b style="color:#1f6fc0">公式スケジュール</b> ／ 右＝<b style="color:#2f8f2f">家族の予定（タップで記入・自動保存）</b>。印刷すれば手書き記入欄になります。</p>
+
+  <!-- 金曜 -->
+  <section class="day day-fri">
+    <div class="day-head">🟡 6/26（金）｜前日・周辺施設めぐり（メイン会場は未開催）</div>
+    <div class="table-wrap">
+    <table>
+      <colgroup><col class="c-time"><col class="c-off"><col class="c-fam"></colgroup>
+      <thead><tr><th>時間</th><th class="off">公式スケジュール</th><th class="fam">家族の予定</th></tr></thead>
+      <tbody>
+        <tr><td class="time">14:00</td><td class="off"><span class="ev">みなとみらい駅 着</span><span class="mini">キャラクターボイス改札機／ラッピングトレイン</span></td><td class="fam" contenteditable="true" data-k="f1400"></td></tr>
+        <tr><td class="time">15:00</td><td class="off"><span class="ev">みなとみらい東急スクエア 2F Sanrio</span><span class="mini">サンリオショップ（スタンプラリー拠点⑥）</span></td><td class="fam" contenteditable="true" data-k="f1500"></td></tr>
+        <tr><td class="time">16:00</td><td class="off"><span class="ev">クイーンズスクエア横浜</span><span class="mini">全90キャラクター装飾（エスカレーター80m以上）</span></td><td class="fam" contenteditable="true" data-k="f1600"></td></tr>
+        <tr class="key"><td class="time">17:00</td><td class="off"><span class="ev star">MARK IS みなとみらい 1F</span><span class="mini">ピューロランド35周年POP-UPショップ／グリーティング ※本日6/26スタート</span></td><td class="fam" contenteditable="true" data-k="f1700"></td></tr>
+        <tr><td class="time">18:00</td><td class="off"><span class="ev">ランドマークプラザ 1F</span><span class="mini">ポムポムプリン30周年POP-UPストア・巨大バルーン</span></td><td class="fam" contenteditable="true" data-k="f1800"></td></tr>
+        <tr><td class="time">19:00</td><td class="off"><span class="ev">夕食</span><span class="mini">みなとみらいエリア</span></td><td class="fam" contenteditable="true" data-k="f1900"></td></tr>
+        <tr><td class="time">20:00</td><td class="off"><span class="ev">解散／ホテル</span><span class="mini">商業施設は20〜21時頃 閉店</span></td><td class="fam" contenteditable="true" data-k="f2000"></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <!-- 土曜 -->
+  <section class="day day-sat">
+    <div class="day-head">🔵 6/27（土）｜DAY1・メイン会場入場日（10:00〜18:00）</div>
+    <div class="table-wrap">
+    <table>
+      <colgroup><col class="c-time"><col class="c-off"><col class="c-fam"></colgroup>
+      <thead><tr><th>時間</th><th class="off">公式スケジュール</th><th class="fam">家族の予定</th></tr></thead>
+      <tbody>
+        <tr><td class="time">09:00</td><td class="off"><span class="ev">入場受付開始</span><span class="mini">9:00頃〜／手荷物検査・リストバンド</span></td><td class="fam" contenteditable="true" data-k="s0900"></td></tr>
+        <tr><td class="time">10:00</td><td class="off"><span class="ev star">開場・メイン会場入場</span><span class="mini">ショップ／フード／かさねおしスタンプラリー開始（10:00〜20:00・6拠点）</span></td><td class="fam" contenteditable="true" data-k="s1000"></td></tr>
+        <tr><td class="time">11:00</td><td class="off"><span class="ev">アトラクション</span><span class="mini">パーティランド世界初試遊／大賞エリア／MRグリーティング 等（整理券制あり）</span></td><td class="fam" contenteditable="true" data-k="s1100"></td></tr>
+        <tr class="key"><td class="time">12:00</td><td class="off"><span class="ev star">スペシャル撮影会 開始</span><span class="mini">12:00〜15:00／①12:00 ②12:30 ③13:00 ④13:30 ⑤14:00 ⑥14:30（各25分）</span></td><td class="fam" contenteditable="true" data-k="s1200"></td></tr>
+        <tr><td class="time">13:00</td><td class="off"><span class="ev">撮影会つづき</span><span class="mini">③13:00／④13:30</span></td><td class="fam" contenteditable="true" data-k="s1300"></td></tr>
+        <tr><td class="time">14:00</td><td class="off"><span class="ev">撮影会つづき</span><span class="mini">⑤14:00／⑥14:30（最終回）</span></td><td class="fam" contenteditable="true" data-k="s1400"></td></tr>
+        <tr><td class="time">15:00</td><td class="off"><span class="ev">撮影会終了</span><span class="mini">ショップ・フード・アトラクションへ</span></td><td class="fam" contenteditable="true" data-k="s1500"></td></tr>
+        <tr><td class="time">16:00</td><td class="off"><span class="ev">立ち見エリア入場</span><span class="mini">16:00〜16:45</span></td><td class="fam" contenteditable="true" data-k="s1600"></td></tr>
+        <tr class="key"><td class="time">16:45</td><td class="off"><span class="ev star">SANRIO KAWAII MINI LIVE</span><span class="mini">16:45〜17:30／立ち見無料</span></td><td class="fam" contenteditable="true" data-k="s1645"></td></tr>
+        <tr><td class="time">18:00</td><td class="off"><span class="ev">閉場</span><span class="mini">メイン会場 終了</span></td><td class="fam" contenteditable="true" data-k="s1800"></td></tr>
+        <tr><td class="time">19:00</td><td class="off"><span class="ev">夕食／周辺施設</span><span class="mini">みなとみらいエリア</span></td><td class="fam" contenteditable="true" data-k="s1900"></td></tr>
+        <tr><td class="time">20:00</td><td class="off"><span class="ev star">スタンプラリー 締切</span><span class="mini">20:00まで／夜のみなとみらい散策</span></td><td class="fam" contenteditable="true" data-k="s2000"></td></tr>
+        <tr><td class="time">21:00</td><td class="off"><span class="ev">解散</span></td><td class="fam" contenteditable="true" data-k="s2100"></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <footer class="foot">
+    情報取得元：fes.sanrio.co.jp（公式）／@sanrio_ranking（X公式）｜取得日：2026年6月21日<br>
+    撮影会の回・整理券時間は当日案内をご確認ください。© 2026 SANRIO CO., LTD.
+  </footer>
+
+</div>
+
+<script>
+  // 家族の予定を自動保存（端末内に保存／印刷後の手書きにも対応）
+  var KEY = "sanrioFesFamilyPlan";
+  var cells = document.querySelectorAll('td.fam[contenteditable]');
+  function load(){
+    var data;
+    try { data = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e){ data = {}; }
+    cells.forEach(function(c){
+      var v = data[c.dataset.k];
+      if(v) c.textContent = v;
+    });
+  }
+  function save(){
+    var data = {};
+    cells.forEach(function(c){ if(c.textContent.trim()) data[c.dataset.k] = c.textContent; });
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch(e){}
+  }
+  cells.forEach(function(c){ c.addEventListener('input', save); });
+  function clearFam(){
+    if(confirm("家族の予定の記入をすべて消去しますか？")){
+      cells.forEach(function(c){ c.textContent = ""; });
+      try { localStorage.removeItem(KEY); } catch(e){}
+    }
+  }
+  load();
+</script>
+</body>
+</html>
