@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サンリオフェス2026 in みなとみらい｜スケジュール（6/26金〜6/28日）</title>
+<style>
+  :root{
+    --pink:#ff5fa2;
+    --pink-light:#ffe3ef;
+    --blue:#3aa0ff;
+    --blue-light:#e3f1ff;
+    --red:#ff5a5a;
+    --red-light:#ffe3e3;
+    --yellow:#ffb800;
+    --yellow-light:#fff5dc;
+    --ink:#333;
+    --line:#e3e3e3;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    background:#f7f7f9;
+    font-size:15px;
+  }
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    background:#fff;
+    padding:24px 20px 48px;
+  }
+  header.title{
+    text-align:center;
+    border-bottom:3px solid var(--pink);
+    padding-bottom:14px;
+    margin-bottom:18px;
+  }
+  header.title h1{
+    font-size:1.5rem;
+    margin:0 0 6px;
+    color:var(--pink);
+    line-height:1.3;
+  }
+  header.title .sub{font-size:.85rem;color:#666;margin:0;}
+
+  .toolbar{
+    position:sticky;top:0;z-index:10;
+    display:flex;justify-content:flex-end;gap:8px;
+    padding:10px 0;background:#f7f7f9;
+  }
+  .btn-print{
+    appearance:none;border:none;cursor:pointer;
+    background:var(--pink);color:#fff;font-weight:700;
+    padding:10px 18px;border-radius:999px;font-size:.95rem;
+    box-shadow:0 3px 8px rgba(255,95,162,.35);
+  }
+  .btn-print:active{transform:translateY(1px);}
+
+  .info-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:8px 14px;
+    background:var(--pink-light);border-radius:10px;padding:14px 16px;margin-bottom:22px;
+    font-size:.9rem;
+  }
+  .info-grid div{display:flex;flex-direction:column;}
+  .info-grid dt{font-weight:700;color:var(--pink);font-size:.75rem;}
+  .info-grid dd{margin:0;}
+
+  .day{margin:0 0 26px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  .day-head{
+    padding:10px 16px;color:#fff;font-weight:700;font-size:1.05rem;
+    display:flex;align-items:center;gap:10px;
+  }
+  .day-fri .day-head{background:var(--yellow);}
+  .day-sat .day-head{background:var(--blue);}
+  .day-sun .day-head{background:var(--red);}
+  .day-head .tag{
+    background:rgba(255,255,255,.28);border-radius:6px;
+    padding:1px 8px;font-size:.75rem;font-weight:700;
+  }
+  .day-body{padding:14px 16px;}
+
+  h3.section{
+    font-size:.95rem;margin:18px 0 8px;padding-left:10px;
+    border-left:5px solid var(--pink);
+  }
+  h3.section:first-child{margin-top:4px;}
+  .day-sat h3.section{border-color:var(--blue);}
+  .day-sun h3.section{border-color:var(--red);}
+  .day-fri h3.section{border-color:var(--yellow);}
+
+  table{width:100%;border-collapse:collapse;font-size:.85rem;margin-bottom:6px;}
+  th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top;}
+  thead th{background:#f1f1f4;font-size:.78rem;white-space:nowrap;}
+  td.time{white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums;}
+  tr.hl td{background:#fffbe8;}
+  .star{color:var(--red);font-weight:700;}
+
+  .note{font-size:.78rem;color:#777;margin:4px 0 0;}
+  ul.plain{margin:6px 0;padding-left:1.2em;font-size:.85rem;}
+  ul.plain li{margin-bottom:2px;}
+
+  .badge{display:inline-block;font-size:.7rem;font-weight:700;border-radius:5px;padding:1px 6px;margin-left:4px;}
+  .badge-live{background:var(--red-light);color:var(--red);}
+  .badge-free{background:var(--blue-light);color:var(--blue);}
+
+  footer.foot{
+    margin-top:24px;padding-top:12px;border-top:1px solid var(--line);
+    font-size:.72rem;color:#999;text-align:center;
+  }
+
+  /* スマホ最適化 */
+  @media (max-width:560px){
+    body{font-size:14px;}
+    .sheet{padding:16px 12px 40px;}
+    header.title h1{font-size:1.2rem;}
+    .info-grid{grid-template-columns:1fr;}
+    table{font-size:.8rem;}
+    th,td{padding:5px 6px;}
+    /* 横スクロール可能に */
+    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+    .table-wrap table{min-width:460px;}
+  }
+
+  /* A4印刷最適化 */
+  @media print{
+    @page{size:A4 portrait;margin:12mm;}
+    body{background:#fff;font-size:10.5pt;}
+    .sheet{max-width:none;padding:0;}
+    .toolbar{display:none !important;}
+    .day{break-inside:avoid;page-break-inside:avoid;border:1px solid #ccc;}
+    .day-head{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .info-grid,.day-fri .day-head,.day-sat .day-head,.day-sun .day-head,
+    thead th,tr.hl td{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    table{font-size:9pt;}
+    h3.section{break-after:avoid;}
+    tr{break-inside:avoid;}
+    a{color:inherit;text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="toolbar">
+    <button class="btn-print" onclick="window.print()">🖨 印刷する（A4）</button>
+  </div>
+
+  <header class="title">
+    <h1>サンリオフェス2026 in みなとみらい</h1>
+    <p class="sub">公式スケジュール｜2026年6月26日（金・前日）〜6月28日（日）</p>
+  </header>
+
+  <dl class="info-grid">
+    <div><dt>開催日</dt><dd>6/27（土）・28（日）<br>10:00〜18:00</dd></div>
+    <div><dt>メイン会場</dt><dd>パシフィコ横浜 展示ホールB・C・D</dd></div>
+    <div><dt>キッズ会場</dt><dd>パシフィコ横浜 会議センター</dd></div>
+    <div><dt>アクセス</dt><dd>みなとみらい駅 徒歩5分／桜木町駅 徒歩12分</dd></div>
+  </dl>
+
+  <!-- 金曜 -->
+  <section class="day day-fri">
+    <div class="day-head">🟡 6/26（金）<span class="tag">前日</span></div>
+    <div class="day-body">
+      <p class="note">メイン会場・キッズ会場・スタンプラリーは土日のみ。金曜は<strong>周辺施設のみ稼働</strong>。</p>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>時間</th><th>コンテンツ</th><th>場所</th></tr></thead>
+        <tbody>
+          <tr><td class="time">終日</td><td>サンリオピューロランド35周年POP-UPショップ／スペシャルグリーティング<br><span class="note">（6/26スタート〜6/28）</span></td><td>MARK IS みなとみらい 1F グランドガレリア</td></tr>
+          <tr><td class="time">終日</td><td>ポムポムプリン30周年POP-UPストア・巨大バルーン</td><td>ランドマークプラザ 1F サカタのタネ ガーデンスクエア</td></tr>
+          <tr><td class="time">終日</td><td>全90キャラクター装飾（80m以上）</td><td>クイーンズスクエア横浜 エスカレーター</td></tr>
+          <tr><td class="time">終日</td><td>サンリオショップ</td><td>みなとみらい東急スクエア 2F Sanrio</td></tr>
+          <tr><td class="time">終日</td><td>キャラクターボイス改札機・ラッピングトレイン</td><td>みなとみらい駅</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 土曜 -->
+  <section class="day day-sat">
+    <div class="day-head">🔵 6/27（土）<span class="tag">DAY1</span></div>
+    <div class="day-body">
+
+      <h3 class="section">メインステージ（展示ホール）</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>時間</th><th>プログラム</th><th>チケット</th></tr></thead>
+        <tbody>
+          <tr><td class="time">10:00〜</td><td>ステージエリア入場開始</td><td>入場チケット</td></tr>
+          <tr class="hl"><td class="time">12:00〜15:00</td><td><strong>スペシャル撮影会</strong> 〜誰と会えるかはお楽しみ〜<br><span class="note">①12:00 ②12:30 ③13:00 ④13:30 ⑤14:00 ⑥14:30（各25分）</span></td><td>入場チケット</td></tr>
+          <tr><td class="time">16:00〜16:45</td><td>立ち見エリア入場時間</td><td></td></tr>
+          <tr class="hl"><td class="time">16:45〜17:30</td><td><strong>SANRIO KAWAII MINI LIVE</strong></td><td>入場チケット<span class="badge badge-free">立ち見無料</span></td></tr>
+          <tr><td class="time">18:00</td><td>閉場</td><td></td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="section">キッズ会場グリーティング</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>時間</th><th>キャラクター</th><th>整理券受付</th></tr></thead>
+        <tbody>
+          <tr><td class="time">10:30〜10:55</td><td>クロミ・マイメロディ</td><td>開場後〜10:10</td></tr>
+          <tr><td class="time">12:30〜12:55</td><td>ハローキティ・ポムポムプリン</td><td>11:00〜12:00</td></tr>
+          <tr><td class="time">14:30〜14:55</td><td>シナモン・ハローキティ</td><td>13:00〜14:00</td></tr>
+          <tr><td class="time">15:00〜15:25</td><td>クロミ・マイメロディ</td><td>13:30〜14:30</td></tr>
+          <tr><td class="time">15:30〜15:55</td><td>シナモン・ポムポムプリン</td><td>14:00〜15:00</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">整理券はLINE「サンリオフェス キッズ会場公式アカウント」で申込。集合はグリーティング開始10分前。</p>
+
+      <h3 class="section">両日共通</h3>
+      <ul class="plain">
+        <li>アトラクション 10:00〜（パーティランド世界初試遊／大賞エリア／MRグリーティング 等）</li>
+        <li>かさねおしスタンプラリー 10:00〜20:00（6拠点）</li>
+        <li>周辺施設すべて稼働</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 日曜 -->
+  <section class="day day-sun">
+    <div class="day-head">🔴 6/28（日）<span class="tag">DAY2・メインデー</span></div>
+    <div class="day-body">
+
+      <h3 class="section">メインステージ（展示ホール）</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>時間</th><th>プログラム</th><th>チケット</th></tr></thead>
+        <tbody>
+          <tr><td class="time">10:00</td><td>開場</td><td>入場チケット</td></tr>
+          <tr><td class="time">11:15〜11:45</td><td>指定席エリア入場時間</td><td>指定席付チケット</td></tr>
+          <tr class="hl"><td class="time">11:45〜13:00</td><td><strong>2026年サンリオキャラクター大賞 結果発表ステージ</strong><br><span class="note">1〜90位発表・上位キャラ登場</span></td><td>指定席／立ち見可</td></tr>
+          <tr><td class="time">13:30〜14:00</td><td>指定席エリア入場時間</td><td>指定席付チケット</td></tr>
+          <tr class="hl"><td class="time">14:00〜14:35</td><td><strong>ポムポムプリン喜劇「ポムポムパニック！」</strong><br><span class="note">脚本・演出：岩崎裕介</span></td><td>指定席／立ち見可</td></tr>
+          <tr><td class="time">14:45〜15:20</td><td>着席エリア入場時間</td><td>指定席付チケット</td></tr>
+          <tr><td class="time">15:20〜15:45</td><td>みんなでがおがお！がおぱわるぅワオワオステージ</td><td><span class="badge badge-free">不要・立ち見</span></td></tr>
+          <tr><td class="time">16:00〜16:30</td><td>指定席エリア入場時間</td><td>指定席付チケット</td></tr>
+          <tr class="hl"><td class="time">16:30〜17:30</td><td><strong>SANRIO KAWAII LIVE</strong><span class="badge badge-live">YouTube生配信</span></td><td>指定席／立ち見可</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="note">MC：篠原光／サポートMC：新本芙由美</p>
+
+      <h3 class="section">キッズ会場グリーティング</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>時間</th><th>キャラクター</th><th>整理券受付</th></tr></thead>
+        <tbody>
+          <tr><td class="time">10:40〜11:10</td><td>クロミ・マイメロディ</td><td>開場後〜10:20</td></tr>
+          <tr><td class="time">14:45〜15:10</td><td>シナモン・ポムポムプリン</td><td>13:00〜14:00</td></tr>
+          <tr><td class="time">15:15〜15:40</td><td>クロミ・ハローキティ・マイメロディ</td><td>13:30〜14:30</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="section">両日共通</h3>
+      <ul class="plain">
+        <li>アトラクション・キダルトコーナー各種（整理券制あり）</li>
+        <li>かさねおしスタンプラリー 10:00〜20:00</li>
+        <li>周辺施設すべて稼働</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="foot">
+    情報取得元：fes.sanrio.co.jp（公式）／@sanrio_ranking（X公式）｜取得日：2026年6月21日<br>
+    © 2026 SANRIO CO., LTD. TOKYO, JAPAN
+  </footer>
+
+</div>
+</body>
+</html>
