@@ -87,6 +87,30 @@
   .ref-table tbody td{height:auto;}   /* タイムテーブルの固定高さをここでは無効化 */
   .yes{color:#27772f;font-weight:700;} .no{color:#c0392b;font-weight:700;} .maybe{color:#b8860b;font-weight:700;}
 
+  /* ===== キッズ会場ガイド（統合） ===== */
+  .kids{margin:0 0 22px;}
+  .kids .rh{padding:9px 14px;color:#fff;font-weight:700;font-size:1.0rem;background:var(--pink);border-radius:8px;margin-bottom:8px;}
+  .kids h3.kh{font-size:1.0rem;margin:20px 0 8px;padding:6px 12px;background:#ffe3ef;color:#c93b76;border-radius:8px;}
+  .kids h4.ksub{font-size:.92rem;margin:14px 0 6px;padding-left:9px;border-left:5px solid var(--pink);}
+  .kids table{table-layout:auto;}
+  .kids tbody td{height:auto;}
+  .kids th.k,.kids td.k{text-align:center;white-space:nowrap;}
+  .kids .need{color:var(--red);font-weight:700;}
+  .kids .free{color:#37b24d;font-weight:700;}
+  .kids .callout{border-radius:10px;padding:12px 14px;margin:10px 0;font-size:.84rem;}
+  .kids .callout.warn{background:#fff4f4;border:1px solid #ffd0d0;}
+  .kids .callout.info{background:#e3f1ff;border:1px solid #c7e2ff;}
+  .kids .callout.price{background:#e6f7e9;border:1px solid #bfe8c8;}
+  .kids .callout b{color:#c0392b;} .kids .callout.info b{color:#1f6fc0;} .kids .callout.price b{color:#27772f;}
+  .kids ul{margin:6px 0;padding-left:1.25em;} .kids ul li{margin-bottom:3px;font-size:.85rem;}
+  .kids ol{margin:6px 0;padding-left:1.4em;} .kids ol li{margin-bottom:4px;font-size:.84rem;}
+  .kids .legend-tt{font-size:.78rem;color:#666;margin:4px 0;}
+  .kids .icon{font-weight:700;}
+  .kids .dayband{margin-top:16px;padding:7px 12px;border-radius:8px 8px 0 0;color:#fff;font-weight:700;font-size:.92rem;}
+  .kids .d1{background:var(--blue);} .kids .d2{background:var(--red);}
+  .kids .check li{list-style:none;position:relative;padding-left:26px;margin-bottom:6px;font-size:.85rem;}
+  .kids .check li::before{content:"";position:absolute;left:0;top:2px;width:15px;height:15px;border:2px solid var(--pink);border-radius:4px;}
+
   /* 家族の書き込み欄 */
   td.fam{background:var(--fam);}                 /* 罫線（リピート背景）は削除 */
   td.fam[contenteditable]{
@@ -127,6 +151,9 @@
     tbody td{height:13mm;}           /* 印刷時も全行の高さを揃える */
     td.fam:empty::before{content:"";}
     td.fam[contenteditable]{min-height:11mm;}
+    .kids .callout,.kids .dayband,.kids h3.kh,.kids .check li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .kids table,.kids tr,.kids .callout{break-inside:avoid;}
+    .kids h3.kh,.kids h4.ksub,.kids .dayband{break-after:avoid;}
   }
 </style>
 </head>
@@ -140,23 +167,8 @@
 
   <header class="title">
     <h1>サンリオフェス2026｜家族プラン表</h1>
-    <p class="sub">6/26（金）〜6/28（日）｜メイン会場の入場日：土曜（DAY1）</p>
+    <p class="sub">6/26（金）〜6/28（日）｜メイン会場入場日：土曜（DAY1）｜キッズ会場ガイド統合</p>
   </header>
-
-  <!-- 会場マップ -->
-  <div class="map-box">
-    <h2>📍 メイン会場：パシフィコ横浜 展示ホールB・C・D</h2>
-    <div class="map-wrap">
-      <iframe
-        src="https://maps.google.com/maps?q=%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%B3%E6%A8%AA%E6%B5%9C%20%E5%B1%95%E7%A4%BA%E3%83%9B%E3%83%BC%E3%83%AB&z=16&hl=ja&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="パシフィコ横浜 展示ホール 地図"></iframe>
-    </div>
-    <p class="map-meta">
-      〒220-0012 神奈川県横浜市西区みなとみらい1-1-1／みなとみらい駅 徒歩5分・桜木町駅 徒歩12分
-      <a href="https://www.google.com/maps/dir/?api=1&destination=%E3%83%91%E3%82%B7%E3%83%95%E3%82%A3%E3%82%B3%E6%A8%AA%E6%B5%9C" target="_blank" rel="noopener">▶ 経路案内を開く</a>
-    </p>
-    <p class="map-print">会場：パシフィコ横浜 展示ホールB・C・D ／ 〒220-0012 神奈川県横浜市西区みなとみらい1-1-1（みなとみらい駅 徒歩5分）</p>
-  </div>
 
   <p class="legend">左＝<b style="color:#1f6fc0">公式スケジュール（公式情報のみ）</b> ／ 右＝<b style="color:#2f8f2f">家族の予定（タップで記入・自動保存）</b>。印刷すれば手書き記入欄になります。</p>
 
@@ -200,10 +212,7 @@
       </ul>
     </div>
     <div class="day-note">
-      <b>キッズ会場（会議センター・無料/別棟）DAY1：</b>
-      グリーティング 10:30／12:30／14:30／15:00／15:30（整理券＋プレイ券）｜
-      無料ステージ 11:05 ハッピリーナクイズ・11:50 Hello Kitty&amp;BuddyEddy・13:45 フワフワ｜
-      16:45 MINI LIVE ライブビューイング。
+      <b>キッズ会場（会議センター・無料/別棟）も同時開催。</b>グリーティング・ゲーム・ステージの詳細はページ下部の<b>「キッズ会場ガイド」</b>を参照。
     </div>
     <div class="table-wrap">
     <table>
@@ -235,10 +244,7 @@
       <b>日曜はメイン会場に入場できません（当選は土曜）。</b>大賞結果発表ステージと SANRIO KAWAII LIVE は <b>YouTube生配信</b> で視聴可能。<b>周辺施設・スタンプラリー（10:00〜20:00）</b>は日曜も参加できます。
     </div>
     <div class="day-note">
-      <b>キッズ会場（会議センター・無料/別棟）DAY2：</b>
-      グリーティング 10:40／14:45／15:15（整理券＋プレイ券）｜
-      無料ステージ 11:25 ハッピリーナクイズ・13:20 Hello Kitty&amp;BuddyEddy・13:55 フワフワ｜
-      11:45 大賞発表・16:30 KAWAII LIVE ライブビューイング。
+      <b>キッズ会場（会議センター・無料/別棟）の詳細はページ下部の「キッズ会場ガイド」を参照。</b>
     </div>
     <div class="table-wrap">
     <table>
@@ -293,20 +299,6 @@
       <li>一部商品は販売中止・仕様変更の場合あり。</li>
     </ul>
 
-    <h4>飲食物の持ち込み</h4>
-    <div class="table-wrap">
-    <table class="ref-table">
-      <thead><tr><th>項目</th><th>可否</th></tr></thead>
-      <tbody>
-        <tr><td>水筒・ドリンク類（蓋付き）</td><td><span class="yes">✅ 可</span>（スタッフ判断で中身確認あり）</td></tr>
-        <tr><td>アルコール類</td><td><span class="no">❌ 禁止</span>（持込禁止物・手荷物検査で没収）</td></tr>
-        <tr><td>外部購入の食事</td><td><span class="maybe">⚠️ 明確な禁止規定は公式に記載なし</span></td></tr>
-        <tr><td>会場内ベンチでの飲食</td><td><span class="yes">✅ 可</span></td></tr>
-        <tr><td>アトラクション・ステージエリアへの飲食物</td><td><span class="no">❌ 不可</span>（蓋付きドリンクを除く）</td></tr>
-      </tbody>
-    </table>
-    </div>
-
     <h4>入退場・再入場</h4>
     <ul>
       <li><b>再入場可</b>。再入場時は毎回<b>リストバンド提示＋手荷物検査</b>。</li>
@@ -329,24 +321,187 @@
       <li><b>キッズ会場（会議センター）はこの制限の対象外</b>（無料・未就学児可）。</li>
     </ul>
 
-    <h4>昼食の選択肢</h4>
-    <div class="table-wrap">
-    <table class="ref-table">
-      <thead><tr><th>選択肢</th><th>特徴</th></tr></thead>
-      <tbody>
-        <tr><td>会場内フードエリア</td><td>キャラフード。食事スペース限定・混雑・売切れ注意。販売〜17:30。</td></tr>
-        <tr><td>パシフィコ横浜内レストラン・カフェ</td><td>公式が案内する代替。再入場でゆっくり食事も可。</td></tr>
-        <tr><td>みなとみらい周辺施設</td><td>ランドマークプラザ等（再入場活用・リストバンド着用）。</td></tr>
-        <tr><td>水筒・飲み物の持参</td><td><span class="yes">✅ 持込可</span>（蓋付き）。</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="tip">💡 おすすめ：整理券の<b>申込〜当落通知（締切5分後）の待ち時間</b>を使ってフードエリア購入、または再入場でパシフィコ横浜内施設へ。</p>
-
     <h4>問い合わせ</h4>
     <ul>
       <li>「サンリオフェス2026」問い合わせ事務局／開局 2026/4/14〜7/10 11:00〜18:00（土日祝休・<b>6/27・28は対応</b>）</li>
       <li>https://sanriofes-contact.com ／ info@sanriofes-contact.com（受信設定を確認）</li>
+    </ul>
+  </section>
+
+  <!-- ===== キッズ会場ガイド（統合） ===== -->
+  <section class="kids">
+    <div class="rh">👶 キッズ会場ガイド（サンリオキッズフェスティバル｜会議センター・無料）</div>
+
+    <div class="callout warn">
+      ⚠️ <b>コンテンツ参加は小学生以下のお子さまのみ・保護者同伴必須。</b>ステージ／ライブビューイング／ハッピリーナフレンズ展示はプレイ券なしで観覧可（小学生以下優先・自由席）。
+    </div>
+
+    <h3 class="kh">基本情報</h3>
+    <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>会場</th><td>パシフィコ横浜 <b>会議センター</b>（メイン会場の展示ホールとは別棟）</td></tr>
+        <tr><th>開場／閉場</th><td>10:00 ／ 18:00</td></tr>
+        <tr><th>入場</th><td><span class="free">不要・無料</span>（混雑時は入場制限あり／再入場可）</td></tr>
+        <tr><th>ベビーカー</th><td>会議センター1Fに置き場あり（無料・数量限定／貴重品は手元に）</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="kh">プレイ券</h3>
+    <div class="callout price">
+      <b>2,000円（税込）＝500円券×4枚つづり</b>／バラ追加1枚500円｜販売 両日 <b>10:00〜17:00</b>｜コンテンツ最終受付 <b>17:30</b><br>
+      支払いは<b>現金不可</b>（クレジット・電子マネー・QRコード決済のみ）／換金・再発行不可／購入は小学生以下のお子さま連れの方のみ／有効期限 6/28 閉場まで
+    </div>
+    <h4 class="ksub">必要枚数の早見表</h4>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>コンテンツ</th><th class="k">プレイ券</th></tr></thead>
+      <tbody>
+        <tr><td>プレイスクール（缶バッジ／ねんど／トートバッグ）</td><td class="k">各1枚</td></tr>
+        <tr><td>バッドばつ丸のゲームセンター（6種中3種）</td><td class="k">1枚</td></tr>
+        <tr><td>バッドばつ丸のゲームセンター（6種すべて）</td><td class="k"><b>2枚</b></td></tr>
+        <tr><td>ハローキティの宝さがし</td><td class="k">1枚</td></tr>
+        <tr><td>ハッピリーナフレンズ 宝石さがし</td><td class="k">1枚</td></tr>
+        <tr><td>グリーティング</td><td class="k">1枚＋整理券</td></tr>
+        <tr><td>ステージ・ライブビューイング／展示</td><td class="k free">不要</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="legend-tt">※ゲームセンターはプレイ券1枚で同じゲームへの参加は1回限り。</p>
+
+    <h3 class="kh">コンテンツ一覧</h3>
+    <h4 class="ksub">🎨 プレイスクール（各1枚）</h4>
+    <ul>
+      <li><b>缶バッジづくり</b>：ぬりえを塗ると大画面で動き出し、缶バッジに</li>
+      <li><b>マジックねんどチャームづくり</b>：ねんどをこねて色を作りチャームに</li>
+      <li><b>ぬりえトートバッグづくり</b>：トートにぬりえ＋チャームで完成</li>
+    </ul>
+    <h4 class="ksub">🎮 バッドばつ丸のゲームセンター（全6種／3種=1枚・6種=2枚）</h4>
+    <ul>
+      <li>おつかい／アイスクリーム／ストーンまと／ボール投げ／バスケ（3回）／ボウリング（Uターン・2回）</li>
+      <li>合計点でもらえるアクリルキーホルダーの色が決まる。</li>
+    </ul>
+    <h4 class="ksub">🔍 さがすゲーム（各1枚）</h4>
+    <ul>
+      <li><b>ハローキティの宝さがし</b>：ボールプールでリボン探し（色でステッカーの色が決定）</li>
+      <li><b>ハッピリーナフレンズ 宝石さがし</b>：砂を掘って宝石ゲット・新キャラと出会う</li>
+    </ul>
+
+    <h3 class="kh">🤝 グリーティング（整理券＋プレイ券1枚）</h3>
+    <div class="callout warn">
+      <b>重要ルール</b>
+      <ol>
+        <li>小学生以下のお子さま不在の参加は不可（大人のみ不可）。お子さま含め<b>最大4名</b>まで。</li>
+        <li>整理券は<b>当日会場のQRからLINEで抽選申込</b>（事前申込不可）。「サンリオフェス キッズ会場公式アカウント」友だち登録＋<b>位置情報ON</b>が必要。</li>
+        <li>当落通知＝申込終了の<b>5分後</b>。集合＝開始<b>10分前</b>（遅刻不可）。受付時に<b>プレイ券が必要</b>。整理券は<b>スクショ不可</b>・キャンセル不可。</li>
+        <li>カメラ・スマホは自分で用意（個別・ツーショット撮影は不可）。</li>
+      </ol>
+    </div>
+
+    <h4 class="ksub">整理券タイミング完全整理（申込→当落→集合）</h4>
+    <p class="legend-tt">当落＝申込終了の約5分後／集合＝開始10分前（公式ルールからの<b>目安</b>）。</p>
+    <div class="dayband d1">DAY1（6/27 土）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th class="k">回</th><th>グリーティング</th><th>キャラクター</th><th>整理券 申込</th><th class="k">当落</th><th class="k">集合</th></tr></thead>
+      <tbody>
+        <tr><td class="k">①</td><td class="time">10:30〜10:55</td><td>クロミ・マイメロディ</td><td>開場後〜<b>10:10</b></td><td class="k">10:15頃</td><td class="k">10:20</td></tr>
+        <tr><td class="k">②</td><td class="time">12:30〜12:55</td><td>ハローキティ・ポムポムプリン</td><td>11:00〜12:00</td><td class="k">12:05頃</td><td class="k">12:20</td></tr>
+        <tr><td class="k">③</td><td class="time">14:30〜14:55</td><td>シナモン・ハローキティ</td><td>13:00〜14:00</td><td class="k">14:05頃</td><td class="k">14:20</td></tr>
+        <tr><td class="k">④</td><td class="time">15:00〜15:25</td><td>クロミ・マイメロディ</td><td>13:30〜14:30</td><td class="k">14:35頃</td><td class="k">14:50</td></tr>
+        <tr><td class="k">⑤</td><td class="time">15:30〜15:55</td><td>シナモン・ポムポムプリン</td><td>14:00〜15:00</td><td class="k">15:05頃</td><td class="k">15:20</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="dayband d2">DAY2（6/28 日）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th class="k">回</th><th>グリーティング</th><th>キャラクター</th><th>整理券 申込</th><th class="k">当落</th><th class="k">集合</th></tr></thead>
+      <tbody>
+        <tr><td class="k">①</td><td class="time">10:40〜11:10</td><td>クロミ・マイメロディ</td><td>開場後〜<b>10:20</b></td><td class="k">10:25頃</td><td class="k">10:30</td></tr>
+        <tr><td class="k">②</td><td class="time">14:45〜15:10</td><td>シナモン・ポムポムプリン</td><td>13:00〜14:00</td><td class="k">14:05頃</td><td class="k">14:35</td></tr>
+        <tr><td class="k">③</td><td class="time">15:15〜15:40</td><td>クロミ・ハローキティ・マイメロディ</td><td>13:30〜14:30</td><td class="k">14:35頃</td><td class="k">15:05</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h4 class="ksub">🚨 整理券で特に注意（最重要）</h4>
+    <div class="callout warn">
+      <ol>
+        <li><b>開場直後が最大の勝負。</b>①の申込締切は <b>DAY1=10:10／DAY2=10:20</b>。入場(9:00頃〜)→手荷物検査・リストバンド→会議センター移動→QR探し→申込を10分強で。①狙いは<b>早めの入場必須</b>。</li>
+        <li><b>QRは当日会場のみ</b>（事前LINE登録不可）。<b>LINE位置情報ON必須</b>。</li>
+        <li><b>受付時にプレイ券が必要。</b>当選〜集合は最短5〜10分のことも。<b>申込前にプレイ券購入</b>。</li>
+        <li><b>キャンセル不可・遅刻で失効。</b>全員そろって参加。<b>スクショ不可</b>。</li>
+        <li><b>申込時間が重複する回（当選すると断れない）：</b>DAY1=③④⑤が一部重複、DAY2=②③が重複。複数当選すると参加できない回が出るリスク。</li>
+      </ol>
+    </div>
+
+    <h4 class="ksub">📋 整理券取得 推奨フロー</h4>
+    <div class="callout info">
+      <b>入場前</b>：LINE通知ON／<b>位置情報ON</b>／キャッシュレス決済を準備<br>
+      <b>入場直後（9:00〜）</b>：手荷物検査・リストバンド → 会議センターへ → <b>プレイ券購入（10:00〜・現金不可）</b> → 会場QRでLINE登録 → <b>①の整理券をすぐ申込</b><br>
+      <b>申込後</b>：当落（締切5分後）確認 → 当選なら集合（開始10分前）に全員で移動 → 受付でプレイ券提示
+    </div>
+
+    <h3 class="kh">キッズ会場 全タイムテーブル</h3>
+    <p class="legend-tt"><span class="icon">🤝</span>グリーティング（整理券＋プレイ券）／<span class="icon">🎭</span>独自ステージ（<span class="free">プレイ券不要</span>・自由席）／<span class="icon">📺</span>ライブビューイング（<span class="free">不要</span>）</p>
+    <div class="dayband d1">DAY1（6/27 土）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>時間</th><th>プログラム</th><th class="k">プレイ券</th></tr></thead>
+      <tbody>
+        <tr><td class="time">10:00</td><td>開場</td><td class="k"></td></tr>
+        <tr><td class="time">10:30〜10:55</td><td>🤝 グリーティング①（クロミ・マイメロディ）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">11:05〜11:20</td><td>🎭 ハッピリーナフレンズ クイズでだいすき大発見！</td><td class="k free">不要</td></tr>
+        <tr><td class="time">11:50〜12:10</td><td>🎭 Let's Play Together! Hello Kitty &amp; BuddyEddy</td><td class="k free">不要</td></tr>
+        <tr><td class="time">12:30〜12:55</td><td>🤝 グリーティング②（ハローキティ・ポムポムプリン）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">13:45〜14:05</td><td>🎭 フワフワ ミニステージショー</td><td class="k free">不要</td></tr>
+        <tr><td class="time">14:30〜14:55</td><td>🤝 グリーティング③（シナモン・ハローキティ）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">15:00〜15:25</td><td>🤝 グリーティング④（クロミ・マイメロディ）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">15:30〜15:55</td><td>🤝 グリーティング⑤（シナモン・ポムポムプリン）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">16:45〜17:30</td><td>📺 SANRIO KAWAII MINI LIVE（ライブビューイング）</td><td class="k free">不要</td></tr>
+        <tr><td class="time">18:00</td><td>閉場</td><td class="k"></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="dayband d2">DAY2（6/28 日）</div>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>時間</th><th>プログラム</th><th class="k">プレイ券</th></tr></thead>
+      <tbody>
+        <tr><td class="time">10:00</td><td>開場</td><td class="k"></td></tr>
+        <tr><td class="time">10:40〜11:10</td><td>🤝 グリーティング①（クロミ・マイメロディ）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">11:25〜11:40</td><td>🎭 ハッピリーナフレンズ クイズでだいすき大発見！</td><td class="k free">不要</td></tr>
+        <tr><td class="time">11:45〜13:00</td><td>📺 2026年サンリオキャラクター大賞 結果発表ステージ（ライブビューイング）</td><td class="k free">不要</td></tr>
+        <tr><td class="time">13:20〜13:40</td><td>🎭 Let's Play Together! Hello Kitty &amp; BuddyEddy</td><td class="k free">不要</td></tr>
+        <tr><td class="time">13:55〜14:15</td><td>🎭 フワフワ ミニステージショー</td><td class="k free">不要</td></tr>
+        <tr><td class="time">14:45〜15:10</td><td>🤝 グリーティング②（シナモン・ポムポムプリン）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">15:15〜15:40</td><td>🤝 グリーティング③（クロミ・ハローキティ・マイメロディ）</td><td class="k need">必要</td></tr>
+        <tr><td class="time">16:30〜17:30</td><td>📺 SANRIO KAWAII LIVE（ライブビューイング）</td><td class="k free">不要</td></tr>
+        <tr><td class="time">18:00</td><td>閉場</td><td class="k"></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="kh">独自ステージ・ブース詳細</h3>
+    <ul>
+      <li><b>ハッピリーナフレンズ クイズでだいすき大発見！</b>：新キャラ「ハッピリーナフレンズ」のミニショー（クイズ→歌・踊り→記念撮影 予定）。出演：シナモン・ハローキティ・ポムポムプリン・ハッピリーナフレンズ。<b>※大賞ハッピリーナ部門の結果発表は行わない。</b></li>
+      <li><b>Let's Play Together! Hello Kitty &amp; BuddyEddy</b>：ハローキティ×バディエディ（"Sanrio English Master"）の英語の歌とダンス。</li>
+      <li><b>フワフワ ミニステージショー</b>：やさしい世界観の英語ミニステージ／出演：BOBA・KIKI。</li>
+      <li><b>ハッピリーナフレンズ ときめきブース</b>（無料・券不要）：10種のぬいぐるみと撮れるフォトブース。</li>
+      <li><b>バディエディ ブース</b>（券不要）：風船プレゼント（お子さま1人1つ・数量限定・配布なし時間帯あり）。</li>
+      <li><b>ノベルティ</b>：小学生以下のお子さま1人1セット（数量限定・なくなり次第終了）。</li>
+    </ul>
+
+    <h3 class="kh">当日の準備チェックリスト（キッズ会場）</h3>
+    <ul class="check">
+      <li>LINEアプリをインストール・<b>位置情報をON</b></li>
+      <li>「サンリオフェス キッズ会場公式アカウント」を友だち登録（当日会場のQR）</li>
+      <li>「LINEミニアプリお知らせ」の通知をON</li>
+      <li>プレイ券用の<b>キャッシュレス決済</b>を用意（現金不可）</li>
+      <li>カメラ・スマホを持参（グリーティング撮影用）</li>
+      <li>整理券の集合時間（開始10分前）に余裕を持って到着</li>
     </ul>
   </section>
 
