@@ -88,12 +88,11 @@
   .yes{color:#27772f;font-weight:700;} .no{color:#c0392b;font-weight:700;} .maybe{color:#b8860b;font-weight:700;}
 
   /* 家族の書き込み欄 */
-  td.fam{
-    background:var(--fam);
-    background-image:repeating-linear-gradient(transparent,transparent 25px,var(--fam-line) 25px,var(--fam-line) 26px);
-    background-position:0 6px;
+  td.fam{background:var(--fam);}                 /* 罫線（リピート背景）は削除 */
+  td.fam[contenteditable]{
+    outline:none;
+    min-height:3.1em;line-height:1.55em;          /* 2行分の入力欄 */
   }
-  td.fam[contenteditable]{outline:none;min-height:54px;}
   td.fam[contenteditable]:focus{background-color:#eafaea;}
   td.fam:empty::before{content:"＋ タップして記入";color:#9bc79b;font-size:.78rem;}
 
