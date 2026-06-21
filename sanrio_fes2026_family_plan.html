@@ -74,6 +74,17 @@
   tr.key td.off{background:#fff7fb;}
   tbody td{height:64px;}            /* 全行の高さを揃える（上揃え・余白は下に） */
 
+  /* 実用ガイド（飲食・入退場など参照用ブロック） */
+  .refsec{margin:0 0 22px;}
+  .refsec .rh{padding:9px 14px;color:#fff;font-weight:700;font-size:1.0rem;background:#6b7280;border-radius:8px;}
+  .refsec h4{font-size:.9rem;margin:14px 0 5px;padding-left:9px;border-left:4px solid var(--pink);}
+  .refsec ul{margin:4px 0 10px;padding-left:1.2em;font-size:.83rem;}
+  .refsec li{margin-bottom:3px;}
+  .refsec .tip{font-size:.8rem;color:#666;margin:2px 0 10px;}
+  .ref-table{font-size:.83rem;margin-bottom:10px;}
+  .ref-table tbody td{height:auto;}   /* タイムテーブルの固定高さをここでは無効化 */
+  .yes{color:#27772f;font-weight:700;} .no{color:#c0392b;font-weight:700;} .maybe{color:#b8860b;font-weight:700;}
+
   /* 家族の書き込み欄 */
   td.fam{
     background:var(--fam);
@@ -222,7 +233,7 @@
     </div>
     <div class="day-note">
       <b>キッズ会場（会議センター・無料/別棟）DAY2：</b>
-      グリーティング 10:45／14:45／15:15（整理券＋プレイ券）｜
+      グリーティング 10:40／14:45／15:15（整理券＋プレイ券）｜
       無料ステージ 11:25 ハッピリーナクイズ・13:20 Hello Kitty&amp;BuddyEddy・13:55 フワフワ｜
       11:45 大賞発表・16:30 KAWAII LIVE ライブビューイング。
     </div>
@@ -248,8 +259,96 @@
     </div>
   </section>
 
+  <!-- 実用ガイド -->
+  <section class="refsec">
+    <div class="rh">🍱 実用ガイド（飲食・入退場・チケット・問い合わせ）｜メイン会場</div>
+
+    <h4>フードメニュー（フードエリア・販売〜17:30）</h4>
+    <div class="table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>メニュー</th><th>価格（税込）</th></tr></thead>
+      <tbody>
+        <tr><td>ハローキティのチーズカレー</td><td>1,000円</td></tr>
+        <tr><td>ハローキティのホットドッグ</td><td>800円</td></tr>
+        <tr><td>サンリオフェス からあげ</td><td>700円</td></tr>
+        <tr><td>サンリオフェス もちもちボール（チーズ・紫いも）</td><td>700円</td></tr>
+        <tr><td>サンリオフェスキャラクタードリンク各種</td><td>各800円</td></tr>
+        <tr><td>選べるサンリオキャラクタークレープ</td><td>各800円</td></tr>
+        <tr><td>選べるサンリオキャラクターシルクアイス</td><td>各700円</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h4>フードの注意</h4>
+    <ul>
+      <li>注文・会計はサンリオカフェワゴン／販売ブースで、ブースごとの待機列に並ぶ。</li>
+      <li><b>「Sanrio＋」のスマイル付与・利用は不可</b>。「Sanrio＋ハートあつめ」でカフェ購入に使えるカードを配布。</li>
+      <li>支払い：現金・クレジット・電子マネー・QR可。<b>通信状況でキャッシュレスが使えない場合あり</b>（現金も用意推奨）。領収書はレシートのみ（手書き不可）。</li>
+      <li><b>販売は17:30まで</b>（混雑で前倒し受付終了あり）。提供まで時間／一時的に提供停止の場合あり。</li>
+      <li><b>食事は会場内ベンチ または 会場外のみ</b>。蓋付き以外のフード・ドリンクはアトラクション・ステージ等へ持込不可。</li>
+      <li><b>食事スペースは数量限定</b>。パシフィコ横浜内のレストラン・カフェ併用を公式が推奨。</li>
+      <li>一部商品は販売中止・仕様変更の場合あり。</li>
+    </ul>
+
+    <h4>飲食物の持ち込み</h4>
+    <div class="table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>項目</th><th>可否</th></tr></thead>
+      <tbody>
+        <tr><td>水筒・ドリンク類（蓋付き）</td><td><span class="yes">✅ 可</span>（スタッフ判断で中身確認あり）</td></tr>
+        <tr><td>アルコール類</td><td><span class="no">❌ 禁止</span>（持込禁止物・手荷物検査で没収）</td></tr>
+        <tr><td>外部購入の食事</td><td><span class="maybe">⚠️ 明確な禁止規定は公式に記載なし</span></td></tr>
+        <tr><td>会場内ベンチでの飲食</td><td><span class="yes">✅ 可</span></td></tr>
+        <tr><td>アトラクション・ステージエリアへの飲食物</td><td><span class="no">❌ 不可</span>（蓋付きドリンクを除く）</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h4>入退場・再入場</h4>
+    <ul>
+      <li><b>再入場可</b>。再入場時は毎回<b>リストバンド提示＋手荷物検査</b>。</li>
+      <li>リストバンドは入場受付で配布・着用必須。<b>紛失・破損は再発行不可</b>。</li>
+      <li>複数名は<b>全員そろってから受付</b>（受付完了後の途中合流・別々入場は不可）。</li>
+      <li>入場受付は<b>9:00頃〜</b>。</li>
+    </ul>
+
+    <h4>手荷物検査・持ち込み禁止物</h4>
+    <ul>
+      <li>入場前・再入場前の両方で検査あり。</li>
+      <li>禁止物：①酒類　②危険物（先の尖ったもの・刃物・火気・劇物毒物等）　③スタッフが危険と判断したもの。</li>
+      <li>禁止物は預けるか廃棄。指示に従わない場合は入場拒否。</li>
+    </ul>
+
+    <h4>お子さまの入場制限（メイン会場）</h4>
+    <ul>
+      <li><b>推奨年齢：中学生以上</b>。<b>未就学児は入場不可</b>（小学生以上が入場可）。小学生は保護者（18歳以上）の同伴が必要。</li>
+      <li>会場内は照明を暗くする演出・大音量・強い光あり。</li>
+      <li><b>キッズ会場（会議センター）はこの制限の対象外</b>（無料・未就学児可）。</li>
+    </ul>
+
+    <h4>昼食の選択肢</h4>
+    <div class="table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>選択肢</th><th>特徴</th></tr></thead>
+      <tbody>
+        <tr><td>会場内フードエリア</td><td>キャラフード。食事スペース限定・混雑・売切れ注意。販売〜17:30。</td></tr>
+        <tr><td>パシフィコ横浜内レストラン・カフェ</td><td>公式が案内する代替。再入場でゆっくり食事も可。</td></tr>
+        <tr><td>みなとみらい周辺施設</td><td>ランドマークプラザ等（再入場活用・リストバンド着用）。</td></tr>
+        <tr><td>水筒・飲み物の持参</td><td><span class="yes">✅ 持込可</span>（蓋付き）。</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="tip">💡 おすすめ：整理券の<b>申込〜当落通知（締切5分後）の待ち時間</b>を使ってフードエリア購入、または再入場でパシフィコ横浜内施設へ。</p>
+
+    <h4>問い合わせ</h4>
+    <ul>
+      <li>「サンリオフェス2026」問い合わせ事務局／開局 2026/4/14〜7/10 11:00〜18:00（土日祝休・<b>6/27・28は対応</b>）</li>
+      <li>https://sanriofes-contact.com ／ info@sanriofes-contact.com（受信設定を確認）</li>
+    </ul>
+  </section>
+
   <footer class="foot">
-    情報取得元：fes.sanrio.co.jp（公式）／@sanrio_ranking（X公式）｜取得日：2026年6月21日<br>
+    情報取得元：fes.sanrio.co.jp（公式・index/stage/food/kidsarea）／@sanrio_ranking（X公式）｜取得日：2026年6月21日<br>
     撮影会の回・整理券時間・配信URLは当日の公式案内をご確認ください。© 2026 SANRIO CO., LTD.
   </footer>
 
