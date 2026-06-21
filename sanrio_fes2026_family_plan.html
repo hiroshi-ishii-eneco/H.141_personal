@@ -67,6 +67,7 @@
   td.off .star{color:var(--pink);}
   td.off .none{color:#bbb;font-weight:400;}
   tr.key td.off{background:#fff7fb;}
+  tbody td{height:64px;}            /* 全行の高さを揃える（上揃え・余白は下に） */
 
   /* 家族の書き込み欄 */
   td.fam{
@@ -97,16 +98,18 @@
     body{background:#fff;font-size:10pt;}
     .sheet{max-width:none;padding:0;}
     .toolbar{display:none !important;}
-    .map-wrap{display:none;}           /* 地図iframeは印刷で出ないため住所表示に切替 */
-    .map-print{display:block;font-size:9pt;color:#333;}
+    .map-box{break-inside:avoid;}
+    .map-wrap{padding-bottom:0;height:60mm;break-inside:avoid;}  /* 印刷時も地図を表示（固定高さで印刷範囲に含める） */
+    .map-print{display:block;font-size:9pt;color:#333;}          /* 地図が出ない環境向けの住所フォールバック */
     .day{break-inside:avoid;page-break-inside:avoid;}
     .day-head,.day-note,thead th,thead th.off,thead th.fam,td.fam,tr.key td.off{
       -webkit-print-color-adjust:exact;print-color-adjust:exact;
     }
     table{font-size:9pt;}
     tr{break-inside:avoid;}
+    tbody td{height:13mm;}           /* 印刷時も全行の高さを揃える */
     td.fam:empty::before{content:"";}
-    td.fam[contenteditable]{min-height:46px;}
+    td.fam[contenteditable]{min-height:11mm;}
   }
 </style>
 </head>
