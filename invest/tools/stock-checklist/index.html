@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>新高値投資 銘柄チェックリスト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 免責事項 (常時表示) -->
+  <div class="disclaimer-banner" role="note">
+    本ツールは投資助言ではありません。書籍等の公開情報を基にした個人学習用のチェックリストであり、判定結果の正確性・投資成果を保証しません。投資判断はご自身の責任で行ってください。
+  </div>
+
+  <header class="app-header">
+    <h1 class="app-title">新高値投資 銘柄チェックリスト</h1>
+    <p class="app-subtitle">林則行氏の「新高値投資」手法に基づく個人学習用チェックツール</p>
+  </header>
+
+  <!-- 通知・エラー表示領域 (app.js が必要時に表示) -->
+  <div id="notice-container" aria-live="polite"></div>
+
+  <main class="layout">
+    <!-- 入力フォーム -->
+    <section class="panel form-panel" aria-label="入力フォーム">
+      <form id="checklist-form">
+        <fieldset class="form-section">
+          <legend>1. 銘柄情報</legend>
+          <label class="field">
+            <span class="field-label">銘柄コード (4桁英数)</span>
+            <input type="text" id="stock-code" maxlength="4" autocomplete="off"
+                   pattern="[0-9A-Za-z]{4}" placeholder="例: 7203">
+          </label>
+          <label class="field">
+            <span class="field-label">銘柄名</span>
+            <input type="text" id="stock-name" autocomplete="off" placeholder="例: トヨタ自動車">
+          </label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>2. 株価・チャート</legend>
+          <label class="check-option required-option">
+            <input type="checkbox" id="new-high">
+            <span>新高値を更新した (過去2年以内の高値を上回った) <em class="required-mark">必須</em></span>
+          </label>
+          <label class="check-option">
+            <input type="checkbox" id="base-breakout">
+            <span>もみ合い (ベース) 期間を経てのブレイクである</span>
+          </label>
+          <label class="check-option">
+            <input type="checkbox" id="volume-surge">
+            <span>ブレイク時に出来高が急増した</span>
+          </label>
+          <label class="field field-indent">
+            <span class="field-label">出来高倍率 (平均出来高比、任意)</span>
+            <span class="field-with-unit">
+              <input type="number" id="volume-ratio" step="0.1" min="0" placeholder="例: 2.5">
+              <span class="unit">倍</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>3. 業績 (決算短信から転記)</legend>
+          <label class="field required-option">
+            <span class="field-label">直近四半期の経常利益 前年同期比成長率 <em class="required-mark">必須</em></span>
+            <span class="field-with-unit">
+              <input type="number" id="keijo-growth-latest" step="0.1" placeholder="例: 25.3">
+              <span class="unit">%</span>
+            </span>
+          </label>
+          <label class="field required-option">
+            <span class="field-label">その前の四半期の経常利益 前年同期比成長率 <em class="required-mark">必須</em></span>
+            <span class="field-with-unit">
+              <input type="number" id="keijo-growth-prev" step="0.1" placeholder="例: 22.0">
+              <span class="unit">%</span>
+            </span>
+          </label>
+          <label class="field">
+            <span class="field-label">売上高成長率 (任意)</span>
+            <span class="field-with-unit">
+              <input type="number" id="sales-growth" step="0.1" placeholder="例: 15.0">
+              <span class="unit">%</span>
+            </span>
+          </label>
+          <label class="check-option required-option">
+            <input type="checkbox" id="profit-forecast-up">
+            <span>今期予想は増益である <em class="required-mark">必須</em></span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>4. 企業の質</legend>
+          <label class="field">
+            <span class="field-label">時価総額 (任意)</span>
+            <span class="field-with-unit">
+              <input type="number" id="market-cap" step="1" min="0" placeholder="例: 500">
+              <span class="unit">億円</span>
+            </span>
+          </label>
+          <label class="check-option">
+            <input type="checkbox" id="owner-management">
+            <span>オーナー経営 (大株主に経営者) である</span>
+          </label>
+          <label class="field">
+            <span class="field-label">ROE (任意)</span>
+            <span class="field-with-unit">
+              <input type="number" id="roe" step="0.1" placeholder="例: 12.5">
+              <span class="unit">%</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend>5. テーマ・マクロ</legend>
+          <label class="check-option">
+            <input type="checkbox" id="theme-tailwind">
+            <span>時代の追い風となるテーマがある</span>
+          </label>
+          <label class="field">
+            <span class="field-label">テーマのメモ (自由記述)</span>
+            <textarea id="theme-memo" rows="3" placeholder="例: 生成AI関連の半導体需要拡大"></textarea>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="button" id="judge-btn" class="action-btn primary">判定する</button>
+          <button type="button" id="save-btn" class="action-btn">この銘柄を保存</button>
+          <button type="button" id="reset-btn" class="action-btn ghost">フォームをクリア</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 判定結果 -->
+    <section class="panel result-panel" aria-label="判定結果">
+      <h2 class="panel-title">判定結果</h2>
+      <div id="result-container">
+        <p class="placeholder">左のフォームに入力し「判定する」を押してください。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 保存済み銘柄一覧 -->
+  <section class="panel history-panel" aria-label="保存済み銘柄">
+    <h2 class="panel-title">保存済み銘柄</h2>
+    <div class="table-scroll">
+      <table id="history-table">
+        <thead>
+          <tr>
+            <th>銘柄コード</th>
+            <th>銘柄名</th>
+            <th>判定</th>
+            <th>スコア</th>
+            <th>保存日時</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="history-tbody"></tbody>
+      </table>
+    </div>
+    <p class="empty-note" id="history-empty">保存済みの銘柄はありません。</p>
+  </section>
+
+  <footer class="app-footer">
+    <p>本ツールは投資助言ではありません。書籍等の公開情報を基にした個人学習用のチェックリストであり、判定結果の正確性・投資成果を保証しません。投資判断はご自身の責任で行ってください。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
