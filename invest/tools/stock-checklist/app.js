@@ -11,21 +11,24 @@
   const CRITERIA = {
     KEIJO_GROWTH_MIN: 20,        // 経常利益成長率の最低ライン(%)
     KEIJO_QUARTERS_REQUIRED: 2,  // 上記を満たすべき直近四半期数
-    VOLUME_SURGE_RATIO: 2,       // ブレイク時出来高の目安(平均比)
+    SALES_GROWTH_MIN: 10,        // 売上高成長率の最低ライン(%)
+    VOLUME_SURGE_RATIO: 2,       // ブレイク時出来高の目安(平均比) ※書籍での定量基準は未確認、一般的な目安
     STOP_LOSS_PCT: 8,            // 買値からの損切りライン(%) ※参考表示用
     SMALL_CAP_MAX_OKU: 1000,     // 「小型株」とみなす時価総額の上限(億円)
-    HIGH_ROE_MIN: 10             // 「ROEが高い」とみなす最低ライン(%)
+    HIGH_ROE_MIN: 10,            // 「ROEが高い」とみなす最低ライン(%)
+    PER_MAX: 60                  // PER の上限(倍)
   };
 
   // 加点条件の配点テーブル (合計 100 点。値を変えるだけで配点調整可能)
   const SCORE_WEIGHTS = {
-    baseBreakout: 20,     // もみ合い後のブレイク
+    baseBreakout: 15,     // もみ合い後のブレイク
     volumeSurge: 15,      // ブレイク時の出来高急増
     salesGrowth: 15,      // 売上高が成長している
     ownerManagement: 15,  // オーナー経営
-    themeTailwind: 15,    // 時代の追い風となるテーマ
+    themeTailwind: 10,    // 時代の追い風となるテーマ
     smallCap: 10,         // 時価総額が小さい
-    highRoe: 10           // ROE が高い
+    highRoe: 10,          // ROE が高い
+    perOk: 10             // PER が基準以下
   };
 
   // === 2. 保存管理 (localStorage) ===
@@ -117,6 +120,7 @@
       keijoGrowthPrev: parseNumOrNull(el("keijo-growth-prev")?.value),
       salesGrowth: parseNumOrNull(el("sales-growth")?.value),
       profitForecastUp: !!el("profit-forecast-up")?.checked,
+      per: parseNumOrNull(el("per")?.value),
       marketCap: parseNumOrNull(el("market-cap")?.value),
       ownerManagement: !!el("owner-management")?.checked,
       roe: parseNumOrNull(el("roe")?.value),
@@ -136,6 +140,7 @@
     if (el("keijo-growth-prev")) el("keijo-growth-prev").value = input.keijoGrowthPrev == null ? "" : String(input.keijoGrowthPrev);
     if (el("sales-growth")) el("sales-growth").value = input.salesGrowth == null ? "" : String(input.salesGrowth);
     if (el("profit-forecast-up")) el("profit-forecast-up").checked = !!input.profitForecastUp;
+    if (el("per")) el("per").value = input.per == null ? "" : String(input.per);
     if (el("market-cap")) el("market-cap").value = input.marketCap == null ? "" : String(input.marketCap);
     if (el("owner-management")) el("owner-management").checked = !!input.ownerManagement;
     if (el("roe")) el("roe").value = input.roe == null ? "" : String(input.roe);
@@ -287,24 +292,24 @@
     if (input.salesGrowth == null) {
       ruleResults.push({
         id: "bonus-sales-growth",
-        label: `売上高が成長している (+${SCORE_WEIGHTS.salesGrowth})`,
+        label: `売上高成長率 ${CRITERIA.SALES_GROWTH_MIN}%以上 (+${SCORE_WEIGHTS.salesGrowth})`,
         status: "na",
         comment: "売上高成長率は未入力 (減点なし)。"
       });
-    } else if (input.salesGrowth > 0) {
+    } else if (input.salesGrowth >= CRITERIA.SALES_GROWTH_MIN) {
       score += SCORE_WEIGHTS.salesGrowth;
       ruleResults.push({
         id: "bonus-sales-growth",
-        label: `売上高が成長している (+${SCORE_WEIGHTS.salesGrowth})`,
+        label: `売上高成長率 ${CRITERIA.SALES_GROWTH_MIN}%以上 (+${SCORE_WEIGHTS.salesGrowth})`,
         status: "ok",
         comment: `売上高成長率 ${fmtNum(input.salesGrowth)}%。利益成長に売上の裏付けがある。`
       });
     } else {
       ruleResults.push({
         id: "bonus-sales-growth",
-        label: `売上高が成長している (+${SCORE_WEIGHTS.salesGrowth})`,
+        label: `売上高成長率 ${CRITERIA.SALES_GROWTH_MIN}%以上 (+${SCORE_WEIGHTS.salesGrowth})`,
         status: "ng",
-        comment: `売上高成長率 ${fmtNum(input.salesGrowth)}%。売上が伸びない増益は持続性に疑問。`
+        comment: `売上高成長率 ${fmtNum(input.salesGrowth)}%。基準${CRITERIA.SALES_GROWTH_MIN}%未満で売上の裏付けが弱い。`
       });
     }
 
@@ -395,6 +400,31 @@
       });
     }
 
+    // PER (任意数値)
+    if (input.per == null) {
+      ruleResults.push({
+        id: "bonus-per",
+        label: `PER ${CRITERIA.PER_MAX}倍以下 (+${SCORE_WEIGHTS.perOk})`,
+        status: "na",
+        comment: "PER は未入力 (減点なし)。"
+      });
+    } else if (input.per <= CRITERIA.PER_MAX) {
+      score += SCORE_WEIGHTS.perOk;
+      ruleResults.push({
+        id: "bonus-per",
+        label: `PER ${CRITERIA.PER_MAX}倍以下 (+${SCORE_WEIGHTS.perOk})`,
+        status: "ok",
+        comment: `PER ${fmtNum(input.per)}倍で基準 ${CRITERIA.PER_MAX}倍以下。`
+      });
+    } else {
+      ruleResults.push({
+        id: "bonus-per",
+        label: `PER ${CRITERIA.PER_MAX}倍以下 (+${SCORE_WEIGHTS.perOk})`,
+        status: "ng",
+        comment: `PER ${fmtNum(input.per)}倍で基準 ${CRITERIA.PER_MAX}倍超は過熱圏。`
+      });
+    }
+
     // スコアを 0-100 にクランプ
     score = Math.max(0, Math.min(100, score));
 
@@ -462,7 +492,7 @@
       `<div class="reference-note">`,
       `<p>参考情報 (手法のルール):</p>`,
       `<ul>`,
-      `<li>損切り目安: 買値から −${CRITERIA.STOP_LOSS_PCT}%。</li>`,
+      `<li>損切り目安: 買値から −${CRITERIA.STOP_LOSS_PCT}% (書籍レビュー等の複数ソースに基づく目安)。</li>`,
       `<li>必須3条件 (新高値・経常増益率${CRITERIA.KEIJO_GROWTH_MIN}%×直近${CRITERIA.KEIJO_QUARTERS_REQUIRED}四半期・今期増益予想) を欠く銘柄は見送り。</li>`,
       `<li>加点スコアは補助指標であり、高スコアでも投資成果を保証しない。</li>`,
       `</ul>`,
