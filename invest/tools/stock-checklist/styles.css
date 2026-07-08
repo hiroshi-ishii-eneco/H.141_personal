@@ -1,0 +1,422 @@
+/* ===== 新高値投資 銘柄チェックリスト (画面用) ===== */
+
+:root {
+  --line-main: #222;
+  --line-sub: #555;
+  --line-light: #ccc;
+  --bg-screen: #f4f4f4;
+  --bg-panel: #fff;
+  --font-stack: "BIZ UDPGothic", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+                "Meiryo", sans-serif;
+
+  /* 判定バッジ色 */
+  --pass-bg: #e6f4ea;
+  --pass-fg: #1e7d34;
+  --pass-border: #a5d6a7;
+  --fail-bg: #fdecea;
+  --fail-fg: #c62828;
+  --fail-border: #ef9a9a;
+  --insufficient-bg: #f0f0f0;
+  --insufficient-fg: #555;
+  --insufficient-border: #bbb;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-stack);
+  color: var(--line-main);
+  background: var(--bg-screen);
+  line-height: 1.6;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ===== 免責事項 ===== */
+.disclaimer-banner {
+  background: #fff8e1;
+  border: 1px solid #e6c860;
+  border-left: 4px solid #c9a227;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #5a4a12;
+  margin-bottom: 16px;
+}
+
+.app-footer {
+  margin-top: 24px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line-light);
+  font-size: 0.8rem;
+  color: var(--line-sub);
+}
+
+/* ===== ヘッダ ===== */
+.app-header { margin-bottom: 16px; }
+
+.app-title {
+  margin: 0;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--line-main);
+  padding-bottom: 6px;
+}
+
+.app-subtitle {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: var(--line-sub);
+}
+
+/* ===== 通知 ===== */
+#notice-container { margin-bottom: 12px; }
+
+.notice-message {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.notice-error {
+  background: var(--fail-bg);
+  border-left: 4px solid var(--fail-fg);
+  color: var(--fail-fg);
+}
+
+.notice-info {
+  background: var(--pass-bg);
+  border-left: 4px solid var(--pass-fg);
+  color: var(--pass-fg);
+}
+
+/* ===== レイアウト (2カラム → 800px 未満で 1 カラム) ===== */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--line-light);
+  border-radius: 4px;
+  padding: 16px 20px;
+}
+
+.panel-title {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--line-light);
+  padding-bottom: 6px;
+}
+
+/* ===== 入力フォーム ===== */
+.form-section {
+  border: 1px solid var(--line-light);
+  border-radius: 4px;
+  margin: 0 0 14px;
+  padding: 10px 14px 12px;
+}
+
+.form-section legend {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--line-sub);
+  margin-bottom: 2px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field textarea {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  width: 100%;
+  background: #fff;
+  color: var(--line-main);
+}
+
+.field textarea { resize: vertical; }
+
+.field-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field-with-unit input[type="number"] { max-width: 10em; }
+
+.field-with-unit .unit {
+  font-size: 0.85rem;
+  color: var(--line-sub);
+  white-space: nowrap;
+}
+
+.field-indent { margin-left: 1.6em; }
+
+.check-option {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.check-option input[type="checkbox"] {
+  flex: 0 0 auto;
+  transform: translateY(1px);
+}
+
+.required-mark {
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fail-fg);
+  background: var(--fail-bg);
+  border: 1px solid var(--fail-border);
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.action-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  background: #fff;
+  color: var(--line-main);
+  border: 1px solid var(--line-sub);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-btn:hover { background: #eee; }
+.action-btn:focus-visible { outline: 2px solid #333; outline-offset: 1px; }
+
+.action-btn.primary {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.action-btn.primary:hover { background: #555; }
+
+.action-btn.ghost {
+  border-color: var(--line-light);
+  color: var(--line-sub);
+}
+
+/* ===== 判定結果 ===== */
+.placeholder {
+  color: var(--line-sub);
+  font-size: 0.9rem;
+}
+
+.result-stock {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.verdict-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.verdict-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.verdict-badge.badge-small {
+  font-size: 0.78rem;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+
+.verdict-pass {
+  background: var(--pass-bg);
+  color: var(--pass-fg);
+  border-color: var(--pass-border);
+}
+
+.verdict-fail {
+  background: var(--fail-bg);
+  color: var(--fail-fg);
+  border-color: var(--fail-border);
+}
+
+.verdict-insufficient {
+  background: var(--insufficient-bg);
+  color: var(--insufficient-fg);
+  border-color: var(--insufficient-border);
+}
+
+.score-text {
+  font-size: 0.88rem;
+  color: var(--line-sub);
+}
+
+/* スコアバー */
+.score-bar {
+  width: 100%;
+  height: 12px;
+  background: #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.score-bar-fill.verdict-pass { background: #43a047; }
+.score-bar-fill.verdict-fail { background: #e05353; }
+.score-bar-fill.verdict-insufficient { background: #9e9e9e; }
+
+/* ルール別 ○/×/− 一覧 */
+.rule-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.rule-item {
+  display: flex;
+  gap: 10px;
+  padding: 8px 6px;
+  border-bottom: 1px dashed var(--line-light);
+  font-size: 0.88rem;
+}
+
+.rule-item:last-child { border-bottom: none; }
+
+.rule-mark {
+  flex: 0 0 1.4em;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.rule-ok .rule-mark { color: var(--pass-fg); }
+.rule-ng .rule-mark { color: var(--fail-fg); }
+.rule-na .rule-mark { color: var(--insufficient-fg); }
+
+.rule-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.rule-label { font-weight: 700; }
+
+.rule-comment {
+  color: var(--line-sub);
+  font-size: 0.82rem;
+}
+
+/* 参考情報 */
+.reference-note {
+  background: #f7f7f7;
+  border: 1px solid var(--line-light);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--line-sub);
+}
+
+.reference-note p { margin: 0 0 4px; font-weight: 700; }
+.reference-note ul { margin: 0; padding-left: 1.4em; }
+
+/* ===== 保存済み銘柄一覧 ===== */
+.history-panel { margin-top: 16px; }
+
+.table-scroll { overflow-x: auto; }
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+#history-table th,
+#history-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line-light);
+  text-align: left;
+  white-space: nowrap;
+}
+
+#history-table th {
+  font-size: 0.8rem;
+  color: var(--line-sub);
+  border-bottom: 2px solid var(--line-sub);
+}
+
+.history-row { cursor: pointer; }
+.history-row:hover { background: #f5f5f5; }
+
+.cell-num { text-align: right; }
+
+.delete-btn {
+  font-family: inherit;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  background: #fff;
+  color: var(--fail-fg);
+  border: 1px solid var(--fail-border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-btn:hover { background: var(--fail-bg); }
+
+.empty-note {
+  color: var(--line-sub);
+  font-size: 0.88rem;
+  margin: 8px 0 0;
+}
