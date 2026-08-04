@@ -1,0 +1,2186 @@
+[
+ {
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "sector": "銀行業",
+  "market_cap": "約42兆円(2026年7月時点、国内時価総額トップ)",
+  "reason": "日銀の追加利上げ観測を追い風に2026年6月5日に上場来高値を更新。長期金利が約30年ぶり水準(2.9%台)まで上昇する中、貸出金利ザヤ拡大による増益期待が続いており、7月13日の市況記事でも「銀行株は年後半相場の主役」と評価されている。",
+  "catalyst": "日銀追加利上げ観測、長期金利上昇継続、メガバンク決算(7月末~)",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606050342",
+   "https://kabutan.jp/news/marketnews/?b=n202607131017",
+   "https://www.nikkei.com/article/DGXZQOFL103ED0Q6A710C2000000/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "sector": "銀行業",
+  "market_cap": "不明(メガバンク、10兆円超規模)",
+  "reason": "2026年7月15日時点で年初来高値8,693円を記録。金利上昇メリット銘柄としてメガバンク全般が資金流入の対象となっている。",
+  "catalyst": "日銀追加利上げ観測、長期金利上昇継続",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607131017"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "sector": "銀行業",
+  "market_cap": "不明(メガバンク、10兆円超規模)",
+  "reason": "2026年6月18日に年初来高値6,728円をつけた後、直近は調整含みだが金利上昇メリット・銀行セクター全体の上昇トレンドの中核銘柄。",
+  "catalyst": "日銀追加利上げ観測、長期金利上昇継続",
+  "ai_theme_risk": "none",
+  "data_date": "2026-06-18",
+  "sources": [
+   "https://minkabu.jp/stock/8316",
+   "https://kabutan.jp/news/marketnews/?b=n202607131017"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8354",
+  "name": "ふくおかフィナンシャルグループ",
+  "sector": "銀行業(地方銀行)",
+  "market_cap": "約1兆円超(いわゆる「一兆円クラブ」地銀)",
+  "reason": "2026年7月7日に年初来高値7,590円を記録。地銀最大手として総資産32兆円超、金利上昇による貸出金利息拡大で経常利益は連続最高益に向かっている。",
+  "catalyst": "金利上昇による利ザヤ拡大、地銀再編思惑",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-07",
+  "sources": [
+   "https://kabutan.jp/stock/?code=8354",
+   "https://gendai.media/articles/-/167828"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "7186",
+  "name": "コンコルディア・フィナンシャルグループ(横浜フィナンシャルグループ)",
+  "sector": "銀行業(地方銀行)",
+  "market_cap": "約1兆円規模",
+  "reason": "2026年7月8日に年初来高値1,952円を記録。経常利益連続最高益・連続増配が続いており、金利上昇メリット銘柄として地銀の中でも物色対象。",
+  "catalyst": "金利上昇による利ザヤ拡大、増配継続",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-08",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7186.T"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8766",
+  "name": "東京海上ホールディングス",
+  "sector": "保険業",
+  "market_cap": "約10兆円規模",
+  "reason": "2026年5月20日に年初来高値8,038円を記録。金利上昇で運用環境改善が期待される大手損保の中核銘柄で、大手証券もセクター「強気」判断を継続。",
+  "catalyst": "金利上昇による運用益改善、自然災害減による増益",
+  "ai_theme_risk": "none",
+  "data_date": "2026-05-20",
+  "sources": [
+   "https://minkabu.jp/news/4462677",
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8725",
+  "name": "MS&ADインシュアランスグループホールディングス",
+  "sector": "保険業",
+  "market_cap": "約5兆円規模",
+  "reason": "2026年6月15日に年初来高値4,742円を記録。自然災害減少による大幅増益が確認されており、損保株全体の上昇トレンドに乗る形。",
+  "catalyst": "自然災害減による増益、金利上昇メリット",
+  "ai_theme_risk": "none",
+  "data_date": "2026-06-15",
+  "sources": [
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8630",
+  "name": "SOMPOホールディングス",
+  "sector": "保険業",
+  "market_cap": "約3兆円規模",
+  "reason": "大手損保3社決算で自然災害減により大幅増益。損保セクター全体が金利上昇・増益期待で堅調に推移しているが、7月時点の具体的な年初来高値の裏付けは今回取得できず、情報の鮮度に限界あり。",
+  "catalyst": "自然災害減による増益、金利上昇メリット",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-16",
+  "sources": [
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133",
+   "https://minkabu.jp/stock/8630"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8001",
+  "name": "伊藤忠商事",
+  "sector": "卸売業(総合商社)",
+  "market_cap": "約13兆円規模",
+  "reason": "2026年3月期は増収増益(純利益9,003億円、+2.3%)。株式分割・増配を同時発表し株主還元強化が評価され、株価は年初来高値圏で推移。バフェット氏率いるバークシャー・ハサウェイの5大商社長期保有方針も継続的な支援材料。",
+  "catalyst": "株式分割・増配、資源高、バークシャーの買い増し継続観測",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://www.businessinsider.jp/article/2605-why-sogo-shosha-strong/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8031",
+  "name": "三井物産",
+  "sector": "卸売業(総合商社)",
+  "market_cap": "約11兆円規模",
+  "reason": "2026年4月8日に年初来高値6,675円を記録。野村など大手証券が目標株価を引き上げており、総合商社セクター全体で2025年春以降上昇スピードが加速。",
+  "catalyst": "資源高、バークシャーの買い増し観測、株主還元強化",
+  "ai_theme_risk": "none",
+  "data_date": "2026-04-08",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL263X00W5A121C2000000/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8002",
+  "name": "丸紅",
+  "sector": "卸売業(総合商社)",
+  "market_cap": "時価総額10兆円超(24年末比2.6倍、総合商社首位の伸び率)",
+  "reason": "バークシャー・ハサウェイが住友商事・三井物産に続き丸紅の保有比率も10%超に引き上げたと報じられ、商社株全般に期待買いが波及。時価総額は2024年末の2.6倍に拡大。",
+  "catalyst": "バークシャーの追加買い増し観測、資源高",
+  "ai_theme_risk": "none",
+  "data_date": "2026-05-07",
+  "sources": [
+   "https://www.bloomberg.com/jp/news/articles/2026-05-07/TENHBDT96OSG00",
+   "https://www.nikkei.com/article/DGXZQOTG095820Z00C26A2000000/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8053",
+  "name": "住友商事",
+  "sector": "卸売業(総合商社)",
+  "market_cap": "約5兆円規模",
+  "reason": "バークシャー・ハサウェイの買い増しを受けて3日続伸するなど、商社株全般に期待買いが波及している。",
+  "catalyst": "バークシャーの買い増し継続観測、資源高",
+  "ai_theme_risk": "none",
+  "data_date": "2026-05-07",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/5f32a34bc95d3ff52c9de97f830fbe0be9f2b6fb"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "7014",
+  "name": "名村造船所",
+  "sector": "輸送用機器(造船)",
+  "market_cap": "不明(東証スタンダード上場、中型株)",
+  "reason": "2026年7月15日、前日比+3.6%の急伸で株価4,020円まで上昇。新造船事業の好調で2026年3月期は増収増益・自己資本比率も51.3%に上昇、次期も増収増配計画。造船業界全体が受注増と政府の重点投資対象指定を背景に活況。",
+  "catalyst": "新造船受注拡大、政府の造船業支援策、増配",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/6fd7ddb0b310c34ed205b7482325ef5a0ea7fc4e",
+   "https://kabutan.jp/news/marketnews/?b=n202508090232"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "9201",
+  "name": "日本航空(JAL)",
+  "sector": "空運業",
+  "market_cap": "約1.3兆円規模",
+  "reason": "2026年3月期は増収増益(純利益1,376億円、+28.6%)。6月下旬から株価は上昇基調を強め、7月2日時点で3,000円台を回復。燃料価格上昇リスク後退やアナリスト格上げが好感され、国際線需要・インバウンド拡大で年初来高値接近が期待される。",
+  "catalyst": "インバウンド需要拡大、国際線需要回復、燃料コスト懸念後退",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-06",
+  "sources": [
+   "https://www.ebc.com/jp/forex/302527.html"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "3099",
+  "name": "三越伊勢丹ホールディングス",
+  "sector": "小売業(百貨店)",
+  "market_cap": "約1.5兆円規模",
+  "reason": "連日で上場来高値を更新中。直近1年で+50.6%の上昇。免税売上の急回復、高級時計・ジュエリー・ハイブランドアパレルの客単価上昇、新宿・銀座・福岡店舗の改装効果が寄与し、インバウンド消費と資産効果を背景に国内向け販売も増加。",
+  "catalyst": "インバウンド消費拡大、円安継続、店舗改装効果",
+  "ai_theme_risk": "none",
+  "data_date": "2026-06-25",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL254340V20C26A6000000/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "8233",
+  "name": "高島屋",
+  "sector": "小売業(百貨店)",
+  "market_cap": "約4000億円規模",
+  "reason": "2026年6月26日に年初来高値2,608.5円を記録。京都店・新宿店・大阪店の免税売上が好調で、客単価の継続的上昇が利益成長を牽引しており、インバウンド消費関連として三越伊勢丹と並び物色されている。",
+  "catalyst": "インバウンド消費拡大、免税売上の伸長",
+  "ai_theme_risk": "none",
+  "data_date": "2026-06-26",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8233.T/history"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "2678",
+  "name": "アスクル",
+  "sector": "小売業(EC/オフィス用品通販)",
+  "market_cap": "約1500億円規模",
+  "reason": "2026年7月6日に4連騰し1,280円台まで上昇。ランサムウェア被害からの回復が進み、2027年5月期に営業黒字転換・増配見通しを発表したことが好感された。",
+  "catalyst": "黒字転換・増配見通し、システム障害からの正常化",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-06",
+  "sources": [
+   "https://kabushiki.jp/news/756701",
+   "https://kabutan.jp/news/marketnews/?b=n202607060775"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "5967",
+  "name": "TONE",
+  "sector": "金属製品(工具メーカー)",
+  "market_cap": "不明(小型株、東証スタンダード)",
+  "reason": "2026年7月1日にストップ高。2026年5月期の営業利益予想を1.36億円(前回予想比+18%程度、前期比+36%)に上方修正し、年間配当も9円→13円に増額。高付加価値製品の販売強化とコスト削減が寄与。",
+  "catalyst": "業績・配当の上方修正",
+  "ai_theme_risk": "none",
+  "data_date": "2026-07-01",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607010463",
+   "https://www.zaikei.co.jp/article/20260701/859227.html"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "5713",
+  "name": "住友金属鉱山",
+  "sector": "非鉄金属(金鉱・銅)",
+  "market_cap": "約3兆円規模",
+  "reason": "国内最大の菱刈鉱山を保有し金・銅生産量が大きい。2026年初に金価格が1トロイオンス=4,600ドル超まで急騰した局面で金鉱株として物色された実績があり、金価格の高値圏推移が続けば追加の追い風となる可能性。ただし銅需要はデータセンター向け電力インフラ需要とも関連するため注意。",
+  "catalyst": "金価格の高値圏推移、銅価格動向",
+  "ai_theme_risk": "gray",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://media.monex.co.jp/articles/-/27801",
+   "https://gold.tanaka.co.jp/commodity/souba/y-gold.php"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "5711",
+  "name": "三菱マテリアル",
+  "sector": "非鉄金属(金・銅・セメント)",
+  "market_cap": "約1兆円規模",
+  "reason": "2026年3月2日に年初来高値6,126円を記録(銅・金価格の上昇が業績に寄与)。ただし直近(7月)の株価水準は3月高値からやや期間が経過しており、直近1〜3ヶ月の勢いは要確認。銅需要はデータセンター向け電力インフラとの関連も指摘されるため留意が必要。",
+  "catalyst": "銅・金価格の高値圏推移",
+  "ai_theme_risk": "gray",
+  "data_date": "2026-03-02",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL243I90U5A221C2000000/"
+  ],
+  "source_sweep": "momentum"
+ },
+ {
+  "code": "7453",
+  "name": "良品計画",
+  "sector": "小売業（衣料・生活雑貨、無印良品）",
+  "reason": "2026年8月期の通期営業利益予想を890億円→980億円（前回比+10.1%、前期比+32.7%）に上方修正。9-5月累計は営業収益16.9%増・営業利益36.0%増と海外（特に東アジア）事業が牽引し、市場予想を上回る決算内容で株価は上場来高値を更新。",
+  "ai_theme_risk": "none",
+  "catalyst": "9月上旬に月次売上速報の発表が続く見込み、海外既存店の高成長トレンド継続への期待",
+  "market_cap": "不明（大型株、時価総額1兆円超級とみられる）",
+  "data_date": "2026-07-10",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL130L70T10C26A7000000/",
+   "https://s.kabutan.jp/news/k202607100039/",
+   "https://www.ryutsuu.biz/accounts/s071043.html"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "2593",
+  "name": "伊藤園",
+  "sector": "食料品（飲料）",
+  "reason": "2026年4月期の営業利益予想を200億円→216億円（+8.0%）、経常利益を210億円→232億円（+10.5%）に上方修正。広告宣伝費等のコスト削減、北米・ASEAN中心の海外事業堅調、為替差益が寄与し、前期経常が一転増益に。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年4月期第1四半期決算発表が9月上旬に予定される見込み",
+  "market_cap": "不明（大型株、数千億円規模とみられる）",
+  "data_date": "2026-05-28",
+  "sources": [
+   "https://s.kabutan.jp/news/n202605290340/",
+   "https://finance.yahoo.co.jp/news/detail/ec2e99023d72fdadcae8209eea6a34a1ebd18ac4",
+   "https://www.nikkei.com/article/DGXZQOFL291IE0Z20C26A5000000/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "6310",
+  "name": "井関農機",
+  "sector": "機械（農業機械）",
+  "reason": "2026年12月期通期営業利益予想を前期比42.0%増の60億円に上方修正。米価上昇に伴う農機需要増や価格改定前の駆け込み需要、構造改革「プロジェクトZ」効果により国内外で大幅増収増益、1Qは過去最高の売上・利益を更新。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年12月期第2四半期（中間）決算発表が8月中旬に予定",
+  "market_cap": "不明",
+  "data_date": "2026-05-18",
+  "sources": [
+   "https://www.zaikei.co.jp/article/20260518/853795.html",
+   "https://finance.logmi.jp/articles/384810",
+   "https://finance.logmi.jp/articles/382396"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "6062",
+  "name": "チャーム・ケア・コーポレーション",
+  "sector": "サービス業（有料老人ホーム運営）",
+  "reason": "2026年6月期通期営業利益予想を15.5%増の51.5億円に上方修正。介護事業の生産性向上（人員配置緩和）による利益積み上げに加え、不動産売却案件の時期確定が寄与。増配（期末+6円、年間43円）も発表。",
+  "ai_theme_risk": "low",
+  "catalyst": "2026年6月期本決算（通期実績）発表が8月上旬に予定される見込み",
+  "market_cap": "不明",
+  "data_date": "2026-05-25",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/438aab2fc5fce5ef400c278802d9dc685ad69365",
+   "https://finance.biggo.jp/news/jpx_tdnet_140120260525545932",
+   "https://www.nikkei.com/article/DGXZRST0518833X00C26A5000000/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "9060",
+  "name": "日本ロジテム",
+  "sector": "陸運業（物流・倉庫）",
+  "reason": "2026年3月期は売上高8.1%増、営業利益16.9%増（センター事業好調・倉庫稼働率上振れ）で着地し、通期予想を期中に上方修正（営業利益を当初予想比+2.5億円の12億円に修正）した後、実績はさらにこれを上回った。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明（小型株）",
+  "data_date": "2026-05-14",
+  "sources": [
+   "https://www.lnews.jp/2026/05/s0514608.html",
+   "https://www.logi-today.com/872175",
+   "https://finance.yahoo.co.jp/news/detail/600314025a6714159b5409121fc14c4682590766"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "3449",
+  "name": "テクノフレックス",
+  "sector": "金属製品（フレキシブル管継手）",
+  "reason": "上半期業績予想を大幅上方修正、営業利益を17億円→29億円（前年同期比+51.1%）に引き上げ。クリーンエネルギー関連・半導体関連分野で受注が想定を大幅に上回り、2026年に入り複数回の上方修正を実施。3期ぶり最高益更新。",
+  "ai_theme_risk": "gray",
+  "catalyst": "上半期（中間）決算発表が8月中旬に予定。半導体製造装置・クリーンエネルギー関連需要の継続がカギ",
+  "market_cap": "不明（小型株）",
+  "data_date": "2026-04-16",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202604160477",
+   "https://note.com/cosmos_invest/n/n872ff1efd98e"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "7878",
+  "name": "光・彩",
+  "sector": "卸売業（宝飾・アクセサリー）",
+  "reason": "27年1月期の経常利益予想を1.7億円→3.7億円（2.1倍）、営業利益を2億円→4億円（前期比2.2倍）に上方修正。高付加価値商品の販売が好調で32期ぶりに過去最高益を更新する見通し。ストップ高買い気配。",
+  "ai_theme_risk": "none",
+  "catalyst": "27年1月期第2四半期決算発表が9月中旬に予定される見込み",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-06-10",
+  "sources": [
+   "https://kabutan.jp/news/?b=k202606100016",
+   "https://diamond.jp/zai/articles/-/1068594",
+   "https://finance.yahoo.co.jp/news/detail/1adcdcde8482fca882380d3d458a6e497e6250e5"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "2375",
+  "name": "ギグワークス",
+  "sector": "サービス業（BPO・コールセンター）",
+  "reason": "2026年10月期の通期営業利益予想を3月に5000万円→2.4億円（4.8倍）、6月にさらに上方修正（前回比+66.6%）。経常利益は6月に2000万円→1.8億円（9.0倍）に上方修正され、増益率が4.0倍→36倍に拡大する見通し。",
+  "ai_theme_risk": "low",
+  "catalyst": "2026年10月期第3四半期決算発表が9月上旬に予定される見込み",
+  "market_cap": "不明（小型株）",
+  "data_date": "2026-06-11",
+  "sources": [
+   "https://kabutan.jp/news/?b=k202606110015",
+   "https://kabutan.jp/news/?b=k202603100011",
+   "https://www.diamond.co.jp/zai/articles/-/650"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "2385",
+  "name": "総医研ホールディングス",
+  "sector": "サービス業（健康食品・ダイエット関連）",
+  "reason": "2026年5月13日決算発表で通期経常利益予想を5500万円→2.15億円（3.9倍）に上方修正。売上高は12.1%減少したが構造改革と収益性改善で営業・経常・純利益とも黒字転換。営業利益は前回予想比300%増（ダイヤモンドZAi集計）。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年2月期第1四半期決算発表が7月末〜8月に予定される見込み",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-05-13",
+  "sources": [
+   "https://www.diamond.co.jp/zai/articles/-/674",
+   "https://s.kabutan.jp/stocks/2385/news/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "7256",
+  "name": "河西工業",
+  "sector": "輸送用機器（自動車内装部品）",
+  "reason": "2026年3月期通期純利益予想を5月8日に20億円の赤字→10億円の黒字に上方修正（7年ぶり最終黒字）。経常利益は前回予想比2.1倍。北米事業の収益改善と日本国内の固定費削減効果が寄与。優先株負担など財務リスクは残る。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明",
+  "data_date": "2026-05-08",
+  "sources": [
+   "https://kabutan.jp/news/?b=k202605080095",
+   "https://www.nikkei.com/article/DGXZRST0562343T10C26A2000000/",
+   "https://www.nikkei.com/article/DGXZQOUC165QD0W6A210C2000000/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "8944",
+  "name": "ランドビジネス",
+  "sector": "不動産業",
+  "reason": "2025年10月期通期経常利益予想を10.1億円→31億円（3.1倍）に上方修正。中間決算では営業利益34.62億円（前年同期比550.3%増）、営業利益率も14.1%→33.4%へ急上昇。不動産事業（開発・販売）の好調が主因。",
+  "ai_theme_risk": "none",
+  "catalyst": "通期本決算発表が11月予定で当期間（9月上旬）にはやや外れるが、月次不動産販売動向に注目",
+  "market_cap": "不明（小型株）",
+  "data_date": "2026-05-19",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/b3a672e91e8d7b1e57317cfae5e1be91fa911c58",
+   "https://www.nikkei.com/nkd/disclosure/financial-summary-visual/TDNKDBRST051064924042026/",
+   "https://www.diamond.co.jp/zai/articles/-/674"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "3169",
+  "name": "ミサワ",
+  "sector": "卸売業（繊維・生活資材専門商社）",
+  "reason": "ダイヤモンドZAi集計（2026年3月）によれば、営業利益予想が前回予想比968%増と大幅上方修正され、同月の上方修正銘柄の中でトップの増加率となった。",
+  "ai_theme_risk": "none",
+  "catalyst": "",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-03",
+  "sources": [
+   "https://www.diamond.co.jp/zai/articles/-/650"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "1663",
+  "name": "K&Oエナジーグループ",
+  "sector": "鉱業・エネルギー（天然ガス・ヨウ素）",
+  "reason": "2025年12月期は経常利益117億円（前期比19.0%増）で過去最高を更新。ヨウ素の国際価格上昇が牽引し2Qも増益。2026年5月13日には通期業績予想を売上高870億円・純利益63億円に上方修正し増配も発表。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年12月期第2四半期（中間）決算発表が8月中旬に予定される見込み。ヨウ素価格の高止まりが継続すれば追加の上振れ余地",
+  "market_cap": "不明（中型株、1000億円台とみられる）",
+  "data_date": "2026-05-13",
+  "sources": [
+   "https://finance.logmi.jp/articles/380138",
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260512526495/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "6034",
+  "name": "MRT",
+  "sector": "サービス業（医療従事者向け人材・遠隔医療プラットフォーム）",
+  "reason": "2026年12月期通期営業利益予想を1.70億円→1.95億円、純利益予想を1.09億円→1.29億円（+18.3%、2.3倍成長）に上方修正。ただし主因は事業ポートフォリオ再編に伴う一部子会社の連結除外であり、オーガニックな増益とは性質が異なる点に留意が必要。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年12月期第2四半期決算発表が8月中旬に予定される見込み",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-05-26",
+  "sources": [
+   "https://diamond.jp/zai/articles/-/1067919",
+   "https://kabutan.jp/news/?b=k202605260005"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "7564",
+  "name": "ワークマン",
+  "sector": "小売業（作業服・アウトドア衣料）",
+  "reason": "2026年3月期は チェーン全店売上高14.3%増、営業利益21.7%増の296億円、純利益22.1%増と過去最高業績を達成。リカバリーウェアが前期比808.2%増と急成長。2027年3月期も営業利益8.2%増の321億円と増益ガイダンス。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み。月次既存店売上の高水準継続が焦点",
+  "market_cap": "不明（大型株、数千億円規模とみられる）",
+  "data_date": "2026-05-11",
+  "sources": [
+   "https://news.yahoo.co.jp/articles/dfdb15bd2d876a128a952e4130a8f90f628b4c42",
+   "https://www.fashionsnap.com/article/2026-05-11/workman-2026-result/",
+   "https://kabuyoho.jp/sp/consNewsDetail?nid=7564_20260511_act_20260511_153044_4&cat=1&bcode=7564"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "4918",
+  "name": "アイビー化粧品",
+  "sector": "化学（化粧品）",
+  "reason": "業績予想を上方修正し、27年3月期の営業利益を前回予想比65.0%増、売上高を同6.1%増に修正（ダイヤモンドZAi 2026年7月号集計）。別途5月にも業績予想の修正を開示。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-07",
+  "sources": [
+   "https://www.diamond.co.jp/zai/articles/-/700",
+   "https://www.nikkei.com/markets/company/sys/redirect_dis.aspr?ano=fx8pm0&t=https%3A%2F%2Fwww.nikkei.com%2Fnkd%2Fdisclosure%2Ftdnr%2F20260512526408%2F"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "2999",
+  "name": "ホームポジション",
+  "sector": "不動産業（戸建・宅地分譲）",
+  "reason": "2026年8月期通期営業利益予想を5億円→10.4億円（+108%、約2.08倍）に上方修正。高付加価値住宅販売の拡大と不採算物件の圧縮による粗利改善が寄与。ダイヤモンドZAi集計で7月の上方修正率トップ級。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月期本決算発表が10月予定のためやや期間外だが、上半期の勢い継続に注目",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-07-10",
+  "sources": [
+   "https://www.release.tdnet.info/inbs/140120260710591091.pdf",
+   "https://www.diamond.co.jp/zai/articles/-/700",
+   "https://www.zaikei.co.jp/article/20260413/850295.html"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "9720",
+  "name": "ホテル、ニューグランド",
+  "sector": "サービス業（ホテル運営・横浜）",
+  "reason": "ダイヤモンドZAi集計（2026年7月号）で、営業利益予想が前回予想比2.0倍超に上方修正された銘柄として紹介。インバウンド需要等ホテル稼働の好調が背景とみられる（詳細な修正幅は一次情報未確認）。",
+  "ai_theme_risk": "none",
+  "catalyst": "",
+  "market_cap": "不明（超小型株）",
+  "data_date": "2026-07",
+  "sources": [
+   "https://www.diamond.co.jp/zai/articles/-/700"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "1419",
+  "name": "タマホーム",
+  "sector": "建設業（注文住宅・分譲住宅）",
+  "reason": "2027年5月期の経常利益予想を前期比78.3%増の67億円、営業利益を95%増の75億円と発表（26年5月期実績は経常減益だったが次期は急回復）。分譲住宅事業が業績を押し上げ、純利益は3.3倍の40億円見込み。5円増配（年間130円）も発表。",
+  "ai_theme_risk": "none",
+  "catalyst": "月次契約棟数の発表が継続。2027年5月期第1四半期決算は10月予定でやや期間外",
+  "market_cap": "不明（中型株）",
+  "data_date": "2026-07-14",
+  "sources": [
+   "https://s.kabutan.jp/news/k202607140064/",
+   "https://www.nikkei.com/article/DGXZQOUC145TY0U6A710C2000000/",
+   "https://www.zaikei.co.jp/article/20260715/861251.html"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "7730",
+  "name": "マニー",
+  "sector": "精密機器（医療用・歯科用機器）",
+  "reason": "2026年8月期の経常利益予想を89.5億円→101億円に上方修正、営業増益率も8.2%増→22.7%増に拡大。中国で一時販売停止していた歯科用ダイヤモンドバーの販売再開（25年11月）が寄与し、想定より円安基調も追い風。9ヶ月累計純利益は前年同期比33%増。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月期本決算発表が10月予定でやや期間外だが、ダイヤバー販売回復の継続が焦点",
+  "market_cap": "不明（大型株、2000億円前後とみられる）",
+  "data_date": "2026-07-15",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL091T20Z01C25A0000000/",
+   "https://irbank.net/7730/pl"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "5351",
+  "name": "品川リフラクトリーズ",
+  "sector": "ガラス・土石製品（耐火物・産業資材）",
+  "reason": "2026年3月期は売上高1777億円（前年比23.4%増）、純利益260億円（同166.6%増）を達成。期中に純利益予想を130億円→310億円（2.3倍）へ上方修正、経常利益も135億円→145億円（+7.4%）に上方修正。M&Aによる事業拡大と保有不動産売却益が寄与。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明（中型株）",
+  "data_date": "2026-05頃（本決算発表、正確な発表日は未確認）",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZRST0517725R11C25A2000000/",
+   "https://kabutan.jp/news/?b=k202508080484"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "5243",
+  "name": "note",
+  "sector": "情報・通信業（コンテンツプラットフォーム）",
+  "reason": "2026年11月期通期業績予想の経常利益を61%上方修正し最高益予想を上乗せ。7月7日発表の第2四半期決算では売上高が前年同期比+36.8%、営業利益は約17倍に拡大。note pro等法人向けSaaSの伸長が主因。ただし同時に「AI時代の新成長戦略」を発表しており、AIテーマとして市場に物色される可能性がある点に注意。",
+  "ai_theme_risk": "gray",
+  "catalyst": "2026年11月期第3四半期決算発表が9月に予定される見込み",
+  "market_cap": "不明（小型株）",
+  "data_date": "2026-07-07",
+  "sources": [
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260707588967/",
+   "https://kabutan.jp/news/?b=k202607070010",
+   "https://note.com/note_ir/n/n3c6653a7c0db"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "9104",
+  "name": "商船三井",
+  "sector": "海運業",
+  "reason": "通期経常利益予想を1520億円→1800億円（+18.4%）に上方修正。自動車輸送事業の底堅い荷動きが牽引し、前回予想（11月時点）から+90億円上振れ。コンテナ船市況は軟調も、想定より減益幅は縮小する見通し。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明（大型株、1兆円超級とみられる）",
+  "data_date": "2026年4月頃（正確な発表日は未確認、前期末〜次期見通し公表時）",
+  "sources": [
+   "https://newswitch.jp/p/48284",
+   "https://finance.yahoo.co.jp/news/detail/89ba5864b901108159202df67b31987135679ad9"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "5411",
+  "name": "JFEホールディングス",
+  "sector": "鉄鋼",
+  "reason": "2026年度（2027年3月期）事業利益予想を前年度比60%増の2150億円と発表。鉄鋼・エンジニアリング・商社の全セグメントで改善見込み。国内鉄鋼大手の中でも回復ペースが速いとされる。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み。鋼材市況・中国需給動向が焦点",
+  "market_cap": "不明（大型株、1兆円超級とみられる）",
+  "data_date": "2026年5月頃（正確な発表日は未確認）",
+  "sources": [
+   "https://www.japanmetaldaily.com/articles/-/259505"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "5401",
+  "name": "日本製鉄",
+  "sector": "鉄鋼",
+  "reason": "2026年3月期は当初予想（700億円の赤字）から一転して純利益171億円で黒字着地。在庫評価益の改善が寄与し、2027年3月期は純利益が前期比13倍の2200億円に回復する見通しを提示。構造改革により1トン当たり利益で世界首位級との報道も。",
+  "ai_theme_risk": "none",
+  "catalyst": "2027年3月期第1四半期決算発表が8月上旬に予定される見込み",
+  "market_cap": "不明（超大型株、数兆円規模）",
+  "data_date": "2026年5月頃（本決算発表、正確な発表日は未確認）",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUB125OX0S6A510C2000000/",
+   "https://www.nikkei.com/article/DGXZQOUB26AT50W6A620C2000000/"
+  ],
+  "source_sweep": "earnings"
+ },
+ {
+  "code": "7011",
+  "name": "三菱重工業",
+  "sector": "防衛・重工",
+  "reason": "防衛装備品契約実績で国内最大のプライム企業。地政学リスクの高まりと政府による防衛生産基盤強化策(工場の国有化方針報道など)を背景に7/6には防衛関連株が急伸しリターンリバーサルの主役に。3月には上場来高値5208円を記録するなど中期基調も強い。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月上旬の2027年3月期1Q決算、防衛省の2027年度予算概算要求(8月末)",
+  "market_cap": "不明",
+  "data_date": "2026-07-06",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607060836",
+   "https://www.nomura.co.jp/wealthstyle/article/0776/",
+   "https://whiteorder.net/defense-stock-investment-guide-2026/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7012",
+  "name": "川崎重工業",
+  "sector": "防衛・重工・造船",
+  "reason": "防衛装備品契約実績で三菱重工に次ぐ国内2番手。防衛関連物色の主力の一角として7/6に三菱重工・IHIとともに急伸。造船・航空機・ガスタービンなど重工業ポートフォリオの厚みも評価されている。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、防衛装備品の追加受注発表",
+  "market_cap": "不明",
+  "data_date": "2026-07-06",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607060836",
+   "https://whiteorder.net/defense-stock-investment-guide-2026/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7013",
+  "name": "ＩＨＩ",
+  "sector": "防衛・重工",
+  "reason": "2025年3月期は受注高・売上高・事業利益がいずれも過去最高を更新。防衛・航空エンジン事業が牽引役となっており、防衛関連の物色で三菱重工・川崎重工とともに買われている。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-06",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607060836",
+   "https://whiteorder.net/defense-stock-investment-guide-2026/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7721",
+  "name": "東京計器",
+  "sector": "防衛(出遅れ中小型)",
+  "reason": "船舶・防衛計器の中堅企業で、直近四半期は防衛・通信機器事業の伸長により営業利益が前年同期比93.4%増と大幅増益。御三家(三菱重工・川崎重工・IHI)対比で時価総額が小さく、防衛予算拡大の裾野銘柄として出遅れ妙味がある。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算(防衛・通信機器の受注動向)",
+  "market_cap": "不明",
+  "data_date": "2026-07(直近四半期決算時点)",
+  "sources": [
+   "https://www.tokyokeiki.jp/ir/annual/brand.html",
+   "https://note.com/tatsuya_sabato/n/n634994496e73"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7224",
+  "name": "新明和工業",
+  "sector": "防衛(出遅れ中小型)",
+  "reason": "水陸両用機US-2など防衛航空機を手がける中堅企業。2026年3月期は航空機セグメントの受注が53.9%増と大きく伸び過去最高益を更新。防衛関連の中小型出遅れ株として個人投資家の関心が高まっている。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://note.com/tatsuya_sabato/n/n634994496e73",
+   "https://minkabu.jp/stock/7224"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7003",
+  "name": "三井Ｅ＆Ｓホールディングス",
+  "sector": "造船",
+  "reason": "造船は政府の「重点投資対象17分野」に含まれる国策テーマとして脚光。脱炭素船・防衛艦艇需要の拡大が追い風で、造船・エンジン事業の構造改革進展による業績回復期待がある。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、新造船受注動向",
+  "market_cap": "不明",
+  "data_date": "2026-08-09(関連記事)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202508090232",
+   "https://kabutan.jp/stock/?code=7003"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7014",
+  "name": "名村造船所",
+  "sector": "造船",
+  "reason": "国内造船大手で「造船関連株」の代表格の一つ。建造需要は過去最大級との報道があり、国策としての造船業支援・標準設計スキーム構築(2025年12月、国内7社覚書)などが株価を下支え。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、受注残高の開示",
+  "market_cap": "不明",
+  "data_date": "2026-08-09(関連記事)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202508090232",
+   "https://minkabu.jp/stock/7014"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7018",
+  "name": "内海造船",
+  "sector": "造船(出遅れ中小型)",
+  "reason": "2026年3月期1Q(4-6月)決算で最終利益が前年同期比89%増、受注残高も51%増の1401億円に拡大し株価が急伸。造船セクターの中でも時価総額が小さく出遅れていた中小型株として物色余地がある。",
+  "ai_theme_risk": "none",
+  "catalyst": "通期決算・追加受注の発表",
+  "market_cap": "不明",
+  "data_date": "2026-08-09(関連記事)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202508090232"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8306",
+  "name": "三菱ＵＦＪフィナンシャル・グループ",
+  "sector": "銀行",
+  "reason": "日銀が2026年6月に政策金利を1.0%へ引き上げ(約31年ぶり高水準)、メガバンクは利ざや改善期待で資金流入が続いている。国内最大の総資産規模で金利上昇メリットを最も広く享受できる代表銘柄。",
+  "ai_theme_risk": "none",
+  "catalyst": "7/30-31のBOJ金融政策決定会合、8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-07",
+  "sources": [
+   "https://www.ebc.com/jp/forex/303015.html",
+   "https://www.dlri.co.jp/report/macro/623090.html"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "sector": "銀行",
+  "reason": "法人融資比率が高く政策金利引き上げの利ざや改善効果を受けやすいとされ、メガバンクの中でも特に強い値動き。2026年7月時点で市場最高値圏で推移。",
+  "ai_theme_risk": "none",
+  "catalyst": "7/30-31のBOJ金融政策決定会合、8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-07",
+  "sources": [
+   "https://www.ebc.com/jp/forex/303015.html",
+   "https://www.nikkei.com/nkd/company/article/?DisplayType=1&ng=DGXZQOUB284Q60Y6A420C2000000&scode=7186&ba=1"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "sector": "銀行",
+  "reason": "メガバンク3行の一角として日銀利上げ・金融正常化の恩恵を受ける代表銘柄。銀行セクター全体への資金流入の波に乗る形で株価が堅調に推移している。",
+  "ai_theme_risk": "none",
+  "catalyst": "7/30-31のBOJ金融政策決定会合、8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-07",
+  "sources": [
+   "https://www.ebc.com/jp/forex/303015.html"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7186",
+  "name": "コンコルディア・フィナンシャルグループ(横浜銀行等)",
+  "sector": "銀行(地銀・出遅れ)",
+  "reason": "地銀最大手で国内貸出比率が高く利上げ恩恵が大きいとされる代表銘柄。連続2桁増益・株主還元強化も評価され「地銀再編の軸」として注目。メガバンク対比で株価の出遅れ感がある。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、横浜FGへの社名変更関連材料",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://mag.minkabu.jp/companys-features/36176/",
+   "https://shisan-invest.com/entry/concordia2026",
+   "https://media.rakuten-sec.net/articles/-/52214"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8766",
+  "name": "東京海上ホールディングス",
+  "sector": "保険",
+  "reason": "大手損保として運用資産の金利上昇メリットを享受しやすい。保険料引き上げにより増収を確保し、国内証券のセクター投資判断も「強気」が継続している。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-03-10(関連記事)",
+  "sources": [
+   "https://minkabu.jp/news/4462677"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8630",
+  "name": "ＳＯＭＰＯホールディングス",
+  "sector": "保険",
+  "reason": "2026年3月期は自然災害減少と資産運用好調により純利益が前期比約2.6倍の6400億円に急拡大。株価・金利上昇による運用収益改善も追い風。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-05-20",
+  "sources": [
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133",
+   "https://www.jiji.com/jc/article?k=2026052001204&g=eco"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8725",
+  "name": "ＭＳ＆ＡＤインシュアランスグループホールディングス",
+  "sector": "保険",
+  "reason": "2026年3月期は13.8%増益の7873億円で過去最高益を計上。保険料改定と資産運用収益の改善が続き、金利上昇局面で恩恵を受けるセクターとして評価されている。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-05-20",
+  "sources": [
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8058",
+  "name": "三菱商事",
+  "sector": "商社",
+  "reason": "資源高・LNG事業拡大を背景に2026年に入り堅調に推移、3月には上場来高値5787円を記録。2027年3月期は最終利益1.1兆円への回復を見込み、商社セクターの代表格として指数を牽引している。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月上旬の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://www.nikkei.com/prime/veritas/article/DGXZQOUC302HL0Q6A330C2000000",
+   "https://note.com/t_ryoma1985/n/n868fc3b44d3e"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8031",
+  "name": "三井物産",
+  "sector": "商社",
+  "reason": "エネルギー・金属資源に強みを持ち資源高局面で最も利益変動が大きい商社。24年5月以来の上場来高値を更新するなど、商社株上昇の先導役となっている。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月上旬の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://shikiho.toyokeizai.net/news/0/921983",
+   "https://snowball-family.com/trading-companies-comparison-2026/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8001",
+  "name": "伊藤忠商事",
+  "sector": "商社",
+  "reason": "非資源分野の強さを背景に2026年3月期は大幅増益を確保し、財閥系2社(三菱商事・三井物産)を上回る純利益で5年ぶりの首位奪還が視野に入るなど、商社セクター全体の上昇を牽引する代表銘柄。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月上旬の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://www.sbbit.jp/article/cont1/176192",
+   "https://note.com/t_ryoma1985/n/n868fc3b44d3e"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8002",
+  "name": "丸紅",
+  "sector": "商社(出遅れ)",
+  "reason": "純利益では商社5位だが時価総額では住友商事を抜き4位に浮上するなど評価が改善中。資源高の恩恵を受けつつ大手商社の中では相対的に出遅れていた面があり、見直し買いの余地がある。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月上旬の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://diamond.jp/articles/-/365985"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "2768",
+  "name": "双日",
+  "sector": "商社(出遅れ)",
+  "reason": "7大商社の中では豊田通商にも水をあけられ「出遅れ」と評される銘柄。資源高・金利上昇メリットの商社セクター全体への波及が期待される中、バリュエーション面での出遅れ修正余地がある。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月上旬の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://diamond.jp/articles/-/365985"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "1605",
+  "name": "ＩＮＰＥＸ",
+  "sector": "資源・エネルギー",
+  "reason": "イランによるホルムズ海峡付近での商船攻撃・再封鎖宣言(7月)を受けて中東情勢の緊張が再燃し、WTI原油先物は7/13時点で1バレル=74ドル台まで上昇。石油開発の上流を担うINPEXは原油高がストレートに業績拡大に直結する代表銘柄で7/8にも上昇。",
+  "ai_theme_risk": "none",
+  "catalyst": "中東情勢のさらなる悪化、8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-13",
+  "sources": [
+   "https://minkabu.jp/news/4564155",
+   "https://news.livedoor.com/topics/detail/31810576/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "1662",
+  "name": "石油資源開発",
+  "sector": "資源・エネルギー",
+  "reason": "INPEXと並び原油高で買われている石油開発の上流企業。ホルムズ海峡の緊張再燃を受けた原油高局面で7/8に株価が上昇した。",
+  "ai_theme_risk": "none",
+  "catalyst": "中東情勢の動向、8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07-08",
+  "sources": [
+   "https://minkabu.jp/news/4564155"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "5020",
+  "name": "ＥＮＥＯＳホールディングス",
+  "sector": "資源・エネルギー",
+  "reason": "国内最大の石油元売りで原油高・資源価格上昇の影響を受けやすい。中東情勢の緊迫化を背景とした資源エネルギー株物色の代表格の一つ。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、原油相場の動向",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://media.rakuten-sec.net/articles/-/51689?page=2"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "5019",
+  "name": "出光興産",
+  "sector": "資源・エネルギー(出遅れ)",
+  "reason": "石油元売り大手だがENEOS対比では株価物色にやや出遅れ感があるとされる銘柄。原油高局面でのセクター全体への資金流入の波及が期待される。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://media.rakuten-sec.net/articles/-/51689?page=2"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "1801",
+  "name": "大成建設",
+  "sector": "建設(出遅れ)",
+  "reason": "米国とイランの停戦合意報道を受けた金利低下観測から出遅れ感のあった建設株に買いが入り、前週末比12%高の急伸を記録した実績がある。26年3月期は反動減益予想だが、選別受注の進展や政策保有株売却一巡後の収益改善期待がある。",
+  "ai_theme_risk": "gray",
+  "catalyst": "8月の1Q決算、長期金利の動向",
+  "market_cap": "不明",
+  "data_date": "2026-06(株価急伸時点)",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL151IH0V10C26A6000000/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "1812",
+  "name": "鹿島建設",
+  "sector": "建設",
+  "reason": "大手ゼネコンの中で2026年3月期に営業最高益を更新した数少ない企業の一つ。土木分野の受注環境が良好で選別受注による利益率改善が評価されており、建設セクターの代表格として注目されている。",
+  "ai_theme_risk": "gray",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://newswitch.jp/p/45715",
+   "https://diamond.jp/articles/-/393201"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8801",
+  "name": "三井不動産",
+  "sector": "不動産",
+  "reason": "5月の金利上昇懸念による不動産株急落は「行き過ぎ」との見方があり、野村證券も6月以降不動産セクターへの注目度を引き上げ。大手デベロッパーの代表格として反発余地がある。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算、日銀会合後の長期金利動向",
+  "market_cap": "不明",
+  "data_date": "2026-06(野村レポート時点)",
+  "sources": [
+   "https://www.nomura.co.jp/wealthstyle/article/0767/",
+   "https://www.nomura.co.jp/wealthstyle/article/0728/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "8830",
+  "name": "住友不動産",
+  "sector": "不動産(出遅れ)",
+  "reason": "5月には金利上昇観測で不動産セクターが前日比5.3%下落するなど大きく売られた経緯があり、賃貸中心の事業モデルから金利上昇の影響を受けやすいとされる一方、行き過ぎた下落の反動買いが期待される出遅れ銘柄。",
+  "ai_theme_risk": "none",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-05-14",
+  "sources": [
+   "https://www.nomura.co.jp/wealthstyle/article/0728/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "9503",
+  "name": "関西電力",
+  "sector": "電力",
+  "reason": "原発再稼働の進展や送配電効率化により2026年3月期は市場予想を上回る上方修正を実施し増配も発表。株価は11ヶ月ぶり高値の2409円まで上昇するなど電力セクターの中でも特に強い動きを見せている。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月の1Q決算、原発再稼働の追加進展",
+  "market_cap": "不明",
+  "data_date": "2025-10-31(株価急伸時点、直近まで高値圏継続)",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL310YT0R31C25A0000000/",
+   "https://www.nikkei.com/article/DGXZQOUF115R70R10C25A9000000/"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "9508",
+  "name": "九州電力",
+  "sector": "電力(出遅れ)",
+  "reason": "川内原発など複数基が稼働中で電力セクターの中でも業績安定度が高いが、関西電力対比では株価物色がやや遅れている面がある。原発再稼働・電気料金改定を材料にした電力株物色の裾野銘柄として位置づけられる。",
+  "ai_theme_risk": "low",
+  "catalyst": "8月の1Q決算",
+  "market_cap": "不明",
+  "data_date": "2026-07",
+  "sources": [
+   "https://minkabu.jp/stock/9508"
+  ],
+  "source_sweep": "themes"
+ },
+ {
+  "code": "7803",
+  "name": "ブシロード",
+  "sector": "娯楽(トレーディングカード・IP)",
+  "reason": "2026年6月30日、発行済み株式数の5.89%を上限とする自社株買いを発表。カード・アニメ関連IPビジネスで業績堅調な中での株主還元強化策。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い実施期間中の進捗（取得状況の適時開示）",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-30",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "4078",
+  "name": "堺化学工業",
+  "sector": "化学(酸化チタン・電子材料)",
+  "reason": "2026年6月30日、発行済み株式数の9.9%という大規模上限の自社株買いを発表。酸化チタン大手で電子材料強化中の中、資本効率改善を意識した還元強化。",
+  "ai_theme_risk": "low",
+  "catalyst": "自社株買い進捗開示、2027年3月期1Q決算(8月頃)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-30",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "7447",
+  "name": "ナガイレーベン",
+  "sector": "医療用白衣・ユニフォーム製造",
+  "reason": "2026年6月29日、発行済み株式数2.00%を上限とする自社株買いを発表。医療従事者向けユニフォーム大手で安定収益を背景とした株主還元。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗、中間決算発表(11月頃)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-29",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "1780",
+  "name": "ヤマウラ",
+  "sector": "建設(長野地盤の中堅ゼネコン)",
+  "reason": "2026年6月29日、発行済み株式数3.12%を上限とする自社株買いを発表。首都圏営業網も持つ中堅建設会社の資本政策強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗開示",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-29",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "4323",
+  "name": "日本システム技術",
+  "sector": "情報・通信(独立系IT、大学基幹システム・医療ビッグデータ)",
+  "reason": "2026年6月26日、発行済み株式数8.06%という大規模な自社株買いを発表。「JAST VISION 2035」策定など成長戦略と並行した株主還元強化。DX・生成AI活用は事業の一部でありAI関連設備投資が主な買い材料ではない。",
+  "ai_theme_risk": "gray",
+  "catalyst": "自社株買い進捗、決算発表",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223",
+   "https://finance.logmi.jp/articles/382264"
+  ],
+  "data_date": "2026-06-26",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "3512",
+  "name": "日本フエルト",
+  "sector": "産業用資材(製紙用フェルト)",
+  "reason": "2026年6月26日、発行済み株式数5.96%を上限とする自社株買いを発表。ニッチ産業資材メーカーの資本効率改善策。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗開示",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-26",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "9364",
+  "name": "上組",
+  "sector": "港湾運送・物流(神戸地盤)",
+  "reason": "2026年6月26日、発行済み株式数4.25%を上限とする自社株買いを発表。港湾荷役・倉庫大手の株主還元強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗開示、中間決算(11月)",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-26",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "4613",
+  "name": "関西ペイント",
+  "sector": "化学(塗料)",
+  "reason": "2026年6月26日、発行済み株式数2.81%・100億円を上限とする自社株買いを発表。国内外の塗料事業を持つ大手化学メーカーの資本政策強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗、中間決算発表",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606261223"
+  ],
+  "data_date": "2026-06-26",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "3775",
+  "name": "ガイアックス",
+  "sector": "IT・web3/DAOスタートアップスタジオ",
+  "reason": "2026年6月22日、発行済み株式数11.76%という極めて大規模な自社株買いを発表。ソーシャルメディア・web3/DAO領域が主力事業でAI半導体・データセンター等が主な買い材料ではない。ただしweb3テーマ株としての値動きには留意。",
+  "ai_theme_risk": "gray",
+  "catalyst": "自社株買い進捗開示",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606221400"
+  ],
+  "data_date": "2026-06-22",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "6369",
+  "name": "トヨカネツ",
+  "sector": "機械(マテリアルハンドリング・コンベヤ設備)",
+  "reason": "2026年6月22日、発行済み株式数5.8%を上限とする自社株買いを発表。倉庫・物流設備機械メーカーの株主還元強化。AIではなく物流自動化設備が主力。",
+  "ai_theme_risk": "low",
+  "catalyst": "自社株買い進捗開示",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606221400"
+  ],
+  "data_date": "2026-06-22",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "sector": "銀行(メガバンク)",
+  "reason": "2026年5月13日、発行済み株式数の1.0%・1800億円を上限とする自社株買いと1対2の株式分割を発表。2026年3月期は純利益が前期比34.4%増の1兆5829億円と大幅増益で、還元競争を背景に還元強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "株式分割の効力発生(2026年10月1日予定)に向けた需給思惑、1Q決算(8月)",
+  "sources": [
+   "https://news.yahoo.co.jp/articles/551b59e592a5ea37a19d6a856c69fb5014b2812e",
+   "https://www.zaikei.co.jp/article/20260520/853997.html"
+  ],
+  "data_date": "2026-05-13",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "sector": "銀行(メガバンク)",
+  "reason": "2026年5月15日、発行済み株式数の約1%・1000億円を上限とする自社株買いと、前期比5円増配(145円→150円、6期連続増配)を発表。純利益は前期比41%増の1兆2486億円で3期連続最高益。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、自社株買い進捗開示",
+  "sources": [
+   "https://www.bloomberg.com/jp/news/articles/2026-05-15/TF24VIT96OSJ00",
+   "https://diamond.jp/zai/articles/-/1050319"
+  ],
+  "data_date": "2026-05-15",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8766",
+  "name": "東京海上ホールディングス",
+  "sector": "損害保険",
+  "reason": "2026年5月20日、発行済み株式数6.9%・2000億円を上限とする自社株買いを決議(2026年度通期では最大4000億円方針)。配当は218円→245円へ大幅増配予定。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗(取得期間~12月23日)、1Q決算(8月)",
+  "sources": [
+   "https://news.yahoo.co.jp/articles/35a69536484c777c2ee299b3b7bb435b04154d30",
+   "https://note.com/tack104/n/n56e41ac32a78"
+  ],
+  "data_date": "2026-05-20",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8725",
+  "name": "MS&ADインシュアランスグループホールディングス",
+  "sector": "損害保険",
+  "reason": "2026年3月期決算で純利益が前期比13.8%増の7873億円と過去最高を更新。2026年度に上限2700億円規模の自己株式取得方針を示し、配当も160円→170円前後へ増配見通し。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、自社株買い具体化の適時開示",
+  "sources": [
+   "https://note.com/t_ryoma1985/n/n7f138980dd76"
+  ],
+  "data_date": "2026-05",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8630",
+  "name": "SOMPOホールディングス",
+  "sector": "損害保険",
+  "reason": "2026年3月期純利益が前期比約2.6倍の6400億円と大幅増益。来期配当予想は150円から200円へと約33%の大幅増配を計画。",
+  "ai_theme_risk": "low",
+  "catalyst": "1Q決算発表(8月)、自社株買い方針の具体化",
+  "sources": [
+   "https://note.com/t_ryoma1985/n/n7f138980dd76"
+  ],
+  "data_date": "2026-05",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "2802",
+  "name": "味の素",
+  "sector": "食品・電子材料(ABF半導体材料)",
+  "reason": "2026年5月7-9日、発行済み株式数5.03%・最大1000億円の自社株買いを発表(取得株はすべて消却)、配当も実質8円増配(48円)。ただし収益の柱である半導体絶縁材料ABFはAI半導体・AIサーバー向け需要が主因で株価上昇しており、市場では「AI半導体テーマ株」として認識されている点に強く留意。",
+  "ai_theme_risk": "high",
+  "catalyst": "自社株買い進捗、1Q決算(8月)、ABF価格改定・増産計画の発表",
+  "sources": [
+   "https://www.nikkei.com/nkd/industry/article/?DisplayType=1&n_m_code=051&ng=DGXZQOTG082GU0Y5A500C2000000",
+   "https://toyokeizai.net/articles/-/948253?display=b",
+   "https://gigazine.net/news/20260414-ajinomoto-ai-abf/"
+  ],
+  "data_date": "2026-05-09",
+  "market_cap": "約5兆円(概算)",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "2810",
+  "name": "ハウス食品グループ本社",
+  "sector": "食品(調味料・レトルト食品)",
+  "reason": "2026年5月11日、2026年3月期期末配当を前年の24円から22円積み増しの46円とし、年間配当70円を決議(大幅増配)。加えて政策保有株縮減を原資とした150億円の自己株式取得を発表。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表、自社株買い進捗開示",
+  "sources": [
+   "https://www2.jpx.co.jp/disc/28100/140120260511521942.pdf"
+  ],
+  "data_date": "2026-05-11",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "9735",
+  "name": "セコム",
+  "sector": "警備・セキュリティサービス",
+  "reason": "2026年5月12日、発行済み株式数5.69%・過去最大1000億円を上限とする自社株買いを発表。3期連続最高益予想も好感され株価急伸。取得株はすべて消却予定。",
+  "ai_theme_risk": "low",
+  "catalyst": "自社株買い進捗(取得期間~2027年2月25日)、1Q決算",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL132GM0T10C26A5000000/",
+   "https://minkabu.jp/news/4509452"
+  ],
+  "data_date": "2026-05-12",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "6367",
+  "name": "ダイキン工業",
+  "sector": "機械(空調機器)",
+  "reason": "2026年5月12日、10年ぶりとなる発行済み株式数約5%・3500億円の大規模自社株買いを発表。期末配当も165円→175円へ10円増配。空調需要は住宅・オフィス向けが中心で、データセンター向け空調はAI関連の一部追い風に留意。",
+  "ai_theme_risk": "gray",
+  "catalyst": "自社株買い進捗、1Q決算(8月)",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUF1318O0T10C26A5000000/",
+   "https://www.daikin.co.jp/press/2026/20260512_2"
+  ],
+  "data_date": "2026-05-12",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "9433",
+  "name": "KDDI",
+  "sector": "通信",
+  "reason": "2026年5月12日、最大3000億円の自社株買い(トヨタ・京セラの保有株売却2500億円＋市場買付500億円)を発表。配当も前期比4円増の84円へ25期連続増配。ただし新中期経営計画で国内データセンター整備に3年間1.2兆円を投じる方針があり、AI関連インフラ投資への市場期待も株価材料の一部となっている点に留意。",
+  "ai_theme_risk": "gray",
+  "catalyst": "自社株買い進捗(~2027年1月31日)、1Q決算(8月)",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUB126JK0S6A510C2000000/",
+   "https://www.zaikei.co.jp/article/20260620/857658.html"
+  ],
+  "data_date": "2026-05-12",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8031",
+  "name": "三井物産",
+  "sector": "総合商社",
+  "reason": "2026年5月1日、2026年3月期の年間配当を前期比25円増の140円とする大幅増配を発表(利回り上位)。あわせて2000億円規模の自己株式取得プログラムを実施中で株主還元を強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、新規自社株買い枠設定の可能性",
+  "sources": [
+   "https://finance.logmi.jp/articles/383034",
+   "https://www.mitsui.com/jp/ja/ir/library/meeting/2026/index.html"
+  ],
+  "data_date": "2026-05-01",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8058",
+  "name": "三菱商事",
+  "sector": "総合商社",
+  "reason": "2026年5月1日、2027年3月期の年間配当を前期比15円増の125円とする増配を発表。継続中の発行済み株式総数約17%・上限1兆円の大規模自社株買いプログラム(2026年3月末まで)とあわせ株主還元を強化。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、自社株買い消却(4月30日実施済み)後の新規還元方針",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOTG274EW0X20C26A4000000/",
+   "https://kabutan.jp/news/marketnews/?b=k202605010018"
+  ],
+  "data_date": "2026-05-01",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "7011",
+  "name": "三菱重工業",
+  "sector": "重工業・機械(防衛・エネルギー・航空)",
+  "reason": "2026年5月12日、2027年3月期配当を前期比4円増の29円とする4期連続増配を発表。防衛予算拡大やエネルギー関連事業の好調を背景とした業績拡大が支え。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、防衛関連受注動向",
+  "sources": [
+   "https://kabutan.jp/news/?b=k202605120060"
+  ],
+  "data_date": "2026-05-12",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "9651",
+  "name": "日本プロセス",
+  "sector": "情報・通信(制御・組込システム開発)",
+  "reason": "2026年7月7日、発行済み株式数9.28%・約17.5億円を上限とする自社株買いを立会外分売取引で実施すると発表。自動運転・鉄道・発電所監視システムなど社会インフラ向け組込系開発が主力で、AIは事業の一部に留まる。",
+  "ai_theme_risk": "gray",
+  "catalyst": "7月8日の自己株式立会外買付取引の結果、中間決算(11月)",
+  "sources": [
+   "https://minkabu.jp/news/4563909"
+  ],
+  "data_date": "2026-07-07",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8591",
+  "name": "オリックス",
+  "sector": "総合リース・金融",
+  "reason": "2026年5月12日決算発表で、2027年3月期の年間配当を前期比大幅増(187.36円、+31.26円)とする計画とあわせ、発行済み株式数9.1%・上限2500億円規模の自社株買いを発表。ガイダンス・還元規模とも市場予想を上回り株価急伸。",
+  "ai_theme_risk": "none",
+  "catalyst": "自社株買い進捗開示、1Q決算(8月)",
+  "sources": [
+   "https://s.minkabu.jp/news/4507478",
+   "https://irbank.net/E04762/buyback"
+  ],
+  "data_date": "2026-05-12",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "1925",
+  "name": "大和ハウス工業",
+  "sector": "住宅・不動産(戸建て・物流施設開発)",
+  "reason": "2026年3月期配当を中間75円・期末95円の合計170円(前期比20円増)とし、16期連続増配を発表。事業の中心は住宅・物流施設・商業施設開発だが、一部データセンター開発案件を含む点には留意。",
+  "ai_theme_risk": "gray",
+  "catalyst": "1Q決算発表(8月)、物流施設着工動向",
+  "sources": [
+   "https://diamond.jp/zai/articles/-/1054281"
+  ],
+  "data_date": "2026-05",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "8136",
+  "name": "サンリオ",
+  "sector": "娯楽・キャラクターIP(ハローキティ等)",
+  "reason": "2026年6月23日発表の2026年3月期決算で売上・営業利益ともに過去最高(営業利益約779億円、前期比50%超増益)を更新し、増配を発表。海外ライセンス収入拡大が業績を牽引しAIとは無関係。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、海外ライセンス契約の追加開示",
+  "sources": [
+   "https://diamond.jp/zai/articles/-/1059558"
+  ],
+  "data_date": "2026-06-23",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "7269",
+  "name": "スズキ",
+  "sector": "自動車(小型車・インド市場)",
+  "reason": "2026年5月14日、2026年3月期配当を前期比5円増(12.2%増)の46円、2027年3月期も1株あたり51円(前期比10.9%増)とする増配方針を発表。インド市場が好調で大手7社の中で唯一増益。",
+  "ai_theme_risk": "none",
+  "catalyst": "1Q決算発表(8月)、インド販売動向、中東情勢によるコスト影響の顕在化",
+  "sources": [
+   "https://minkabu.jp/stock/7269/news/4512842",
+   "https://www.nikkei.com/article/DGXZQOUB13BE30T10C26A5000000/"
+  ],
+  "data_date": "2026-05-14",
+  "market_cap": "不明",
+  "source_sweep": "returns"
+ },
+ {
+  "code": "3046",
+  "name": "JINSホールディングス",
+  "sector": "小売(眼鏡)",
+  "reason": "日系大手証券が7/14、目標株価を8,400円→10,000円に増額(レーティング最上位据置き)。7/16現在値6,490円に対し上昇余地約54%。決算後の急伸で直近高値圏。海外・国内既存店の好調が材料。",
+  "catalyst": "次回四半期決算(8月下旬〜9月想定)、海外店舗出店ペース",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://finance.yahoo.co.jp/quote/3046.T"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-16",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "3182",
+  "name": "オイシックス・ラ・大地",
+  "sector": "食品EC/ミールキット",
+  "reason": "7/15付株探レーティング日報で目標株価2,300円→2,400円に増額(最上位継続)。アナリスト平均目標株価も2,300円前後で推移。5月決算で最終利益24.4%増、27年3月期も増益見通し。現在値データがやや古く(5月時点1,500円台)上昇余地の正確な算出は要確認。",
+  "catalyst": "次回四半期決算、夏季販促の動向",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://minkabu.jp/stock/3182/analyst_consensus"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-15",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "4443",
+  "name": "Ｓａｎｓａｎ",
+  "sector": "SaaS/名刺・請求書DX",
+  "reason": "7/13決算発表(経常利益前年比3倍)を受け欧州系大手証券が目標株価を増額(強気継続)。アナリスト平均目標株価は1,994円(7/13時点、現在値1,773円から+17.6%)。27年5月期の経常利益ガイダンスは125〜145億円で強気。個別記事で目標株価3,400円との情報もあるが現在値との乖離が大きすぎ、単位不整合の可能性があるためコンセンサス値を優先。",
+  "catalyst": "次回四半期決算、Bill One事業の成長率",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://minkabu.jp/stock/4443/analyst_consensus",
+   "https://s.kabutan.jp/news/k202607130034/",
+   "https://finance.yahoo.co.jp/news/detail/b7fa8c44b5b3c7f1997dc0c557f069a650ff78df"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-15",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "4536",
+  "name": "参天製薬",
+  "sector": "医薬品(眼科)",
+  "reason": "6月上旬に米系大手証券が目標株価2,100円→2,400円に増額(強気継続)、7/15付報道では別証券が2,300円→2,450円に増額との情報も。6月末株価は2,128円前後で、目標株価に対し13%前後の上昇余地。",
+  "catalyst": "パイプライン進捗発表、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/90ae0c5c191ff23178e836a72417d99d3f11a617",
+   "https://kabutan.jp/news/marketnews/?b=n202607151040"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-06-05",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "4578",
+  "name": "大塚ホールディングス",
+  "sector": "医薬品/機能性飲料",
+  "reason": "7/14に欧州系大手証券が目標株価を13,500円→15,000円に増額(強気継続)。7/10現在値11,185円に対し上昇余地約34%。主力医薬品・パイプラインの進捗が好感されている。",
+  "catalyst": "主力製品の臨床/承認関連ニュース、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://finance.biggo.jp/news/e16dfcad-b716-48b1-8adc-c9f83a387737",
+   "https://kabutan.jp/news/marketnews/?b=n202607141016"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-14",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "5334",
+  "name": "日本特殊陶業(Niterra)",
+  "sector": "自動車部品/セラミック",
+  "reason": "6月に米系大手証券が目標株価9,100円→12,600円に増額、7/15付報道でも9,100円→13,300円への増額情報。7/16現在値9,995円に対し30%前後の上昇余地。自動車関連が堅調、半導体製造装置向け部品需要も追い風(AI専用チップではなく汎用パッケージ中心)。",
+  "catalyst": "次回四半期決算、自動車生産動向",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/85e3f6fc2493c5d1927f4364f6d4c2c8b7b6602c",
+   "https://kabutan.jp/news/marketnews/?b=n202607151040"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-16",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "5991",
+  "name": "ニッパツ(日本発条)",
+  "sector": "自動車部品",
+  "reason": "6/2と6/17に米系大手証券が2度連続で目標株価を増額(3,400円→4,400円、さらに3,400円→4,800円、いずれも強気継続)。6/26終値3,987円に対し20%前後の上昇余地。26年3月期は減益だったが自動車懸架ばね・HDDサスペンション事業の先行き評価が向上。",
+  "catalyst": "次回四半期決算、自動車生産・HDD需要動向",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/4cabda48bbecc666375c36fef3293bf9e00e6f36"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-06-26",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "9735",
+  "name": "セコム",
+  "sector": "警備保障",
+  "reason": "7/15付報道で目標株価を6,300円→7,450円に増額(最上位継続)。7/14現在値6,634円に対し12%程度の上昇余地。過去最大1,000億円の自社株買いと3期連続最高益予想を好感し株価が急反発。",
+  "catalyst": "自社株買い進捗、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://www.nikkei.com/article/DGXZQOFL132GM0T10C26A5000000/"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-15",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "9983",
+  "name": "ファーストリテイリング",
+  "sector": "アパレル小売(ユニクロ)",
+  "reason": "7/8〜7/14にかけ米系・日系証券が相次ぎ増額。日系中堅証券が78,000円→93,500円(7/14)、米系大手証券が86,000円→96,000円(7/8〜7/10)。7/13現在値81,230円に対し15〜18%の上昇余地。3Q累計で営業利益36.2%増の最高益更新。",
+  "catalyst": "月次既存店売上、次回四半期決算(2026年8月期通期は10月発表)",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://finance.yahoo.co.jp/news/detail/0d6cd29a20cdda2447f0777591cc912d2edcec03"
+  ],
+  "market_cap": "約15兆円(概算)",
+  "data_date": "2026-07-14",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "3099",
+  "name": "三越伊勢丹ホールディングス",
+  "sector": "百貨店",
+  "reason": "7/9〜7/13にかけ複数社が増額。日系大手証券が3,200円→4,000円(7/9、中立据置き)、JPモルガンが3,200円→4,300円(7/13)、SMBC日興も7/10に増額。7/8現在値3,852円に対し4,300円目標で約12%の上昇余地。中計前倒し達成期待とインバウンド消費が材料。",
+  "catalyst": "インバウンド消費動向、次回四半期決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607130963",
+   "https://finance.yahoo.co.jp/news/detail/7dfd97b1bf4391e053b1ed8732b8dc5ffe964834"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-13",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "4684",
+  "name": "オービック",
+  "sector": "業務ソフト(ERP)",
+  "reason": "アナリストコンセンサス平均目標株価は5,095〜5,167円(7/9時点)で、7/10現在値4,161円から23〜25%の上昇余地。26年3月期は営業利益13.3%増の増収増益。企業向け業務システムが主力でAI銘柄としての物色色は薄い。",
+  "catalyst": "次回四半期決算、企業のIT投資動向",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://minkabu.jp/stock/4684/analyst_consensus",
+   "https://kabutan.jp/news/marketnews/?b=n202607130963"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-10",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "6856",
+  "name": "堀場製作所",
+  "sector": "計測機器",
+  "reason": "5/26に日系大手証券が目標株価26,000円→35,000円に増額(強気継続)、米系証券も30,000円に増額。7/6現在値27,650円に対し35,000円目標で約27%の上昇余地。自動車排ガス計測・半導体製造装置向け計測機器の受注が好調(AI専用装置ではなく汎用計測機器)。",
+  "catalyst": "次回四半期決算、半導体設備投資動向",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/9e72042c2551bb8fb4573633165f12fa142b0dd3",
+   "https://kabutan.jp/news/marketnews/?b=n202605150490"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-06",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "7011",
+  "name": "三菱重工業",
+  "sector": "重工業/防衛/エネルギー",
+  "reason": "7/10に日系中堅証券が目標株価5,500円→5,800円に増額(強気継続)。アナリスト平均目標株価は5,323円(7/9時点、現在値からの上昇余地39%)。防衛需要の長期化とガスタービン事業が主因だが、一部報道でAIデータセンター向け電力需要拡大も材料として言及されており留意が必要。",
+  "catalyst": "防衛予算関連ニュース、次回四半期決算",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://kabushiki.jp/news/757553",
+   "https://finance.yahoo.co.jp/news/detail/0ab13f08338a5548213fa228e5c092c77bf51558"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-10",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "7453",
+  "name": "良品計画",
+  "sector": "小売(無印良品)",
+  "reason": "6/18〜19に日系大手証券が目標株価4,500円に増額。7/10に26年8月期業績予想を上方修正(営業利益33%増)し、7/13〜14に株価が急伸し上場来高値更新(4,233円前後、株式分割考慮ベース)。米系証券・日系中堅証券も目標株価3,500円に増額との情報あり(株式分割前後の数値混在の可能性、要確認)。",
+  "catalyst": "海外事業の月次動向、次回四半期決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://s.kabutan.jp/news/k202607100039/",
+   "https://www.nikkei.com/article/DGXZQOFL130L70T10C26A7000000/"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-14",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "7532",
+  "name": "パン・パシフィック・インターナショナルHD",
+  "sector": "小売(ドン・キホーテ)",
+  "reason": "7/13付レーティング日報で最上位継続・目標株価増額。アナリスト平均目標株価1,087円(7/3時点)に対し7/14現在値884.6円から約23〜33%の上昇余地。26年6月期3Q累計で経常利益11.7%増と増収増益基調が継続。",
+  "catalyst": "インバウンド消費動向、次回四半期決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607130963",
+   "https://minkabu.jp/stock/7532/analyst_consensus"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-14",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "sector": "銀行",
+  "reason": "7/13にゴールドマン・サックス証券が目標株価3,400円→3,900円に増額(最上位継続)。7/16現在値3,697円で時価総額は42兆円超、邦銀として初の時価総額首位に。日銀利上げによる利ざや拡大期待が背景。",
+  "catalyst": "日銀金融政策決定会合、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUB071QZ0X00C26A7000000/",
+   "https://finance.yahoo.co.jp/news/detail/c46f28437a014c23e58843552f709aa607ec6c50"
+  ],
+  "market_cap": "約42兆円",
+  "data_date": "2026-07-16",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "sector": "銀行",
+  "reason": "7/13にゴールドマン・サックス証券が目標株価6,400円→7,300円に増額(最上位継続)。7/15に年初来高値7,137円を更新。日銀利上げ期待とメガバンク全般への見直し買いが継続。",
+  "catalyst": "日銀金融政策決定会合、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607130963"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-15",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "sector": "銀行",
+  "reason": "7/13にゴールドマン・サックス証券が目標株価8,140円→9,100円に増額(最上位継続)。7/15現在値8,624円に対し5%程度の上昇余地(メガバンク3行そろって増額改定)。",
+  "catalyst": "日銀金融政策決定会合、次回決算",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/14d20906ad26f42d7b928564f3e7ef1a6ef89a22"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-15",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "2503",
+  "name": "キリンホールディングス",
+  "sector": "飲料/医薬品",
+  "reason": "6/15に日系大手証券(みずほ)が目標株価3,150円→3,250円に増額(強気継続)、6/10には別の日系大手証券が2,550円→2,700円に増額。7/13現在値2,842円に対し3,250円目標で約14%の上昇余地。26/12期は4期連続最高BP、EPS安定成長局面入りが評価材料。",
+  "catalyst": "次回四半期決算、値上げ・原材料コスト動向",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/6f8f34d20721dd85bcb10d1484cccf00e80cdffb"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-13",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "2670",
+  "name": "エービーシー・マート",
+  "sector": "靴小売",
+  "reason": "6/16に日系大手証券が目標株価2,800円→3,000円に増額(中立据置き)、三菱UFJモルガン・スタンレー証券も同時期に増額。7/13現在値2,666円に対し3,000円目標で約12%の上昇余地。国内シェア拡大が緩やかに継続している点が評価材料。",
+  "catalyst": "次回四半期決算、国内既存店売上動向",
+  "ai_theme_risk": "none",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/ac83b06312547080a84f48df1e3418c70095e8a9"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-13",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "6098",
+  "name": "リクルートホールディングス",
+  "sector": "HR/求人メディア",
+  "reason": "6月に複数の米系・日系証券が相次ぎ増額(11,000円→14,000円6/2、10,000円→15,000円6/18、中立→強気に格上げ・8,000円→16,000円6/16、11,700円→14,500円6/26)。7/14現在値12,660円に対し最大26%の上昇余地。Indeed事業と人材紹介の堅調が中心材料だが、一部報道でAI活用による業務効率化も評価材料として言及されている点に留意。",
+  "catalyst": "次回四半期決算、Indeed求人動向",
+  "ai_theme_risk": "gray",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/be160c162301c5aa0107bcabf5db788c12639fe1",
+   "https://finance.yahoo.co.jp/news/detail/a372821934eeeb4942b1c41aa998d68cb2aa7e6b"
+  ],
+  "market_cap": "不明",
+  "data_date": "2026-07-14",
+  "source_sweep": "analysts"
+ },
+ {
+  "code": "3099",
+  "name": "三越伊勢丹ホールディングス",
+  "sector": "小売(百貨店)",
+  "reason": "2026年3月期は減収ながら純利益44.1%増で14年ぶり最高益。6月の海外顧客(免税)売上高は前年比33.3%増と大幅伸長し、客単価の高さが寄与。10円増配を発表するなど株主還元も強化中で、7月末~8月の月次売上・8月の1Q決算が次のカタリスト。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q(4-6月期)決算発表、月次売上速報の継続的な上振れ確認",
+  "market_cap": "約1.1兆円(概算)",
+  "data_date": "2026-07-08",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUC018BH0R00C26A7000000/",
+   "https://www.nikkei.com/article/DGXZRST0549077V00C26A2000000/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "8233",
+  "name": "高島屋",
+  "sector": "小売(百貨店)",
+  "reason": "2026年6月度の店頭売上速報で免税売上高が前年比32.4%増と大幅伸長。京都店・日本橋店が11%増など高額品需要が牽引。中国人客数は伸び悩むも客単価上昇で補完する構図が継続。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算、月次売上speed reportの継続確認",
+  "market_cap": "約5000億円(概算)",
+  "data_date": "2026-07-08",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUC018BH0R00C26A7000000/",
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260624579137/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "2222",
+  "name": "寿スピリッツ",
+  "sector": "食品(土産菓子)",
+  "reason": "2026年3月期は売上高8.9%増・各利益過去最高を更新。27年3月期も経常10%増を計画し5期連続の最高益更新を見込む。訪日客の土産菓子需要とインバウンド消費の高付加価値化の恩恵を継続的に受ける構造。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算(3-5月期)発表での進捗確認",
+  "market_cap": "約3400億円(概算)",
+  "data_date": "2026-05頃",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/892038285e14fcbf6bf89c4f79b1856743b8fd28"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9616",
+  "name": "共立メンテナンス",
+  "sector": "ホテル・レジャー",
+  "reason": "2026年3月期は売上高20.2%増・純利益28.5%増で3期連続最高益。ドーミーインの通期稼働率88.9%、客室単価上昇と稼働率向上の両輪でホテル事業が牽引。訪日旅行人気の高まりが継続的な追い風。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q(4-6月期)決算発表",
+  "market_cap": "約4500億円(概算)",
+  "data_date": "2026-05-29",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUC158740V10C26A5000000/",
+   "https://finance.logmi.jp/articles/384954"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "7532",
+  "name": "パン・パシフィック・インターナショナルホールディングス(PPIH/ドンキ)",
+  "sector": "小売(総合ディスカウント)",
+  "reason": "2025年6月期は免税売上高1,742億円で過去最高。2026年6月期も1Qよりインバウンド売上の伸長で増収増益基調。ドンキホーテの免税ワンストップショッピングは訪日客の定番となっており、2026年6月期通期決算(8月発表予定)が直近のカタリスト。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の2026年6月期通期決算発表",
+  "market_cap": "約2.5兆円(概算)",
+  "data_date": "2025-11-17",
+  "sources": [
+   "https://honichi.com/news/2025/08/25/ppih_202508/",
+   "https://honichi.com/news/2025/11/17/ppih-settlement-of-accounts202606-01/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "3397",
+  "name": "トリドールホールディングス",
+  "sector": "外食",
+  "reason": "丸亀製麺を中心に訪日客の来店増と海外展開が業績を下支え。26年3月期3Q決算までは好調な進捗を継続。8月頃の1Q決算発表が次のカタリスト。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q(4-6月期)決算発表",
+  "market_cap": "約4500億円(概算)",
+  "data_date": "2026-02-13",
+  "sources": [
+   "https://pdf.irpocket.com/C3397/YpwX/KmyB/zwxE.pdf"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "7581",
+  "name": "サイゼリヤ",
+  "sector": "外食",
+  "reason": "9~5月期は増収増益、客数・客単価ともに増加。訪日客含む幅広い客層の取り込みと海外(中国・ベトナム等)出店加速が続く。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年10月頃の通期決算(直近は月次売上高の推移に注目)",
+  "market_cap": "約5500億円(概算)",
+  "data_date": "2026-07頃",
+  "sources": [
+   "https://www.ryutsuu.biz/accounts/s071512.html",
+   "https://www.nikkei.com/article/DGXZQOUB149JQ0U6A710C2000000/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9044",
+  "name": "南海電気鉄道",
+  "sector": "鉄道(関西空港アクセス)",
+  "reason": "インバウンドと万博効果で26年3月期業績を上方修正、自社株買いも実施。27年3月期は万博の反動があるものの、関西国際空港の訪日客増加を背景にした旅客収入の伸びは継続する計画。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表でインバウンド収入の継続性を確認",
+  "market_cap": "約4000億円(概算)",
+  "data_date": "2026-02頃",
+  "sources": [
+   "https://finance.yahoo.co.jp/news/detail/38825c358dc7f7f10a942caa29e48bc06774e183",
+   "https://www.nankai.co.jp/ir/management/vision2027"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9201",
+  "name": "日本航空(JAL)",
+  "sector": "空運",
+  "reason": "2026年3月期はインバウンド需要好調でEBIT過去最高、売上収益は再上場後最高。27年3月期見通しはANAと異なり据え置きで、燃油高の影響を相対的に受けにくい構図。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表、国際線予約状況の開示",
+  "market_cap": "約1兆円(概算)",
+  "data_date": "2026-05-13",
+  "sources": [
+   "https://honichi.com/news/2026/05/13/jal-202603-04/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "4922",
+  "name": "コーセーホールディングス",
+  "sector": "化粧品",
+  "reason": "2025年12月期は増収増益、中国事業もコーセーブランド・デコルテが下半期に持ち直し。2026年12月期は売上6.0%増・営業利益8.3%増を計画し、コスメデコルテが3期連続最高売上を更新中。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の2Q(4-6月期)決算発表",
+  "market_cap": "約6000億円(概算)",
+  "data_date": "2026-02-12",
+  "sources": [
+   "https://www.fashionsnap.com/article/2026-02-12/kose-report-2025/",
+   "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260212/20260212556590.pdf"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "7453",
+  "name": "良品計画(無印良品)",
+  "sector": "小売(生活雑貨)",
+  "reason": "2025年9月~26年2月期は2ケタ増収増益で過去最高益、営業利益率10.3%と3カ年計画を前倒し達成。訪日客も含めた国内既存店とEC回復に加え、海外事業（利益率20%超）の伸長が継続。",
+  "ai_theme_risk": "none",
+  "catalyst": "月次売上速報(毎月開示)、2026年10月頃の通期決算",
+  "market_cap": "約1.3兆円(概算)",
+  "data_date": "2026-04頃",
+  "sources": [
+   "https://note.com/good_sage554/n/n362ca9db20f6",
+   "https://article.yahoo.co.jp/detail/c1c4e4e32015c54e5bf7f972d4b44359dbf894f7"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "2780",
+  "name": "コメ兵ホールディングス",
+  "sector": "小売(リユース・宝飾)",
+  "reason": "2026年3月期は売上高39.4%増・純利益14.9%増で過去最高益、通期予想を大幅上方修正(経常利益26.5%上方修正)。円安基調のインバウンド需要が免税売上を中心に底堅く推移していることが好業績の要因。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q(4-6月期)決算発表",
+  "market_cap": "約1500億円(概算)",
+  "data_date": "2026-05-14",
+  "sources": [
+   "https://www.fashionsnap.com/article/2026-05-15/komehyo-2026-result/",
+   "https://s.kabutan.jp/news/k202605080257/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "4666",
+  "name": "パーク24",
+  "sector": "交通インフラ(駐車場・レンタカー・カーシェア)",
+  "reason": "2026年10月期中間期は増収増益、通期予想を上方修正し純利益は前期比176.4%増を計画。訪日客のレンタカー・カーシェア需要増も追い風。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年9月頃の3Q決算発表",
+  "market_cap": "約7000億円(概算)",
+  "data_date": "2026-06頃",
+  "sources": [
+   "https://note.com/tatsuya_sabato/n/nd1d7d54ba02f"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "7937",
+  "name": "ツツミ(ジュエリーツツミ)",
+  "sector": "小売(宝飾品)",
+  "reason": "25年4~12月期は純利益41.5%増、9カ月累計売上高は14年ぶり高水準で39%増。通期(26年3月期)の営業利益予想を68%増へ上方修正するなど、インバウンドの高額品需要を強く取り込んでいる小型株。2026年11月の免税制度改正(リファンド方式化)も追い風となる可能性。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表、免税制度改正(2026年11月)への思惑",
+  "market_cap": "約600億円(概算、小型株のため流動性に留意)",
+  "data_date": "2026-01頃",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZRST0536391R20C26A1000000/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "7649",
+  "name": "スギホールディングス",
+  "sector": "ドラッグストア",
+  "reason": "2026年2月期は売上高21%増の過去最高、純利益は2.2倍(3~8月期時点)。インバウンド需要が好調に推移し通期純利益は72%増を計画。中華圏客を中心とした免税需要とヘルスケア需要の取り込みが強み。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年10月頃の2Q決算発表(直近は月次売上高)",
+  "market_cap": "約4500億円(概算)",
+  "data_date": "2025-10頃",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFD096T10Z01C25A0000000/",
+   "https://gekiryu-online.jp/2025/10/214763"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "3046",
+  "name": "ジンズホールディングス",
+  "sector": "小売(眼鏡)",
+  "reason": "2026年4月度の売上高は既存店・全店ベースともに前年比プラスでインバウンド需要の取込みが寄与。銀座・新宿に相次いで旗艦店を開業し訪日客の認知度向上と海外展開への布石を打っている。",
+  "ai_theme_risk": "gray",
+  "catalyst": "2026年7月頃の2026年5月期通期決算発表",
+  "market_cap": "約2500億円(概算)",
+  "data_date": "2026-04頃",
+  "sources": [
+   "https://www.glafas.com/news/shop_news/monthlysales.html",
+   "https://www.nikkei.com/article/DGXZQOUC189W60Y6A310C2000000/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9021",
+  "name": "西日本旅客鉄道(JR西日本)",
+  "sector": "鉄道",
+  "reason": "2026年3月期は5期連続増収増益で過去最高益、インバウンド収入も過去最高の823億円を記録。万博効果剥落後も堅調な国内需要とインバウンドの取り込みを継続する計画。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表",
+  "market_cap": "約2兆円(概算)",
+  "data_date": "2026-05-12",
+  "sources": [
+   "https://honichi.com/news/2026/05/12/jr-west-settlement-of-accounts-202603-04/",
+   "https://www.kankokeizai.com/2605121400ks/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9022",
+  "name": "東海旅客鉄道(JR東海)",
+  "sector": "鉄道",
+  "reason": "2026年3月期は営業利益が前期比18.1%増の大幅増益、万博とインバウンドが追い風。東海道新幹線のインバウンド利用増加が業績を下支え。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表",
+  "market_cap": "約4.5兆円(概算)",
+  "data_date": "2026-05-12",
+  "sources": [
+   "https://honichi.com/news/2026/05/12/jr-tokai-settlement-of-accounts-202603-04/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9706",
+  "name": "日本空港ビルデング",
+  "sector": "空港施設(羽田)",
+  "reason": "2026年3月期は売上高7.4%増で2018年以来の過去最高を更新、経常利益は22.3%増で3年連続最高益。羽田空港旅客数は過去最高の9100万人。物品販売(免税)は上期減益の影響で通期は増収減益だったが、下期の免税売上は前期を上回り改善基調。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表で免税売上の回復ペースを確認",
+  "market_cap": "約5000億円(概算)",
+  "data_date": "2026-05-20",
+  "sources": [
+   "https://honichi.com/news/2026/05/20/nihonkuko-settlement-of-accounts-202603-03/",
+   "https://finance.logmi.jp/articles/384850"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9001",
+  "name": "東武鉄道",
+  "sector": "鉄道(日光・スカイツリー)",
+  "reason": "2026年3月期は営業収益3.8%増。東京スカイツリーへの訪日客誘客強化や日光・鬼怒川エリアのラグジュアリーホテル(リッツ・カールトン日光)、都内ホテルの稼働率・客室単価向上がインバウンド需要と円安を背景に進展。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表",
+  "market_cap": "約5500億円(概算)",
+  "data_date": "2026-04-30",
+  "sources": [
+   "https://www.kankokeizai.com/2605241100ks/",
+   "https://www.tobu.co.jp/cms-pdf/financial_summaries/20260430154313jWHZgF-QyiV776F5eyclZw.pdf"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9722",
+  "name": "藤田観光",
+  "sector": "ホテル(椿山荘・箱根)",
+  "reason": "ホテル椿山荘東京・箱根小涌園は欧米豪を中心としたインバウンド獲得と価格設定の最適化で増収。2026年12月期は複数拠点の改装に伴う一時的な減益を計画しているが、改装完了後の収益性向上を見込む中長期的な回復ストーリー。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の2Q決算発表",
+  "market_cap": "約1500億円(概算、改装影響で短期的にボラティリティ高い点に留意)",
+  "data_date": "2026-05-14",
+  "sources": [
+   "https://www.fujita-kanko.co.jp/sub/wp-content/uploads/2026/05/20260514_IR-2.pdf"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "3088",
+  "name": "マツキヨココカラ&カンパニー",
+  "sector": "ドラッグストア",
+  "reason": "2026年3月期は増収増益で売上高1兆円突破、過去最高益。インバウンド増加による免税売上伸長とPB比率上昇(14.8%)が寄与。ただし27年3月期は制度要因(免税制度改正等)で減益予想としている点に注意が必要で、モメンタムは反転リスクあり。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表で減益予想の修正有無を確認",
+  "market_cap": "約7000億円(概算)",
+  "data_date": "2026-05-20",
+  "sources": [
+   "https://finance.biggo.jp/news/JP_3088.T_2026-05-20",
+   "https://hoitto-hc.com/12453/"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9627",
+  "name": "アインホールディングス",
+  "sector": "調剤薬局・ドラッグストア",
+  "reason": "2026年4月期は売上高41.8%増・営業利益76.8%増と大幅増益。さくら薬局グループ入りによるM&A効果が主因で純粋なインバウンド銘柄ではないが、小売部門の免税・訪日需要も好調に推移。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年9月頃の1Q決算発表",
+  "market_cap": "約3000億円(概算)",
+  "data_date": "2026-06頃",
+  "sources": [
+   "https://www.ryutsuu.biz/accounts/s061122.html"
+  ],
+  "source_sweep": "domestic"
+ },
+ {
+  "code": "9202",
+  "name": "ANAホールディングス",
+  "sector": "空運",
+  "reason": "2026年3月期は旺盛な訪日需要を追い風に売上高・営業利益・純利益すべて過去最高。ただし27年3月期は燃油費高騰を理由に営業利益600億円減益の計画を公表しており、直近のモメンタムには反転リスクがある点に留意が必要。",
+  "ai_theme_risk": "none",
+  "catalyst": "2026年8月頃の1Q決算発表で減益計画の上振れ有無を確認",
+  "market_cap": "約1.5兆円(概算)",
+  "data_date": "2026-04-30",
+  "sources": [
+   "https://honichi.com/news/2026/05/13/ana-202603-04/",
+   "https://diamond.jp/articles/-/391263"
+  ],
+  "source_sweep": "domestic"
+ }
+]
