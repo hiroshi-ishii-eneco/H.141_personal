@@ -1,0 +1,724 @@
+[
+ {
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "sector_data": "PER目安は約15倍前後、PBRは約1.6~1.7倍とされ、メガバンク3行(三菱UFJ・三井住友・みずほ)の中では最も高いバリュエーション(SMFGは1.5倍台、みずほはやや低め)。ROEは3行とも11%前後まで改善したが、PBR2倍超の米JPモルガン・チェース等の欧米大手行と比べるとなお割安との指摘があり、半沢社長のROE向上(10%台半ば目標)発言が再評価の材料となっている。予想配当利回りは約2.6%。ただしアナリスト目標株価コンセンサス(3,792円、7/10時点)に対し現在値3,697円は僅差まで接近しており、短期的な追加の株価上昇余地は他のメガバンク・保険株対比でもやや限定的になりつつある。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6.5,
+  "audit_note": "決算数値・日銀会合日程・カタリスト日程・時価総額首位・社長発言・目標株価など投資判断の根幹となる主張はほぼ全て独立検証で裏付けられ、AIテーマ株ではなく金利上昇/バリューシフトの受け皿という分析も正確だった。誤りは連続最高益の期数カウント(1期過大)と一部株価データの日付帰属程度で、投資テーゼを損なうものではない。リスク認識(コンセンサス目標到達済み・9月利上げ会合が期限後・短期過熱)も適切で、元スコア6.5は妥当と判断し据え置く。",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202606050342",
+   "https://kabutan.jp/news/marketnews/?b=n202607131017",
+   "https://www.nikkei.com/article/DGXZQOFL103ED0Q6A710C2000000/",
+   "https://www.dlri.co.jp/report/macro/623090.html",
+   "https://finance.yahoo.co.jp/quote/8306.T/history",
+   "https://minkabu.jp/stock/8306",
+   "https://www.nikkei.com/nkd/company/?scode=8306",
+   "https://kabutan.jp/stock/?code=8306"
+  ]
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "sector_data": "PER(予想)は概ね13.7〜14.3倍、PBR(実績)は1.48〜1.55倍(検索結果の別ソースでは直近1.5〜1.7倍との言及も)、配当利回り(予想)は2.8〜2.95%程度。メガバンク内では三菱UFJ(8306、国内時価総額トップの約42兆円)より小型だが、法人融資比率の高さから利上げメリットを受けやすいとされ、GSなど外資系証券の目標株価引き上げ幅(6,400円→7,300円、+14%)は3メガバンクの中でも大きい部類。みずほ(8411)も同様に高値更新・目標株価増額が続いており、3行そろって金利上昇テーマで物色されている構図で、SMFGが突出して割安/割高というより横並びでの再評価が進んでいる状況。出典: WebSearch(みんかぶ・株予報系サイトのPER/PBR/利回りスニペット), https://zaikei.co.jp/article/20260616/857091.html",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6,
+  "audit_note": "主要な事実(3期連続最高益、保守的ガイダンスでの反落前例、1,800億円自社株買い・株式分割、日銀6月利上げ1.0%、7/30-31会合、10年債利回り約30年ぶり高水準、GS目標7,300円)はほぼ全て一次報道で裏付けられ、株価上昇の主因が「AI一極集中からのローテーション+金利上昇」でありAIテーマ買いでないことも報道で直接確認できた。ただしバリュエーション指標が古い株価水準に基づいており、7,100円台では実際はPER約16〜17倍・利回り約2.4%とやや割高で、報告の想定以上に過熱している一方、野村8,400円など目標株価はGSより高く上値限定リスクは過大評価とみられ、両者を相殺しつつ割高化を重く見て0.5点減点した。",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOUB132JZ0T10C26A5000000/",
+   "https://www.nikkei.com/article/DGXZQOFL140JA0U6A510C2000000/",
+   "https://www.nikkei.com/article/DGXZRST0597678S6A400C2000000/",
+   "https://minkabu.jp/stock/8316",
+   "https://kabutan.jp/news/marketnews/?b=n202607130963",
+   "https://minkabu.jp/news/4563237",
+   "https://www.smbc.co.jp/news/pdf/j20260513_03.pdf",
+   "https://www.smfg.co.jp/investor/calendar/"
+  ]
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "sector_data": "PER(予想)は概ね15.2〜15.6倍、PBRは約1.8倍、配当利回り(予想)は約1.8〜1.9%(みんかぶ等の集計値)。メガバンク内では三菱UFJ・三井住友より高めのPER/PBRで推移しており、直近の高い増益率(前期+41%)を織り込んだプレミアム評価となっている一方、27年3月期の会社計画は+4%増益にとどまるため、成長率の伸び悩みを勘案すると相対的な割高感も意識される。同業(8306三菱UFJ、8316三井住友)と比べても年初来の上昇率・目標株価引き上げ幅が大きく、既に多くの好材料が株価に織り込まれつつある可能性がある。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "caution",
+  "audit_score": 6,
+  "audit_note": "主要な主張(41%増益・5月急落・利上げ主導の急騰・自社株買い・目標株価引き上げ・カタリスト実在性)はほぼ全て一次報道で裏付けられ、AIテーマ買いではないことも積極的に確認できた(銀行株はむしろAI株下落の退避先)。一方で「3期連続最高益」の誤記、1Q発表日の誤推定(実際は7/30で上方修正+自社株買い倍増とポジティブに実現)、7月会合を利上げ試金石とするやや過大な表現、7/15株価とバリュエーション数値の未確認という細かな瑕疵があるため、caution・6.0に微調整する。分析の慎重なトーン自体は妥当で、過熱感の指摘は7月下旬の8,766円→7,800円台への押し目で実際に顕在化した。",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607131017",
+   "https://finance.yahoo.co.jp/quote/8411.T",
+   "https://minkabu.jp/stock/8411",
+   "https://www.nikkei.com/article/DGXZQOUB1440D0U6A510C2000000/",
+   "https://news.yahoo.co.jp/articles/c04ba0377926c6623d9e4694dca1851b3e6f726c",
+   "https://finance.biggo.jp/news/jpx_tdnet_140120260622575299",
+   "https://www.mizuho-fg.co.jp/investors/financial/tanshin/index.html",
+   "https://www.nikkei.com/article/DGXZQOFL1813F0Y6A510C2000000/"
+  ]
+ },
+ {
+  "code": "8766",
+  "name": "東京海上ホールディングス",
+  "sector_data": "PER(会社予想)は情報源により12.8倍〜13.5倍、PBR(実績)は2.45倍〜2.58倍、配当利回りは2.9%台〜3.4%程度とされる(取得タイミングによりブレあり)。国内損保セクター内では、MS&AD(8725)やSOMPO(8630)がより大幅な増益・自然災害減の恩恵を強く受けているのに対し、東京海上は本決算が会社計画未達だったこともありPBRの割高感が相対的に意識されやすい。もっとも過去数年のレンジと比べると金利上昇メリット・資本効率改善期待を織り込みバリュエーションは切り上がっている。(出典: https://minkabu.jp/stock/8766, https://limo.media/articles/-/121535)",
+  "preliminary_score": 6,
+  "audit_verdict": "pass",
+  "audit_score": 6.5,
+  "audit_note": "決算数値・株主還元(2,000億円自社株買い・245円増配)・IFRS移行に伴う報道の混乱・AIテーマ非該当という主要な主張はすべて一次情報・複数ソースで裏付けられ、データ品質への自己申告(403エラー・数値のブレ)も誠実だった。訂正は1Q決算日(8/12)とIFRS遡及短信の既開示(6/26)程度の軽微なもの。むしろ「材料出尽くし・上値の重さ」という慎重バイアスの方が外れており、株価は監査日直後に年初来高値を更新したため、スコアを6→6.5へ小幅に上方調整。8/12の1Q決算と台風シーズンが引き続き主要な変動要因。",
+  "sources": [
+   "https://minkabu.jp/stock/8766",
+   "https://minkabu.jp/stock/8766/dividend",
+   "https://minkabu.jp/stock/8766/analyst_consensus",
+   "https://www.nikkei.com/article/DGXZRST0558831Q5A520C2000000/",
+   "https://www.nikkei.com/article/DGXZRST0541455Z10C26A5000000/",
+   "https://finance.yahoo.co.jp/news/detail/eab5ce9f8dee71919841c2c7f412336eca44545a",
+   "https://finance.yahoo.co.jp/news/detail/9de21104d44fd1435166a41a0fb9ec2bc898dd1a",
+   "https://www.tokiomarinehd.com/ir/event/presentation/2025/gi58a8000000246z-att/4Q_FY2025_Summary_Report_j.pdf"
+  ]
+ },
+ {
+  "code": "8725",
+  "name": "MS&ADインシュアランスグループホールディングス",
+  "sector_data": "予想PERはおおむね10倍前後(9.9〜10.0倍程度、出典により差異あり)で、東京海上(8766、PER約14.4倍)・SOMPO(8630、PER約24.8倍)と比較して3メガ損保の中で最も割安な水準。PBRは出典により1.26倍〜1.67倍とばらつきがあり正確な最新値は確認できず(株価上昇に伴いPBRも上昇している可能性が高い)。予想配当利回りは約3.7〜3.8%で、東京海上(約3.4%)・SOMPO(約3.1%)より高め。ROEは約16〜18%と東京海上に次ぐ高水準で、増益・増配・自社株買いの株主還元強化が続くなか、バリュエーション面では3メガ損保の中で相対的に「割安」との評価が複数の分析記事で見られる。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "業績実績・大型自社株買い・14期連続増配・トヨタのブロック売却・8/14の1Q決算日といった主要事実は一次報道で裏付けられ、AIテーマ株でないことも確認できた。ただしバリュエーション主張(PER約10倍・ROE16-18%・割安評価)はIFRS移行後の実データ(PER16.7倍・ROE約5%・PBR0.83倍)と大きく乖離し、実質減益ガイダンス(-16.8%)も弱められて表現されているため、「割安×高ROE」という買いストーリーの数値根拠は脆弱。一方で懸念された需給・モメンタムは実際には強く7月末に年初来高値を更新しており、総合すると事実面は概ね堅実だが投資判断の根幹となる割安性評価に誤りがあるため、スコアを小幅に引き下げ5.5とする。",
+  "sources": [
+   "https://finance.biggo.jp/news/uplZRZ4BLfE1EzqPV133",
+   "https://note.com/t_ryoma1985/n/n7f138980dd76",
+   "https://stockexpress.jp/msadhd20260520/",
+   "https://finance.biggo.jp/news/jpx_tdnet_140120260519541239",
+   "https://minkabu.jp/stock/8725/news/4522813",
+   "https://minkabu.jp/stock/8725/settlement",
+   "https://www.ms-ad-hd.com/ja/ir/library/earnings.html",
+   "https://www.ms-ad-hd.com/ja/ir/ir_event/event.html"
+  ]
+ },
+ {
+  "code": "8630",
+  "name": "SOMPOホールディングス",
+  "sector_data": "PBR約1.10~1.14倍(2026年6-7月時点)で、東京海上(2.75倍)・MS&AD(1.33倍)と比較し3メガ損保の中で最も割安。PERは算出基準により9.4倍~12.1倍とソースにより幅があるが、いずれにせよ東京海上・MS&ADより低PER・低PBRの「バリュー株」的位置づけ。予想配当利回りは約3.0~3.2%とメガ損保の中でも相対的に高水準。ただしROE(予想)は9.5%程度と東京海上(20%超)・MS&AD(16%台)を下回り、コンバインドレシオ(収益性)の構造的な差が慢性的なディスカウントの一因となっている。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "caution",
+  "audit_score": 6.5,
+  "audit_note": "決算数値・配当・時価総額・カタリスト日程・AIテーマ非該当といった中核的主張はほぼ全て一次情報ないし複数の独立ソースで裏付けられ、分析の誠実性(データ制約の明示、ショートリストの時価総額誤りの指摘)も高い。ただしAspen買収が既に2026年2月に完了している点の見落とし、7月7日の米労災保険会社買収発表の欠落、2025年の情報漏えい事案の未記載など情報鮮度に難があり、caution評価とした。一方で株価は7月下旬に7,232円まで一段高しておりモメンタムは分析の想定以上に強く、減益ガイダンスと8月ハリケーンシーズンのリスクと相殺して予備スコア6.5は概ね妥当と判断し据え置く。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8630.T",
+   "https://minkabu.jp/stock/8630",
+   "https://www.nikkei.com/article/DGXZRST0540591Z10C26A5000000/",
+   "https://kabutan.jp/news/?b=k202605200018",
+   "https://finance.yahoo.co.jp/news/detail/1813ae0c1c57471cd8ba8d61ee4d82288c9b13e8",
+   "https://diamond.jp/zai/articles/-/1067644",
+   "https://note.com/t_ryoma1985/n/n7f138980dd76",
+   "https://www.sompo-hd.com/news/topics/2025/20250814_1/"
+  ]
+ },
+ {
+  "code": "7186",
+  "name": "横浜フィナンシャルグループ(旧コンコルディア・フィナンシャルグループ、2025年10月1日に商号変更)",
+  "sector_data": "2026年7月10日時点でPER(会社予想)16.11倍、PBR(実績)1.48倍(時価総額2.14兆円)。直近数週間の推移としては6月9日時点でPER14.68倍・PBR1.35倍・配当利回り(予想)2.76%だったところから、株価上昇に伴いバリュエーションは切り上がっている。地銀大手同業では静岡銀行(時価総額1兆円超、業績上方修正基調)、千葉銀行(利ざや改善メリットはあるが横浜FG対比で成長スピードはやや劣後との評価)などと比較される。ふくおかフィナンシャルグループ(8354、時価総額1兆円超クラス)との直接的なPBR比較データは今回確認できなかった。メガバンク3行(PBR的にはより高い評価を受けている可能性が高い)対比では、地銀トップながら相対的にバリュエーションは低めとの見方がある一方、既に急騰後で「値ごろ感」は薄れつつある。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6,
+  "audit_note": "決算数値・配当・ガイダンス・カタリスト日程(8/5決算、日銀会合)・株価上昇の背景(日銀利上げ期待)はいずれも独立検証で裏付けられ、AIテーマ株ではないことも日経報道で確認できた。データ品質の制約(主要サイト403でスニペット依存)は監査側でも再現され、ピンポイントの株価データのみ未確認。ただし7月末時点で株価は高値1,995.5円から1,839円まで反落し、7月会合も据え置きに終わったため、報告書が自認する「過熱感・材料出尽くしリスク」を反映して6.5から6.0へ小幅減点する。",
+  "sources": [
+   "https://kabutan.jp/stock/?code=7186",
+   "https://minkabu.jp/stock/7186",
+   "https://finance.yahoo.co.jp/quote/7186.T",
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260511523056/",
+   "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260511523056.pdf",
+   "https://s.kabutan.jp/news/k202605120185/",
+   "https://kabuyoho.ifis.co.jp/index.php?action=tp1&bcode=7186&sa=report",
+   "https://finance.yahoo.co.jp/news/detail/8e331c09437b03a1c93b4d8b3f65b2ceae773652"
+  ]
+ },
+ {
+  "code": "8354",
+  "name": "ふくおかフィナンシャルグループ",
+  "sector_data": "会社計画ベースでPER概算13〜14倍程度(株式益回り7.22%との情報に基づく試算)、PBRは実績・予想ともに1.3倍前後(2026年7月10日時点でPBR1.28倍、ROE予想9.30%との情報あり)。予想配当利回りは情報源により2.8%台〜3.4%台と幅があるが、増配後の配当210円ベースで概算2.8%程度。同業の地銀最大手コンコルディア・フィナンシャルグループ(7186)はPER16.1倍・PBR1.48倍・配当利回り2.51%(2026/7/10時点)であり、FFGは同業対比でやや割安な水準にあると評価できる。ただしPER/PBRの一部データソース間で数値の不一致があり、正確な最新値は要確認(データ品質注記参照)。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6,
+  "audit_note": "決算数値・ガイダンス・日銀利上げ(6月に1.0%へ)・会合日程・8月7日の1Q決算というカタリスト構造は一次情報と報道で概ね裏付けられ、AIテーマ株ではなく利上げ恩恵の銀行セクター物色であることも確認できた。ただし配当増配幅の誤記(+30円→正しくは+45円)、7月中旬株価と年初来高値の数値不確実性、米系証券の弱気目標株価7,300円(上値余地の乏しさを示唆)を踏まえ、10年来高値圏での期待織り込み進行というリスクも考慮してスコアを6.5から6.0へ小幅減点する。",
+  "sources": [
+   "https://kabutan.jp/stock/?code=8354",
+   "https://gendai.media/articles/-/167828",
+   "https://finance.yahoo.co.jp/quote/8354.T",
+   "https://minkabu.jp/stock/8354",
+   "https://minkabu.jp/stock/8354/settlement",
+   "https://www.fukuokabank.co.jp/announcement/newsrelease/y2026/20260513_release.html",
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260512526431/",
+   "https://www.nikkei.com/article/DGXZQOJC046W40U6A200C2000000/"
+  ]
+ },
+ {
+  "code": "7011",
+  "name": "三菱重工業",
+  "sector_data": "PER(予想)33.85倍、PBR(実績)4.16倍、配当利回り0.76%(2026年7月15日時点)。防衛重工3社で比較すると、川崎重工がPER約32倍(2026年5月時点)とやや割安、IHIはPER60倍超と大幅に割高で、三菱重工はその中間的な水準。ただし伝統的な重工業セクターとしてはPER30倍台・PBR4倍台自体が歴史的に見て相当高い水準にあり、既にかなりの成長期待が織り込まれている点には留意が必要。",
+  "preliminary_score": 7,
+  "audit_verdict": "caution",
+  "audit_score": 6,
+  "audit_note": "業績実績・ガイダンス・カタリスト(8/4のQ1決算、NVIDIA協業、中国禁輸リスク)といった中核事実は一次報道でほぼ裏付けられ、AIテーマ株ではなく防衛・エナジー主導という判定も妥当。ただし年初来安値を約450円高く誤認(実際は6月に3,400円台前半まで下落し個人の投げ売りが報道された)しており、株価モメンタムは記載より明確に弱く、7月末には3,764円まで再軟化してNVIDIA材料の持続力も乏しい。テクニカル記述の誤りと決算前(8/4)の不確実性を考慮し、元の7点から6点に減点する。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7011.T",
+   "https://kabutan.jp/stock/?code=7011",
+   "https://minkabu.jp/stock/7011",
+   "https://minkabu.jp/stock/7011/analyst_consensus",
+   "https://www.nikkei.com/article/DGXZQOUB117RU0R10C26A5000000/",
+   "https://www.nikkei.com/article/DGXZRST0520898Y6A500C2000000/",
+   "https://kabutan.jp/news/?b=k202605120060",
+   "https://www.nikkei.com/article/DGXZQOFL121QJTS6A510C2000000/"
+  ]
+ },
+ {
+  "code": "7012",
+  "name": "川崎重工業",
+  "sector_data": "会社予想PER 約19.5~20.9倍(ソースによりばらつき)、実績PBR 2.62倍、会社予想配当利回り約1.45%、EPS(会社予想)131.60円、BPS(実績)1,050.57円、ROE(実績)13.68%。同業重工3社比較では、三菱重工が予想PER47~49倍と突出して高いのに対し、川崎重工は実績PERレンジ(10.5~21.1倍)内に収まり、IHI(予想PER20.4~20.9倍)とほぼ同水準で「妥当圏」と評価される。自己資本比率は三菱重工35.9%・川崎重工24.6%・IHI23.0%と3社の中では中位。配当利回りは1.5%未満と、同ショートリスト内の高配当銘柄(商社・保険等)対比では見劣りする水準。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "決算実績・今期計画・分割・配当・防衛テーマ・中国輸出規制・検査不正など主要な事実関係は一次報道と概ね一致し、捏造や重大な数値誤りは見つからなかった。ただし報告基準日(7/16)直前の2026年7月1~2日に発表された総額約1,937億円の海外公募増資+CB発行(希薄化約4.4%+CB需給、払込7月下旬)という重大イベントを完全に見落としており、直近株価軟調の説明とリスク評価が不完全。また7/15-16のNVIDIA協業(AI造船所)報道が当日の株価材料になっていた点も未言及だが、AI半導体・データセンター需要で買われる銘柄ではないためAIテーマ除外には該当しない。増資イベントの見落としと需給悪化リスクを織り込み、スコアを6→5に調整する。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7012.T",
+   "https://minkabu.jp/stock/7012",
+   "https://minkabu.jp/stock/7012/analyst_consensus",
+   "https://minkabu.jp/stock/7012/dividend",
+   "https://kabutan.jp/stock/finance?code=7012",
+   "https://www.nikkei.com/article/DGXZQOUB06CG70W6A200C2000000/",
+   "https://www.nikkei.com/article/DGXZQOUB118JF0R10C26A5000000/",
+   "https://www.nikkei.com/article/DGXZQOFL1134F0R11C25A1000000/"
+  ]
+ },
+ {
+  "code": "7013",
+  "name": "ＩＨＩ",
+  "sector_data": "予想PERは情報源により18.4倍〜20.4倍とばらつきがあるが、おおむね19〜20倍程度とみられる(自社の実績PERレンジ7.0〜15.5倍対比ではやや割高圏)。PBRは4.66〜4.88倍と高水準で、ROE約26%(3社中突出)という高い資本効率が織り込まれている。同業(防衛3社)比較では、三菱重工が予想PER47〜49倍・PBR5.38倍と突出して割高、川崎重工が予想PER18〜19倍・PBRも相対的に低めで配当利回りも3社中最高、IHIはその中間からやや川崎重工寄りの水準。配当利回りは0.80%(会社予想)と3社の中では見劣りする。",
+  "preliminary_score": 5,
+  "audit_verdict": "caution",
+  "audit_score": 4.5,
+  "audit_note": "決算数値・JAXA処分・8月5日の1Q決算日・モルガン・スタンレー格上げ・「利益の質」懸念という調査の骨格は一次情報と報道で裏付けられ、AIテーマ株ではないという判定も妥当。ただし年初来安値の値と日付(実際は2,245円・6月11日)および配当額(実際は分割後23円)に明確な誤りがあり、株価トレンドの細部の精度に難がある。中核テーゼは維持されるためスコアは5から4.5へ小幅減点とする。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7013.T",
+   "https://minkabu.jp/stock/7013",
+   "https://www.zaikei.co.jp/article/20260510/852751.html",
+   "https://www.zaikei.co.jp/article/20260616/857203.html",
+   "https://news.mynavi.jp/techplus/article/20260603-4535910/",
+   "https://www.nikkei.com/article/DGXZQOSG027IX0S6A600C2000000/",
+   "https://kabutan.jp/news/marketnews/?b=n202606030253",
+   "https://www.nikkei.com/article/DGXZRST0518926X00C26A5000000/"
+  ]
+ },
+ {
+  "code": "7003",
+  "name": "三井Ｅ＆Ｓ（旧・三井Ｅ＆Ｓホールディングス／旧三井造船）",
+  "sector_data": "算出方法・データ取得時点により数値が大きく振れ、確定値は確認できず。時価総額(2026/7/15、約4,839億円)と2027年3月期会社計画純利益300億円から逆算するとPER(会社予想)は概算16倍程度。一方、検索で拾えたキャッシュ値ではPER(予)23.9倍・PBR(実)3.63倍、別時点でPBR2.84倍、配当利回り0.68%〜1.4%等、相互に整合しない数値が混在しており、多くは5月の株価急落前（高値圏）のデータが混入している可能性が高い。配当利回りは前述の会社計画配当60円ベースで現在株価に対し概算1.3%程度。同業（名村造船所7014、川崎重工7012、日本のシップリサイクル系企業など）とのPER/PBR直接比較データは今回取得できず、確認できず。ただし同社は2020〜2022年に船体建造（造船）事業そのものからは撤退済み（三井E&S造船の全株式を常石造船へ譲渡）で、現在の主力事業は舶用エンジン・港湾クレーン・物流システムであり、「造船テーマ」の中でも船体建造企業とは事業構造が異なる点に留意が必要。",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 4.5,
+  "audit_note": "決算数値・株価推移・テーマ判定(AI関連ではなく国策造船・脱炭素エンジン)などレポートの事実関係は概ね正確で、捏造や重大な見落としはなかった。ただし最大のカタリストと位置づけた1Q決算(8/3)が既に発表され、増収増益・通期上方修正にもかかわらず株価が-9.1%急落するというネガティブな市場反応で決着しており、「保守的ガイダンスの上振れ=株価回復」という強気シナリオの根拠は大きく毀損した。目標株価7,000円が引き下げ後の水準である点の文脈欠落も含め、レポートのややポジティブ寄りの解釈を割り引き、スコアを5.5から4.5に調整する。",
+  "sources": [
+   "https://minkabu.jp/stock/7003",
+   "https://finance.yahoo.co.jp/quote/7003.T",
+   "https://kabutan.jp/stock/chart?code=7003",
+   "https://kabutan.jp/stock/?code=7003",
+   "https://www.mes.co.jp/ir/schedule/",
+   "https://www.nikkei.com/article/DGXZRST0531838U6A510C2000000/",
+   "https://finance.yahoo.co.jp/news/detail/d7b0e16f4e6b2eca7b815186ea06ade552afab2b",
+   "https://stockexpress.jp/mitsuies20260514/"
+  ]
+ },
+ {
+  "code": "7014",
+  "name": "名村造船所",
+  "sector_data": "予想PER 約12~14倍(2026年5月中旬・株価4,370円時点で13.8倍との報道。株価下落後の直近ではやや低下している可能性が高いが正確な最新値は確認できず)、実績PBR 約2.0~2.2倍。予想配当利回り 約1.5%(2027年3月期会社計画の年間配当60円÷現在値4,020円で算出)。同業の三井E&S(7003、造船・機械のコングロマリット)は予想PER 19~24倍程度・PBR 2.9~3.6倍程度とされ、経常最高益を更新する名村造船所は業績の絶対水準対比で相対的に割安との指摘が複数の投資情報サイト(楽天証券トウシル等)で見られる。ただし三井E&Sは事業構成が異なる多角化企業であり単純比較には注意が必要。造船専業ピュアプレイという性質上、造船市況(新造船価格・受注環境)の影響を最も直接的に受ける銘柄でもある。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6.5,
+  "audit_note": "主要な定量データ(決算実績・今期計画・増配・受注残・バリュエーション・時価総額)はすべて独立検証で裏付けられ、8/6の1Q決算という期間内カタリストも実在、AIテーマ性は皆無で純粋な造船国策・業績銘柄であることを確認した。唯一の実質的な瑕疵は「5/14決算失望で急落」という因果ナラティブで、実際は決算前に下落が進み決算翌日は急反発しており、8月決算がただちに急落トリガーになるというリスク描写はやや過剰(ただし-37%の高ボラティリティ自体は事実)。報告は不確実性を誠実に開示しており、検証によりデータの信頼性はむしろ向上したため、スコア6.5は妥当として据え置く。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7014.T",
+   "https://kabutan.jp/stock/?code=7014",
+   "https://minkabu.jp/stock/7014",
+   "https://zosenblog.com/namura2603kessan/",
+   "https://kabutan.jp/news/?b=k202605140372",
+   "https://finance.yahoo.co.jp/news/detail/1033c0aa578699c4364cacbc3bb7fd49c4d1a873",
+   "https://minkabu.jp/news/4516256",
+   "https://finance.matsui.co.jp/news/576036/index"
+  ]
+ },
+ {
+  "code": "7721",
+  "name": "東京計器",
+  "sector_data": "PER(会社予想)は約19.9~20倍、PBR(実績)は約2.2倍前後、配当利回り(予想)は約0.75~0.8%との情報が複数ソースで得られた(ただし取得時期の異なるデータを株価変動で補正した概算値であり、直接の最新一次データでの再確認はWebFetchのアクセス制限により今回できず)。三菱重工・IHI・川崎重工など防衛御三家がPER30倍超まで買われている銘柄がある中で、東京計器のPER20倍前後は相対的に出遅れており、shortlist.jsonの「御三家対比で時価総額が小さく出遅れ妙味がある」との評価と整合的。一方でPBR2倍台は資産面での明確な割安感を示すものではなく、防衛テーマとしての成長期待が既にある程度織り込まれた水準との見方もできる。古野電気・多摩川精機など同業他社との詳細な数値比較は今回のリサーチでは確認できず。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "pass",
+  "audit_score": 6,
+  "audit_note": "株価・決算数値・上方修正履歴・増配・防衛主導の買い材料といった主要な主張はほぼすべて独立検証で裏付けられ、AIテーマ関与も皆無(防衛テーマ純度が高い)で、重大な悪材料も検出されなかった。ただし9/15までの主カタリストである1Q決算は確定日が依然未確認なうえ、同社の1Qは季節的に赤字(前年・前々年とも最終赤字)であり、好決算カタリストどころか進捗率での失望リスクを孕む点が調査結果から抜けている。バリュエーションのやや過小表示(実際はPER約21倍・PBR約2.3倍)と合わせ、6.5からわずかに割り引いて6.0とする。",
+  "sources": [
+   "https://kabutan.jp/stock/chart?code=7721 (2026-07-16アクセス、株価情報)",
+   "https://finance.yahoo.co.jp/quote/7721.T (2026-07-16アクセス、株価6,390円時点情報)",
+   "https://finance.yahoo.co.jp/news/detail/c7f3c3e3aa3e62e6d7edcdbb138372d849a54f34 (株探ニュース、2026年5月12日、決算速報 経常19%増・8円増配)",
+   "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260511/20260511522305.pdf (2026年3月期決算説明資料、2026年5月11日開示、直接アクセスは403のため検索結果要約経由)",
+   "https://finance.logmi.jp/articles/384525 (ログミーファイナンス、2027年3月期中計上方修正・受注残に関する記事、検索結果要約経由)",
+   "https://note.com/toushihachirou78/n/n40ad98fc5df6 (2026年3月期第3四半期決算に関する分析記事、検索結果要約経由)",
+   "https://note.com/shunsuke_taka/n/n368a1a2cd918 (防衛予算関連銘柄としての位置づけ解説記事、検索結果要約経由)",
+   "https://kabutan.jp/news/marketnews/?b=n202606220055 (株探テクニカル記事、2026年6月22日、5月12日戻り高値8,520円・6月11日安値4,850円の言及)"
+  ]
+ },
+ {
+  "code": "8031",
+  "name": "三井物産",
+  "sector_data": "予想PER約14.4~14.5倍、実績PBR約1.51~1.52倍(検索エンジン経由の集約値。上記の通り最新株価との整合性に疑義があり要検証)。予想配当利回りは約2.9~3.1%。商社他社との比較では、丸紅PBR約0.92倍、伊藤忠PBR約1.29倍という情報もあり、三井物産のPBR水準は5大商社の中では中位からやや高め。資源比率の高さゆえに市況次第で業績変動が大きく、バリュー株としての「割安感」は資源高局面で薄れやすい。",
+  "preliminary_score": 5,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "業績数値・配当・バークシャー買い増し・自社株買い完了・8/4決算日・下落トレンドといった主要な事実関係は独立検証でほぼ裏付けられ、AIテーマ株ではないという判定も妥当。一方、株式分割(2024年1:2)の見落としにより時価総額を約半分に誤推定し、正しかったPERに誤った疑義を付すなどバリュエーション関連の記述に混乱がある。投資判断の骨子(モメンタム弱、バークシャーが下値支え、8/4決算待ちで中立~やや強気)は現実のデータと整合しており、予備スコア5の据え置きが適当。",
+  "sources": [
+   "https://www.mitsui.com/jp/ja/ir/library/meeting/2026/index.html",
+   "https://www.mitsui.com/jp/ja/ir/calendar/index.html",
+   "https://www.nikkei.com/article/DGXZQOTG2787C0X20C26A4000000/",
+   "https://www.nikkei.com/article/DGXZQOUC011TS0R00C26A5000000/",
+   "https://finance.logmi.jp/articles/384561",
+   "https://www.nikkei.com/article/DGXZQOTG01A0Q0R00C26A7000000/",
+   "https://www.nikkei.com/article/DGXZQOFL020QF0S6A700C2000000/",
+   "https://shikiho.toyokeizai.net/news/0/943327"
+  ]
+ },
+ {
+  "code": "8058",
+  "name": "三菱商事",
+  "sector_data": "予想PERは情報源により15.2倍〜19.5倍とばらつきがあるが、複数の比較記事では18〜19.5倍程度で総合商社5社中最も割高との評価が多い。PBRも実績値で2.06〜2.27倍とこちらも5社中最高水準(伊藤忠PER15.05倍・PBR2.17倍、三井物産PER18.0倍・PBR1.98倍、住友商事PBR1.93倍、丸紅PBR2.20倍)。予想配当利回りは約2.7%(125円/約4,564円)。FY3/26は減益だったがFY3/27計画で大幅増益回復を見込んでおり、その期待がバリュエーションに先行して織り込まれている構図で、割安感は乏しい。",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "業績数値・FY3/27強気ガイダンス・増配・エーソン買収・バークシャー保有などの主要ファクトは一次情報と報道で概ね裏付けられ、AIテーマ株ではないとの判定も正しい。一方、年初来高値の取り違え(正しくは6,012円、下落率-24%)、決算後のトレンド記述の誤り、5月高値圏ベースの古いPER/PBRを7月時点の割高論拠に使うなど、モメンタムとバリュエーションの記述に系統的な粗さがある。誤りは弱気方向(割高の誇張)と強気方向(下落率の過小)で概ね相殺され、8/3の1Q決算は+47%増益・進捗27%と好調だったが株価は「材料出尽くし」で一時4%安となっており、明確な優位性を欠くとした5.5点の総合評価自体は妥当と判断し据え置く。",
+  "sources": [
+   "https://www.nikkei.com/prime/veritas/article/DGXZQOUC302HL0Q6A330C2000000",
+   "https://www.nikkei.com/article/DGXZQOTG274EW0X20C26A4000000/",
+   "https://www.nikkei.com/article/DGXZRST0515679Q6A430C2000000/",
+   "https://kabutan.jp/news/?b=k202605010018",
+   "https://kabutan.jp/news/marketnews/?b=k202605010018",
+   "https://limo.media/articles/-/123082",
+   "https://limo.media/articles/-/124908",
+   "https://limo.media/articles/-/117076"
+  ]
+ },
+ {
+  "code": "8001",
+  "name": "伊藤忠商事",
+  "sector_data": "予想PER約13.4倍、実績PBR約1.93~2.00倍。5大商社の中ではPBRが最も高く(三菱商事1.73倍、三井物産1.49倍)、割安感は相対的に乏しい。一方でROE14.59%は3社中最高、配当性向は32.8%程度と低く累進配当の継続余地は大きいとされる。配当利回りは2.4~2.6%程度で三井物産・三菱商事(3%台)より見劣り。出典: https://snowball-family.com/trading-companies-comparison-2026/ (2026年7月時点、基準日はやや不明瞭につき目安)",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "プロキシ遮断と検索上限により一次情報での裏取りはほぼ不能だったが、唯一確認できた株価(7/31終値2,014円)は分析と整合し、むしろ分析時点より上昇していた。AIテーマ株ではないとの判定に反証はなく、重大悪材料も検出されなかった一方、PER(13.4倍と記載だが自己数値からは約15.2倍)と配当利回りに内部矛盾があり、決算発表日(8/3)を含む主要カタリストは未確認のまま。全体として方向性は概ね妥当だがバリュエーションの割安感は記載より乏しい可能性があり、スコアを5.5から5.0へ小幅減点する。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8001.T",
+   "https://www.nikkei.com/article/DGXZQOTG2738G0X20C26A4000000/",
+   "https://www.itochu.co.jp/ja/ir/download/__icsFiles/afieldfile/2026/05/01/26_ended_01_1.pdf",
+   "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260501/20260501516183.pdf",
+   "https://www.itochu.co.jp/ja/ir/shareholder/dividend/index.html",
+   "https://www.nikkei.com/article/DGXZQOUB129GG0S6A610C2000000/",
+   "https://limo.media/articles/-/125225",
+   "https://www.nikkei.com/article/DGXZQOUC168VW0W6A610C2000000/"
+  ]
+ },
+ {
+  "code": "8002",
+  "name": "丸紅",
+  "sector_data": "PER(予)は13.3~16.2倍程度、PBR(実)は1.76~1.85倍程度(サイトにより差異あり、一部で8.6倍との表記もあるが誤記または別基準の可能性)。5大商社の中では伊藤忠(PBR2倍超)や三菱商事に比べるとやや割安な水準で、三井物産と並び「割安・成長期待バランス型」と評価される記事もある。資源比率の高さ(金属セグメントが利益変動の中心)がバリュエーション面でのディスカウント要因になっているとみられる。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "外部検証手段が全滅(WebSearch枯渇・WebFetch/curl全て403)のため、監査は2026年1月時点の既知情報との整合性チェックに限定された。その範囲では前期比計算や配当利回りなど内部整合性は概ね保たれている一方、時価総額7.8兆円は株価5,110円と算術的に矛盾する古値であり、株価・決算日・バークシャー10.32%等の中核データは全て未検証のスニペット伝聞に依存している。AIテーマ株ではない(バークシャー・資源・還元が主材料)という判定は支持できるが、未検証データの多さと時価総額の矛盾を踏まえ、スコアを6から5に引き下げる。",
+  "sources": [
+   "https://www.marubeni.com/jp/news/2026/release/00021.html",
+   "https://www.nikkei.com/article/DGXZQOTG275SK0X20C26A4000000/",
+   "https://www.nikkei.com/article/DGXZQOTG294ZI0Z20C26A1000000/",
+   "https://irbank.net/8002",
+   "https://irbank.net/8002/news",
+   "https://www.bloomberg.com/jp/news/articles/2026-05-07/TENHBDT96OSG00",
+   "https://www.nikkei.com/article/DGXZQOTG01A0Q0R00C26A7000000/",
+   "https://finance.yahoo.co.jp/news/detail/fe58e4e2479e7edb8d9e1d9cfa4936ece18a7e91"
+  ]
+ },
+ {
+  "code": "3099",
+  "name": "三越伊勢丹ホールディングス",
+  "sector_data": "PER(予) 約18.8〜19.1倍、PBR(実) 約1.83〜1.90倍、配当利回り(予) 約2.4%。百貨店セクター内では高島屋(PER約14.7倍、PBR約1.24倍)対比で明確に割高であり、PBRはセクター最高水準。市場は旗艦店(伊勢丹新宿・三越日本橋等)の高い収益力と構造改革・中計前倒し達成期待を織り込んで高いマルチプルを許容している状態。",
+  "preliminary_score": 7,
+  "audit_verdict": "caution",
+  "audit_score": 6,
+  "audit_note": "業績・月次・目標株価引き上げ・上場来高値更新といった中核の主張は、別日付・別エージェントの3つの上流スイープ記録および算術検証と整合しており、AIテーマとも無関係で、ストーリー自体の信頼性は高い。ただし監査環境の制約(WebSearch予算枯渇・WebFetch/直接アクセス全遮断)により株価・配当・決算日程の一次確認ができず、さらに予想PERが実績ベースの数値と混同されており実際のバリュエーション(会社計画ベースPER約24倍)は報告より明確に割高。過熱感リスクが報告の想定以上である点とカタリスト日付未確定を踏まえ、7点から6点に減点する。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/3099.T",
+   "https://kabutan.jp/news/marketnews/?b=n202607130963",
+   "https://www.nikkei.com/prime/veritas/article/DGXZQOUB290FI0Z20C26A6000000",
+   "https://www.nikkei.com/article/DGXZQOFL254340V20C26A6000000/",
+   "https://www.nikkei.com/article/DGXZQOUC018BH0R00C26A7000000/",
+   "https://kabushiki.jp/news/756341",
+   "https://www.nikkei.com/article/DGXZQOUB058OX0V00C26A2000000/",
+   "https://www.fashionsnap.com/article/2026-05-14/mihd-2027-03-remodel-plan/"
+  ]
+ },
+ {
+  "code": "7453",
+  "name": "良品計画(無印良品)",
+  "sector_data": "PER(予想): 概ね30倍前後(5月時点で31.25倍との情報があり、直近の株価上昇と上方修正後のEPS更新を踏まえても同水準~やや低下と推定。一部情報源では22.3倍との記載もあるが上方修正前・旧EPSベースの可能性がありデータ不整合に留意)。PBR(実績): 約5.5~5.7倍。配当利回り: 約0.7~0.9%。同業比較では、ファーストリテイリング(ユニクロ、9983)がPER35~40倍程度で推移しているのに対し良品計画は相対的に見劣りしない(むしろ割安)水準にあるとの分析があり、しまむら等の一般的な衣料品専門店(PER15~20倍程度)と比べると割高。海外事業の高成長・高収益性(利益率20%超)を踏まえたグロース株的評価がなされており、今回の連続上方修正・過去最高益更新を勘案すればバリュエーション自体は極端な過熱とまでは言えないが、既に高い成長期待を織り込んだ株価水準にある。出典: WebSearch(みんかぶ、株探、マネックス銘柄スカウター等の要約)、https://media.moneyforward.com/articles/9788?page=2",
+  "preliminary_score": 7,
+  "audit_verdict": "caution",
+  "audit_score": 6,
+  "audit_note": "決算数値・上方修正・カタリスト・AIテーマ非該当といった中核ストーリーは内部整合性が高く、カットオフ内の既知事実(FY8/2025営業利益約738億円、2025年9月の1:2分割、10月本決算慣行、東アジア牽引の増益基調)とも矛盾しないため主要な反証には至らなかった。ただし時価総額が約2~3割過小で、それに連動して予想PERも約30倍ではなく約37倍前後と、割高感は報告書の記載より一段強い可能性が高い。加えて直近株価・6月月次・レーティング変更はネットワーク遮断により独立確認できておらず、上場来高値圏での期間内カタリストが月次のみという弱さも考慮し、スコアを7から6に引き下げる。",
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL130L70T10C26A7000000/",
+   "https://www.nikkei.com/article/DGXZRST0590770Z00C26A7000000/",
+   "https://finance.biggo.jp/news/jpx_tdnet_140120260710591093",
+   "https://japanir.jp/company/company-7453/ir/7453-20260710-01_wp_financial_summary/",
+   "https://japanir.jp/company/company-7453/ir/7453-20260410-02_wp_earnings_guidance/",
+   "https://finance.yahoo.co.jp/news/detail/d581e17579996070550cf6855b2669023f9e69db",
+   "https://www.zaikei.co.jp/article/20260703/859691.html",
+   "https://finance.yahoo.co.jp/news/detail/f22628c46d7e3562bec94d05ada52ecc613b9dbe"
+  ]
+ },
+ {
+  "code": "7532",
+  "name": "パン・パシフィック・インターナショナルホールディングス(PPIH、ドン・キホーテ運営)",
+  "sector_data": "PER(予想)24.8倍、PBR(実績)4.05倍、配当利回り(予想)0.96%(2026年5月時点データ)。ROE15.85%・ROA6.02%と高収益性。イオン・セブン&アイ等の総合スーパー大手(各事業利益率0.8~3.4%程度)と比較して収益性が高く、成長期待を反映した相対的に高いPER/PBRのプレミアム評価となっている。配当利回りは小売他社比で低めで、株主還元よりも成長投資・出店拡大を優先する姿勢がうかがえる。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "アナリストの分析は内部整合性が高く、算術検証・監査人の既有知識(前期実績からの逆算、中国の訪日自粛要請、免税制度改正)とも矛盾せず、AIテーマ株でないことは確実。ただしネットワーク制約(検索予算枯渇+プロキシの全面遮断)により株価・決算の一次情報での独立確認が一切できず、かつ分析基準日(7/16)から監査日(8/3)までの動向が未確認のため、スコアは6から5に引き下げる。反証事項はないが「検証済み」とは言えない状態であり、8月中旬の本決算前に最新株価と月次動向の再確認が必須。",
+  "sources": [
+   "https://minkabu.jp/stock/7532",
+   "https://minkabu.jp/stock/7532/analyst_consensus",
+   "https://finance.yahoo.co.jp/quote/7532.T",
+   "https://kabutan.jp/news/marketnews/?b=n202607130963",
+   "https://www.ryutsuu.biz/accounts/s051381.html",
+   "https://ppih.co.jp/ir/library/earnings/pdf/PPIH_FY2026_Q3_Financial_Results_J.pdf",
+   "https://ppih.co.jp/ir/library/earnings/pdf/PPIH_FY2026_Q3_Presentation_J.pdf",
+   "https://honichi.com/news/2026/05/22/ppih-202606-03/"
+  ]
+ },
+ {
+  "code": "8233",
+  "name": "高島屋",
+  "sector_data": "予想PER約19~21倍、PBR約1.6~1.7倍(2026年6月30日時点でPER19.3倍・PBR1.61倍との情報があり、その後の株価上昇分を加味すると現状PERはやや切り上がっている可能性)。予想配当利回りは約1.6%(2027年2月期予想配当40円/株、前期実績34円)。同業比較では、三越伊勢丹HD(PER目安16.9倍前後、2026年5月時点情報)と比べて高島屋の方が割安との指摘がある一方、別時点(5月)の情報では高島屋PER14.7倍という数字もあり、データにばらつきがあるため厳密な比較は「確認できず」とし参考値にとどめる。アナリストコンセンサス目標株価は2,140円(乖離率-14.5%、株予報Pro調べ)との情報もあるが、直近では日系大手証券が7/2に目標株価を2,000円→2,500円に引き上げ(レーティングは中立据え置き)との情報もあり、目標株価情報源間で幅がある。",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 4.5,
+  "audit_note": "検証環境の制約(WebSearch上限枯渇・WebFetch全ドメイン403)により株価・決算数値の独立検証ができず、主要数値は「確認できず」扱いとせざるを得ない。ただし内部監査で売上指標の混在(総額1兆円と収益認識後5,000億円の無区別併記)と地政学イベントの時期誤記が見つかり、報告書自身も認めるスニペット依存のデータ精度リスクが確認された。AIテーマ株でない点は事業構造上確実で、投資テーゼ(インバウンド・月次カタリスト)自体は反証されていないが、データ鮮度(7/16時点)と検証不能性、8/1月次消化済みの可能性を減点し、スコアを5.5から4.5に調整する。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8233.T",
+   "https://finance.yahoo.co.jp/quote/8233.T/history",
+   "https://www.nikkei.com/nkd/company/?scode=8233",
+   "https://kabutan.jp/stock/?code=8233",
+   "https://s.kabutan.jp/stocks/8233/",
+   "https://minkabu.jp/stock/8233",
+   "https://kabuyoho.jp/sp/reportTop?bcode=8233",
+   "https://kabuyoho.jp/sp/reportTarget?bcode=8233"
+  ]
+ },
+ {
+  "code": "9201",
+  "name": "日本航空(JAL)",
+  "sector_data": "PER(会社予想)10.26倍、PBR(実績)1.01倍(kabuyoho調べ、2026年6月~7月時点)。同業のANAホールディングス(9202)はPER12.8倍・PBR0.95倍・配当利回り2.21%(比較サイトko-invest.net調べ)であり、JALはPERで見て相対的に割安、PBRはANAよりやや高いが配当利回りはJALが優位。空運セクター全体としては業績最高益更新・株主還元強化が評価され見直し買いが入っている局面。",
+  "preliminary_score": 7,
+  "audit_verdict": "caution",
+  "audit_score": 6,
+  "audit_note": "外部検証手段が全て遮断され(検索予算枯渇+プロキシ403)、オンラインでの独立検証は実行できなかったが、決算数値の逆算値が知識cutoff前の2025年3月期実績と正確に一致するなど内部整合性は高く、明確な捏造・誤りの兆候は検出されなかった。AIテーマ株ではないとの判定は業態上妥当。一方、株価水準・アナリスト格上げ・訪日統計・1Q決算日程といったcutoff後の主張は全て未確認であり、特に監査実行日(8/3)時点では主力カタリストの1Q決算が既に通過済みの可能性が高いため、未検証リスクと情報の陳腐化を織り込みスコアを7→6に調整した。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/9201.T",
+   "https://press.jal.co.jp/ja/release/202604/009510.html",
+   "https://www.nikkei.com/article/DGXZQOUB301QS0Q6A430C2000000/",
+   "https://kabutan.jp/news/marketnews/?b=n202607020716",
+   "https://finance.yahoo.co.jp/news/detail/8613c34bdca735737a3ff6fe6b817348f3da908a",
+   "https://finance.yahoo.co.jp/news/detail/9aacb3b7ef2f042df7a8959d84dc29459606d935",
+   "https://kabuyoho.jp/reportTarget?bcode=9201",
+   "https://minkabu.jp/stock/9201"
+  ]
+ },
+ {
+  "code": "8136",
+  "name": "サンリオ",
+  "sector_data": "PER(会社予想)17.7倍、PBR(実績)7.25倍、ROE(実績)41.56%、ROA(実績)24.99%、自己資本比率66.4%。配当利回り(会社予想)1.36%。ライセンス事業中心で原価がほぼゼロに近い高収益体質のため、玩具・製造業を含むバンダイナムコ等の総合エンタメ企業と比べて営業利益率(40%超)は突出して高く、PBR7倍台は同業内でも高水準とみられるが、バンダイナムコ・東映アニメーション等との具体的なPER/PBR数値の直接比較データは今回のWebSearchでは確認できず。ROE40%超という高い資本効率と2期連続の大幅増益を勘案すると、成長株としてのプレミアムが一定程度正当化される一方、PER自体は17倍台とグロース株としては過度な割高感はない。",
+  "preliminary_score": 6.5,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "AIテーマ便乗ではない純粋な業績・IP拡大銘柄という判定と、決算数値の基準年整合性は独立知識で裏付けられた一方、バリュエーションの中核数値であるPER17.7倍がレポート自身の時価総額・純利益と矛盾しており、実態は予想PER約23倍前後とより割高である。さらにスコアの需給リスク根拠(信用倍率30倍・空売り15%)や株価・決算日はネットワーク制約(検索予算枯渇・プロキシ403)で一切独立検証できなかった。割高度の過小表示と未検証項目の多さを踏まえ、予備スコア6.5から5.5へ引き下げる。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8136.T",
+   "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260623/20260623576716.pdf",
+   "https://www.nikkei.com/article/DGXZQOUB1778X0X10C26A6000000/",
+   "https://gamebiz.jp/news/428299",
+   "https://finance.yahoo.co.jp/news/detail/695b474c6e91d18489b8bcebeb96255c591eeb2f",
+   "https://www.nikkei.com/article/DGXZQOUB236Q00T20C26A6000000/",
+   "https://diamond.jp/zai/articles/-/1069181",
+   "https://news.livedoor.com/article/detail/31632178/"
+  ]
+ },
+ {
+  "code": "7564",
+  "name": "ワークマン",
+  "sector_data": "情報源により数値がばらつくため幅を持って提示。PER(会社予想)はおおむね20倍台前半~後半(6/24時点でPER24.7倍・PBR3.60倍という情報、別ソースではPER20.94倍・PBR3.05倍という情報もあり、取得時点の株価差によるブレとみられる)。配当利回り(会社予想)は約1.3%(1株配当89円/2027年3月期予想)。株価下落により6月時点対比でPERはやや低下している可能性が高いが、正確な最新値は確認できず。同業比較では、しまむら(PER15~18倍程度が目安とされる一般的水準)より高く、ファーストリテイリング(ユニクロ、PER30倍台後半~)より低い中間的な位置づけで、成長期待(リカバリーウェア・新業態)を織り込んだプレミアムがついた状態とみられるが、5月高値からの調整でそのプレミアムは一部剥落している。",
+  "preliminary_score": 4.5,
+  "audit_verdict": null,
+  "audit_score": null,
+  "audit_note": "",
+  "sources": [
+   "https://news.yahoo.co.jp/articles/dfdb15bd2d876a128a952e4130a8f90f628b4c42 (2026-05-11、決算内容)",
+   "https://www.fashionsnap.com/article/2026-05-11/workman-2026-result/ (2026-05-11、決算内容・リカバリーウェア808%増)",
+   "https://kabuyoho.jp/sp/consNewsDetail?nid=7564_20260511_act_20260511_153044_4&cat=1&bcode=7564 (2026-05-11、コンセンサス超過)",
+   "https://www.nikkei.com/article/DGXZQOFL01DF30R00C26A7000000/ (2026-07-02、6月既存店-8.8%・年初来安値5,780円)",
+   "https://s.minkabu.jp/news/4560847 (2026-07-02、6月既存店売上高6か月ぶり減・3日続落)",
+   "https://minkabu.jp/stock/7564/analyst_consensus (アナリスト平均目標株価5,611円、中立、2025年11月時点データ)",
+   "https://minkabu.jp/stock/7564/analysis (2026年6月時点、みんかぶ予想株価7,039円/売り評価)",
+   "https://irbank.net/E03296/dividend (配当情報)"
+  ]
+ },
+ {
+  "code": "2222",
+  "name": "寿スピリッツ",
+  "sector_data": "PER(予想)28.7倍、PBR(実績)8.26倍程度(取得時点不明の情報のため要最新確認)。ROEは28.5~35%程度と非常に高く、自己資本比率79.7%と財務健全性も高い。土産菓子・食品セクターの中では収益性・成長性が突出しているためバリュエーションプレミアムが正当化されている面はあるが、絶対水準としては相応に割高感がある。直接的な同業(観光土産菓子専業の上場企業)が少なく、厳密な同業比較は確認できず。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "WebSearch予算枯渇とプロキシの全面的なpolicy denialにより一次情報・市場データへの独立アクセスが完全に不能であり、株価・1Q概算値・決算日はいずれも「反証されないが未確認」の状態にとどまる。事前知識との照合ではAIテーマ性の否定と企業プロファイル・決算発表時期の妥当性は支持され、ガイダンス数値の内部整合も確認できたが、時価総額とPERの間に約14%の内部矛盾を発見した。数値検証が成立していない点と、アナリスト自身も認めるデータ品質の低さ(全て検索スニペット由来)を踏まえ、根拠なき楽観を排してスコアを6→5に引き下げる。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/2222.T",
+   "https://minkabu.jp/stock/2222",
+   "https://minkabu.jp/stock/2222/analyst_consensus",
+   "https://kabutan.jp/stock/?code=2222",
+   "https://finance.yahoo.co.jp/news/detail/7ac62d40248c878b5a14a99f9c006ad37d9a2532",
+   "https://finance.yahoo.co.jp/news/detail/892038285e14fcbf6bf89c4f79b1856743b8fd28",
+   "https://www.nikkei.com/article/DGXZQOFL1426Z0U6A110C2000000/",
+   "https://www.nikkei.com/prime/veritas/article/DGXZQOUB1787M0X10C26A2000000"
+  ]
+ },
+ {
+  "code": "9616",
+  "name": "共立メンテナンス",
+  "sector_data": "PER(会社予想)15.17倍、PBR(実績)1.88倍(2026年7月15日時点)。配当利回りは会社予想ベースで約1.53%と低め。同業のホテル運営会社であるワシントンホテル(4691、藤田観光系列だが別法人)はPER9.6倍程度・PBR1.4〜2.3倍(データソースにより差異あり)とされ、共立メンテナンスのPERはやや高め〜同水準。訪日インバウンド関連の小売・百貨店株(三越伊勢丹PER高め等)と比べると割高感は限定的で、増収増益トレンドを踏まえれば妥当〜やや割安な水準との評価も可能。ただし直接比較可能な上場同業(APAグループ、東横INN等)は非上場のため、正確な同業比較は限界がある。\"]",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "外部アクセスが完全に遮断された環境下の監査であり、株価・バリュエーション・決算日の独立検証はできなかったが、決算数値は既知のFY3/25実績との逆算整合が取れており捏造の兆候はなく、AIテーマ株でないことは事業構造から確実。一方でスコア6の根拠に含まれる目標株価3,565円や直近株価データは未検証の二次情報であり、会社計画自体が経常・純利益減益である点も踏まえ、根拠不足分を減点してスコア5に調整する。",
+  "sources": [
+   "https://minkabu.jp/stock/9616",
+   "https://minkabu.jp/stock/9616/analyst_consensus",
+   "https://finance.yahoo.co.jp/quote/9616.T",
+   "https://www.kyoritsugroup.co.jp/Portals/0/pdf/ir/library/2026_full-year_summary-of-financial-results_jp.pdf",
+   "https://www.kyoritsugroup.co.jp/Portals/0/pdf/ir/library/2026_full-year_briefing-materials_jp.pdf",
+   "https://finance.logmi.jp/articles/384954",
+   "https://note.com/asuta_insight/n/n46e621aaf8f9",
+   "https://kabutan.jp/news/?b=k202605150362"
+  ]
+ },
+ {
+  "code": "9706",
+  "name": "日本空港ビルデング",
+  "sector_data": "PER(会社予想)は約20~21倍(20.1~20.92倍の情報あり)、PBR(実績)は約2.3~2.4倍、ROE(実績)約14.65%、自己資本比率42.7%。羽田空港ターミナル運営という実質的な独占事業のため直接比較できる純粋な同業上場企業は国内に少ないが、インバウンド消費関連の百貨店(三越伊勢丹PER見合い)や商業施設運営会社と比較すると、PERはやや高め、PBRは同水準~やや高めの水準。ROE14%台は資本効率としては良好。 出典: WebSearchスニペット集計(みんかぶ/株予報Pro等の指標を検索結果から取得、原典URL未直接確認のため参考値扱い)",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 5,
+  "audit_note": "本監査ではWebSearch予算枯渇とプロキシの全面遮断により独立のウェブ検証が不可能で、内部知識との突合と数値の内部整合性チェックのみ実施した。その範囲では銘柄同定・事業構造(非AIテーマ)・免税制度改正・中国人客急減の背景・各種指標の整合性に矛盾はなく、アナリストのデータ品質開示も誠実だが、株価水準・コンセンサス値・Q1決算日という投資判断の要となる数値が全て未照合のまま残る。反証事実は見つからなかったものの検証手段自体が制約されていたため、不確実性を織り込み予備スコア5.5から5.0へ小幅減点し、verdict=cautionとする。",
+  "sources": [
+   "https://minkabu.jp/news/4504858",
+   "https://www.nikkei.com/article/DGXZRST0520224Y6A500C2000000/",
+   "https://honichi.com/news/2026/05/20/nihonkuko-settlement-of-accounts-202603-03/",
+   "https://finance.logmi.jp/articles/384850",
+   "https://www.jnto.go.jp/news/press/20260715_monthly.html",
+   "https://www.travelvoice.jp/20260715-160182",
+   "https://yamatogokoro.jp/inbound_data/60728",
+   "https://finance.yahoo.co.jp/news/detail/0a50dc699734ab1dcb33d1f15d72b9bb4421e2e5"
+  ]
+ },
+ {
+  "code": "9044",
+  "name": "南海電気鉄道(2026年4月1日付で持株会社化し上場企業名は「株式会社NANKAI」に変更。鉄道事業は新設子会社「南海電気鉄道株式会社」に承継)",
+  "sector_data": "PER(実績/予想とも)12倍台前半(stockanalysis.com調べ、6/16時点でtrailing PE 12.26倍、forward PE 12.37倍)、PBR 0.95倍(2026年7月10日時点、1倍割れで簿価対比では割安感)、配当利回り約1.8%(年間配当50円、2026年3月期実績、配当性向25.4%)。近鉄グループHD(9041)等の関西私鉄と比較してもPBRは同水準~やや割安な部類だが、配当利回りは阪急阪神HD(2.3%程度)などと比べてやや見劣りする。",
+  "preliminary_score": 4,
+  "audit_verdict": null,
+  "audit_score": null,
+  "audit_note": "",
+  "sources": [
+   "https://minkabu.jp/stock/9044",
+   "https://www.nikkei.com/article/DGXZQOUF307KU0Q5A730C2000000/",
+   "https://kabutan.jp/news/?b=k202507300059",
+   "https://www.nankai.co.jp/ir/management/vision2027",
+   "https://www.nankai.co.jp/lib/company/ir/library/presentation/pdf/setsumeikai_260515.pdf",
+   "https://www.kankokeizai.com/2605231400ks/",
+   "https://note.com/kabutabi2000/n/n9357cc015449",
+   "https://stockanalysis.com/quote/tyo/9044/"
+  ]
+ },
+ {
+  "code": "9983",
+  "name": "ファーストリテイリング",
+  "sector_data": "PER(予想)約48.96倍、PBR(実績)約8.97倍、ROE(実績)約20.19%、自己資本比率約58.9%(出典: irbank/株予報系集計、2026年7月時点)。国内小売業平均(PER15~20倍程度が一般的)と比べて突出して高いが、これはファーストリテイリングが「グローバル製造小売業(SPA)」として海外(特に欧米)での高成長を続けていることや、インディテックス(ZARA)などグローバルSPA大手との比較で評価されているためとみられる。三越伊勢丹・良品計画・パン・パシフィックHDなどインバウンド消費関連小売株と比べても本銘柄はバリュエーションが顕著に高く、既に成長期待が株価に相当程度織り込まれている点には注意が必要。配当利回りは約0.8%と低く、インカムゲイン目的には不向き。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5.8,
+  "audit_note": "元調査はファンダメンタルズ(3Q数値・上方修正額・目標株価・6月月次・通期決算が10月で期間外)については一次寄り情報と概ね一致し、精度は高い。AIテーマ判定「none」も妥当で除外不要。問題は約2.5週間の情報鮮度で、スコアの根拠となった2本の柱のうち「明確な上昇トリガー不在」「下落トレンド継続」が事後的に崩れている。7/31の日米協調為替介入(1998年・2011年以来の異例措置)でドル円が164円近辺から155円台へ急伸し、ファストリは輸入型内需・円高メリット銘柄として8/3に日経平均押し上げ寄与度1位となり、7/24安値76,220円から約+7%戻して81,000円台を回復した。元調査が円高を一律に「海外収益の目減り=ネガティブ」と整理していた点も、少なくとも短期の値付けとは逆で、整理が不完全だった。加えて7/30-31の日銀会合(1.0%据え置き・植田総裁のタカ派発言)がカタリスト/リスクの双方から欠落していた。\n\n一方でスコアを引き上げきれない理由も明確である。(1)株価上昇でPERは約49倍→約51倍とさらに割高化し、目標株価(93,500〜96,000円、いずれも7/9〜7/15設定で155円台の為替を未反映)への上値余地は+18〜22%から+14〜18%へ縮小。(2)円高は仕入コスト面では追い風だが、海外ユニクロが売上収益の約6割・事業利益の過半を稼ぐ構造上、10月発表の27年8月期ガイダンスには円換算の逆風であり、7/9決算後の下落理由の一つが「来期ガイダンスリスク」だったことを踏まえると、期間終盤にかけて先回りの警戒が出やすい。(3)明日8/4の7月月次は6月▲14.1%の反動が焦点だが、天候前提を独立に検証できておらず(検索でヒットした「猛暑継続」記述は2025年の記事)、下振れ時の失望リスクは非対称に大きい。(4)投資期間内に決算イベントがないという構造的な材料不足は変わらない。(5)日銀のタカ派バイアス継続は高マルチプル銘柄の割引率リスクとして残る。\n\n以上より、モメンタム面は元調査より改善、バリュエーション・カタリスト密度・来期ガイダンスリスク面は悪化と評価し、preliminary_score 6.0からわずかに減点した5.8とする。すでに8/3に一日で約+4%動いた直後であり、この水準からの追随買いは短期のリスクリワードとして妙味が乏しい。\n\nデータ品質の限界: Yahoo!ファイナンス、株探、みんかぶ、日経、investing.com、stooq、ファストリIRサイト(月次PDF・決算サマリー)を含む主要金融サイトはすべてWebFetchが403 Forbiddenでブロックされ、WebSearchのスニペット/要約に依拠した。8/3終値の確定値は取得できておらず、記載の81,350円前後は寄与度からの推計、82,170円は別スニペット由来で、両者の整合は取れていない(ただし「81,000円超」という水準では一致)。また7/24発動と報じられる後継関税(12.5%等)のアパレルへの適用実態は未検証であり、北米事業のコスト影響は本監査では確定できていない。",
+  "sources": [
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://finance.yahoo.co.jp/news/detail/0d6cd29a20cdda2447f0777591cc912d2edcec03",
+   "https://www.nikkei.com/nkd/disclosure/tdnr/20260708589430/",
+   "https://kabutan.jp/news/?b=k202607090028",
+   "https://www.nikkei.com/article/DGXZQOUB065JR0W6A700C2000000/",
+   "https://news.yahoo.co.jp/articles/658bd7bc1e99ea4855fc80010693a796cbf28453",
+   "https://www.ryutsuu.biz/accounts/s070983.html",
+   "https://www.ryutsuu.biz/sales/s070221.html"
+  ]
+ },
+ {
+  "code": "5401",
+  "name": "日本製鉄",
+  "sector_data": "PER(会社予想ベース)約12.8~13.5倍、PBR約0.51~0.6倍(ソースにより幅あり)、配当利回り約4.2%。東証プライム平均PER(16~17倍)対比で明確に割安、PBR1倍割れも継続。同業JFEホールディングスと比較すると、日本製鉄は規模・技術力で優位(連結事業利益ベースでJFEの2倍超)だが、USスチール統合に伴う財務負担・不確実性からJFE以上にバリュエーションが抑えられている面がある。JFEは配当利回り・株主還元姿勢で選好されるとの評もあり、割安株として長期資産形成向きとの位置づけ。",
+  "preliminary_score": 4.5,
+  "audit_verdict": null,
+  "audit_score": null,
+  "audit_note": "",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/5401.T",
+   "https://minkabu.jp/stock/5401",
+   "https://minkabu.jp/stock/5401/analyst_consensus",
+   "https://kabutan.jp/stock/?code=5401",
+   "https://www.nikkei.com/article/DGXZQOUB125OX0S6A510C2000000/",
+   "https://www.nipponsteel.com/ir/library/settlement/pdf/20260513_100.pdf",
+   "https://www.nipponsteel.com/newsroom/news/2026/__icsFiles/afieldfile/2026/05/13/20260513_300.pdf",
+   "https://kabutan.jp/news/?b=k202605130245"
+  ]
+ },
+ {
+  "code": "5713",
+  "name": "住友金属鉱山",
+  "sector_data": "予想PER14.2倍、実績PBR0.95倍、予想配当利回り2.84%(IFIS株予報、2026年7月時点)。理論株価(PBR基準)は9,371円(1.22倍)、下値目途6,640円(0.87倍)~上値目途12,102円(1.58倍)とのレンジ提示あり。アナリストコンセンサス目標株価は10,790円で現在値からの乖離率+47.83%。同業の非鉄金属大手(JX金属5016、三菱マテリアル5711、DOWAホールディングス5714、三井金属鉱業5706)と比較すると、JX金属は配当利回りが0.5%前後と大幅に低く、住友金属鉱山は相対的に高配当利回り。一部アナリスト分析ではPBR0.6倍台(時期不明の過去データ)は保有する鉱山権益の時価評価を考慮すると割安との指摘もあり、現状のPBR0.95倍も歴史的には低水準寄りとみられるが、正確な同業他社比較データは今回のリサーチでは断片的にしか確認できず。",
+  "preliminary_score": 4,
+  "audit_verdict": null,
+  "audit_score": null,
+  "audit_note": "",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/5713.T",
+   "https://www.nikkei.com/article/DGXZQOUB103ZC0Q5A111C2000000/",
+   "https://www.nikkei.com/article/DGXZQOUB112ED0R10C26A5000000/",
+   "https://www.nikkei.com/article/DGXZQOFL1144G0R10C26A5000000/",
+   "https://minkabu.jp/news/4505684",
+   "https://finance.yahoo.co.jp/news/detail/08b0b8cf61a2120b1b8eb417faf8815b87629bbb",
+   "https://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report_pbr&bcode=5713",
+   "https://www.nikkei.com/article/DGXZQOFL111C00R10C26A6000000/"
+  ]
+ },
+ {
+  "code": "1605",
+  "name": "ＩＮＰＥＸ",
+  "sector_data": "予想PER 10.65倍、実績PBR 0.76倍(2026年7月1日時点、LIMO記事)。別ソースでは予想PER16.76倍・PBR1.17倍との記載もあり算出時点の相違で幅がある点に留意。同業の石油資源開発(1662、証券コード1662)は2026年3月期3Q決算で減収減益(売上高-5.3%、営業利益-27.9%)となっており、INPEXは規模・収益基盤で優位。下流精製大手ENEOS等とは原油価格に対する損益方向が逆(原油高はINPEXに追い風、ENEOSには仕入れコスト増でマイナス方向に働きうる)ため、中東情勢緊迫局面では相対的にINPEXの選好度が高まりやすい構造。配当利回り約3%、自己株取得枠(上限6,000万株)継続中で株主還元姿勢は強く、資源メジャーとしては相対的に割安な水準にあると評価できる。",
+  "preliminary_score": 5.5,
+  "audit_verdict": "caution",
+  "audit_score": 4.5,
+  "audit_note": "結論: 元レポート(preliminary_score 5.5)は「3月高値から3割下げたまま動かない割安・低モメンタム株を、8/7決算という控えめなカタリストで拾う」という構図だったが、その前提は7月下旬の中東緊迫と原油急騰でほぼ消滅した。株価はすでに3,450円→約3,920円(+13.6%)と先回りして上昇しており、投資家は「調整局面で拾う」のではなく「急騰後の高値圏で、原油86ドル・地政学プレミアム込みの水準を買う」局面に変わっている。\n\n減点要因(元レポートより悪化):\n・上値余地の消滅 — コンセンサス平均目標株価4,185円に対する乖離が+22.8%→約+7%に圧縮。米系大手の目標株価3,650円はすでに現値が上回っており、8/7で目標株価引き上げが伴わなければ格下げ・利食いの口実になる。\n・円安メリットの反転 — 日米協調介入(7/30-31)でドル円が163.65円→157円台半ばへ約6円の急速な円高。会社前提154〜156円をほぼ埋め、以降は下振れ要因。植田総裁のタカ派トーンで一段の円高リスク。元レポートが「将来の可能性」として挙げたリスクが、監査時点ですでに現実化している。\n・割安感の希薄化 — PBR0.76倍→約0.88倍、配当利回り3.1%→約2.75%。バリュエーションによる下値支持が弱まった。\n・地政学の両面性が実証済み — 7/28に「米国が対イラン攻撃見送り」観測だけで-2.35%下落。上昇分の大半が剥落し得る非対称な下方リスクを抱えた状態で、9月上旬まで保有することになる。\n・原油の需給面 — OPEC+は5か月連続増産中で本日8/3も会合。供給増が続く一方で価格を支えているのは供給途絶「懸念」のみ。\n\n加点要因:\n・8/7 Q2決算は日付確定の実カタリストで、WTI 86.80ドル(7月月間+20%超)が会社前提上限83ドルを上回るため、通期レンジ(3,500〜4,500億円)の再上方修正または下限切り上げの現実的な可能性がある。\n・元レポートのQ1利益の誤り(351億円→実際1,094億円)を正すと、通期進捗率は約1割ではなく約31%で、業績の足元は元レポートの評価より明確に良好。\n・累進配当(90円起点)+自己株取得で総還元性向50%以上という還元方針は下支え。\n\nAIテーマ判定: ai_theme_check=none は妥当で「ok」(除外不要)。ただし裏返しとして、7/31の日経平均+4.03%はSOX8%高を受けた半導体・AI主導であり、値上がり銘柄はプライムの4割未満という物色の極端な偏りがあった。INPEXはその資金フローの外側にあり、原油が下げれば単独で置いていかれる構造。\n\nスコア: 5.5 → 4.5。業績実態は元レポートの評価より良い(進捗率の誤りを補正すれば+)が、それを上回る勢いで株価が先行し(+13.6%)、目標株価乖離が+7%まで縮み、為替前提が協調介入で崩れた。8/7の再上方修正期待という上振れシナリオは実在するが、それは同時に「上振れが出ても出尽くし、出なければ失望」という両建てのイベントであり、しかもポジションの本質は中東エスカレーション継続への賭けである。9月上旬までの1か月強で、根拠のある期待値は中立以下。\n\nデータ品質の限界(明示): 当監査でも日本の主要金融サイト(kabutan.jp / minkabu.jp / finance.yahoo.co.jp / nikkei.com / inpex.com / traders.co.jp / shikiho / i",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/1605.T",
+   "https://finance.yahoo.co.jp/news/detail/850cff4c04648be5f8ef8dd38516441a365e1daa",
+   "https://s.kabutan.jp/news/k202605130397/",
+   "https://www.inpex.com/ir/library/upload/result20260513.pdf",
+   "https://limo.media/articles/-/111086",
+   "https://limo.media/articles/-/110413",
+   "https://limo.media/articles/-/129289?page=1",
+   "https://limo.media/articles/-/127585"
+  ]
+ },
+ {
+  "code": "9104",
+  "name": "商船三井",
+  "sector_data": "PBR(実績)0.66倍。予想配当利回り3.66%。株式益回り(予想)8.84%から逆算すると予想PERは概ね11〜12倍程度とみられる(コンテナ船市況ピーク時の予想PER3〜4倍台からは上昇。前期純利益急減により分母のEPSが縮小したため)。同業の日本郵船・川崎汽船もPBR1倍割れ・PER5倍台前後の水準にあるとされ、海運セクター全体が「増収減益」局面の中で相対的にバリュエーション面での割安感が指摘されるが、商船三井の予想PERは同業対比でやや高めとの情報もある。累進配当方針と自社株買いなど株主還元姿勢は評価材料。",
+  "preliminary_score": 5,
+  "audit_verdict": "caution",
+  "audit_score": 7,
+  "audit_note": "元調査(7月中旬時点)の中核ロジックは「今期は減益計画で明確な上昇トリガーに乏しい」であり、これが preliminary_score 5 の根拠だった。この前提は本日8月3日大引け後(15:30)の適時開示で完全に崩れた。経常利益1,450億円→2,250億円(+55.2%)、純利益1,700億円→2,400億円と、減益計画が一転して増益計画に転換している。しかも8/3終値5,801円(-1.58%)はこの発表前の価格であり、材料は未消化。8/7の1Q決算も投資期間内に残っている。予想PERは約8.3倍、PBR0.66〜0.68倍、利回り3.5%と依然低位で、コンセンサス目標株価6,785円(修正前の数値)に対して+17%の乖離があり、目標株価の上方修正ラッシュが起きる蓋然性は高い。加えて元調査が完全に見落としていたエリオット・マネジメントの株主還元圧力(3年3,000億円の自社株買い要求、会社は5年5,400億円還元方針、総還元性向40%目安)は、純利益上方修正と機械的に連動して追加還元余地を生む未消化カタリストである。\n\n一方で無条件に強気にはできない理由が三点ある。第一に、SCFIは10週続伸後に7月から3週連続下落(3,062.95、7/27時点)しており、米10%暫定関税の7/24期限切れで駆け込み輸送が一巡した。ONE持分利益という上方修正の主因の一つは足元でピークアウトの兆しがある。第二に、海運セクターでは川崎汽船が7/24に同様の上方修正を発表しながら株価反応は「もみ合い」にとどまった前例があり、上方修正が既に相場に織り込まれている可能性がある(ただし川崎汽船は下期実質減額だったのに対し、商船三井の下期含意は990億円と旧計画の940億円からむしろ微増しており、内容の質は上)。第三に、海運は市況ピーク時にPERが最も低く見える典型的なシクリカルであり、低PERを割安と単純解釈するのは危険。また日銀は据え置いたものの植田総裁が利上げ加速の可能性に言及しており円高リスクは残存、ホルムズ正常化(=タンカー市況プレミアム剥落)と8/21のイラン制裁適用除外期限も両面材料として残る。\n\n総合すると、日付が特定でき、かつまだ価格に織り込まれていない具体的カタリスト(8/4の修正織り込み+8/7の1Q+還元強化余地)が明確に存在し、バリュエーションも下支えとして機能する。preliminary_score 5 は前提が陳腐化した上での過小評価であり 7.0 に引き上げる。ただしコンテナ市況の反転と海運株特有のシクリカル・トラップを踏まえ、8点以上は根拠のない楽観と判断した。verdict は元調査の中核前提が誤り(陳腐化)であるため caution とする。ai_theme_verdict は独立検証でもAI関連の材料は皆無で ok(=除外不要)。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/9104.T",
+   "https://finance.yahoo.co.jp/news/detail/89ba5864b901108159202df67b31987135679ad9",
+   "https://kabutan.jp/news/?b=k202601300018",
+   "https://kabutan.jp/news/?b=k202604300008",
+   "https://www.lnews.jp/2026/05/s0501104.html",
+   "https://www.nikkei.com/article/DGXZRST0507811R20C26A4000000/",
+   "https://finance.yahoo.co.jp/news/detail/a69ce4f457d86316b6c661c218ae889c9257b664",
+   "https://minkabu.jp/stock/9104"
+  ]
+ },
+ {
+  "code": "8801",
+  "name": "三井不動産",
+  "sector_data": "PER(予想)14.71倍、PBR(実績)1.28倍、配当利回り(予想)2.4%(2026年7月14日時点)。同業大手の三菱地所(PER24.89倍・PBR2.16倍・利回り1.02%)と比較すると三井不動産は明確に割安。住友不動産(PER15.5倍)とはほぼ同水準。業界最大手・最高益更新中にもかかわらず金利上昇懸念によるセクター全体の売られすぎでバリュエーションが圧縮された状態であり、割安感は投資妙味の一つ。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 4,
+  "audit_note": "結論: 事実誤認(捏造)は少なく、決算数値・自社株買い・カレンダーの一次情報照合はほぼ全てクリアした。問題は「情報の陳腐化」と「シナリオの前提崩壊」であり、preliminary_score 6 は現時点では高すぎる。4.0へ引き下げる。\n\n減点理由(3点):\n(1) 中心シナリオの前提が崩れた。アナリストは7/30-31日銀会合を「最大のカタリストであり最大のリスクでもある双刃の材料」と位置づけたが、これは既に消化され、結果は据え置き(1.00%)ながら植田総裁の「利上げペース加速もあり得る」発言で明確にタカ派だった。期待した「金利上昇懸念の行き過ぎ修正による反発」は起きず、7/31当日に-3.17%下落している。\n\n(2) 元調査が全く捕捉していないマクロ悪化が起きた。7/31の日米協調為替介入(2011年以来初)を受け、8/3時点で9月日銀利上げのOIS織り込みは40%超、10月までに90%超まで前倒しされ、10年債利回りは2.830%(約30年ぶり高水準)、5年債は2.090%と過去最高。1%の金利上昇で営業利益約120億円下押しという感応度を持つ8801にとって、これは調査時点より明確に悪化した環境。しかも次回日銀会合は9/17-18で投資期間外のため、期間中は「観測が積み上がる重石」だけを負い、解消イベントは期間後にずれる — カレンダーが構造的に不利。\n\n(3) 期待余地が縮んだ。株価がほぼ横ばい(1,554→1,560円)でバリュエーション改善はゼロ。一方でコンセンサス経常利益は3,405億→約3,292億へ切り下がり、会社計画との乖離は+8.1%→+4.5%へ縮小した。つまり「保守的計画をどれだけ上回るか」というアナリストの唯一の企業固有アップサイド論拠は、市場側の期待調整で目減りしている。自社株買いも金額上限400億円が先に効くため実質0.94%相当で、需給インパクトは1.47%という記載より小さい。\n\n据え置き・加点要因: 業績自体は堅牢(4期連続最高益、FY27/3も5期連続最高益計画)で下方修正・不祥事は確認されず。PER約14.8倍・PBR約1.29倍は三菱地所対比で明確に割安、アナリスト平均目標2,124円との乖離も大きく、6/26安値1,430円が近いこと・自社株買いが10/31まで継続することが下値を支える。8/7の1Q決算は投資期間内に残る本物のカタリストで、過去は期初計画を上振れる傾向がある。したがって「fail」ではなく「caution」。\n\nAIテーマ判定は「ok」(除外不要)。データセンター投資は7/23に2035年度までの累計6,000億円超へ倍増発表されたが、この発表後も株価は無反応で、市場は本銘柄をAI関連として物色していない。金利敏感バリュー株としての位置づけは変わらず、ai_theme_check=\"low\"は妥当(ただし金額は3,000億円→6,000億円超に要修正)。\n\n投資判断上の含意: 8/7の1Q決算で明確な上振れが出れば短期の戻りはあり得るが、それを打ち消す方向に金利・日銀観測が動き続けており、9月上旬までの1ヶ月強では「決算で上振れても金利で売られる」非対称性が強い。同じショートリスト内で日銀利上げが追い風になる銘柄(銀行株など)を保有する場合、8801はマクロ的に逆相関のヘッジにはなるが、単独のロング候補としての魅力は調査時点より低下している。\n\nデータ品質: kabutan/Yahoo!ファイナンス/日経/みんかぶ/三井不動産IRサイトはWebFetchが軒並み403で、8月",
+  "sources": [
+   "https://www.mitsuifudosan.co.jp/corporate/ir/library/news/2026/pdf/news_260513.pdf",
+   "https://www.nikkei.com/article/DGXZQOUB059C70V00C26A2000000/",
+   "https://www.nikkei.com/article/DGXZQOUB232VV0T20C26A3000000/",
+   "https://www.zaikei.co.jp/article/20260526/854598.html",
+   "https://media.rakuten-sec.net/articles/-/51335",
+   "https://www.nomura.co.jp/wealthstyle/article/0728/",
+   "https://www.nomura.co.jp/wealthstyle/article/0767/",
+   "https://finance.yahoo.co.jp/news/detail/4df51afe82ff5cacec7be086acb9b900c4998ec1"
+  ]
+ },
+ {
+  "code": "9735",
+  "name": "セコム",
+  "sector_data": "PER(会社予想)約24.7倍、PBR(実績)約1.99倍(Yahoo!ファイナンス系データ)。同業のALSOK(2331)はPER(予想)約14.8倍・PBR(連結)約1.44倍・配当利回り約2.91%であり、セコムはALSOK対比で明確にプレミアム評価(粗利率31.7% vs 24.6%、最終利益率約10% vs 約5%という収益性の高さが背景)。ただし直近の急騰でそのプレミアムはさらに拡大しており、バリュエーション面での割安感は乏しい。\"]",
+  "preliminary_score": 6.5,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "元調査(7月中旬時点)は方向性としては大きく外していないが、価格データが2.5週間で決定的に陳腐化しており、そのままでは投資判断に使えない。最大の発見は3点。\n\n第一に、株価は6,634円から6,830円へ約3%上昇し、途中7月29日に10年来高値7,224円を更新したうえで、そこから-5.45%押し戻されている。元調査の「年初来高値6,637〜6,789円で高値圏膠着」という前提は完全に無効。\n\n第二に、その7/29の新高値は企業固有材料ではなく、米半導体株安で日経平均が5%前後急落する中での「AI・半導体売り→ディフェンシブ/内需買い」という資金シフトの産物だった。7/31に日経平均が2,494円高と急反発するとセコムは即座に5%超押し戻されており、直近の上昇は外生的・可逆的な需給に依存する脆い性質のものである。AIテーマ買いではないという判定自体は正しい(むしろ反AIテーマ側の受益)が、それは同時に「AI相場が戻れば売られる側」であることを意味する。\n\n第三に、上値余地の根拠が弱い。元調査が+12%の上値余地の根拠としたみずほ証券7,450円は独立検証できず、検証できたコンセンサス平均目標株価6,670円(6/10時点)は現値6,830円が既に上回っている。PERは約26倍・PBR約2.1倍・利回り1.76%まで切り上がり、ALSOK対比のプレミアムは元調査時点よりさらに拡大した。\n\n加えて元調査はマクロを完全に取りこぼしている。7/31の日銀据え置き+植田総裁のタカ派発言(利上げペース加速もありうる)は、利回り1.76%・PER26倍のディフェンシブ銘柄には金利面で逆風。一方で同日の日米協調介入による急激な円高は、内需型のセコムを相対的に選好させる方向に働く両面材料である。\n\n残存カタリストは実質8/7の1Q決算のみで、しかも通期営業利益計画が+3%・経常利益は-3.4%の減益計画という低成長ガイダンスであるため、大幅上振れによるサプライズ余地は構造的に限定的。むしろ「材料出尽くし」で新高値後の調整が続くリスクの方が高い。下支えとしては自社株買いの残枠約776億円(6/30時点で枠の22.4%消化)が月次で効いてくる点、および相場急落局面でのディフェンシブ需要が挙げられる。\n\n総合すると、業績・還元の質は高いが、(1)年初来+23%・新高値直後で織り込みが進んだ株価、(2)コンセンサス目標株価を既に上回る水準、(3)上昇要因がローテーション需給という可逆性、(4)残存カタリストの薄さ、を踏まえ、元の6.5から5.5へ引き下げる。下方リスクは自社株買いとディフェンシブ性で限定的だが、9月上旬までの上昇期待という観点では中立にとどまる。なお主要金融サイト(株探/みんかぶ/Yahoo!ファイナンス/セコムIR/kabupro/stooq等)はWebFetchが軒並み403で、本監査も一次情報の直接取得はできずWebSearch経由の集約情報に依拠している点は元調査と同じ制約として明記しておく。",
+  "sources": [
+   "https://minkabu.jp/stock/9735",
+   "https://kabutan.jp/news/marketnews/?b=n202607151040",
+   "https://kabutan.jp/stock/?code=9735",
+   "https://www.nikkei.com/article/DGXZQOFL132GM0T10C26A5000000/",
+   "https://minkabu.jp/news/4509452",
+   "https://www.newsweekjapan.jp/articles/-/322081",
+   "https://finance.yahoo.co.jp/quote/9735.T",
+   "https://finance.yahoo.co.jp/news/detail/24c3c617c8eca4751c0270581ffb6c3104ac35c4"
+  ]
+ },
+ {
+  "code": "7269",
+  "name": "スズキ",
+  "sector_data": "予想PER約9.75倍、PBR約1.1倍(2026年5月14日時点データ、直近時点の更新値は確認できず)。同業のトヨタ自動車(PER約11.9~12.3倍、2026年6月-7月時点)と比べるとやや割安な水準。ホンダは2026年3月期がEV関連損失で最終赤字のため単純なPER比較は困難。理論株価(PBR基準)では下値目途1,603円、理論株価2,042円、上値目途2,480円との試算があり、7月14日時点の実勢株価2,036円はほぼ理論株価近辺で推移している。出典: https://minkabu.jp/stock/7269 、https://irbank.net/7203/per 、https://kabuyoho.jp/reportTarget?bcode=7269",
+  "preliminary_score": 5.3,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "元調査(5.3)は「インド依存・減益ガイダンス・AI無関係」という骨格は正しいが、7月下旬〜8月上旬の重要な変化を2方向とも取りこぼしている。上方向: 1-6月世界販売でホンダ超え・日本車2位(日系で唯一のプラス)、1-6月世界生産+14%で過去最高、7月マルチ販売+33.7%と、実需モメンタムは元調査の「消極的な強さ」という評価より明確に強い。しかも最重要カタリストである1Q決算(8月5日、2日後)がまだ手つかずで残り、GST減税フル寄与+想定150円を大きく上回る円安環境で着地するため、上振れ・上方修正観測が出る確度は相応に高い。下方向: 7/31および8/3の日米協調為替介入で3営業日に約5%の円高(163.74→155円台)が進み、海外売上75%の同社は直撃。8/3は自動車株が軒並み安。日銀もタカ派寄り(利上げ加速示唆)で円高圧力は継続的。加えて元調査が完全に見落とした7/9の50万台リコールがある。差し引きで、8/5決算という日付の確定した高確度カタリストが直近にある点を加点、為替レジーム転換という銘柄特性上最も効く逆風と、既に消化済みのカタリストが多い点を減点し、5.3→5.5とほぼ据え置きの中立評価とした。上げるにも下げるにも8/5の内容(特に通期計画の想定為替を150円のまま据え置くか、上方修正するか)が分水嶺であり、それ以前のポジション取りは為替介入リスクとの綱引きになる。なおデータ品質面では、元調査同様に主要株価サイト(kabutan/minkabu/Yahoo!ファイナンス/irbank/kabuyoho/response.jp)がすべてWebFetch 403で、株価・PER等の一次確認は今回も取れていない。8/3当日終値・最新バリュエーションは未確認である点を明示しておく。",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/7269.T",
+   "https://www.suzuki.co.jp/ir/library/financialaffairs/pdf/2026_fin/financialaffairs.pdf",
+   "https://www.nikkei.com/article/DGXZQOUB13BE30T10C26A5000000/",
+   "https://www.nikkan.co.jp/articles/view/00781328",
+   "https://newswitch.jp/p/48297",
+   "https://minkabu.jp/stock/7269/news/4512842",
+   "https://minkabu.jp/stock/7269/analyst_consensus",
+   "https://www.nikkei.com/prime/veritas/article/DGXZQOUB275AS0X20C26A5000000"
+  ]
+ },
+ {
+  "code": "8591",
+  "name": "オリックス",
+  "sector_data": "PER(予想)13.4倍、PBR(実績)1.58倍、ROE(実績)10.44%(みんかぶ2026-07-16スナップショット)。総合リース・多角化金融大手として国内同業(三菱HCキャピタル、東京センチュリー等)と比較すると、PBR・ROEともに相対的に高水準にあり、業績・還元強化を受けた見直し買いが評価に反映されている可能性がある。同業比較の一次データ(各社PER/PBR横並び表)は今回未取得のため厳密な比較は確認できず。",
+  "preliminary_score": 6,
+  "audit_verdict": "caution",
+  "audit_score": 5.5,
+  "audit_note": "結論: 元調査の事実関係は「大枠は正しいが、投資判断上決定的な1件を落としている」。最大の欠落はオリックス銀行の大和証券グループへの譲渡(3,700億円、売却益1,242億円)で、これは2027年3月期ガイダンス+18.5%の主因であり、かつ本日8月3日に取得が完了した。元調査はカタリストにもリスクにも一切記載していない。これを織り込むと評価は両面に動く。ポジティブ側は、ガイダンス最大の前提が実行完了して不確実性が消えたこと。ネガティブ側は、(a)計画純利益5,300億円の約23%が一過性益で、実力ベースPERは13.4倍ではなく約18.4倍と、元調査が描いた「割安な総合金融」像より明確に高いこと、(b)売却益は2Q計上のため8/6の1Q決算では通期進捗率が構造的に低く出ること。元調査自身が1Qのカタリスト説明を「進捗率が焦点」と書いており、その枠組みのまま数字を見れば失望売りを誘発しかねない。\n\n次に重いのは陳腐化。株価は7/16の6,559円から8/3に約6,731円へ上昇し、7/28の10年来高値6,680円も上抜けて事実上の高値更新中。元調査が挙げた「年初来高値6,593円」「高値比-0.5%」「中立派の目標株価6,280円は現在値を下回る」はいずれも無効化された。ただし更新後の姿はより慎重を要する内容で、米系大手証券は7/28にレーティング中立を据え置いたまま目標株価を5,300円→6,900円へ大幅増額したが、その6,900円に対しても現値の上値余地は約+2.5%しかない。つまり「アナリスト目標に対する乖離」というアップサイド論拠は事実上消滅し、強気派の7,500円(+11%)のみが残る。元調査の「好材料をかなり織り込んだ」という減点判断は、方向として正しかったどころか、2.5週間の上昇でさらに強まった。\n\nマクロ面では元調査が本銘柄について日銀会合を一切扱っていない点も穴。7/30-31会合は1.00%据え置き(6月に利上げ済み)だったが、成長率見通し上方修正と植田総裁の「利上げペース加速もありうる」発言でタカ派色が残り、8/3の東京市場は日経平均-607円、不動産業が下落業種上位。不動産・PE・国内貸出を抱えるオリックスには、9月にかけて追加利上げ観測が再燃した場合の逆風が残る。\n\n一方で減点一辺倒ではない。①8月6日という日付確定の1Q決算が投資期間の序盤にあること、②発行済9.1%・上限2,500億円という大型自社株買いが期間を通じて需給を支え、月初の取得状況開示が繰り返されること、③銀行譲渡完了でガイダンス達成確度が上がったこと、④モメンタムが10年来高値更新中で崩れていないこと、はいずれも実質的なプラス。重大な悪材料(不祥事・行政処分・下方修正)は独立検索でも検出されず、この点は元調査どおりクリーン。AIテーマ判定「low」も支持する。オリックス・レンテックのGPUサーバーレンタルやデータセンター投資という実需はあるが、7-8月の上昇をAI材料で説明する報道は皆無で、AIテーマ買いによる除外には当たらない(ai_theme_verdict=ok)。\n\n以上を総合し、元調査の6.0から5.5へ小幅減点する。減点理由は主に「更新後の株価が引き上げ後のアナリスト目標にほぼ到達し上値余地が消えたこと」と「実力ベースPER約18倍という、元調査が提示した13.4倍より明確に高い実質バリュエーション」、加えて「8/6の1Q決算で進捗率が低く見えることによる短期のヘッドライン下振れリスク」。逆に自社株買いの継続的な買い需要と日付確定カタ",
+  "sources": [
+   "https://finance.yahoo.co.jp/quote/8591.T",
+   "https://minkabu.jp/stock/8591",
+   "https://s.minkabu.jp/news/4507478",
+   "https://irbank.net/E04762/buyback",
+   "https://www.orix.co.jp/grp/company/newsroom/newsrelease/pdf/260511_ORIXJ.pdf",
+   "https://kabutan.jp/news/marketnews/?b=n202605111035",
+   "https://minkabu.jp/news/4506808",
+   "https://finance.yahoo.co.jp/news/detail/dbc4355814ef593aa1f4d67ab805c1d53e3586ea"
+  ]
+ }
+]
