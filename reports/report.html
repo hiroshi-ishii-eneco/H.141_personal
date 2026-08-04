@@ -1,0 +1,865 @@
+<title>日本株スクリーニング:非AI有望銘柄トップ20(2026年8月3日基準)</title>
+
+<style>
+  :root {
+    --ground: #F1F4F7;
+    --surface: #FFFFFF;
+    --surface-2: #F7F9FB;
+    --ink: #16202A;
+    --ink-2: #3D4C5A;
+    --muted: #66757F;
+    --line: #D9E1E8;
+    --line-soft: #E8EEF3;
+    --accent: #1B5E7E;
+    --accent-2: #2E7E9E;
+    --accent-wash: #E4EFF4;
+    --pos: #2C7A57;
+    --warn: #96631A;
+    --neg: #9E3B3B;
+    --shadow: 0 1px 2px rgba(22, 32, 42, .05), 0 8px 24px -16px rgba(22, 32, 42, .22);
+
+    --serif: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, "Noto Serif JP", "Source Han Serif JP", serif;
+    --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, "Noto Sans JP", system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0D1216;
+      --surface: #151C22;
+      --surface-2: #1A222A;
+      --ink: #E4EAEF;
+      --ink-2: #B7C3CD;
+      --muted: #8B99A5;
+      --line: #2A353F;
+      --line-soft: #212B34;
+      --accent: #64B6D8;
+      --accent-2: #8ACBE5;
+      --accent-wash: #16303C;
+      --pos: #56BC8D;
+      --warn: #D7A055;
+      --neg: #E28585;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0D1216;
+    --surface: #151C22;
+    --surface-2: #1A222A;
+    --ink: #E4EAEF;
+    --ink-2: #B7C3CD;
+    --muted: #8B99A5;
+    --line: #2A353F;
+    --line-soft: #212B34;
+    --accent: #64B6D8;
+    --accent-2: #8ACBE5;
+    --accent-wash: #16303C;
+    --pos: #56BC8D;
+    --warn: #D7A055;
+    --neg: #E28585;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .8);
+  }
+
+  :root[data-theme="light"] {
+    --ground: #F1F4F7;
+    --surface: #FFFFFF;
+    --surface-2: #F7F9FB;
+    --ink: #16202A;
+    --ink-2: #3D4C5A;
+    --muted: #66757F;
+    --line: #D9E1E8;
+    --line-soft: #E8EEF3;
+    --accent: #1B5E7E;
+    --accent-2: #2E7E9E;
+    --accent-wash: #E4EFF4;
+    --pos: #2C7A57;
+    --warn: #96631A;
+    --neg: #9E3B3B;
+    --shadow: 0 1px 2px rgba(22, 32, 42, .05), 0 8px 24px -16px rgba(22, 32, 42, .22);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px 96px;
+  }
+
+  /* ---- masthead ---- */
+
+  .masthead {
+    padding: 64px 0 32px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.3;
+    font-weight: 600;
+    margin: 0 0 8px;
+    text-wrap: balance;
+    letter-spacing: .01em;
+  }
+
+  .subtitle {
+    font-family: var(--serif);
+    font-size: clamp(15px, 2vw, 18px);
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+
+  .meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  .meta-item {
+    padding-right: 32px;
+    margin-right: 32px;
+    border-right: 1px solid var(--line);
+  }
+
+  .meta-item:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+
+  .meta-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .meta-value {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  /* ---- disclaimer ---- */
+
+  .disclaimer {
+    margin: 28px 0 0;
+    padding: 14px 18px;
+    background: var(--surface-2);
+    border-left: 3px solid var(--warn);
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.7;
+  }
+
+  /* ---- sections ---- */
+
+  section { margin-top: 72px; }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: .02em;
+  }
+
+  .section-note {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 26px;
+    max-width: 68ch;
+  }
+
+  p { max-width: 72ch; }
+
+  /* ---- summary lede ---- */
+
+  .lede {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.95;
+    color: var(--ink-2);
+    max-width: 66ch;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 32px;
+  }
+
+  .pillar {
+    background: var(--surface);
+    padding: 22px 20px;
+  }
+
+  .pillar-n {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: .1em;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .pillar-t {
+    font-weight: 700;
+    font-size: 14.5px;
+    margin-bottom: 6px;
+  }
+
+  .pillar-d {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ---- timeline ---- */
+
+  .timeline {
+    border-top: 1px solid var(--line);
+    margin-top: 8px;
+  }
+
+  .tl-row {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 22px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: start;
+  }
+
+  .tl-date {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-weight: 600;
+    padding-top: 2px;
+  }
+
+  .tl-body { font-size: 14.5px; line-height: 1.75; }
+  .tl-body strong { font-weight: 700; }
+
+  /* ---- ranking table ---- */
+
+  .scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 720px;
+  }
+
+  thead th {
+    background: var(--surface-2);
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: middle;
+  }
+
+  tbody tr:last-child td { border-bottom: 0; }
+
+  .c-rank {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    width: 42px;
+  }
+
+  .c-code {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    width: 62px;
+  }
+
+  .c-name { font-weight: 600; white-space: nowrap; }
+  .c-cat { color: var(--ink-2); font-size: 13px; min-width: 220px; }
+
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .chip-lg { border-color: var(--accent); color: var(--accent); }
+
+  /* score meter */
+  .score { display: flex; align-items: center; gap: 9px; width: 116px; }
+
+  .bar {
+    flex: 1;
+    height: 5px;
+    background: var(--line-soft);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bar > i {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: var(--accent);
+    display: block;
+  }
+
+  .bar.t-hi > i { background: var(--pos); }
+  .bar.t-lo > i { background: var(--warn); }
+
+  .score-n {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    width: 26px;
+    text-align: right;
+  }
+
+  /* ---- composition ---- */
+
+  .comp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 36px;
+    margin-top: 8px;
+  }
+
+  .comp h3 {
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 16px;
+  }
+
+  .stack { display: flex; flex-direction: column; gap: 12px; }
+
+  .srow { display: grid; grid-template-columns: 1fr; gap: 5px; }
+
+  .srow-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13.5px;
+  }
+
+  .srow-head b { font-weight: 600; }
+
+  .srow-head span {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  .track { height: 8px; background: var(--line-soft); overflow: hidden; }
+  .track > i { display: block; height: 100%; background: var(--accent); }
+  .track.alt > i { background: var(--accent-2); }
+
+  .fx-legend { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+
+  .fx-item { display: grid; grid-template-columns: 10px 1fr; gap: 12px; align-items: start; font-size: 13.5px; }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 7px; }
+  .dot.pos { background: var(--pos); }
+  .dot.neu { background: var(--muted); }
+  .dot.neg { background: var(--neg); }
+
+  .fx-item b { font-weight: 600; }
+  .fx-item .codes { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+
+  /* ---- stock cards ---- */
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin-top: 8px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 22px 22px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card-head { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: start; }
+
+  .rank-fig {
+    font-family: var(--serif);
+    font-size: 30px;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    padding-top: 2px;
+  }
+
+  .card-title { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .card-name { font-family: var(--serif); font-size: 18px; font-weight: 600; line-height: 1.35; }
+
+  .card-sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card-score {
+    font-family: var(--mono);
+    font-size: 20px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    line-height: 1.1;
+    text-align: right;
+  }
+
+  .card-score small { display: block; font-size: 10px; letter-spacing: .1em; color: var(--muted); font-weight: 400; }
+
+  .thesis { font-size: 13.5px; line-height: 1.8; color: var(--ink-2); margin: 0; }
+
+  .kv { display: grid; gap: 9px; border-top: 1px solid var(--line-soft); padding-top: 14px; }
+
+  .kv-row { display: grid; grid-template-columns: 58px 1fr; gap: 12px; font-size: 12.5px; line-height: 1.7; }
+
+  .kv-k {
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 3px;
+  }
+
+  .kv-k.cat { color: var(--pos); }
+  .kv-k.risk { color: var(--neg); }
+  .kv-v { color: var(--ink-2); }
+
+  /* ---- excluded ---- */
+
+  .ex-table td.c-why { font-size: 13px; color: var(--ink-2); min-width: 340px; }
+
+  /* ---- caveats ---- */
+
+  .caveats {
+    border: 1px solid var(--warn);
+    background: var(--surface);
+    padding: 26px 26px 8px;
+  }
+
+  .caveats > h2 { color: var(--warn); }
+  .caveats ol { padding-left: 22px; margin: 18px 0 0; }
+  .caveats li { margin-bottom: 16px; font-size: 13.5px; line-height: 1.8; color: var(--ink-2); max-width: 76ch; }
+  .caveats li b { color: var(--ink); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 640px) {
+    .masthead { padding-top: 40px; }
+    .meta-item { padding-right: 20px; margin-right: 20px; }
+    .tl-row { grid-template-columns: 1fr; gap: 4px; }
+    .card-head { grid-template-columns: auto 1fr; }
+    .card-score { grid-column: 2; text-align: left; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Equity Screening / Japan</p>
+    <h1>日本株スクリーニング:<br>非AI有望銘柄トップ20</h1>
+    <p class="subtitle">AIテーマ株を除外した、2026年8月4日〜9月上旬の約1ヶ月半における相対的上昇期待の高い20銘柄</p>
+
+    <div class="meta-strip">
+      <div class="meta-item">
+        <span class="meta-label">基準日</span>
+        <span class="meta-value">2026-08-03</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">投資期間</span>
+        <span class="meta-value">08-04 → 09上旬</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">調査銘柄</span>
+        <span class="meta-value">148 → 38 → 20</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">構成</span>
+        <span class="meta-value">大型 11 / 中型 9</span>
+      </div>
+    </div>
+
+    <p class="disclaimer">本ページは情報提供のみを目的としたものであり、特定の金融商品の売買を勧誘・推奨するものではありません。記載内容の正確性・完全性を保証するものではなく、将来の株価や業績を保証するものでもありません。投資判断は必ずご自身の責任において行ってください。</p>
+  </header>
+
+  <section>
+    <h2>サマリー</h2>
+    <p class="section-note">何を、どういう基準で選んだか</p>
+    <p class="lede">6つの切り口で集めた148件の候補を一次フィルタで38件に絞り込み、個別深掘り調査と敵対的監査を経て、さらに8月3日時点の最新情報(株価・第1四半期決算・為替影響・残存カタリスト)へ更新したうえで、大型11銘柄・中型9銘柄のトップ20を選定しました。7月末から8月にかけて相場を揺さぶった3つの構造変化を前提に、次の3本柱で構成しています。</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-n">柱 A</span>
+        <div class="pillar-t">国内金利上昇が追い風の金融</div>
+        <div class="pillar-d">日銀のタカ派化で利上げ織り込みが前倒しされ、利ざや拡大テーマが強化。メガバンク2・地銀1・損保2・総合金融1の6銘柄。</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-n">柱 B</span>
+        <div class="pillar-t">円高が中立〜追い風の純内需</div>
+        <div class="pillar-d">空運・アパレル・土産菓子・ホテル・空港・百貨店・作業服・私鉄と業態を完全に分散した8銘柄。単一の需要ドライバーに依存しない構成。</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-n">柱 C</span>
+        <div class="pillar-t">為替に依存しない国策・個別材料</div>
+        <div class="pillar-d">海運の通期上方修正、防衛予算の概算要求という為替と無関係の材料を持つ6銘柄。円高が直撃する商社・資源・不動産・自動車はセクター単位で除外。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>相場環境の急変</h2>
+    <p class="section-note">7月中旬は日経平均68,325.86円(7/15)、ドル円161〜163円台の40年ぶり高値圏という前提だったが、その後わずか2週間で様変わりした。</p>
+
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-date">7/29</div>
+        <div class="tl-body">米半導体株安を契機に日経平均急落。<strong>AI・半導体株から内需・ディフェンシブ株への資金ローテーション</strong>が始まる。</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">7/30–31</div>
+        <div class="tl-body">日銀会合は政策金利1.0%据え置きも、植田総裁が<strong>「利上げペース加速もありうる」とタカ派姿勢</strong>を表明、成長率見通しも上方修正。日経平均は+2,494円の急反発。</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">7/31</div>
+        <div class="tl-body"><strong>日米協調円買い介入(約28年ぶり)</strong>でドル円は164円台から157円台へ急伸、8/3朝方は一時155円台まで円高進行。日銀利上げ織り込みは9月40%超・10月まで90%超に前倒し。</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">8/3</div>
+        <div class="tl-body">日経平均は607円安(前場一時1,121円安)の63,754.90円。三菱商事は1Q純利益+47%でも一時4%安、ファナックは好決算・上方修正でも−14.31%急落と、<strong>「好決算でも素直に買われない」地合い</strong>が目立った。</div>
+      </div>
+    </div>
+
+    <p class="section-note" style="margin-top:26px">中心シナリオは「円高・国内金利上昇が9月上旬まで基調として残る」。市場全体のボラティリティは極めて高く、個別材料が良好でも需給・地合いで大きく振らされるリスクが常に存在する。</p>
+  </section>
+
+  <section>
+    <h2>トップ20一覧</h2>
+    <p class="section-note">スコアは10点満点の相対的な上昇期待度。最高7.0・中央値5.5という水準そのものが、非AI銘柄に確信度の高い強気テーマが乏しいことを示している。</p>
+
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>順位</th><th>コード</th><th>銘柄名</th><th>セクター</th><th>規模</th><th>スコア</th><th>最重要カタリスト</th>
+          </tr>
+        </thead>
+        <tbody id="rank-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>ポートフォリオ構成</h2>
+    <p class="section-note">セクター分散・規模バランス・円高感応度の3軸で組成。中型枠は調査ユニバース38銘柄中で該当する9銘柄を事実上フルに使い切っている。</p>
+
+    <div class="comp">
+      <div>
+        <h3>セクター配分</h3>
+        <div class="stack" id="sector-stack"></div>
+      </div>
+      <div>
+        <h3>円高(164円 → 157円台)への感応度</h3>
+        <div class="fx-legend">
+          <div class="fx-item">
+            <span class="dot pos"></span>
+            <div><b>追い風 — 3銘柄</b><br><span class="codes">9201 日本航空 / 9983 ファーストリテイリング / 7564 ワークマン</span><br>ドル建てコストの減少、輸入コスト低下が直接効く。</div>
+          </div>
+          <div class="fx-item">
+            <span class="dot neu"></span>
+            <div><b>中立 — 5銘柄</b><br><span class="codes">7186 横浜FG / 9044 南海電鉄 / 9735 セコム / 8233 高島屋 / 9616 共立メンテナンス</span><br>純国内型で為替の直接的な業績インパクトがほぼない。</div>
+          </div>
+          <div class="fx-item">
+            <span class="dot neg"></span>
+            <div><b>逆風だが採用 — 3銘柄</b><br><span class="codes">8766 東京海上 / 8630 SOMPO / 7014 名村造船所</span><br>決算・還元・国策という為替を上回る個別材料を持つと判断。ポジションサイズは相対的に小さく置くことを推奨。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>個別銘柄</h2>
+    <p class="section-note">推奨根拠・カタリスト・リスクを銘柄ごとに記載。数値・日付はいずれも調査データに記載のあるものに限定している。</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <h2>検討したが除外した銘柄</h2>
+    <p class="section-note">スコアが中位でも、円高逆風がプロファイルの中核を占める銘柄・材料が出尽くした銘柄はセクター単位で外した。</p>
+    <div class="scroll">
+      <table class="ex-table">
+        <thead>
+          <tr><th>コード</th><th>銘柄名</th><th>除外理由</th></tr>
+        </thead>
+        <tbody id="ex-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="caveats">
+    <h2>注意点・本レポートの限界</h2>
+    <ol>
+      <li><b>データ取得の重大な制約</b> — 本調査は、Yahoo!ファイナンス・株探・みんかぶ・日本経済新聞・各社IRサイト等の主要金融情報サイトへの直接アクセスが軒並みHTTP 403で遮断された環境下で行われています。多くの銘柄で検索エンジンのスニペット経由の二次情報に依拠しており、8月3日時点の正確な終値・PER/PBR・決算発表確定日を一次資料で裏取りできていないものが多数あります。特に 8136・7012・8002・8001・7532・2222・9616 の調査回では8月時点の新規情報が取得できておらず、評価は7月時点の確定情報と相場環境からの推論にとどまります。<b>実際の発注前には各銘柄の最新情報を必ず一次情報で再確認してください。</b></li>
+      <li><b>決算発表日の不確実性</b> — 7721(8/10)、9616(8/7)、9706(8/6頃)、7003(8月上旬)、7564(8/3頃)、9044(7月下旬〜8月上旬)、7014(8/6頃)は一次確認が取れていない推定日です。日程がずれれば「投資期間内カタリスト」という前提自体が変わります。</li>
+      <li><b>未確認・未反映の決算反応</b> — 9104の通期上方修正(8/3 15:30開示)、8306の1Q大幅ビート(8/3 16:00開示)はいずれも本調査時点で市場反応が観測できていません。三菱商事が好決算でも一時4%安となった例が示すとおり、2026年8月の地合いでは好決算が素直に買われない局面が生じています。</li>
+      <li><b>相場全体のボラティリティ</b> — 7/29急落、7/31 +2,494円、8/3 −607円と1週間で数千円規模の乱高下が続いています。本選定は個別材料の質に基づくものであり、指数全体の方向性はヘッジしていません。</li>
+      <li><b>スコアの性質</b> — 上位でも7.0(9104)、中央値は5.5にすぎません。下位4銘柄(7003 / 8233 / 7564 / 9044)は、セクター分散と中型株比率の要請を満たすために採用した性格が強く、単独の強気推奨ではありません。</li>
+      <li><b>期間区切りとイベントのずれ</b> — 次回日銀会合(9/17-18)、FOMC(9/15-16)、9月末権利確定日(9/30)はいずれも投資期間の直後または外にあります。金融株は「利上げ観測の積み上がり」という期待だけを享受し、実際の確認は期間外にずれるという非対称性を抱えます。</li>
+      <li><b>本選定は投資助言ではない</b> — 提示した数値・日付はすべて調査データに記載のあるものに限定し創作は行っていませんが、上記のデータ品質上の限界により誤りを含む可能性があります。投資判断は自己責任で行ってください。</li>
+    </ol>
+  </section>
+
+  <footer>
+    データ基準日 2026年8月3日(終値ベース)。選定プロセス: 6つの切り口による候補収集(148件)→ 一次フィルタ(38件)→ 個別深掘り調査 → 敵対的監査 → 8月3日時点への更新 → 最終選定。
+  </footer>
+
+</div>
+
+<script>
+  const stocks = [
+    { r: 1, code: "9104", name: "商船三井", sector: "海運", cap: "大型", score: 7.0,
+      short: "8/4以降の通期上方修正の織り込みと8/7 1Q決算",
+      thesis: "8/3大引け後(15:30)の適時開示で通期経常利益を1,450億円→2,250億円(+55.2%)、純利益を1,700億円→2,400億円へ上方修正。8/3終値5,801円(前日比−1.58%)はこの発表前の水準で未織り込み。予想PER約8.3倍・PBR0.66〜0.68倍・配当利回り3.5%と低位で、修正前ベースの目標株価6,785円対比でも+17%の乖離。エリオットが3年3,000億円の自社株買いを要求中(会社方針は5年5,400億円・総還元性向40%目安)。",
+      cat: "8/4以降の上方修正の織り込みと8/7の1Q決算。",
+      risk: "SCFIが10週続伸後3週連続下落(7/27時点3,062.95)、米関税期限切れで駆け込み輸送一巡。上方修正の主因ONE持分利益がピークアウトの兆し。海運特有のシクリカル・トラップにも注意。" },
+    { r: 2, code: "7186", name: "横浜フィナンシャルグループ", sector: "金融", cap: "大型", score: 6.5,
+      short: "8/5 1Q決算(還元強化の有無)",
+      thesis: "横浜銀行・東日本銀行を中核とする純国内型地銀で円高の直接影響はほぼなし。日米協調介入・タカ派化を受け利上げ織り込みが9月40%超・10月90%超に前倒しされ、利ざや拡大テーマが強化。株価は7/27高値1,995.5円から7/31終値1,839.0円へ約−7.8%調整し過熱感は解消。8/3の607円安の日も銀行業は値下がり上位5業種に入らず耐性を示した。",
+      cat: "8/5の1Q決算(進捗率、還元強化の有無)。地銀セクターは2026年3月期2期連続最高益(+37%)、2027年3月期も業界計画+11%程度。",
+      risk: "+50%超の急騰後で利益確定売りの受け皿になりやすく「材料出尽くし」リスク。AI株回帰による資金逆流も。" },
+    { r: 3, code: "8630", name: "SOMPOホールディングス", sector: "金融", cap: "大型", score: 6.0,
+      short: "8/14 1Q決算(保守的計画の上振れ)",
+      thesis: "8/14の1Q決算が未消化カタリスト。2027年3月期会社計画は純利益4,900億円(−23.4%)と保守的で、進捗率の上振れ確認が焦点。7/28に10年ぶり高値7,291円を更新し、米系証券は目標株価を5/25の7,250円から7/23に8,670円へ連続引き上げ。上限690億円(発行済1.9%)の自社株買いも需給を支える。",
+      cat: "8/14の1Q決算(保守的計画の上振れ)。",
+      risk: "2月完了のAspen買収(35億ドル)で海外比率が上昇したところに円高が直撃。8〜10月ピークのハリケーンシーズン、7月中の連続海外M&Aによる統合負荷にも注意。" },
+    { r: 4, code: "8411", name: "みずほフィナンシャルグループ", sector: "金融", cap: "大型", score: 6.0,
+      short: "上限2,000億円自社株買いの進捗(9月末まで)",
+      thesis: "7/30大引け後の1Q決算で純利益4,229億円(+46%、4-6月期として3年連続最高)、通期計画を1兆3,000億円→1兆4,000億円へ上方修正、配当140円→145円増額、自己株取得枠1,000億円→2,000億円(発行済1.4%)へ倍増し取得期間を9月末まで延長。進捗率約30.2%。株価は7/31に+4.46%の8,167円へ急反発後、円高で8,094円へ押し戻され、PER約14.5倍。",
+      cat: "9月末まで継続する上限2,000億円の自己株式取得進捗。",
+      risk: "主要カタリストが7/30-31に消化済みで次の大型材料(9/17-18日銀会合)は期間外。Mizuho Americas等の円換算目減りにも注意。" },
+    { r: 5, code: "9201", name: "日本航空(JAL)", sector: "内需・インバウンド(空運)", cap: "大型", score: 6.0,
+      short: "燃油サーチャージ改定、JNTO7月速報",
+      thesis: "数少ない明確な円高メリット銘柄。ドル建てで燃油・機体リース費を調達するため円高はコスト減要因。8/3発表の1Q決算は純利益−80.2%(53億円)の悪材料でも、日経平均607円安の中で株価は+1.24%の2,979.5円と逆行高。売上収益は1Q過去最高の5,237億円(+11.2%)、通期計画(純利益1,100億円)は据え置き。PER10.2〜11.6倍・PBR1.01〜1.18倍・利回り3.0〜3.24%と割安圏。",
+      cat: "8月中の燃油サーチャージ改定発表、8月中旬のJNTO7月速報。",
+      risk: "1Q進捗率4.9%(5年平均19.0%)と歴史的低水準。燃油費は+58%増急騰し円高効果の反映は9-10月発券分以降とラグあり。中国人インバウンドは6月−57.3%と7ヶ月連続減。" },
+    { r: 6, code: "7011", name: "三菱重工業", sector: "防衛・造船", cap: "大型", score: 6.0,
+      short: "8月末 防衛省令和9年度予算概算要求",
+      thesis: "8/4後場発表の1Q決算は売上収益1兆1,942億円(+15.5%)、事業利益1,596億円(+65.1%)、純利益1,346億円(+97.4%)、税引前利益はコンセンサス比+73%、受注高+約30%と極めて強い内容。通期進捗率35.4%(5年平均19.1%)。株価は当日+7.69%(4,091円)急伸。想定為替1ドル150円に対し実勢157円台は円安側で、国内官需比率が高く為替感応度は構造的に低め。",
+      cat: "8月末の防衛省令和9年度予算概算要求。",
+      risk: "急伸の反動・利益確定売り。通期計画は据え置きで概算PERは36倍前後と歴史的高水準。" },
+    { r: 7, code: "9983", name: "ファーストリテイリング", sector: "内需・インバウンド(小売)", cap: "大型", score: 5.8,
+      short: "国内ユニクロ月次既存店+EC売上高",
+      thesis: "7/31の円高急伸を受け8/3は円高メリット・内需株として日経平均押し上げ寄与度1位(+113.44円)を記録し、7/24安値76,220円から約+7%戻し。7/9発表の3Q決算は売上収益3兆651億円(+17.1%)・営業利益6,143億円(+36.2%)で過去最高、通期予想は3度目の上方修正。証券各社の目標株価は93,500〜96,000円へ引き上げ。",
+      cat: "毎月上旬の国内ユニクロ既存店+EC月次売上高。",
+      risk: "PER約51倍とさらに割高化。海外ユニクロが利益の過半を稼ぐため円高は10月発表の来期ガイダンスの逆風。投資期間内に決算イベントなし。" },
+    { r: 8, code: "8306", name: "三菱UFJフィナンシャル・グループ", sector: "金融", cap: "大型", score: 5.5,
+      short: "8/4以降の決算反応、8/10日銀「主な意見」",
+      thesis: "8/3大引け後(16:00)発表の1Q決算は連結経常利益1兆1,179億円(+57.8%、コンセンサス比+27.8%)、連結純利益8,094億円(+48%)で四半期過去最高、進捗率約30.0%。8/3終値3,567円はこの決算を織り込む前の水準で、決算反応は未消化のまま投資期間の起点に立っている。7/15高値3,733円から約−4.4%調整済み。",
+      cat: "8/4以降の決算反応・目標株価改定、8/10の日銀「主な意見」公表。",
+      risk: "通期計画が未修正なら「好決算でも材料出尽くし」リスク。モルガン・スタンレー等の円換算収益目減りにも注意。" },
+    { r: 9, code: "8766", name: "東京海上ホールディングス", sector: "金融", cap: "大型", score: 5.5,
+      short: "8/12 1Q決算(IFRS移行後初の実態値)",
+      thesis: "8/12の1Q決算が投資期間内に丸ごと残る未消化カタリストで、IFRS任意移行後初の実態値判明イベント。上限2,000億円の自己株式取得と増配(218円→245円)の還元強化が継続。株価は7/29に年初来高値8,468円まで上伸後、8/3は円高を嫌気し−4.36%の7,760円へ急落。目標株価コンセンサス平均8,138円、欧州系証券は10,500円と上値余地を示唆。",
+      cat: "8/12の1Q決算(通期為替前提の修正有無)。",
+      risk: "利益の約7割を海外保険事業が稼ぐため円高が直接逆風。台風シーズン本格化、同業の海外事業競争激化による減益観測にも留意。" },
+    { r: 10, code: "7014", name: "名村造船所", sector: "防衛・造船", cap: "中型", score: 5.5,
+      short: "8/6頃1Q決算、8月末予算概算要求",
+      thesis: "8/6頃見込みの1Q決算が未消化のまま投資期間序盤に到来。国交省は造船・海運の国際競争力強化予算を計上済みで、8月末の令和9年度概算要求での具体化が焦点。株価は7/15の4,020円から8/3の4,125円へ約+2.6%。予想PER約13倍・PBR約2.0倍は同業三井E&S(PER19〜24倍)対比で割安感が残る。",
+      cat: "8/6頃の1Q決算、8月末の予算概算要求。",
+      risk: "ドル建て受注の輸出型企業で、前期1Hは円高が主因で純利益−43%の実績あり。8/3も輸送用機器セクターが円急伸を嫌気し値下がり上位に。" },
+    { r: 11, code: "7721", name: "東京計器", sector: "防衛・造船", cap: "中型", score: 5.5,
+      short: "8/10頃1Q決算、防衛省概算要求",
+      thesis: "防衛・通信機器事業は防衛省向け円建て国内需要中心で、会社は為替感応度を「1円=経常利益800万円程度」と説明。7/31の円高を機械的試算しても年間5,600万円程度(営業利益計画比1%未満)と軽微。3期連続最高益見通し・受注残過去最高は継続、7/30〜7/31には強気転換のテクニカルシグナルも点灯。",
+      cat: "8/10頃の1Q決算、8月末の予算概算要求。",
+      risk: "1Qは季節性で赤字が通例(前年最終赤字1.77億円)で進捗率の見栄えが悪化しやすい。PER20倍超で金利上昇によるバリュエーション圧縮にも注意。" },
+    { r: 12, code: "8591", name: "オリックス", sector: "金融", cap: "大型", score: 5.5,
+      short: "8/6 1Q決算、自社株買い進捗",
+      thesis: "8/6の1Q決算という日付確定カタリストが序盤にあり、発行済9.1%・上限2,500億円の大型自社株買いが需給を支える。来期ガイダンス+18.5%の前提だったオリックス銀行の大和証券Gへの譲渡(3,700億円、売却益1,242億円)は8/3に取得完了。株価は7/28の10年来高値6,680円を上抜け8/3に約6,731円と高値更新中。",
+      cat: "8/6の1Q決算、上限2,500億円自社株買いの月次進捗。",
+      risk: "目標株価6,900円(7/28改定)からの上値余地は約+2.5%に縮小。銀行譲渡益は2Q計上のため1Q進捗率が構造的に低く出るリスク。実力ベースPERは約18.4倍。" },
+    { r: 13, code: "9735", name: "セコム", sector: "その他(サービス)", cap: "大型", score: 5.5,
+      short: "8/7 1Q決算、自社株買い進捗",
+      thesis: "7/29の半導体株安を受けたディフェンシブ買いで10年来高値7,224円を更新した実績があり、相場急変局面での受け皿になりやすいポートフォリオ内のバラスト役。純内需型で円高の直接逆風なし。株価は高値から−5.45%押し戻された6,830円。",
+      cat: "8/7の1Q決算、自社株買い残枠約776億円(6/30時点22.4%消化)の月次進捗。",
+      risk: "現値がコンセンサス目標株価6,670円を既に上回り上値余地が乏しい。通期は営業利益+3%の低成長ガイダンスでサプライズ余地が限定的、PER約26倍は金利上昇局面で逆風。" },
+    { r: 14, code: "2222", name: "寿スピリッツ", sector: "内需・インバウンド", cap: "中型", score: 5.0,
+      short: "8/3 1Q決算(概算値の裏付け)",
+      thesis: "7/9公表の1Q売上概算+10%増を受け株価反発、8/3に1Q本決算が控え概算値の裏付けが焦点。2026年3月期は売上787.81億円(+8.9%)・営業利益185.98億円(+5.6%)で過去最高更新、自己資本比率79.7%・ROE28.5〜35%と収益性・財務健全性が突出。会社計画も経常+10%・5期連続最高益と強気。",
+      cat: "8/3の1Q決算(概算値の裏付けと進捗率)。",
+      risk: "PER28.7倍・PBR8.26倍と評価は既に高く上振れ余地は限定的。中国インバウンド減速の前例、円高による訪日客購買意欲減退にも注意。" },
+    { r: 15, code: "9616", name: "共立メンテナンス", sector: "内需・インバウンド", cap: "中型", score: 5.0,
+      short: "8/7頃1Q決算、稼働率動向",
+      thesis: "2026年3月期は売上2,752.47億円(+20.2%)、営業利益248.45億円(+21.2%)、純利益187億円(+28.5%)で3期連続最高益。ドーミーイン通期稼働率88.9%(+2.0pt)、寮事業も4月に新規開業し稼働率98.5%と好調。PER(会社予想)15.17倍・PBR1.88倍とインバウンド関連の中では割高感が限定的。",
+      cat: "8/7頃(推定)の1Q決算、稼働率・訪日客数統計。",
+      risk: "2027年3月期会社計画自体が減益ガイダンス(純利益−3.8%)。稼働率が既に高水準で上振れ余地限定的、円高による訪日客消費下振れも懸念。" },
+    { r: 16, code: "9706", name: "日本空港ビルデング", sector: "内需・インバウンド", cap: "中型", score: 5.0,
+      short: "8/6頃1Q決算、JNTO訪日外客数",
+      thesis: "2026年3月期は連結営業収益2,898億円(+7.4%)、営業利益450億円(+16.8%)、純利益291.39億円(+6.1%、市場予想超)。羽田旅客数は過去最高9,100万人、改装したブティックが免税売上を牽引。株価は年初来高値5,830円から約−10%調整済み、ROE約14.65%・自己資本比率42.7%と財務も良好。",
+      cat: "8/6頃(推定)の1Q決算、8/15頃・9/15頃のJNTO訪日外客数。",
+      risk: "訪日外国人数が4〜6月まで3ヶ月連続前年割れ(中国−57.3%)。2027年3月期会社計画は純利益−16.9%の大幅減益見通しで、アナリスト目標株価も強気弱気で大きく割れ不確実性が高い。" },
+    { r: 17, code: "7003", name: "三井E&S", sector: "防衛・造船", cap: "中型", score: 4.5,
+      short: "8/3 1Q決算の織り込み、造船再生ロードマップ",
+      thesis: "2026年3月期は売上3,531.96億円(+12.1%)、営業利益376.41億円(+62.7%)と過去最高水準だが、同日発表の2027年3月期計画が営業利益−15.0%・純利益−22.0%の大幅減益だったことを嫌気し株価は3月高値8,438円から約−44%の4,700円前後まで下落済み。米系証券は買い継続・目標株価7,000円(現値比約+49%)。",
+      cat: "8/3の1Q決算の織り込み、造船業再生ロードマップ関連報道。",
+      risk: "会社自身が減益ガイダンスを出し業績モメンタムが見えにくい。船体建造事業から撤退済みで純粋な造船株ではなく、バリュエーション指標も情報源間で乖離しデータ精度が低い。" },
+    { r: 18, code: "8233", name: "高島屋", sector: "内需・インバウンド", cap: "中型", score: 4.5,
+      short: "9/1 高島屋8月度店頭売上速報",
+      thesis: "2027年2月期1Q(3-5月)は営業収益1,196.87億円(+6.4%)、営業利益159.71億円(+26.4%)、純利益110.82億円(+58.4%)と大幅増収増益で通期進捗も25%ペース超。2月期決算のため中間決算は投資期間外で大型イベントリスクを負わない一方、8/1・9/1の月次店頭売上速報という頻度の高いカタリストがある。PER約19〜21倍・PBR約1.6〜1.7倍。",
+      cat: "9/1の8月度店頭売上速報。",
+      risk: "月次データ以上の強いカタリストが乏しい。円高は訪日客購買力低下を通じ免税売上の伸び鈍化に直結しやすく、株価も年初来高値後に調整しモメンタムを欠く。" },
+    { r: 19, code: "7564", name: "ワークマン", sector: "内需・インバウンド(小売)", cap: "中型", score: 4.5,
+      short: "8月上旬7月度月次・1Q決算、9月上旬8月度月次",
+      thesis: "2026年3月期はチェーン全店売上高2,092億円(+14.3%)、純利益206億円(+22.1%、過去最高)でコンセンサス超、冷却ウェアが前期比+808.2%と牽引。株価は6月既存店売上−8.8%を嫌気し年初来高値から8ヶ月ぶり安値5,750円まで急落済みで悪材料は相当程度織り込み済み。純国内型で円高はむしろ輸入コスト低下要因。",
+      cat: "8月上旬の7月度既存店売上、8/3頃の1Q決算、9月上旬の8月度月次。",
+      risk: "モメンタムが下向きで割安感も乏しい(PER20倍台、PBR3.05〜3.60倍)。天候依存度が高く月次再悪化なら一段安のリスク。" },
+    { r: 20, code: "9044", name: "南海電気鉄道", sector: "内需・インバウンド(陸運)", cap: "中型", score: 4.0,
+      short: "7月下旬〜8月上旬 1Q決算",
+      thesis: "2026年3月期は営業収益2,647.1億円(+1.5%)、営業利益399.45億円(+15.2%、期初計画から大幅上方修正)、純利益251.35億円(+11.5%)で過去最高益。PBR0.95倍と1倍割れ、PER12倍台前半と下値支持が厚く、年初来高値から15〜20%調整済み。純国内型の私鉄・不動産事業で円高の直接逆風がなく、輸出・インバウンド銘柄に対するポートフォリオ内ヘッジになる。",
+      cat: "7月下旬〜8月上旬(未確認)の1Q決算。",
+      risk: "2027年3月期は万博反動で会社計画自体が減益。中国人訪日客急減が関空アクセス路線を直撃、8/3は陸運業が値下がり上位5業種入り。配当利回り約1.8%は関西私鉄内でも見劣り。" }
+  ];
+
+  const excluded = [
+    ["8058", "三菱商事", "8/3の1Q純利益+47%も発表当日に一時4%安・翌日も続落と「材料出尽くし」。進捗率27.1%は5年平均を下回るペース。更新スコア4.0。"],
+    ["8801", "三井不動産", "金利1%上昇で営業利益約120億円下押しの感応度。解消イベントの日銀会合(9/17-18)は投資期間外で「観測が積み上がる重石」だけを負う構造。更新スコア4.0。"],
+    ["3099", "三越伊勢丹HD", "株価が約−13.4%下落しモメンタムが完全転換。「円安×インバウンド免税消費」の核心に円高が直撃。更新スコア4.0。"],
+    ["8725", "MS&AD", "IFRS実データではPER16.72倍・ROE約5%で「割安高収益株」の根拠が崩壊。来期は実質減益ガイダンス。更新スコア4.5。"],
+    ["1605", "INPEX", "原油急騰で株価が先回り上昇し目標株価との乖離が圧縮。中東エスカレーション継続への賭けという非対称リスク。更新スコア4.5。"],
+    ["8001", "伊藤忠商事", "商社中最も資源比率が低いが外貨建て収益はあり円高が逆風。8/3決算の情報空白も大きい。更新スコア4.5。"],
+    ["8002", "丸紅", "北米エネルギー資産を積み増し中で円高がドル建て収益の円換算目減り要因。更新スコア4.5。"],
+    ["8031", "三井物産", "資源比率の高さで円高がエネルギー・金属資源セグメントを直撃。商社セクターを一括で薄くする方針で除外。更新スコア5.0。"],
+    ["7532", "パン・パシフィックHD", "免税売上が増益エンジンで円高が直接逆風。中国人客数−56.4%と既存の逆風も重なる。更新スコア4.5。"],
+    ["7269", "スズキ", "実需モメンタムは強いが海外売上75%で円高を最も直撃されるプロファイル。円高逆風重視の方針で除外。更新スコア5.5。"],
+    ["8316", "三井住友FG", "1Q決算良好も主要材料が7月末までに出尽くし、8/3は指数比アンダーパフォーム。金融枠6行中で劣後。更新スコア5.5。"],
+    ["8354", "ふくおかFG", "1Q決算好内容も主要カタリストは消化済み。地銀の国債含み損への警戒も浮上。金融枠の制約で見送り。更新スコア5.5。"],
+    ["7012", "川崎重工業", "発行済4.4%相当の海外公募増資+CBの新株が需給の重石。防衛・造船枠は既に4銘柄採用済み。更新スコア5.0。"],
+    ["7453", "良品計画", "決算期が8月期で本決算は投資期間後。期間内カタリストは月次売上速報のみで材料密度が低い。更新スコア5.0。"],
+    ["8136", "サンリオ", "海外ライセンス収入・インバウンド消費の双方に円高が逆風。高バリュエーションで8月時点データの独立検証もできず。更新スコア5.0。"],
+    ["7013", "IHI", "防衛・重工セクター内で相対的に劣後(予備スコア4.5)。同セクター既に4銘柄採用済みで見送り。"],
+    ["5401", "日本製鉄", "自動車向け需要軟調と米関税リスクを抱える弱いセクター。8/3も輸出関連として売られた側。予備スコア4.5、監査未実施。"],
+    ["5713", "住友金属鉱山", "ドル建て市況連動で円高が直接逆風。候補中で最低位。予備スコア4.0、監査未実施。"]
+  ];
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const tier = (s) => (s >= 6.5 ? "t-hi" : s < 5 ? "t-lo" : "");
+
+  document.getElementById("rank-body").innerHTML = stocks.map((s) => `
+    <tr>
+      <td class="c-rank">${s.r}</td>
+      <td class="c-code">${s.code}</td>
+      <td class="c-name">${esc(s.name)}</td>
+      <td><span class="chip">${esc(s.sector)}</span></td>
+      <td><span class="chip${s.cap === "大型" ? " chip-lg" : ""}">${s.cap}</span></td>
+      <td>
+        <div class="score">
+          <span class="bar ${tier(s.score)}"><i style="width:${s.score * 10}%"></i></span>
+          <span class="score-n">${s.score.toFixed(1)}</span>
+        </div>
+      </td>
+      <td class="c-cat">${esc(s.short)}</td>
+    </tr>`).join("");
+
+  document.getElementById("cards").innerHTML = stocks.map((s) => `
+    <article class="card">
+      <div class="card-head">
+        <div class="rank-fig">${s.r}</div>
+        <div class="card-title">
+          <span class="card-name">${esc(s.name)}</span>
+          <span class="card-sub">${s.code} · ${esc(s.sector)} · ${s.cap}</span>
+        </div>
+        <div class="card-score">${s.score.toFixed(1)}<small>SCORE</small></div>
+      </div>
+      <p class="thesis">${esc(s.thesis)}</p>
+      <div class="kv">
+        <div class="kv-row"><span class="kv-k cat">材料</span><span class="kv-v">${esc(s.cat)}</span></div>
+        <div class="kv-row"><span class="kv-k risk">リスク</span><span class="kv-v">${esc(s.risk)}</span></div>
+      </div>
+    </article>`).join("");
+
+  document.getElementById("ex-body").innerHTML = excluded.map(([c, n, w]) => `
+    <tr>
+      <td class="c-code">${c}</td>
+      <td class="c-name">${esc(n)}</td>
+      <td class="c-why">${esc(w)}</td>
+    </tr>`).join("");
+
+  const sectors = [
+    ["金融", 6, "8306 / 8411 / 7186 / 8630 / 8766 / 8591"],
+    ["内需・インバウンド", 8, "9201 / 9983 / 2222 / 9616 / 9706 / 8233 / 7564 / 9044"],
+    ["防衛・造船", 4, "7011 / 7014 / 7721 / 7003"],
+    ["その他(海運・サービス)", 2, "9104 / 9735"]
+  ];
+
+  document.getElementById("sector-stack").innerHTML = sectors.map(([label, n, codes], i) => `
+    <div class="srow">
+      <div class="srow-head"><b>${esc(label)}</b><span>${n}銘柄</span></div>
+      <div class="track${i % 2 ? " alt" : ""}"><i style="width:${(n / 8) * 100}%"></i></div>
+      <div class="srow-head"><span style="font-size:11.5px">${esc(codes)}</span></div>
+    </div>`).join("");
+</script>
