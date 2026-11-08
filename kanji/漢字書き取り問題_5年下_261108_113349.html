@@ -26,8 +26,9 @@
  .q{display:flex;align-items:flex-end;gap:2mm;min-height:9.6mm;border-bottom:1px solid #888;padding-bottom:.6mm;}
  .num{flex:0 0 6mm;font-weight:bold;font-size:9.5pt;color:#0a5;text-align:right;}
  .read{flex:0 0 auto;font-size:9.5pt;color:#222;padding-bottom:.3mm;}
- .hint{flex:0 0 auto;font-size:9pt;color:#0a5;font-weight:bold;padding-bottom:.3mm;margin-left:-1mm;white-space:nowrap;}
- .hnote{font-size:8.5pt;color:#555;white-space:nowrap;}
+ /* 意味ヒント: 読みの上に1行で小さく表示（答えの語の漢字は使っていない説明文） */
+ .q.hq{flex-wrap:wrap;align-content:flex-end;min-height:13.5mm;}
+ .hint{flex:0 0 100%;font-size:7.5pt;color:#555;line-height:1.3;padding-left:8mm;white-space:nowrap;overflow:hidden;}
  .write{flex:1 1 auto;}
  h2{font-size:13pt;border-left:5px solid #0a5;padding-left:3mm;margin:0 0 3mm;}
  .akey{display:grid;grid-template-columns:1fr 1fr 1fr;column-gap:6mm;row-gap:1mm;}
@@ -55,7 +56,7 @@
    <div class="fld"><label>出題 No.（終了）</label><input id="to" type="number" value="20" min="1" max="90"></div>
    <div class="fld"><label>1枚の問題数</label><input id="per" type="number" value="50" min="1" max="100"></div>
    <div class="fld"><label>枚数</label><input id="sheets" type="number" value="1" min="1" max="20"></div>
-   <div class="fld"><label>漢字ヒント（読みの横）</label><select id="hintMode"><option value="all" selected>すべて表示</option><option value="homo">同音の問題のみ</option><option value="none">表示しない</option></select></div>
+   <div class="fld"><label>意味ヒント（読みの上）</label><select id="hintMode"><option value="none" selected>表示しない</option><option value="homo">同音の問題のみ</option><option value="all">すべて表示（1枚36問まで）</option></select></div>
    <button onclick="regenerate()">🔄 問題を更新</button>
    <button class="sec" onclick="toggleAnswers()" id="ansBtn">👁 解答を表示</button>
    <button class="sec" onclick="window.print()">🖨 印刷 / PDF保存</button>
@@ -77,6 +78,8 @@ function build(){
  var to=parseInt(document.getElementById('to').value)||NO_MAX;
  if(from>to){var x=from;from=to;to=x;}
  var per=Math.max(1,parseInt(document.getElementById('per').value)||50);
+ var capped=false;
+ if(document.getElementById('hintMode').value==='all'&&per>HINT_MAX){per=HINT_MAX;capped=true;document.getElementById('per').value=HINT_MAX;}
  var sheets=Math.max(1,parseInt(document.getElementById('sheets').value)||1);
 
  var sel=POOL.filter(function(p){return p[0]>=from&&p[0]<=to;});
@@ -100,6 +103,7 @@ function build(){
    var c=sel.slice(s*per,(s+1)*per);
    if(c.length) chunks.push(c);
  }
+ if(capped) msg+=' ※ヒントを「すべて表示」にすると1枚'+HINT_MAX+'問までのため、1枚の問題数を'+HINT_MAX+'問にしました。';
  var m=document.getElementById('msg');
  m.textContent=msg; m.className='msg'+(warn?' warn':'');
  return {chunks:chunks,from:from,to:to};
@@ -109,10 +113,11 @@ function build(){
 var HOMO={};
 (function(){var m={};POOL.forEach(function(p){(m[p[3]]=m[p[3]]||{})[p[2]]=1;});
  for(var r in m){if(Object.keys(m[r]).length>1)HOMO[r]=1;}})();
-// 読みの横に出す漢字ヒント（その問題で習う新出漢字）
+// 読みの上に出す意味ヒント（POOLの5番目。答えの語の漢字を使わずに書いた説明）
+var HINT_MAX=36; // 「すべて表示」は1行ぶん高くなるため、1枚36問まで（A4・表裏1枚ずつに収める）
 function hintOf(it){
  var mode=document.getElementById('hintMode').value;
- return (mode==='all'||(mode==='homo'&&HOMO[it[3]]))?it[1]:'';
+ return (mode==='all'||(mode==='homo'&&HOMO[it[3]]))?(it[4]||''):'';
 }
 var last=null;
 
@@ -126,13 +131,12 @@ function render(data){
    var q='';
    chunk.forEach(function(it,idx){
      var h=hintOf(it);
-     q+='<div class="q"><span class="num">'+(idx+1)+'</span><span class="read">'+it[3]+'</span>'+(h?'<span class="hint">（'+h+'）</span>':'')+'<span class="write"></span></div>';
+     q+='<div class="q'+(h?' hq':'')+'">'+(h?'<span class="hint">'+h+'</span>':'')+'<span class="num">'+(idx+1)+'</span><span class="read">'+it[3]+'</span><span class="write"></span></div>';
    });
    paper.insertAdjacentHTML('beforeend',
     '<div class="sheet">'+
       '<div class="hbar">'+
         '<span class="htitle">漢字書き取り（5年下 No.'+data.from+'〜'+data.to+'）'+tag+'</span>'+
-        (document.getElementById('hintMode').value!=='none'?'<span class="hnote">（ ）内は使う漢字</span>':'')+
         '<span class="hmeta">名前 ____________　点 ____／'+chunk.length+'</span>'+
       '</div>'+
       '<div class="grid">'+q+'</div>'+
@@ -159,7 +163,12 @@ function rerender(){
  var on=!!(first&&first.classList.contains('show'));
  if(last){ render(last); setAnswers(on); }
 }
-document.getElementById('hintMode').addEventListener('change',rerender);
+// 「すべて表示」にした時、1枚が36問を超えていれば作り直す（収まらないため）。それ以外は同じ問題のまま表示だけ更新
+function onHintChange(){
+ var big=last&&last.chunks.some(function(c){return c.length>HINT_MAX;});
+ if(document.getElementById('hintMode').value==='all'&&big) regenerate(); else rerender();
+}
+document.getElementById('hintMode').addEventListener('change',onHintChange);
 function toggleAnswers(){
  var first=document.querySelector('.ans-page');
  setAnswers(!(first&&first.classList.contains('show')));
