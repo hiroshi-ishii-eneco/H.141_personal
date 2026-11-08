@@ -76,8 +76,10 @@ function build(){
  var sheets=Math.max(1,parseInt(document.getElementById('sheets').value)||1);
 
  var sel=POOL.filter(function(p){return p[0]>=from&&p[0]<=to;});
- var seen={}; sel=sel.filter(function(p){if(seen[p[2]])return false;seen[p[2]]=1;return true;});
+ // 同じ問題を出さない: 問題は「読み」だけが表示されるので、語ではなく読みで重複を除く（同じ漢字を含む別の語はOK）
+ // 先にシャッフルしてから除くため、同音の語（例: 賛成／酸性）はどちらが残るかが毎回ランダムになる
  shuffle(sel);
+ var seen={}; sel=sel.filter(function(p){var k=p[3];if(seen[k])return false;seen[k]=1;return true;});
 
  var need=per*sheets, msg='', warn=false, usableSheets=sheets;
  if(sel.length<need){
@@ -86,7 +88,7 @@ function build(){
    usableSheets=full+(rem>0?1:0);
    msg='⚠ 選択範囲 No.'+from+'〜'+to+' の問題は '+sel.length+' 問しかありません。重複なしで作れるのは '+per+'問×'+full+'枚'+(rem>0?'＋'+rem+'問の1枚':'')+'（計'+usableSheets+'枚）まで。範囲を広げるか、1枚の問題数を減らしてください。';
  }else{
-   msg='✓ No.'+from+'〜'+to+'（'+sel.length+'問のプール）から '+per+'問 × '+sheets+'枚＝計'+need+'問を重複なしで出題。';
+   msg='✓ No.'+from+'〜'+to+'（'+sel.length+'問のプール）から '+per+'問 × '+sheets+'枚＝計'+need+'問を同じ問題なしで出題（同じ読みの問題は除外済み）。';
  }
 
  var chunks=[];
